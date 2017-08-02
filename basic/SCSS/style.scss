@@ -1,0 +1,13 @@
+// main style sheet
+
+@import 'vars'; // importing vars.scss file.
+
+body
+{
+  background-color: $red;
+}
+
+h1
+{
+  color: yellow;
+}
