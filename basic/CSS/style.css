@@ -23,6 +23,7 @@ body {
   transition: all 0.25s;
   color: #cccccc; }
 
+.nav > li > a > #special
 img {
   margin-top: -40px;
   margin-left: 50px;
