@@ -7,7 +7,7 @@ body
   background-color: $red;
 }
 
-.links
+header p
 {
   color: #FFFFFF;
   font-family: $fontm;
@@ -17,9 +17,9 @@ body
 }
 
 // normal unvisited
-div.right:link
+div.tr:link
 {
-  color: white;
+  color: green;
   text-decoration: none;
 }
 

@@ -1,15 +1,15 @@
 body {
   background-color: #CF4647; }
 
-.links {
+header p {
   color: #FFFFFF;
   font-family: "Roboto", sans-serif;
   font-size: 22px;
   text-decoration: none;
   text-align: center; }
 
-div.right:link {
-  color: white;
+div.tr:link {
+  color: green;
   text-decoration: none; }
 
 div.links:visited {
