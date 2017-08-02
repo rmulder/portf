@@ -36,33 +36,13 @@ body
 
 .nav > li > a:hover
 {
+  transition: all 0.25s;
   color: darken( $white, 20% );
 }
 
-// normal unvisited
-// a:link
-// {
-//   color: yellow;
-//   text-decoration: none;
-// }
-//
-// // visited link
-// div.links:visited
-// {
-//   color: darken( $white, 10% );
-//   text-decoration: none;
-// }
-//
-// //hovering over
-// div.links:hover
-// {
-//   color: $white;
-//   text-decoration: underline;
-// }
-//
-// // currently active link
-// div.links:active
-// {
-//   color: $blue;
-//   text-decoration: underline;
-// }
+.logo
+{
+  float: left;
+  width: 30px;
+  height: 30px;
+}

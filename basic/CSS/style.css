@@ -20,6 +20,12 @@ body {
   color: #FFFFFF; }
 
 .nav > li > a:hover {
+  transition: all 0.25s;
   color: #cccccc; }
+
+.logo {
+  float: left;
+  width: 30px;
+  height: 30px; }
 
 /*# sourceMappingURL=style.css.map */
