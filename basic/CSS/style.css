@@ -1,31 +1,25 @@
 body {
+  margin: 0;
+  padding: 0;
   background-color: #CF4647; }
 
-img {
-  width: 100px;
-  height: 120px; }
-
-header div .links {
+.nav {
   color: #FFFFFF;
-  font-family: "Roboto", sans-serif;
-  font-size: 22px;
+  font-size: 21px;
+  list-style: none;
+  padding: 20px 0 20px 0;
+  text-align: right;
+  padding-right: 30px; }
+
+.nav > li {
+  display: inline-block;
+  padding: 0 25px 0 25px; }
+
+.nav > li > a {
   text-decoration: none;
-  text-align: center; }
+  color: #FFFFFF; }
 
-a:link {
-  color: yellow;
-  text-decoration: none; }
-
-div.links:visited {
-  color: #e6e6e6;
-  text-decoration: none; }
-
-div.links:hover {
-  color: #FFFFFF;
-  text-decoration: underline; }
-
-div.links:active {
-  color: #3A3E64;
-  text-decoration: underline; }
+.nav > li > a:hover {
+  color: #cccccc; }
 
 /*# sourceMappingURL=style.css.map */

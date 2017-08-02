@@ -4,50 +4,65 @@
 
 body
 {
+  margin: 0;
+  padding: 0;
   background-color: $red;
 }
 
-// logo
-img
+// navigation bar links
+.nav
 {
-  width: 100px;
-  height: 120px;
+  color: $white;
+  font-size: 21px;
+  list-style: none;
+  padding: 20px 0 20px 0; //top,rig,bott,lef
+  text-align: right;
+  padding-right: 30px;
 }
 
-// top right links
-header div .links
+// nav is parent, li, child, only selected
+.nav > li
 {
-  color: #FFFFFF;
-  font-family: $fontm;
-  font-size: 22px;
+  display: inline-block;
+  padding: 0 25px 0 25px;
+}
+
+// nav, li are parents, a, child, selected
+.nav > li > a
+{
   text-decoration: none;
-  text-align: center;
+  color: $white;
+}
+
+.nav > li > a:hover
+{
+  color: darken( $white, 20% );
 }
 
 // normal unvisited
-a:link
-{
-  color: yellow;
-  text-decoration: none;
-}
-
-// visited link
-div.links:visited
-{
-  color: darken( $white, 10% );
-  text-decoration: none;
-}
-
-//hovering over
-div.links:hover
-{
-  color: $white;
-  text-decoration: underline;
-}
-
-// currently active link
-div.links:active
-{
-  color: $blue;
-  text-decoration: underline;
-}
+// a:link
+// {
+//   color: yellow;
+//   text-decoration: none;
+// }
+//
+// // visited link
+// div.links:visited
+// {
+//   color: darken( $white, 10% );
+//   text-decoration: none;
+// }
+//
+// //hovering over
+// div.links:hover
+// {
+//   color: $white;
+//   text-decoration: underline;
+// }
+//
+// // currently active link
+// div.links:active
+// {
+//   color: $blue;
+//   text-decoration: underline;
+// }
