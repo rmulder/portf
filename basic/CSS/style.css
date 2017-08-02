@@ -1,6 +1,10 @@
 body {
   background-color: #CF4647; }
 
+img {
+  width: 100px;
+  height: 120px; }
+
 header div .links {
   color: #FFFFFF;
   font-family: "Roboto", sans-serif;
