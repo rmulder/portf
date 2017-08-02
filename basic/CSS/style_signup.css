@@ -7,7 +7,9 @@ fieldset {
 .wavelogo {
   text-align: left;
   margin-top: 30px;
-  margin-left: 30px;
+  margin-left: 30px; }
+
+div.wavelogo > #cup-logo {
   height: 100px;
   width: 50px; }
 
@@ -46,6 +48,9 @@ label {
   padding-left: 10px;
   border-radius: 4px;
   display: inline; }
+
+.eadd:focus, .passw:focus {
+  outline: 0; }
 
 input::-webkit-input-placeholder {
   color: #B0B0B0;

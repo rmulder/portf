@@ -18,15 +18,13 @@ fieldset
   text-align: left;
   margin-top: 30px;
   margin-left: 30px;
+}
 
+div.wavelogo > #cup-logo
+{
   height: 100px;
   width: 50px;
 }
-// 
-// .wavelogo > a
-// {
-//
-// }
 
 // white box - sign in
 .signbox
@@ -79,7 +77,11 @@ label
   // padding: 10px 0 10px 10px;
   border-radius: 4px;
   display: inline;
+}
 
+.eadd:focus, .passw:focus
+{
+  outline:0;
 }
 
 // place holder
