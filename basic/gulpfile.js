@@ -4,7 +4,9 @@ const gulp = require('gulp'),
   concat = require('gulp-concat'),
   uglify = require('gulp-uglify'),
   rename = require('gulp-rename'),
-  maps = require(‘gulp-sourcemaps’);
+  maps = require('gulp-sourcemaps');
+
+  
 
 // NEED TO WORK ON ORDER. NEED TO FIX ALL.
 
@@ -12,13 +14,18 @@ const gulp = require('gulp'),
 // combining all JS code.
 gulp.task("concatScripts", function()
 {
-    gulp.src(['JS/app.js']) // JS file dependencies
-    .pipe(concat('totapp.js')) // compressing all into "totapp.js" file name
-    .pipe(gulp.dest('JS')); // JS folder destination
+  gulp.src( [“JS/app.js”])
+  .pipe(maps.init())
+  .pipe(concat(“totapp.js”))
+  .pipe(maps.write(“./”))
+  .pipe(gulp.dest(“JS”));
+});
 
-    gulp.src(['CSS/style.css', 'CSS/variables.css']) // JS file dependencies
-    .pipe(concat('styles.css')) // compressing all into "totapp.js" file name
-    .pipe(gulp.dest('CSS')); // JS folder destination
+gulp.task("compileSass", function()
+{
+  return gulp.src(“scss/application.scss”)
+  .pipe(sass())
+  .pipe(gulp.dest(CSS));
 });
 
 // compressing file
@@ -28,4 +35,13 @@ gulp.task("minifyScripts", function()
         .pipe(uglify())
         .pipe(rename('app.min.js'))
         .pipe(gulp.dest('JS'))
+});
+
+gulp.task("compileSass", function()
+{
+  gulp.src(SCSS/style.scss”)
+  .pipe(maps.init())
+  .pipe(sass())
+  .pipe(maps.write(“./”))
+  .pipe(gulp.dest(CSS));
 });
