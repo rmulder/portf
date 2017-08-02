@@ -27,7 +27,8 @@ body
   padding: 0 12px 0 12px; // paddi inbetween
 }
 
-// nav, li are parents, a, child, selected
+// nav, li are parents, a, child, selected.
+// slow fading of text for transition. 
 .nav > li > a
 {
   text-decoration: none;
