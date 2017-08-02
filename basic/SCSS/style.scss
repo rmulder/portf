@@ -40,9 +40,12 @@ body
   color: darken( $white, 20% );
 }
 
-.logo
+img
 {
+  margin-top: -40px;
+  margin-left: 50px;
+  padding: 0;
+  width: 150px;
+  height: 150px;
   float: left;
-  width: 30px;
-  height: 30px;
 }
