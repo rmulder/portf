@@ -1,5 +1,5 @@
 body {
-  background-color: #3A3E64; }
+  background-color: #4a4a94; }
 
 fieldset {
   border: 0; }
@@ -88,7 +88,8 @@ div.forgotpass a:visited {
   color: black; }
 
 div.forgotpass a:hover {
-  color: #777; }
+  transition: all 0.5s;
+  color: black; }
 
 .already {
   font-family: "Roboto", sans-serif;
@@ -104,7 +105,7 @@ div.already a:visited {
   color: white; }
 
 div.already a:hover {
-  transition: all 0.5s;
-  color: #b3b3b3; }
+  transition: all 0.3s;
+  color: #cccccc; }
 
 /*# sourceMappingURL=style_signup.css.map */

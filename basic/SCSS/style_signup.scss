@@ -144,7 +144,8 @@ div.forgotpass a:visited
 // forgot password link - "a" specifically
 div.forgotpass a:hover
 {
-  color: #777;
+  transition: all 0.5s;
+  color: darken($white, 100%);
 }
 
 // Already have an account link
@@ -172,7 +173,7 @@ div.already a:visited // within "already" class, specific element "a"
 // hover link - already have an accoutn "log in"
 div.already a:hover // within "already" class, specific element "a"
 {
-  transition: all 0.5s;
-  color: darken($white, 30%);
+  transition: all 0.3s;
+  color: darken($white, 20%);
 
 }
