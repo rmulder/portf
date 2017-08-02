@@ -25,9 +25,9 @@ header div .links
 }
 
 // normal unvisited
-div.tr:link
+a:link
 {
-  color: green;
+  color: yellow;
   text-decoration: none;
 }
 

@@ -12,8 +12,8 @@ header div .links {
   text-decoration: none;
   text-align: center; }
 
-div.tr:link {
-  color: green;
+a:link {
+  color: yellow;
   text-decoration: none; }
 
 div.links:visited {
