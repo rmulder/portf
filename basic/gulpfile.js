@@ -6,7 +6,8 @@ const gulp = require('gulp'),
   rename = require('gulp-rename'),
   maps = require('gulp-sourcemaps');
 
-  
+
+// https://css-tricks.com/gulp-for-beginners/ GULP for beginners
 
 // NEED TO WORK ON ORDER. NEED TO FIX ALL.
 
