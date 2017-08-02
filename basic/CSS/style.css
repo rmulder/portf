@@ -1,8 +1,12 @@
 body {
   background-color: #CF4647; }
 
-h1 {
-  color: white;
-  text-align: center; }
+.links {
+  color: #FFFFFF;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px; }
+
+div.links:link {
+  color: white; }
 
 /*# sourceMappingURL=style.css.map */

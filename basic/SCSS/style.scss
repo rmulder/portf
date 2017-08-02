@@ -7,8 +7,33 @@ body
   background-color: $red;
 }
 
-h1
+.links
+{
+  color: $white;
+  font-family: $fontm;
+  font-size: 20px;
+}
+
+// normal unvisited
+div.links:link
 {
   color: white;
-  text-align: center;
+}
+
+// visited link
+div.links:visited
+{
+
+}
+
+//hovering over
+div.links:hover
+{
+
+}
+
+// currently active link
+div.links:active
+{
+
 }
