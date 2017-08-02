@@ -1,12 +1,27 @@
 body {
   background-color: #CF4647; }
 
-.links {
+div.links {
   color: #FFFFFF;
   font-family: "Roboto", sans-serif;
-  font-size: 20px; }
+  font-size: 22px;
+  text-decoration: none;
+  text-align: center; }
 
-div.links:link {
-  color: white; }
+div.right:link {
+  color: white;
+  text-decoration: none; }
+
+div.links:visited {
+  color: #e6e6e6;
+  text-decoration: none; }
+
+div.links:hover {
+  color: #FFFFFF;
+  text-decoration: underline; }
+
+div.links:active {
+  color: #3A3E64;
+  text-decoration: underline; }
 
 /*# sourceMappingURL=style.css.map */

@@ -7,33 +7,39 @@ body
   background-color: $red;
 }
 
-.links
+div.links
 {
-  color: $white;
+  color: #FFFFFF;
   font-family: $fontm;
-  font-size: 20px;
+  font-size: 22px;
+  text-decoration: none;
+  text-align: center;
 }
 
 // normal unvisited
-div.links:link
+div.right:link
 {
   color: white;
+  text-decoration: none;
 }
 
 // visited link
 div.links:visited
 {
-
+  color: darken( $white, 10% );
+  text-decoration: none;
 }
 
 //hovering over
 div.links:hover
 {
-
+  color: $white;
+  text-decoration: underline;
 }
 
 // currently active link
 div.links:active
 {
-
+  color: $blue;
+  text-decoration: underline;
 }
