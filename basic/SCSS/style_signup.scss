@@ -1,19 +1,11 @@
-// background color - blue.
-$basec: #298eea;
+// secondary style sheet - sign up sheet
 
-// sign up box color - white
-$signbox: #FFFFFF;
-
-// google fonts - Roboto light
-$robo: 'Roboto', sans-serif;
-
-// green color
-$green: #15CD72;
+@import 'vars'; // importing vars.scss file.
 
 // backgroud color body
 body
 {
-  background-color: $basec;
+  background-color: $blue;
 }
 // overall form input - to remove border
 fieldset
@@ -35,7 +27,7 @@ fieldset
   text-align: center;
   width: 400px;
   height: 410px;
-  background-color: $signbox;
+  background-color: $white;
   border-radius: 3px;
 }
 
@@ -103,12 +95,12 @@ button
   width: 320px;
   height: auto;
   padding: 15px;
-  background-color: $green;
+  background-color: $red;
   font-family: $robo;
   text-align: center;
   color: white;
   font-size: 20px;
-  border: 2px $green;
+  border: 2px $red;
   border-radius: 3px;
 
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
@@ -140,6 +132,7 @@ button:hover
 div.forgotpass a:link
 {
   color: #999;
+  transition: all 0.5s;
 }
 
 // forgot password link - "a" specifically
@@ -159,7 +152,7 @@ div.forgotpass a:hover
 {
   font-family: $robo;
   font-weight: bolder;
-  color: $signbox;
+  color: $white;
   text-align: center;
   font-size: 20px;
 }
@@ -179,5 +172,7 @@ div.already a:visited // within "already" class, specific element "a"
 // hover link - already have an accoutn "log in"
 div.already a:hover // within "already" class, specific element "a"
 {
-  color: #D3D3D3;
+  transition: all 0.5s;
+  color: darken($white, 30%);
+
 }
