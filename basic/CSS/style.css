@@ -43,4 +43,10 @@ img {
   -webkit-user-select: none;
   -ms-user-select: none; }
 
+#motto {
+  text-align: center;
+  color: #FFFFFF;
+  font-family: "Open Sans";
+  font-size: 30px; }
+
 /*# sourceMappingURL=style.css.map */

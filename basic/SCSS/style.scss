@@ -61,3 +61,13 @@ user-select: none;
 -webkit-user-select: none;
 -ms-user-select: none;
 }
+
+#motto
+{
+  // padding: 0;
+  // margin: 0;
+  text-align: center;
+  color: $white;
+  font-family: $fontsec;
+  font-size: 30px;
+}
