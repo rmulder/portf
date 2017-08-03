@@ -11,7 +11,13 @@ fieldset {
 
 img {
   height: 120px;
-  width: 60px; }
+  width: 60px;
+  user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none; }
 
 .signbox {
   display: block;

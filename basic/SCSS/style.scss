@@ -28,14 +28,14 @@ body
 }
 
 // nav, li are parents, a, child, selected.
-// slow fading of text for transition. 
+// slow fading of text for transition.
 .nav > li > a
 {
   text-decoration: none;
   color: $white;
-  transition: color 0.5s ease-in-out; /* vendorless fallback */
-  -moz-transition: color 0.5s ease-in-out; /* Firefox */
-  -webkit-transition: color 0.5s ease-in-out; /*safari and chrome */
+  transition: color 0.3s ease-in-out; /* vendorless fallback */
+  -moz-transition: color 0.3s ease-in-out; /* Firefox */
+  -webkit-transition: color 0.3s ease-in-out; /*safari and chrome */
 }
 
 // nav links at top
@@ -53,4 +53,11 @@ img
   width: 150px;
   height: 150px;
   float: left;
+
+  user-drag: none;
+user-select: none;
+-moz-user-select: none;
+-webkit-user-drag: none;
+-webkit-user-select: none;
+-ms-user-select: none;
 }

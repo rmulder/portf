@@ -18,11 +18,11 @@ body {
 .nav > li > a {
   text-decoration: none;
   color: #FFFFFF;
-  transition: color 0.5s ease-in-out;
+  transition: color 0.3s ease-in-out;
   /* vendorless fallback */
-  -moz-transition: color 0.5s ease-in-out;
+  -moz-transition: color 0.3s ease-in-out;
   /* Firefox */
-  -webkit-transition: color 0.5s ease-in-out;
+  -webkit-transition: color 0.3s ease-in-out;
   /*safari and chrome */ }
 
 .nav > li > a:hover {
@@ -35,6 +35,12 @@ img {
   padding: 0;
   width: 150px;
   height: 150px;
-  float: left; }
+  float: left;
+  user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none; }
 
 /*# sourceMappingURL=style.css.map */
