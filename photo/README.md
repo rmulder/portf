@@ -1,7 +1,7 @@
 # Photography Portfolio Example
 A Photography Portfolio Example Website.
 
-##Technologies Used
+## Technologies Used
 * HTML
 * CSS
 * Sass
