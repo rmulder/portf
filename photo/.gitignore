@@ -1,7 +1,9 @@
 # npm installed modules
 /node_modules/
 /Documentation/
+.sass-cache
 
 #scripts
 watcher.sh
 pusher.sh
+server.sh
