@@ -5,6 +5,3 @@ A Photography Portfolio Example Website.
 * HTML
 * CSS
 * Sass
-* JS
-* Gulp.js
-* Bootstrap
