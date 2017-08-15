@@ -1,4 +1,18 @@
-h1 {
-  color: red; }
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 1rem; }
+
+.responsive-image {
+  max-width: 100%; }
+
+.cell img {
+  display: block; }
 
 /*# sourceMappingURL=gallery.css.map */

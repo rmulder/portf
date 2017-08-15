@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AAIA,EACA;EACE,KAAK,EAAE,GAAG",
+"mappings": "AAKA,IACA;EACE,UAAU,EAAE,UAAU;;AAIxB,oBACA;EACE,UAAU,EAAE,OAAO;;AAGrB,UACA;EACE,MAAM,EAAE,MAAM;EACd,SAAS,EAAE,MAAM;EACjB,OAAO,EAAE,MAAM;;AAGjB,iBACA;EACE,SAAS,EAAE,IAAI;;AAGjB,SACA;EACE,OAAO,EAAE,KAAK",
 "sources": ["../SCSS/gallery.scss"],
 "names": [],
 "file": "gallery.css"
