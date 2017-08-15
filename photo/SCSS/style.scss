@@ -1,0 +1,76 @@
+// main style sheet
+
+@import 'vars'; // importing vars.scss file.
+
+body
+{
+  margin: 0;
+  padding: 0;
+  background-color: $red;
+}
+
+// navigation bar links
+.nav
+{
+  color: $white;
+  font-size: 21px;
+  list-style: none;
+  padding: 20px 0 20px 0; //top,rig,bott,lef
+  text-align: right;
+  padding-right: 30px;
+}
+
+// nav is parent, li, child, only selected
+.nav > li
+{
+  display: inline-block;
+  padding: 0 12px 0 12px; // paddi inbetween
+}
+
+// nav, li are parents, a, child, selected.
+// slow fading of text for transition.
+.nav > li > a
+{
+  text-decoration: none;
+  color: $white;
+  transition: color 0.3s ease-in-out; /* vendorless fallback */
+  -moz-transition: color 0.3s ease-in-out; /* Firefox */
+  -webkit-transition: color 0.3s ease-in-out; /*safari and chrome */
+}
+
+// nav links at top
+.nav > li > a:hover
+{
+  cursor: pointer;
+  color: darken( $white, 30% );
+}
+
+img
+{
+  margin-top: -40px;
+  margin-left: 50px;
+  padding: 0;
+  width: 150px;
+  height: 150px;
+  float: left;
+
+  user-drag: none;
+user-select: none;
+-moz-user-select: none;
+-webkit-user-drag: none;
+-webkit-user-select: none;
+-ms-user-select: none;
+}
+
+.motto
+{
+  // center vertic/horiz
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  color: $white;
+  font-family: $fontsec;
+  font-size: 40px;
+}
