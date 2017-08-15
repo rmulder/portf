@@ -6,13 +6,13 @@ body
 {
   margin: 0;
   padding: 0;
-  background-color: $red;
+  background-color: $light;
 }
 
 // navigation bar links
 .nav
 {
-  color: $white;
+  color: $fourgray;
   font-size: 21px;
   list-style: none;
   padding: 20px 0 20px 0; //top,rig,bott,lef
@@ -32,7 +32,7 @@ body
 .nav > li > a
 {
   text-decoration: none;
-  color: $white;
+  color: $fourgray;
   transition: color 0.3s ease-in-out; /* vendorless fallback */
   -moz-transition: color 0.3s ease-in-out; /* Firefox */
   -webkit-transition: color 0.3s ease-in-out; /*safari and chrome */
@@ -42,17 +42,15 @@ body
 .nav > li > a:hover
 {
   cursor: pointer;
-  color: darken( $white, 30% );
+  color: darken( $fourgray, 45% );
 }
 
-img
+.logo
 {
-  margin-top: -40px;
+  margin-top: -10px;
   margin-left: 50px;
-  padding: 0;
-  width: 150px;
-  height: 150px;
   float: left;
+  font-size: 21px;
 
   user-drag: none;
 user-select: none;
@@ -60,6 +58,11 @@ user-select: none;
 -webkit-user-drag: none;
 -webkit-user-select: none;
 -ms-user-select: none;
+}
+
+.logo::first-letter
+{
+  font-size: 30px;
 }
 
 .motto
@@ -70,7 +73,7 @@ user-select: none;
   left: 50%;
   transform: translate(-50%, -50%);
 
-  color: $white;
+  color: $fourgray;
   font-family: $fontsec;
-  font-size: 40px;
+  font-size: 50px;
 }

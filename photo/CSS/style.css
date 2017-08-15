@@ -1,68 +1,56 @@
-/*
-Error: Undefined variable: "$red".
-        on line 9 of SCSS/style.scss
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff; }
 
-4: 
-5: body
-6: {
-7:   margin: 0;
-8:   padding: 0;
-9:   background-color: $red;
-10: }
-11: 
-12: // navigation bar links
-13: .nav
-14: {
+.nav {
+  color: #454d5d;
+  font-size: 21px;
+  list-style: none;
+  padding: 20px 0 20px 0;
+  text-align: right;
+  padding-right: 30px; }
 
-Backtrace:
-SCSS/style.scss:9
-/Users/ronanmanoj/.rvm/gems/ruby-2.4.1/gems/sass-3.4.24/lib/sass/script/tree/variable.rb:49:in `_perform'
-/Users/ronanmanoj/.rvm/gems/ruby-2.4.1/gems/sass-3.4.24/lib/sass/script/tree/node.rb:58:in `perform'
-/Users/ronanmanoj/.rvm/gems/ruby-2.4.1/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:397:in `visit_prop'
-/Users/ronanmanoj/.rvm/gems/ruby-2.4.1/gems/sass-3.4.24/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/ronanmanoj/.rvm/gems/ruby-2.4.1/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
-/Users/ronanmanoj/.rvm/gems/ruby-2.4.1/gems/sass-3.4.24/lib/sass/stack.rb:79:in `block in with_base'
-/Users/ronanmanoj/.rvm/gems/ruby-2.4.1/gems/sass-3.4.24/lib/sass/stack.rb:115:in `with_frame'
-/Users/ronanmanoj/.rvm/gems/ruby-2.4.1/gems/sass-3.4.24/lib/sass/stack.rb:79:in `with_base'
-/Users/ronanmanoj/.rvm/gems/ruby-2.4.1/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:160:in `visit'
-/Users/ronanmanoj/.rvm/gems/ruby-2.4.1/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:433:in `block (2 levels) in visit_rule'
-/Users/ronanmanoj/.rvm/gems/ruby-2.4.1/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:433:in `map'
-/Users/ronanmanoj/.rvm/gems/ruby-2.4.1/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:433:in `block in visit_rule'
-/Users/ronanmanoj/.rvm/gems/ruby-2.4.1/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
-/Users/ronanmanoj/.rvm/gems/ruby-2.4.1/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:431:in `visit_rule'
-/Users/ronanmanoj/.rvm/gems/ruby-2.4.1/gems/sass-3.4.24/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/ronanmanoj/.rvm/gems/ruby-2.4.1/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
-/Users/ronanmanoj/.rvm/gems/ruby-2.4.1/gems/sass-3.4.24/lib/sass/stack.rb:79:in `block in with_base'
-/Users/ronanmanoj/.rvm/gems/ruby-2.4.1/gems/sass-3.4.24/lib/sass/stack.rb:115:in `with_frame'
-/Users/ronanmanoj/.rvm/gems/ruby-2.4.1/gems/sass-3.4.24/lib/sass/stack.rb:79:in `with_base'
-/Users/ronanmanoj/.rvm/gems/ruby-2.4.1/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:160:in `visit'
-/Users/ronanmanoj/.rvm/gems/ruby-2.4.1/gems/sass-3.4.24/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/Users/ronanmanoj/.rvm/gems/ruby-2.4.1/gems/sass-3.4.24/lib/sass/tree/visitors/base.rb:52:in `map'
-/Users/ronanmanoj/.rvm/gems/ruby-2.4.1/gems/sass-3.4.24/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/Users/ronanmanoj/.rvm/gems/ruby-2.4.1/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:169:in `block in visit_children'
-/Users/ronanmanoj/.rvm/gems/ruby-2.4.1/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
-/Users/ronanmanoj/.rvm/gems/ruby-2.4.1/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:168:in `visit_children'
-/Users/ronanmanoj/.rvm/gems/ruby-2.4.1/gems/sass-3.4.24/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/Users/ronanmanoj/.rvm/gems/ruby-2.4.1/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:188:in `visit_root'
-/Users/ronanmanoj/.rvm/gems/ruby-2.4.1/gems/sass-3.4.24/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/ronanmanoj/.rvm/gems/ruby-2.4.1/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:159:in `visit'
-/Users/ronanmanoj/.rvm/gems/ruby-2.4.1/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:8:in `visit'
-/Users/ronanmanoj/.rvm/gems/ruby-2.4.1/gems/sass-3.4.24/lib/sass/tree/root_node.rb:36:in `css_tree'
-/Users/ronanmanoj/.rvm/gems/ruby-2.4.1/gems/sass-3.4.24/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
-/Users/ronanmanoj/.rvm/gems/ruby-2.4.1/gems/sass-3.4.24/lib/sass/engine.rb:381:in `_render_with_sourcemap'
-/Users/ronanmanoj/.rvm/gems/ruby-2.4.1/gems/sass-3.4.24/lib/sass/engine.rb:298:in `render_with_sourcemap'
-/Users/ronanmanoj/.rvm/gems/ruby-2.4.1/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
-/Users/ronanmanoj/.rvm/gems/ruby-2.4.1/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/Users/ronanmanoj/.rvm/gems/ruby-2.4.1/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:209:in `each'
-/Users/ronanmanoj/.rvm/gems/ruby-2.4.1/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/Users/ronanmanoj/.rvm/gems/ruby-2.4.1/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:473:in `on_file_changed'
-/Users/ronanmanoj/.rvm/gems/ruby-2.4.1/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:331:in `block in watch'
-/Users/ronanmanoj/.rvm/gems/ruby-2.4.1/gems/sass-3.4.24/vendor/listen/lib/listen/listener.rb:252:in `on_change'
-/Users/ronanmanoj/.rvm/gems/ruby-2.4.1/gems/sass-3.4.24/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
-/Users/ronanmanoj/.rvm/gems/ruby-2.4.1/gems/sass-3.4.24/vendor/listen/lib/listen/adapters/polling.rb:48:in `poll_changed_directories'
-/Users/ronanmanoj/.rvm/gems/ruby-2.4.1/gems/sass-3.4.24/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Undefined variable: \"$red\".\A         on line 9 of SCSS/style.scss\A \A 4: \A 5: body\A 6: {\A 7:   margin: 0;\A 8:   padding: 0;\A 9:   background-color: $red;\A 10: }\A 11: \A 12: // navigation bar links\A 13: .nav\A 14: {"; }
+.nav > li {
+  display: inline-block;
+  padding: 0 12px 0 12px; }
+
+.nav > li > a {
+  text-decoration: none;
+  color: #454d5d;
+  transition: color 0.3s ease-in-out;
+  /* vendorless fallback */
+  -moz-transition: color 0.3s ease-in-out;
+  /* Firefox */
+  -webkit-transition: color 0.3s ease-in-out;
+  /*safari and chrome */ }
+
+.nav > li > a:hover {
+  cursor: pointer;
+  color: black; }
+
+.logo {
+  margin-top: -10px;
+  margin-left: 50px;
+  float: left;
+  font-size: 21px;
+  user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none; }
+
+.logo::first-letter {
+  font-size: 30px; }
+
+.motto {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #454d5d;
+  font-family: "Open Sans";
+  font-size: 50px; }
+
+/*# sourceMappingURL=style.css.map */
