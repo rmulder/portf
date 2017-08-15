@@ -1,11 +1,11 @@
 // gallery main style sheet
 
-@import 'gvars'; // importing gvars.scss file.
-
+@import 'vars'; // importing vars.scss file.
 
 html
 {
   box-sizing: border-box;
+  background-color: $light;
 }
 
 *, *:before, *:after
