@@ -52,3 +52,65 @@ html
     width: calc(100% / 3);
   }
 }
+
+// Menu SCSS Below
+
+
+// navigation bar links
+.nav
+{
+  color: $fourgray;
+  font-size: 22px;
+  list-style: none;
+  padding: 20px 0 20px 0; //top,rig,bott,lef
+  text-align: right;
+  padding-right: 30px;
+}
+
+// nav is parent, li, child, only selected
+.nav > li
+{
+  display: inline-block;
+  padding: 0 12px 0 12px; // paddi inbetween
+}
+
+// nav, li are parents, a, child, selected.
+// slow fading of text for transition.
+.nav > li > a
+{
+  text-decoration: none;
+  color: $fourgray;
+  transition: color 0.3s ease-in-out; /* vendorless fallback */
+  -moz-transition: color 0.3s ease-in-out; /* Firefox */
+  -webkit-transition: color 0.3s ease-in-out; /*safari and chrome */
+}
+
+// nav links at top
+.nav > li > a:hover
+{
+  cursor: pointer;
+  color: darken( $fourgray, 90% );
+}
+
+.logo
+{
+  font-family: $logo;
+  margin-top: -50px;
+  margin-left: 50px;
+  float: left;
+  font-size: 40px;
+
+  user-drag: none;
+user-select: none;
+-moz-user-select: none;
+-webkit-user-drag: none;
+-webkit-user-select: none;
+-ms-user-select: none;
+}
+
+.logo::first-letter
+{
+  font-size: 50px;
+  font-style: italic;
+  font-weight: 800;
+}
