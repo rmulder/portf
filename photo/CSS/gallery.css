@@ -5,14 +5,26 @@ html {
   box-sizing: inherit; }
 
 .container {
-  margin: 0 auto;
-  max-width: 1200px;
-  padding: 0 1rem; }
+  margin: auto;
+  max-width: 1200px; }
 
 .responsive-image {
   max-width: 100%; }
 
 .cell img {
-  display: block; }
+  display: block;
+  padding: 10px; }
+
+@media screen and (min-width: 600px) {
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row; }
+
+  .cell {
+    width: 50%; } }
+@media screen and (min-width: 1000px) {
+  .cell {
+    width: calc(100% / 3); } }
 
 /*# sourceMappingURL=gallery.css.map */
