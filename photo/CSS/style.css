@@ -30,10 +30,11 @@ body {
   color: black; }
 
 .logo {
-  margin-top: -10px;
+  font-family: "Exo 2", sans-serif;
+  margin-top: -50px;
   margin-left: 50px;
   float: left;
-  font-size: 21px;
+  font-size: 40px;
   user-drag: none;
   user-select: none;
   -moz-user-select: none;
@@ -42,7 +43,9 @@ body {
   -ms-user-select: none; }
 
 .logo::first-letter {
-  font-size: 30px; }
+  font-size: 50px;
+  font-style: italic;
+  font-weight: 800; }
 
 .motto {
   position: absolute;

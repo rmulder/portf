@@ -42,15 +42,16 @@ body
 .nav > li > a:hover
 {
   cursor: pointer;
-  color: darken( $fourgray, 45% );
+  color: darken( $fourgray, 90% );
 }
 
 .logo
 {
-  margin-top: -10px;
+  font-family: $logo;
+  margin-top: -50px;
   margin-left: 50px;
   float: left;
-  font-size: 21px;
+  font-size: 40px;
 
   user-drag: none;
 user-select: none;
@@ -62,7 +63,9 @@ user-select: none;
 
 .logo::first-letter
 {
-  font-size: 30px;
+  font-size: 50px;
+  font-style: italic;
+  font-weight: 800;
 }
 
 .motto
