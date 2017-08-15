@@ -13,7 +13,7 @@ html {
 
 .cell img {
   display: block;
-  padding: 5px; }
+  padding: 10px; }
 
 @media screen and (min-width: 600px) {
   .grid {
