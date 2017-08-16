@@ -1,0 +1,21 @@
+{
+  "name": "photo_club",
+  "version": "1.0.0",
+  "description": "photography_club website",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "photography",
+    "club",
+    "meeting",
+    "photo",
+    "ronan"
+  ],
+  "author": "Ronan Manoj Kumar",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^0.10.0"
+  }
+}
