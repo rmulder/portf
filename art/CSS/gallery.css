@@ -46,11 +46,8 @@ html {
   text-decoration: none;
   color: #454d5d;
   transition: color 0.3s ease-in-out;
-  /* vendorless fallback */
   -moz-transition: color 0.3s ease-in-out;
-  /* Firefox */
-  -webkit-transition: color 0.3s ease-in-out;
-  /*safari and chrome */ }
+  -webkit-transition: color 0.3s ease-in-out; }
 
 .nav > li > a:hover {
   cursor: pointer;

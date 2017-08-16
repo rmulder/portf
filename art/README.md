@@ -1,5 +1,5 @@
-# Photography Portfolio Example
-A Photography Portfolio Example Website.
+# Art Portfolio Example
+A Art Portfolio Example Website.
 
 ## Technologies Used
 * HTML

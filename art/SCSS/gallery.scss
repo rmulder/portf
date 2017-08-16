@@ -2,12 +2,14 @@
 
 @import 'vars'; // importing vars.scss file.
 
+// box reset standard
 html
 {
   box-sizing: border-box;
   background-color: $light;
 }
 
+// box reset standard
 *, *:before, *:after
 {
   box-sizing: inherit;
@@ -30,7 +32,7 @@ html
   padding: 10px;
 }
 
-
+// tablet
 @media screen and (min-width: 600px)
 {
   .grid
@@ -45,6 +47,7 @@ html
   }
 }
 
+//desktop
 @media screen and (min-width: 1000px)
 {
   .cell
@@ -86,9 +89,9 @@ html
 {
   text-decoration: none;
   color: $fourgray;
-  transition: color 0.3s ease-in-out; /* vendorless fallback */
-  -moz-transition: color 0.3s ease-in-out; /* Firefox */
-  -webkit-transition: color 0.3s ease-in-out; /*safari and chrome */
+  transition: color 0.3s ease-in-out; // vendorless fallback
+  -moz-transition: color 0.3s ease-in-out; // Firefox
+  -webkit-transition: color 0.3s ease-in-out; //safari and chrome
 }
 
 // nav links at top
