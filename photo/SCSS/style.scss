@@ -7,11 +7,18 @@
 $content-width: 1000px;
 $breakpoint: 800px;
 $nav-height: 70px;
-$nav-background: #262626;
-$nav-font-color: #ffffff;
+$gray: #727e96;
+$dgray: #454d5d;
+$back: #f8f9fa;
 $link-hover-color: #2581DC;
 $robo: 'Roboto', sans-serif;
 $open: 'Open Sans', sans-serif;
+$maven: 'Maven Pro', sans-serif;
+
+body
+{
+  background-color: $back;
+}
 
 
 // Outer navigation wrapper
@@ -33,7 +40,7 @@ $open: 'Open Sans', sans-serif;
   a,
   a:visited
   {
-    color: red;
+    color: $gray; // LOGO text color
     text-decoration: none;
   }
 }
@@ -68,12 +75,18 @@ nav
         line-height: $nav-height;
         // background: $nav-background;
         // color: $nav-background;
-        color: yellow;
+        color: $gray; // nav bar link colors
+        font-family: $maven;
+        font-size: 1.1em;
         text-decoration: none;
+
+        transition: color 0.4s ease-in-out; /* vendorless fallback */
+        -moz-transition: color 0.4s ease-in-out; /* Firefox */
+        -webkit-transition: color 0.4s ease-in-out; /*safari and chrome */
         &:hover {
           // background: $link-hover-color;
           // color: $nav-background;
-          // color: darken(#c3c3c3, 30%);
+          color: darken($gray, 90%);
         }
         &:not(:only-child):after
         {
