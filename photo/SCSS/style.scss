@@ -33,48 +33,59 @@ $open: 'Open Sans', sans-serif;
   a,
   a:visited
   {
-    color: $nav-background;
+    color: red;
     text-decoration: none;
   }
 }
 
 // Container with no padding for navbar
-.nav-container {
-  max-width: $content-width;
+.nav-container
+{
+  // flows to edges of page, control:
+  // max-width: $content-width;
   margin: 0 auto;
   padding: 0;
 }
 
 // Navigation
-nav {
+nav
+{
   float: right;
-  ul {
+  ul
+  {
     list-style: none;
     margin: 0;
     padding: 0;
-    li {
+    li
+    {
       float: left;
       position: relative;
       a,
-      a:visited {
+      a:visited
+      {
         display: block;
         padding: 0 20px;
         line-height: $nav-height;
         // background: $nav-background;
         // color: $nav-background;
+        color: yellow;
         text-decoration: none;
         &:hover {
           // background: $link-hover-color;
-          color: $nav-background;
+          // color: $nav-background;
+          // color: darken(#c3c3c3, 30%);
         }
-        &:not(:only-child):after {
+        &:not(:only-child):after
+        {
           padding-left: 4px;
           content: ' ▾';
         }
       } // Dropdown list
-      ul li {
+      ul li
+      {
         min-width: 190px;
-        a {
+        a
+        {
           padding: 15px;
           line-height: 20px;
         }
