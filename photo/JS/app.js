@@ -29,4 +29,4 @@ console.log("Connection test");
       this.classList.toggle('active');
     });
   });
-})(jQuery); // end
+})(jQuery);
