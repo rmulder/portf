@@ -5,31 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta name = "author" content = "Ronan Manoj" />
     <meta name = "description" content = "A photography club website sample." />
-    <link rel="stylesheet" type="text/css" href="CSS/style.css"> <!-- Linking compiled css -->
-    <link rel="stylesheet" type="text/css" href="CSS/vars.css"> <!-- Linking compiled css -->
+    <link rel="stylesheet" type="text/css" href="CSS/style.css"> <!-- linked compiled css -->
+    <link rel="stylesheet" type="text/css" href="CSS/vars.css"> <!-- linked compiled css -->
     <link rel="shortcut icon" type="image/png" href="IMG/gfavicon.ico"/>
     <link href = "https://fonts.googleapis.com/css?family=Roboto:300" rel = "stylesheet"> <!-- G Fonts -->
     <title>Photo Club</title>
   </head>
   <body>
-    <nav>
-      <div class="nav-mobile">
-        <a id="nav-toggle" href="#!"><span></span></a>
+    <section class="navigation">
+    <div class="nav-container">
+      <div class="brand">
+        <a href="#!">Logo</a>
       </div>
-      <ul class="nav-list">
-        <li><a href="#!">Home</a></li>
-        <li><a href="#!">About</a></li>
-        <li><a href="#!">Services</a>
-          <ul class="nav-dropdown">
-            <li><a href="#!">Web Design</a></li>
-            <li><a href="#!">Web Development</a></li>
-            <li><a href="#!">Graphic Design</a></li>
-          </ul>
-        </li>
-        <li><a href="#!">Pricing</a></li>
-        <li><a href="#!">Contact</a></li>
-      </ul>
-    </nav>
+      <nav>
+        <div class="nav-mobile">
+          <a id="nav-toggle" href="#!"><span></span></a>
+        </div>
+        <ul class="nav-list">
+          <li>
+            <a href="#!">Home</a>
+          </li>
+          <li>
+            <a href="#!">About</a>
+          </li>
+          <li>
+            <a href="#!">Services</a>
+            <ul class="nav-dropdown">
+              <li>
+                <a href="#!">Web Design</a>
+              </li>
+              <li>
+                <a href="#!">Web Development</a>
+              </li>
+              <li>
+                <a href="#!">Graphic Design</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#!">Pricing</a>
+          </li>
+          <li>
+            <a href="#!">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </section>
   </body>
-  <script src="JS/app.js" charset="utf-8"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> <!-- CDN before script -->
+  <script type="text/javascript" src="JS/app.js" charset="utf-8"></script>
 </html>
