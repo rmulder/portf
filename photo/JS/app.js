@@ -2,27 +2,31 @@
 
 console.log("Connection test");
 
+(function($)
+{
+  $(function() // DOM ready
+  {
 
-(function($) { // Begin jQuery
-  $(function() { // DOM ready
-    // If a link has a dropdown, add sub menu toggle.
-    $('nav ul li a:not(:only-child)').click(function(e) {
-      $(this).siblings('.nav-dropdown').toggle();
-      // Close one dropdown when selecting another
+    $('nav ul li a:not(:only-child)').click(function(e) // If a link has a dropdown, add sub menu toggle.
+    {
+      $(this).siblings('.nav-dropdown').toggle(); // Close one dropdown when selecting another
       $('.nav-dropdown').not($(this).siblings()).hide();
       e.stopPropagation();
     });
-    // Clicking away from dropdown will remove the dropdown class
-    $('html').click(function() {
+
+    $('html').click(function() // Clicking away from dropdown will remove the dropdown class
+    {
       $('.nav-dropdown').hide();
     });
-    // Toggle open and close nav styles on click
-    $('#nav-toggle').click(function() {
+
+    $('#nav-toggle').click(function() // Toggle open and close nav styles on click
+    {
       $('nav ul').slideToggle();
     });
-    // Hamburger to X toggle
-    $('#nav-toggle').on('click', function() {
+
+    $('#nav-toggle').on('click', function() // Hamburger to X toggle
+    {
       this.classList.toggle('active');
     });
-  }); // end DOM ready
-})(jQuery); // end jQuery
+  });
+})(jQuery); // end
