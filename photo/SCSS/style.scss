@@ -1,3 +1,61 @@
 // main scss stylesheet
 
 @import 'vars'; // importing vars.scss file.
+
+nav
+{
+  float: right;
+  ul
+  {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+li
+{
+  float: left;
+  position: relative;
+  a
+  {
+    display: block;
+    padding: 0 20px; // padding between each word
+    line-height: $nav-height;
+    background: $nav-background;
+    color: $nav-font-color;
+    text-decoration: none;
+    font-family: $fontm;
+  }
+}
+
+a
+{
+  &:hover
+  {
+    background: $link-hover-color;
+    color: $nav-font-color;
+  }
+  &:not(:only-child):after //apply to any <a> tag in nav list, NOT only child.
+  {
+  padding-left: 4px;
+  content: ' ▾';
+  }
+}
+
+ul li // Dropdown list
+{
+  min-width: 190px;
+  a
+  {
+    padding: 15px;
+    line-height: 20px;
+  }
+}
+.nav-dropdown
+{
+  position: absolute;
+  z-index: 1; // display on top of any content
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+  display: none;
+}
