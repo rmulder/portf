@@ -113,7 +113,7 @@ nav {
   #nav-toggle span:before,
   #nav-toggle span:after {
     cursor: pointer;
-    border-radius: 1px;
+    border-radius: 2em;
     height: 5px;
     width: 35px;
     background: #000000;
