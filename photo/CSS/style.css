@@ -12,7 +12,13 @@ body {
   line-height: 70px;
   text-transform: uppercase;
   font-size: 1.5em;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Open Sans", sans-serif;
+  user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none; }
   .brand a,
   .brand a:visited {
     color: #727e96;
@@ -63,7 +69,8 @@ nav {
   position: absolute;
   display: none;
   z-index: 1;
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15); }
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 0.4em; }
 
 /* Mobile navigation */
 .nav-mobile {

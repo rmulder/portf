@@ -37,6 +37,13 @@ body
   text-transform: uppercase;
   font-size: 1.5em;
   font-family: $open;
+
+  user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
   a,
   a:visited
   {
@@ -113,6 +120,7 @@ nav
   display: none;
   z-index: 1;
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 0.4em;
 }
 
 /* Mobile navigation */
