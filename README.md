@@ -6,3 +6,6 @@ Minimalist website.
 
 ## Art 
 Minimalist Art Portfolio Sample website.
+
+## Photo 
+Photography Club Website Sample. 
