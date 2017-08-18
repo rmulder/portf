@@ -7,4 +7,4 @@ echo "watching! sccc => css conversion"
 echo "To kill background task: pkill -f watcher.sh"
 echo " "
 
-sass --watch SCSS:CSS
+sass --watch public/SCSS:public/CSS
