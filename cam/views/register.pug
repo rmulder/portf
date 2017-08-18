@@ -1,10 +1,29 @@
 extends layout
 
 block content
-      h1 Sign Up
+      .spec-padding
+      .spec-register
+        article.register
+          .signbox
+            h1 Join
+            form.login-form(action='/register', method='POST')
+              fieldset(name='login-info')
+                label(for='name') Name 
+                input#email-address.eadd(placeholder='Name', type='text', name='name', required='')
+                label.email-label(for='email') Email 
+                input#email-address.eadd(placeholder='@.com', type='email', name='email-address', required='')
+                label.password-label(for='pw') Password
+                input#password.passw(placeholder='•••••••', type='password', name='password', required='')
+                label.password-label(for='pw2') Confirm Password
+                input#password.passw(placeholder='•••••••', type='password', name='confirmPassword', required='')
+              button(type='submit') Sign up
+              .forgotpass
+                a(href='/forgot-password/new') Forgot password?
+
+
       
       // register form
-      form(method='POST' action='/register')
+      //- form(method='POST' action='/register')
         div.form
           label(for='name') Name:
           input#name.form-control(type='text', placeholder='First and Last' name='name')
@@ -21,6 +40,3 @@ block content
           label(for='pw2') Confirm Password:
           input#pw2.form-control(type='password' name='confirmPassword')
         button(type='submit') Sign up
-
-        //- .main.container.row
-        //-   .col-md-6.col-md-offset-3
