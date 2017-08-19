@@ -1,7 +1,15 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const session = require('express-session');
 const app = express();
+
+// use sessions for login tracking.
+app.use(session({
+  secret: 'pHoT0 cLuB', // required, string used to sign the session ID cookie.
+  resave: true, // save in session store, upon change.
+  saveUninitialized: false 
+}));
 
 // mongodb connection
 mongoose.connect("mongodb://localhost:27017/photoclub");
