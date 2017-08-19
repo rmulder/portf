@@ -25,19 +25,30 @@ router.get('/login', function(req, res, next) {
 });
 
 // POST /login
-router.post('/login', function(req, res, next) {
-  if (req.body.email && req.body.password) {
-    User.authenticate(req.body.email, req.body.password, function (error, user) {
-      if (error || !user) {
+router.post('/login', function(req, res, next)
+{
+  if (req.body.email && req.body.password)
+  {
+    User.authenticate(req.body.email, req.body.password, function (error, user)
+    {
+      if (error || !user)
+      {
+        console.error("Something wrong 1");
         var err = new Error('Wrong email or password.');
         err.status = 401;
         return next(err);
-      }  else {
+      }
+      else
+      {
+        console.error("Something wrong 2");
         req.session.userId = user._id;
         return res.redirect('/profile');
       }
     });
-  } else {
+  }
+  else
+  {
+    console.error("Something wrong 3");
     var err = new Error('Email and password are required.');
     err.status = 401;
     return next(err);
