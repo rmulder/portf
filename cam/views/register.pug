@@ -6,14 +6,14 @@ block content
         article.register
           .signbox
             h1 Join Photo Club
-            form.login-form(action='/register', method='POST')
+            form.login-form(method='POST' action='/register')
               fieldset(name='login-info')
                 label(for='name') Name 
                 input#email-address.eadd(placeholder='Name', type='text', name='name', required='')
-                label.lens-label(for='lens') Favorite Lens 
-                input#email-address.eadd(placeholder='50 f1.2', type='text', name='lens', required='')
+                label.lens-label(for='favoriteLens') Favorite Lens 
+                input#email-address.eadd(placeholder='50 f1.2', type='text', name='favoriteLens', required='')
                 label.email-label(for='email') Email 
-                input#email-address.eadd(placeholder='@.com', type='email', name='email-address', required='')
+                input#email-address.eadd(placeholder='@.com', type='email', name='email', required='')
                 label.password-label(for='pw') Password
                 input#password.passw(placeholder='•••••••', type='password', name='password', required='')
                 label.password-label(for='pw2') Confirm Password
@@ -21,24 +21,22 @@ block content
               button(type='submit') Sign up
               .forgotpass
                 a(href='/forgot-password/new') Forgot password?
-
-
       
       // register form
       //- form(method='POST' action='/register')
-        div.form
+        div.form-group
           label(for='name') Name:
-          input#name.form-control(type='text', placeholder='First and Last' name='name')
+          input#name.form-control(type='text', placeholder='first and last' name='name')
         div.form-group
           label(for='email') Email:
           input#email.form-control(type='email', placeholder='name@email.com' name='email')
         div.form-group
-          label(for='camera') Camera:
-          input#camera.form-control(type='text', placeholder='Camera' name='camera')
+          label(for='favoriteBook') Favorite Book:
+          input#favoriteBook.form-control(type='text', placeholder='title of book' name='favoriteBook')
         div.form-group
           label(for='pw') Password:
           input#pw.form-control(type='password' name='password')
         div.form-group
           label(for='pw2') Confirm Password:
           input#pw2.form-control(type='password' name='confirmPassword')
-        button(type='submit') Sign up
+        button.btn.btn-primary(type='submit') Sign up
