@@ -23,7 +23,7 @@ const UserSchema = new mongoose.Schema({
     }
 });
 
-// hashes password input before storage in DB. 
+// hashes password input before storage in DB.
 UserSchema.pre('save', function(next)
 {
   const user = this; // holds user object and it's data.
@@ -36,7 +36,7 @@ UserSchema.pre('save', function(next)
     {
       return next(err);
     }
-    user.password = hash;
+    user.password = hash; // re-assign hashed password to user.pass for storage in DB.
     next();
   })
 });
