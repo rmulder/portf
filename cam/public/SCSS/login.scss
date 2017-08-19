@@ -1,27 +1,41 @@
-// signup/register scss stylesheet
+// login main stylesheet test
 
-// importing vars.scss file.
-@import 'vars';
 
-// div.spec-padding
+$white: #FFFFFF; // white
+$fontm: 'Roboto', sans-serif;
+$fontsec: 'Open Sans';
+$basec: #5B5BE5; // old background blue.
+$robo: 'Roboto', sans-serif; // google fonts - Roboto light
+$green: #15CD72; // green color
+
+
+
+// backgroud color body
+// body
 // {
-//   height: 2em;
+//   background-color: #f8f9fa;
 // }
 
+div.spec-login-padding
+{
+  height: 4em;
+}
+
+
 // overall form input - to remove border
-div.spec-register fieldset
+div.spec-login fieldset
 {
   border: 0;
 }
 
-// white box - sign in
-div.spec-register .signbox
+// white box - log in
+div.spec-login .loginbox
 {
   display: block;
   margin: 0 auto 0 auto; // top right bott left
   text-align: center;
   width: 500px;
-  height: 660px;
+  height: 410px;
   background-color: #fff;
   border-radius: 3px;
 
@@ -29,18 +43,18 @@ div.spec-register .signbox
   transition: all 0.6s cubic-bezier(.25,.8,.25,1);
 }
 
-// "sign up" text
-div.spec-register .signbox > h1
+// "login" text
+div.spec-login .loginbox > h1
 {
   padding: 40px 40px 0px 40px; // top right bott left
   font-family: $robo;
   font-weight: 300;
   font-size: 35px;
-  color: #505050; // "sign up" color
+  color: #505050; // "log up" color
 }
 
 // Email and Password Labels
-div.spec-register label
+div.spec-login label
 {
   display: block;
   font-family: 'Avenir';
@@ -51,25 +65,25 @@ div.spec-register label
 }
 
 // name label control
-div.spec-register .lens-label
+div.spec-login .lens-label
 {
   margin: 10px 0px 0px 0px;
 }
 
 // name label control
-div.spec-register .email-label
+div.spec-login .email-label
 {
   margin: 10px 0px 0px 0px;
 }
 
 // password label control
-div.spec-register .password-label
+div.spec-login .password-label
 {
   margin: 10px 0px 0px 0px;
 }
 
 // input for email address and password boxes
-div.spec-register .eadd, .passw
+div.spec-login .eadd, .passw
 {
   // border: 2px #e7e7e7;
   border-style: solid;
@@ -77,27 +91,27 @@ div.spec-register .eadd, .passw
   border-color: #e7e7e7;
   width: 420px;
   height: 45px;
-  padding-left: 500px;
-  padding: 10px 0 10px 10px;
+  padding-left: 10px;
+  // padding: 10px 0 10px 10px;
   border-radius: 4px;
   display: inline;
 
   transition: border-color 0.4s ease-in-out;
 }
 
-div.spec-register .eadd:focus, .passw:focus
+div.spec-login .eadd:focus, .passw:focus
 {
   outline: 0;
   border-color: darken(#e7e7e7, 20%);
 }
 
-div.spec-register .eadd:hover
+div.spec-login .eadd:hover, .passw:hover
 {
   border-color: darken(#e7e7e7, 10%);
 }
 
 // place holder
-div.spec-register input::-webkit-input-placeholder
+div.spec-login input::-webkit-input-placeholder
 {
   color: #B0B0B0;
   font-size: 16px;
@@ -105,15 +119,15 @@ div.spec-register input::-webkit-input-placeholder
 }
 
 // text entered by user - changing font, size, color
-div.spec-register input[type="email"], input[type="text"]
+div.spec-login input[type="email"]
 {
   font-size: 18px;
   font-family: $robo;
   color: black;
 }
 
-// sign up button
-div.spec-register button
+// log up button
+div.spec-login button
 {
   width: 420px;
   height: auto;
@@ -130,43 +144,12 @@ div.spec-register button
   transition: all 0.6s cubic-bezier(.25,.8,.25,1);
 }
 
-// sign up button
-div.spec-register button:hover
+// log up button
+div.spec-login button:hover
 {
   // background-color: #0CB863;
 
   border-radius: 3px;
 
   box-shadow: 0 9px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-}
-
-// forgot password link
-div.spec-register div.forgotpass
-{
-  margin: 10px;
-  color: #B0B0B0;
-  text-align: center;
-  font-family: $robo;
-  font-size: 17px;
-  text-decoration: underline;
-}
-
-// forgot password link - "a" specifically
-div.forgotpass a:link
-{
-  color: #999;
-  transition: all 0.5s;
-}
-
-// forgot password link - "a" specifically
-div.forgotpass a:visited
-{
-  color: black;
-}
-
-// forgot password link - "a" specifically
-div.forgotpass a:hover
-{
-  transition: all 0.5s;
-  color: darken($white, 75%);
 }

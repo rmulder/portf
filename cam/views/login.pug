@@ -1,6 +1,26 @@
 extends layout
 
 block content
+  .spec-login-padding
+  .spec-login
+    article.login
+      .loginbox
+        h1 Login
+        form.login-form(method='POST' action='/login')
+          fieldset(name='login-info')
+            label.email-label(for='email') Email 
+            input#email-address.eadd(placeholder='@.com', type='email', name='email-address', required='')
+            label.password-label(for='pw') Password
+            input#password.passw(placeholder='•••••••', type='password', name='password', required='')
+          button(type='submit') Login
+
+  
+  
+  
+  
+  
+  
+  //-
         h1 Log In
         form(method='POST' action='/login')
           div.form-group
