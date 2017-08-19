@@ -2,7 +2,7 @@ div.spec-register fieldset {
   border: 0; }
 
 div.spec-register .signbox {
-  display: block;
+  display: table;
   margin: 0 auto 0 auto;
   text-align: center;
   width: 500px;

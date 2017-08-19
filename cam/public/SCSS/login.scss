@@ -1,12 +1,14 @@
 // login main stylesheet test
 
+// importing vars.scss file.
+@import 'vars';
 
-$white: #FFFFFF; // white
-$fontm: 'Roboto', sans-serif;
-$fontsec: 'Open Sans';
-$basec: #5B5BE5; // old background blue.
-$robo: 'Roboto', sans-serif; // google fonts - Roboto light
-$green: #15CD72; // green color
+// $white: #FFFFFF; // white
+// $fontm: 'Roboto', sans-serif;
+// $fontsec: 'Open Sans';
+// $basec: #5B5BE5; // old background blue.
+// $robo: 'Roboto', sans-serif; // google fonts - Roboto light
+// $green: #15CD72; // green color
 
 
 
@@ -31,7 +33,7 @@ div.spec-login fieldset
 // white box - log in
 div.spec-login .loginbox
 {
-  display: block;
+  display: table;
   margin: 0 auto 0 auto; // top right bott left
   text-align: center;
   width: 500px;
