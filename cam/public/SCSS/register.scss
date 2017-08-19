@@ -28,7 +28,7 @@ div.spec-register .signbox
   margin: 0 auto 0 auto; // top right bott left
   text-align: center;
   width: 500px;
-  height: 610px;
+  height: 660px;
   background-color: #fff;
   border-radius: 3px;
 
@@ -41,6 +41,7 @@ div.spec-register .signbox > h1
 {
   padding: 40px 40px 0px 40px; // top right bott left
   font-family: $robo;
+  font-weight: 300;
   font-size: 35px;
   color: #505050; // "sign up" color
 }
@@ -54,6 +55,12 @@ div.spec-register label
   font-size: 19px;
   text-align: left;
   padding: 0px 0px 10px 27px; // top right bott left
+}
+
+// name label control
+div.spec-register .lens-label
+{
+  margin: 10px 0px 0px 0px;
 }
 
 // name label control
@@ -81,11 +88,18 @@ div.spec-register .eadd, .passw
   padding: 10px 0 10px 10px;
   border-radius: 4px;
   display: inline;
+
+  transition: border-color 0.4s ease-in-out;
 }
 
 div.spec-register .eadd:focus, .passw:focus
 {
   outline: 0;
+}
+
+div.spec-register .eadd:hover, .passw:hover
+{
+  border-color: darken(#e7e7e7, 10%);
 }
 
 // place holder
@@ -97,7 +111,7 @@ div.spec-register input::-webkit-input-placeholder
 }
 
 // text entered by user - changing font, size, color
-div.spec-register input[type="email"]
+div.spec-register input[type="email"], input[type="text"]
 {
   font-size: 18px;
   font-family: $robo;
@@ -135,7 +149,7 @@ div.spec-register button:hover
 // forgot password link
 div.spec-register div.forgotpass
 {
-  margin: 20px;
+  margin: 10px;
   color: #B0B0B0;
   text-align: center;
   font-family: $robo;

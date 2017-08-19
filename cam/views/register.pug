@@ -5,11 +5,13 @@ block content
       .spec-register
         article.register
           .signbox
-            h1 Join
+            h1 Join Photo Club
             form.login-form(action='/register', method='POST')
               fieldset(name='login-info')
                 label(for='name') Name 
                 input#email-address.eadd(placeholder='Name', type='text', name='name', required='')
+                label.lens-label(for='lens') Favorite Lens 
+                input#email-address.eadd(placeholder='50 f1.2', type='text', name='lens', required='')
                 label.email-label(for='email') Email 
                 input#email-address.eadd(placeholder='@.com', type='email', name='email-address', required='')
                 label.password-label(for='pw') Password
