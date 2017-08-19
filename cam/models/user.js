@@ -26,11 +26,11 @@ const UserSchema = new mongoose.Schema({
 // hashes password input before storage in DB.
 UserSchema.pre('save', function(next)
 {
-  const user = this; // holds user object and it's data.
+  var user = this; // holds user object and it's data.
 
   // hash and salt.
   // number = # of times to use encrypt algorithm
-  bcrypt.hash(user.password, 25, function(err, hash)
+  bcrypt.hash(user.password, 9, function(err, hash)
   {
     if (err)
     {
