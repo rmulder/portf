@@ -8,8 +8,14 @@ const app = express();
 app.use(session({
   secret: 'pHoT0 cLuB', // required, string used to sign the session ID cookie.
   resave: true, // save in session store, upon change.
-  saveUninitialized: false 
+  saveUninitialized: false
 }));
+
+// make user ID available in templates
+app.use(function (req, res, next) {
+  res.locals.currentUser = req.session.userId;
+  next();
+});
 
 // mongodb connection
 mongoose.connect("mongodb://localhost:27017/photoclub");

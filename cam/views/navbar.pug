@@ -8,7 +8,8 @@ section.navigation
               span
           ul.nav-list
             li
-              a(href='register') Sign Up
+              if !currentUser
+                a(href='register') Sign Up
             li
               a(href='about') About
             li
@@ -18,12 +19,16 @@ section.navigation
                   a(href='contact') Actual Connections
             li
               a(href='profile') My Profile
-            li
-              a(href='login') Login
-
-
-
-
+            //- li
+            //-   a(href='login') Login
+              
+          
+            if (currentUser)
+              li
+                a(href='/logout') Log out
+            else
+              li 
+                a(href='login') Login
 
 
 
