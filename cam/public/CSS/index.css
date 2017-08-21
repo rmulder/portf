@@ -1,0 +1,35 @@
+div.spec-index-padd {
+  height: 4em; }
+
+div.spec-index-box article {
+  display: table;
+  max-width: 900px;
+  width: 90%;
+  height: 200px;
+  background: #fff;
+  margin: 0 auto;
+  border-radius: 5px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.6s ease-in-out; }
+
+div.spec-index-box article:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.07), 0 10px 10px rgba(0, 0, 0, 0.07); }
+
+div.spec-index-box article p {
+  text-align: center;
+  vertical-align: middle;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5em;
+  font-weight: 400;
+  color: black; }
+
+div.spec-index-box article a {
+  display: block;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 1.4em;
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+  color: black; }
+
+/*# sourceMappingURL=index.css.map */
