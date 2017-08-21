@@ -1,14 +1,25 @@
-function loggedOut(req, res, next) {
-  if (req.session && req.session.userId) {
+"use strict";
+
+// if logged in, then redirect
+function loggedOut(req, res, next)
+{
+  if(req.session && req.session.userId)
+  {
     return res.redirect('/profile');
   }
   return next();
 }
-function requiresLogin(req, res, next) {
-  if (req.session && req.session.userId) {
+
+// need to login to view page.
+function requiresLogin(req, res, next)
+{
+  if(req.session && req.session.userId)
+  {
     return next();
-  } else {
-    var err = new Error('You must be logged in to view this page.');
+  }
+  else
+  {
+    let err = new Error('Need to login to view!');
     err.status = 401;
     return next(err);
   }
