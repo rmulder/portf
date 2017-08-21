@@ -1,5 +1,5 @@
 div.spec-index-padd {
-  height: 4em; }
+  height: 7em; }
 
 div.spec-index-box article {
   display: table;
@@ -18,18 +18,11 @@ div.spec-index-box article:hover {
 div.spec-index-box article p {
   text-align: center;
   vertical-align: middle;
-  font-family: "Roboto", sans-serif;
-  font-size: 1.5em;
-  font-weight: 400;
-  color: black; }
-
-div.spec-index-box article a {
-  display: block;
+  display: table-cell;
   vertical-align: middle;
-  text-align: center;
-  font-size: 1.4em;
-  font-weight: 400;
   font-family: "Roboto", sans-serif;
+  font-size: 1.3em;
+  font-weight: 400;
   color: black; }
 
 /*# sourceMappingURL=index.css.map */
