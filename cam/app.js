@@ -2,13 +2,23 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const session = require('express-session');
+const MongoStore = require('connect-mongo')(session);
 const app = express();
 
-// use sessions for login tracking.
+// mongodb connection
+mongoose.connect("mongodb://localhost:27017/photoclub");
+const db = mongoose.connection;
+// errors with database connection, logs to console.
+db.on('error', console.error.bind(console, 'connection error:'));
+
+// use sessions for tracking logins
 app.use(session({
-  secret: 'pHoT0 cLuB', // required, string used to sign the session ID cookie.
-  resave: true, // save in session store, upon change.
-  saveUninitialized: false
+  secret: 'PhOt0 cLuB',
+  resave: true,
+  saveUninitialized: false,
+  store: new MongoStore({
+    mongooseConnection: db
+  })
 }));
 
 // make user ID available in templates
@@ -16,12 +26,6 @@ app.use(function (req, res, next) {
   res.locals.currentUser = req.session.userId;
   next();
 });
-
-// mongodb connection
-mongoose.connect("mongodb://localhost:27017/photoclub");
-const db = mongoose.connection;
-// errors with database connection, logs to console.
-db.on('error', console.error.bind(console, 'connection error:'));
 
 // parse incoming requests
 app.use(bodyParser.json());
