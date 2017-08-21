@@ -1,15 +1,18 @@
 extends layout
 
 block content
-        h1 Log In
-        form(method='POST' action='/login')
-          div.form-group
-            label(for='email') Email
-            input.form-control(type='text' id='email' placeholder='email' name='email')
-          div.form-group
+  .spec-login-padding
+  .spec-login
+    article.login
+      .loginbox
+        h1 Login
+        form.login-form(method='POST' action='/login') <!-- Up to here -->
+          fieldset(name='login-info')
+            label.email-label(for='email') Email 
+            input#email-address.eadd(type='text' placeholder='email' name='email' required='')
             label(for='password') Password
-            input.form-control(type='password' id='password' placeholder='password' name='password')
-          button.btn.btn-primary(type='submit') Log in        
+            input#password.passw(type='password' placeholder='•••••••' name='password' required='')
+          button(type='submit') Login
 
 //-  .spec-login-padding
   .spec-login

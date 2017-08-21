@@ -3,17 +3,23 @@ var router = express.Router();
 var User = require('../models/user');
 
 // GET /profile
-router.get('/profile', function(req, res, next) {
-  if (! req.session.userId ) {
-    var err = new Error("You are not authorized to view this page.");
+router.get('/profile', function(req, res, next)
+{
+  if (!req.session.userId)
+  {
+    var err = new Error("Not authorized to view! Login");
     err.status = 403;
     return next(err);
   }
   User.findById(req.session.userId)
-      .exec(function (error, user) {
-        if (error) {
+      .exec(function (error, user)
+      {
+        if (error)
+        {
           return next(error);
-        } else {
+        }
+        else
+        {
           return res.render('profile', { title: 'Profile', name: user.name, favorite: user.favoriteLens });
         }
       });
@@ -33,14 +39,14 @@ router.post('/login', function(req, res, next)
     {
       if (error || !user)
       {
-        console.error("Something wrong 1");
+        console.error("error when authenticating! 401 status");
         var err = new Error('Wrong email or password.');
         err.status = 401;
         return next(err);
       }
       else
       {
-        console.error("Something wrong 2");
+        console.log("redirect to /profile page");
         req.session.userId = user._id;
         return res.redirect('/profile');
       }
@@ -48,8 +54,8 @@ router.post('/login', function(req, res, next)
   }
   else
   {
-    console.error("Something wrong 3");
-    var err = new Error('Email and password are required.');
+    console.error("User didn't enter username and/or password; 401 status");
+    var err = new Error('Email & Password Required!');
     err.status = 401;
     return next(err);
   }
@@ -57,12 +63,14 @@ router.post('/login', function(req, res, next)
 
 
 // GET /register
-router.get('/register', function(req, res, next) {
+router.get('/register', function(req, res, next)
+{
   return res.render('register', { title: 'Sign Up' });
 });
 
 // POST /register
-router.post('/register', function(req, res, next) {
+router.post('/register', function(req, res, next)
+{
   if (req.body.email &&
     req.body.name &&
     req.body.favoriteLens &&

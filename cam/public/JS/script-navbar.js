@@ -1,4 +1,4 @@
-// "use strict";
+"use strict";
 
 console.log("Connection test");
 console.log("Working!");
