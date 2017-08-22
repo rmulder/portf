@@ -1,7 +1,7 @@
-var express = require('express');
-var router = express.Router();
-var User = require('../models/user');
-var mid = require('../middleware');
+let express = require('express');
+let router = express.Router();
+let User = require('../models/user');
+let mid = require('../middleware');
 
 // GET /profile
 router.get('/profile', mid.requiresLogin, function(req, res, next)
@@ -56,7 +56,7 @@ router.post('/login', function(req, res, next)
       if (error || !user)
       {
         console.error("error when authenticating! 401 status");
-        var err = new Error('Wrong email or password.');
+        let err = new Error('Wrong email AND/OR Password!');
         err.status = 401;
         return next(err);
       }
@@ -71,7 +71,7 @@ router.post('/login', function(req, res, next)
   else
   {
     console.error("User didn't enter username and/or password; 401 status");
-    var err = new Error('Email & Password Required!');
+    let err = new Error('Email & Password Required!');
     err.status = 401;
     return next(err);
   }
@@ -96,13 +96,13 @@ router.post('/register', function(req, res, next)
       // confirm that user typed same password twice
       if (req.body.password !== req.body.confirmPassword)
       {
-        var err = new Error('Passwords do not match.');
+        let err = new Error('Passwords do not match.');
         err.status = 400;
         return next(err);
       }
 
       // create object with form input
-      var userData = {
+      let userData = {
         email: req.body.email,
         name: req.body.name,
         favoriteLens: req.body.favoriteLens,
@@ -124,7 +124,7 @@ router.post('/register', function(req, res, next)
     }
     else
     {
-      var err = new Error('All fields required.');
+      let err = new Error('All fields required.');
       err.status = 400;
       return next(err);
     }

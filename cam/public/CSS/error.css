@@ -1,0 +1,24 @@
+div.spec-error-padd-top {
+  height: 3.5em; }
+
+div.spec-error-padd {
+  height: 5em; }
+
+div.spec-error-box article {
+  text-align: center;
+  display: table;
+  width: auto;
+  height: auto;
+  background: #fff;
+  margin: 0 auto;
+  border-radius: 5px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  font-size: 1.3em;
+  box-shadow: 0 3px 20px rgba(255, 0, 0, 0.4);
+  transition: all 0.6s ease-in-out; }
+
+div.spec-error-box article:hover {
+  box-shadow: 0 14px 28px rgba(255, 0, 0, 0.26), 0 10px 10px rgba(255, 0, 0, 0.26); }
+
+/*# sourceMappingURL=error.css.map */
