@@ -9,8 +9,28 @@
 	</head>
   <body>
     <div class="imgLogo">
-      <a href="index.html"><img src="../IMG/m_logo.png" alt="Indian Accent" /></a>
+      <a href="../index.html"><img src="../IMG/m_logo.png" alt="Indian Accent" /></a>
     </div>
+
+    <h1>My First Google Map</h1>
+
+    <div id="googleMap" style="width:100%;height:400px;"></div>
+
+    <script>
+    function myMap()
+    {
+    let mapProp=
+    {
+        center:new google.maps.LatLng(51.508742,-0.120850),
+        zoom:5,
+    };
+    var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+    }
+    </script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUfwdR2pfZjGYMVpCc0amlZHOo6LN6veU&callback=myMap"></script>
+
+    <!-- GMaps API Key: AIzaSyAouk4GB3pCNTYYCPfF2Z7EQ3MlaGIIZAM -->
 
   </body>
 </html>
