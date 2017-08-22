@@ -8,4 +8,10 @@ Minimalist website.
 Minimalist Art Portfolio Sample website.
 
 ## Photo 
-Photography Club Website Sample. 
+Responsive Navigation Bar. 
+
+## Cam
+Photography Club Website. 
+
+## Menu
+Restaurant Website. 
