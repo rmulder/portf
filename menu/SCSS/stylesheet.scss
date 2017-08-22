@@ -1,12 +1,28 @@
 // main stylesheet
 
-$white: #fff;
+@import "vars";
+
+// $white: #fff;
+
+div.imgLogo img
+{
+	padding-top: 1em;
+	height: auto;
+	width: 20%;
+	max-width: 100%;
+	min-width: 29em;
+
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .menu--inola
 {
 	display: flex;
 	flex-direction: column;
 	align-items: left;
+	margin-top: -10em;
 }
 
 .menu--inola .menu__item
@@ -53,12 +69,14 @@ $white: #fff;
 	transform-origin: 0% 50%;
 }
 
-.menu--inola .menu__item-label {
+.menu--inola .menu__item-label
+{
 	font-size: 0.85em;
 	margin-top: 0.5em;
 	letter-spacing: 0.2em;
 	text-transform: uppercase;
 	color: var(--color-link);
+	text-align: center;
 }
 
 .menu--inola .menu__item-label::after {
