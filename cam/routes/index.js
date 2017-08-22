@@ -81,12 +81,14 @@ router.post('/login', function(req, res, next)
 // GET /register
 router.get('/register', mid.loggedOut, function(req, res, next)
 {
+  console.log("get request to /register page.");
   return res.render('register', { title: 'Sign Up' });
 });
 
 // POST /register
 router.post('/register', function(req, res, next)
 {
+  console.log("POST request to /register page, checking inputed fields!");
   if (req.body.email &&
     req.body.name &&
     req.body.favoriteLens &&
@@ -96,6 +98,7 @@ router.post('/register', function(req, res, next)
       // confirm that user typed same password twice
       if (req.body.password !== req.body.confirmPassword)
       {
+        console.error("Password and Confirm Password don't match! 400 status");
         let err = new Error('Passwords do not match.');
         err.status = 400;
         return next(err);
@@ -117,6 +120,7 @@ router.post('/register', function(req, res, next)
         }
         else
         {
+          console.log("Session assigned to user on login!");
           req.session.userId = user._id; // basically auto logins
           return res.redirect('/profile');
         }
@@ -124,24 +128,28 @@ router.post('/register', function(req, res, next)
     }
     else
     {
-      let err = new Error('All fields required.');
+      console.error("User hasn't entered all fields. Not possible, all fields required!");
+      let err = new Error('All fields required!');
       err.status = 400;
       return next(err);
     }
 })
 
 // GET /
-router.get('/', function(req, res, next) {
+router.get('/', function(req, res, next)
+{
   return res.render('index', { title: 'Home' });
 });
 
 // GET /about
-router.get('/about', function(req, res, next) {
+router.get('/about', function(req, res, next)
+{
   return res.render('about', { title: 'About' });
 });
 
 // GET /contact
-router.get('/contact', function(req, res, next) {
+router.get('/contact', function(req, res, next)
+{
   return res.render('contact', { title: 'Contact' });
 });
 
