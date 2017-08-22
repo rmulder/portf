@@ -8,4 +8,7 @@ Minimalist website.
 Minimalist Art Portfolio Sample website.
 
 ## Photo 
-Photography Club Website Sample. 
+Test Site.
+
+## Cam
+Photography Club Website. 
