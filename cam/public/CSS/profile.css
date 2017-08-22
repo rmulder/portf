@@ -1,0 +1,43 @@
+div.spec-profile-padd-top {
+  height: 3.5em; }
+
+div.spec-profile-padd {
+  height: 5em; }
+
+div.spec-profile-box article {
+  text-align: center;
+  display: table;
+  max-width: 1500px;
+  width: 84%;
+  min-height: 200px;
+  height: auto;
+  background: #fff;
+  margin: 0 auto;
+  border-radius: 5px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.6s ease-in-out; }
+
+div.spec-profile-box article:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.07), 0 10px 10px rgba(0, 0, 0, 0.07); }
+
+div.spec-profile-box article p {
+  text-align: center;
+  vertical-align: middle;
+  display: table-cell;
+  vertical-align: middle;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3em;
+  font-weight: 400;
+  color: black; }
+
+div.spec-profile-box article a {
+  text-align: center;
+  vertical-align: middle;
+  display: block;
+  vertical-align: middle;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3em;
+  font-weight: 400;
+  color: black; }
+
+/*# sourceMappingURL=profile.css.map */
