@@ -13,16 +13,22 @@ section.navigation
             li
               a(href='about') About
             li
-              a(href='#!') Connections
+              a(href='contact') Contact
+            li
+              a(href='#!') Useful Links
               ul.nav-dropdown
                 li
-                  a(href='contact') Actual Connections
+                  a(href='https://500px.com/home', target="_blank") 500px
+                li
+                  a(href='https://www.behance.net/', target="_blank") Behance
+                li
+                  a(href='https://www.shutterstock.com/', target="_blank") Shutter Stock
+                li
+                  a(href='http://imgur.com/', target="_blank") Imgur
             li
               a(href='profile') My Profile
             //- li
             //-   a(href='login') Login
-              
-          
             if (currentUser)
               li
                 a(href='/logout') Log out
