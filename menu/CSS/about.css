@@ -1,6 +1,12 @@
 body {
   background-color: #1f1e1e; }
 
+div.gmaps article #map {
+  width: 90%;
+  height: 500px;
+  display: block;
+  margin: 0 auto; }
+
 div.imgLogo img {
   padding-top: 1em;
   height: auto;

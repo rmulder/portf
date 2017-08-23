@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8" />
+		<meta charset="UTF-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>About Us</title>
 		<link href="https://fonts.googleapis.com/css?family=Roboto:400,700|Fanwood+Text" rel="stylesheet">
@@ -12,25 +12,38 @@
       <a href="../index.html"><img src="../IMG/m_logo.png" alt="Indian Accent" /></a>
     </div>
 
-    <h1>My First Google Map</h1>
+		<div class="gmaps">
+			<article>
+				<h1>Location</h1>
+				<div id="map">
+					<!-- Google Maps API Styling -->
+				</div>
+			</article>
+		</div>
 
-    <div id="googleMap" style="width:100%;height:400px;"></div>
+		<script>
+		function myMap()
+		{
+		  const myCenter = new google.maps.LatLng(28.5704591,77.2566125);
+		  const mapCanvas = document.getElementById("map");
+		  const mapOptions = {center: myCenter, zoom: 10};
+		  const map = new google.maps.Map(mapCanvas, mapOptions);
+		  const marker = new google.maps.Marker({position:myCenter});
+		  marker.setMap(map);
 
-    <script>
-    function myMap()
-    {
-    let mapProp=
-    {
-        center:new google.maps.LatLng(51.508742,-0.120850),
-        zoom:5,
-    };
-    var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
-    }
-    </script>
+		google.maps.event.addListener(marker,'click',function()
+		{
+	    map.setZoom(14);
+	    map.setCenter(marker.getPosition());
+  	});
+		}
+</script>
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUfwdR2pfZjGYMVpCc0amlZHOo6LN6veU&callback=myMap"></script>
 
     <!-- GMaps API Key: AIzaSyAouk4GB3pCNTYYCPfF2Z7EQ3MlaGIIZAM -->
+		<!-- Lat: 28.5704591-->
+		<!-- Long: 77.2566125 -->
 
   </body>
 </html>
