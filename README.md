@@ -15,3 +15,6 @@ Photography Club Website.
 
 ## Menu
 Restaurant Website. 
+
+## Grade
+Grade Calculator Website.
