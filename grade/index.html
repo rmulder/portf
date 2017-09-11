@@ -7,11 +7,14 @@
     <meta name = "description" content = "A final grade calculator website. Calculate the grade you need to earn on your final to attain your final grade goal!" />
     <link rel="stylesheet" type="text/css" href="CSS/style.css"> <!-- Linking compiled css -->
     <link rel="stylesheet" type="text/css" href="CSS/vars.css"> <!-- Linking compiled css -->
+    <link rel="stylesheet" type="text/css" href="CSS/input.css"> <!-- Linking compiled css -->
     <title>Final Grade Calculator</title>
     <!-- Angular Material style sheet -->
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400|Open+Sans:300,400,600|Roboto:100,300,400,500,700" rel="stylesheet"> <!-- G Fonts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> <!-- jQuery Google CDN -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- <script src="https://threejs.org/examples/js/libs/stats.min.js"></script> -->
   </head>
   <body>
     <div class="title-header">
@@ -28,14 +31,44 @@
 
 
     <article class="calculations">
-      <label>Current Grade</label>
-      <input type="number" id = "current-percent" value = "" onblur="calculate()" required/>
-      <label>Desired Grade</label>
-      <input type="number" id = "min-percent" value = "" onblur="calculate()" required/>
-      <label>Final Worth</label>
-      <input type="number" id = "final-percent" value = "" onblur="calculate(); checker();" required/>
+
+      <div class="main-container page__container">
+
+      <label class="field field_type2">
+        <input type="number" id = "current-percent" value = "" onblur="calculate()" class="field__input" placeholder="90%" required/>
+          <span class="field__label-wrap">
+            <span class="field__label">Enter your Current Percentage in the Class</span>
+          </span>
+      </label>
+
+      <label class="field field_type2">
+      <input type="number" id = "min-percent" value = "" onblur="calculate()" class="field__input" placeholder="95%" required/>
+      <span class="field__label-wrap">
+        <span class="field__label">Enter your wanted Percentage in the Class</span>
+      </span>
+      </label>
+
+      <label class="field field_type2">
+      <input type="number" id = "final-percent" value = "" onblur="calculate(); checker();" class="field__input" placeholder="20%" required/>
+      <span class="field__label-wrap">
+        <span class="field__label">Enter percentage of Final</span>
+      </span>
+
       <label>Grade on Final Needed</label>
       <input type="text" id = "total" value = " " onfocus="checker()" readonly/>
+    </div>
+
+
+
+    <!-- <div class="main-container page__container">
+    <label class="field field_type2">
+      <input class="field__input" placeholder="UI developer">
+      <span class="field__label-wrap">
+        <span class="field__label">Enter your post</span>
+      </span>
+    </label>
+    </div> -->
+
     </article>
 
     </div>
