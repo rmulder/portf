@@ -4,7 +4,7 @@
 
 body
 {
-  background-color: #00c6fb;
+  background-color: $back;
 }
 
 div.title-header
@@ -58,4 +58,19 @@ div.spec-index-box article.about-info p, a
   // top: 50%;
   // left: 50%;
   // transform: translate(-50%, -50%);
+}
+
+div.spec-index-box article.calculations input
+{
+  margin: 0 auto;
+  display: block;
+  border-radius: 3em;
+  outline: none;
+  text-align: center;
+}
+
+div.spec-index-box article.calculations label
+{
+  display: block;
+  margin: 0 auto;
 }

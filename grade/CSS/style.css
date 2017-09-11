@@ -28,4 +28,15 @@ div.spec-index-box article.about-info p, a {
   font-size: 1.3em;
   color: black; }
 
+div.spec-index-box article.calculations input {
+  margin: 0 auto;
+  display: block;
+  border-radius: 3em;
+  outline: none;
+  text-align: center; }
+
+div.spec-index-box article.calculations label {
+  display: block;
+  margin: 0 auto; }
+
 /*# sourceMappingURL=style.css.map */

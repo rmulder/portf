@@ -22,19 +22,19 @@
     </div>
 
     <div class="spec-index-box"/>
-    <article class="about-info">
+    <!-- <article class="about-info">
       <p>Use this tool to calculate the grade needed on the final to get a specified grade in the class</p>
-    </article>
+    </article> -->
 
 
     <article class="calculations">
-      <label>Current Grade:</label>
-      <input type="number" id = "current-percent" value = "" required/>
-      <label>Desired Grade:</label>
-      <input type="number" id = "min-percent" value = "" required/>
-      <label>Final Worth:</label>
-      <input type="number" id = "final-percent" value = "" onblur="calculate()" required/>
-      <label>Total:</label>
+      <label>Current Grade</label>
+      <input type="number" id = "current-percent" value = "" onblur="calculate()" required/>
+      <label>Desired Grade</label>
+      <input type="number" id = "min-percent" value = "" onblur="calculate()" required/>
+      <label>Final Worth</label>
+      <input type="number" id = "final-percent" value = "" onblur="calculate(); checker();" required/>
+      <label>Grade on Final Needed</label>
       <input type="text" id = "total" value = " " onfocus="checker()" readonly/>
     </article>
 

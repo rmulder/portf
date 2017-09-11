@@ -1,25 +1,38 @@
-// 'use strict';
 
-calculate = function()
+function calculate()
 {
-    let a = document.getElementById('current-percent').value;
-    let b = document.getElementById('min-percent').value;
-    let c = document.getElementById('final-percent').value;
-    let total = parseInt(a)*parseInt(b)*parseInt(c);
-    document.getElementById('total').value = parseInt(a)*parseInt(b)*parseInt(c);
+    let a = parseInt(document.getElementById('current-percent').value, 10);
+    let b = parseInt(document.getElementById('min-percent').value, 10);
+    let c = parseInt(document.getElementById('final-percent').value, 10);
+    // let total = a + b + c;
+    let total = (( (b/100) - (1 - (c/100) ) * (a/100) ) / (c/100) * 100);
+    document.getElementById('total').value = total;
+
     console.log("Total of the items entered: " + total);
+
+    if(total > 100)
+    {
+      alert("Won't be able to get that desired score without extra credit! Sorry!")
+      console.error("Sorry, but is not possible to get your desired grade without extra credit being on the final!");
+    }
+
+    if( !isNaN(total) )
+    {
+      console.log("Everything was fine when calculating when user entered numbers!");
+    }
+    if( isNaN(total) )
+    {
+      console.error("There was an error when calculating the numbers entered! Try Again!");
+    }
 }
 
-checker = function()
+function checker()
 {
-  if(total == !NaN)
-  {
-    console.log("Everything was fine when calculating when user entered numbers!");
-  }
-  if( !isNaN(total) )
-  {
-    console.error("There was an error when calculating the numbers entered! Try Again!");
-  }
+  // if(total < 100)
+  // {
+  //   alert("Won't be able to get that desired score without extra credit! Sorry!")
+  //   console.error("Sorry, but is not possible to get your desired grade without extra credit being on the final!");
+  // }
 }
 
 // $(document).ready(function()
