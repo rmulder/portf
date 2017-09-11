@@ -7,7 +7,6 @@
     <meta name = "description" content = "A final grade calculator website. Calculate the grade you need to earn on your final to attain your final grade goal!" />
     <link rel="stylesheet" type="text/css" href="CSS/style.css"> <!-- Linking compiled css -->
     <link rel="stylesheet" type="text/css" href="CSS/vars.css"> <!-- Linking compiled css -->
-    <link rel="shortcut icon" type="image/png" href="IMG/favicon.ico"/> <!-- favicon link -->
     <title>Final Grade Calculator</title>
     <!-- Angular Material style sheet -->
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
@@ -26,20 +25,21 @@
     <article class="about-info">
       <p>Use this tool to calculate the grade needed on the final to get a specified grade in the class</p>
     </article>
-    </div>
 
-    <div class="calculations">
+
+    <article class="calculations">
       <label>Current Grade:</label>
-      <input type="text" id = "current-percent" value = " "/>
+      <input type="number" id = "current-percent" value = "" required/>
       <label>Desired Grade:</label>
-      <input type="text" id = "min-percent" value = " "/>
+      <input type="number" id = "min-percent" value = "" required/>
       <label>Final Worth:</label>
-      <input type="text" id = "final-percent" value = " "/>
+      <input type="number" id = "final-percent" value = "" onblur="calculate()" required/>
       <label>Total:</label>
-      <input type="text" id = "total" value = " "/>
+      <input type="text" id = "total" value = " " onfocus="checker()" readonly/>
+    </article>
+
     </div>
 
-    <script src="JS/app.js">
-</script>
+    <script src="JS/app.js"></script>
   </body>
 </html>
