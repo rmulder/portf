@@ -1,6 +1,18 @@
 // main stylesheet
 
+@import "vars";
+
 body
 {
-  background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
+  background-image: linear-gradient(to bottom, #4facfe 0%, #00f2fe 100%);
+}
+
+.title-header
+{
+  color: $white;
+  font-size: 4em;
+  font-family: $robo;
+  text-align: center;
+  // padding: 5em 0em;
+  font-weight: 100;
 }
