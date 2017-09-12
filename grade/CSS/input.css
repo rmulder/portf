@@ -109,7 +109,7 @@
 */
 .field {
   --fieldBorderColor: #fff;
-  --fieldBorderColorActive: #afeeff;
+  --fieldBorderColorActive: #ecf9fd;
   --fieldPlaceholderColor: #fff;
   color: #fff; }
 

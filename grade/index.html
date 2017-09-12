@@ -7,6 +7,7 @@
     <meta name = "description" content = "A final grade calculator website. Calculate the grade you need to earn on your final to attain your final grade goal!" />
     <link rel="stylesheet" type="text/css" href="CSS/style.css"> <!-- Linking compiled css -->
     <link rel="stylesheet" type="text/css" href="CSS/vars.css"> <!-- Linking compiled css -->
+    <link rel="stylesheet" type="text/css" href="CSS/button.css"> <!-- Linking compiled css -->
     <link rel="stylesheet" type="text/css" href="CSS/input.css"> <!-- Linking compiled css -->
     <title>Final Grade Calculator</title>
     <!-- Angular Material style sheet -->
@@ -35,27 +36,29 @@
       <div class="main-container page__container">
 
       <label class="field field_type2">
-        <input type="number" id = "current-percent" value = "" onblur="calculate()" class="field__input" placeholder="90%" required/>
+        <input type="number" id = "current-percent" value = "" onblur="calculate()" class="field__input" placeholder="e.g. 90%" required/>
           <span class="field__label-wrap">
             <span class="field__label">Current % in Class</span>
           </span>
       </label>
 
       <label class="field field_type2">
-      <input type="number" id = "min-percent" value = "" onblur="calculate()" class="field__input" placeholder="95%" required/>
+      <input type="number" id = "min-percent" value = "" onblur="calculate()" class="field__input" placeholder="e.g. 95%" required/>
       <span class="field__label-wrap">
         <span class="field__label">Grade % Wanted</span>
       </span>
       </label>
 
       <label class="field field_type2">
-      <input type="number" id = "final-percent" value = "" onblur="calculate(); checker();" class="field__input" placeholder="20%" required/>
+      <input type="number" id = "final-percent" value = "" onblur="calculate(); checker();" class="field__input" placeholder="e.g. 20%" required/>
       <span class="field__label-wrap">
         <span class="field__label">Final % Weight</span>
       </span>
       </div>
 
-      <button class="spec-butt" type="button">Calculate</button>
+      <div class="overall-butt">
+        <button class="spec-butt" type="button">Calculate</button>
+      </div>
 
 
       <label>Grade on Final Needed</label>

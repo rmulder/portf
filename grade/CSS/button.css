@@ -1,0 +1,26 @@
+div.overall-butt {
+  margin: -4em 0em 1em 0em; }
+
+div.overall-butt button.spec-butt {
+  padding: 0;
+  margin: 0;
+  display: block;
+  margin: 0 auto;
+  font-size: 25px;
+  border: none;
+  background-color: #fff;
+  color: #48c6ef;
+  text-align: center;
+  height: 1.7em;
+  width: 5em;
+  outline: none;
+  border-radius: 0.2em;
+  box-shadow: 0 1px 20px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.8s cubic-bezier(0.25, 0.8, 0.25, 1); }
+
+div.overall-butt button.spec-butt:hover {
+  cursor: pointer;
+  border-radius: 0.2em;
+  box-shadow: 0 9px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
+
+/*# sourceMappingURL=button.css.map */

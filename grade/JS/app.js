@@ -6,7 +6,7 @@ function calculate()
     let c = parseInt(document.getElementById('final-percent').value, 10);
     // let total = a + b + c;
     let total = (( (b/100) - (1 - (c/100) ) * (a/100) ) / (c/100) * 100);
-    document.getElementById('total').value = total;
+    document.getElementById('total').value = (total + "%");
 
     console.log("Total of the items entered: " + total);
 
