@@ -2,13 +2,8 @@
 
 @import "vars";
 
-/*
-* field
-*/
-
-/* reset */
-
-.field{
+.field
+{
   --uiFieldPaddingTop: var(--fieldPaddingTop, 10px);
   --uiFieldPaddingRight: var(--fieldPaddingRight, 0px);
   --uiFieldPaddingBottom: var(--fieldPaddingBottom, 10px);
@@ -62,21 +57,25 @@
   color: $white;
 }
 
-.field__input::-webkit-input-placeholder{
+.field__input::-webkit-input-placeholder
+{
   color: var(--uiFieldPlaceholderColor);
   opacity: 0;
 }
 
-.field__input::-moz-placeholder{
+.field__input::-moz-placeholder
+{
   color: var(--uiFieldPlaceholderColor);
   opacity: 0;
 }
 
-.field__input:focus{
+.field__input:focus
+{
   outline: none;
 }
 
-.field__input:focus::-webkit-input-placeholder{
+.field__input:focus::-webkit-input-placeholder
+{
   transition: opacity var(--uiFieldAnimationDuration) ease-out var(--uiFieldAnimationDuration);
   opacity: 1;
 }
@@ -162,9 +161,10 @@
 * demo styles
 */
 
-.field{
+.field
+{
   --fieldBorderColor: #fff;
-  --fieldBorderColorActive: lighten($back, 30%);
+  --fieldBorderColorActive: lighten($back, 35%);
   --fieldPlaceholderColor: #fff;
   color: #fff;
 }

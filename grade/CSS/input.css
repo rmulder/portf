@@ -1,7 +1,3 @@
-/*
-* field
-*/
-/* reset */
 .field {
   --uiFieldPaddingTop: var(--fieldPaddingTop, 10px);
   --uiFieldPaddingRight: var(--fieldPaddingRight, 0px);
@@ -113,7 +109,7 @@
 */
 .field {
   --fieldBorderColor: #fff;
-  --fieldBorderColorActive: #95e9ff;
+  --fieldBorderColorActive: #afeeff;
   --fieldPlaceholderColor: #fff;
   color: #fff; }
 
