@@ -28,4 +28,8 @@ div.spec-index-box article.calculations label {
   display: block;
   margin: 0 auto; }
 
+div.spec-index-box article div.spec-total input {
+  background-color: transparent;
+  border: none; }
+
 /*# sourceMappingURL=style.css.map */
