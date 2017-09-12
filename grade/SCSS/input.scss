@@ -118,7 +118,8 @@
 }
 
 
-.field__input:hover ~ .field__label-wrap .field__label
+// custom added, when data entered is valid, info about input field shows up
+.field__input:valid ~ .field__label-wrap .field__label
 {
   opacity: 1;
   top: calc(-1 * calc(var(--uiFieldPaddingTop) + var(--uiFieldBorderTop) + 15px));

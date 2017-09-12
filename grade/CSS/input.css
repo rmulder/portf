@@ -82,7 +82,7 @@
   opacity: 1;
   top: calc(-1 * calc(var(--uiFieldPaddingTop) + var(--uiFieldBorderTop) + 15px)); }
 
-.field__input:hover ~ .field__label-wrap .field__label {
+.field__input:valid ~ .field__label-wrap .field__label {
   opacity: 1;
   top: calc(-1 * calc(var(--uiFieldPaddingTop) + var(--uiFieldBorderTop) + 15px)); }
 
