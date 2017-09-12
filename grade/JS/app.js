@@ -8,8 +8,6 @@ function calculate()
     let total = (( (b/100) - (1 - (c/100) ) * (a/100) ) / (c/100) * 100);
     document.getElementById('total').value = (total.toPrecision(5) + "%");
 
-    console.log("Total of the items entered: " + total);
-
     if( !isNaN(total) )
     {
       console.log("Everything was fine when calculating when user entered numbers!");
@@ -24,15 +22,6 @@ function calculate()
       alert("Won't be able to get that desired score without extra credit! Sorry!")
       console.error("Sorry, but is not possible to get your desired grade without extra credit being on the final!");
     }
-}
-
-function checker()
-{
-  // if(total < 100)
-  // {
-  //   alert("Won't be able to get that desired score without extra credit! Sorry!")
-  //   console.error("Sorry, but is not possible to get your desired grade without extra credit being on the final!");
-  // }
 }
 
 // $(document).ready(function()
