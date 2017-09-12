@@ -29,7 +29,10 @@
   display: block;
 }
 
-.field__input{
+.field__input
+{
+
+  // margin: 20px;
   // text-align: center;
   width: 100%;
   box-sizing: border-box;
@@ -47,9 +50,11 @@
   border-bottom-width: var(--uiFieldBorderBottom);
   border-left-width: var(--uiFieldBorderLeft);
 
+  margin-bottom: 60px;
+
   padding-top: var(--uiFieldPaddingTop);
-  padding-right: var(--uiFieldPaddingRight);
   padding-bottom: var(--uiFieldPaddingBottom);
+  padding-right: var(--uiFieldPaddingRight);
   padding-left: var(--uiFieldPaddingLeft);
 
   font-family: $robo;
@@ -86,7 +91,8 @@
   display: block;
 }
 
-.field__label{
+.field__label
+{
   position: absolute;
   top: calc(0px + var(--uiFieldPaddingTop) + var(--uiFieldBorderTop));
   left: calc(0px + var(--uiFieldPaddingLeft) + var(--uiFieldBorderLeft));
@@ -104,7 +110,8 @@
   top: calc(0px + var(--uiFieldPaddingTop) + var(--uiFieldBorderTop));
 }
 
-.field__input:focus ~ .field__label-wrap .field__label{
+.field__input:focus ~ .field__label-wrap .field__label
+{
   opacity: 1;
   top: calc(-1 * calc(var(--uiFieldPaddingTop) + var(--uiFieldBorderTop) + 15px));
 }
@@ -117,22 +124,23 @@
   --uiFieldBorderBottom: var(--fieldBorderBottom, 0.1em);
   --uiFieldPaddingTop: var(--fieldPaddingTop, 0.5em);
   --uiFieldPaddingRight: var(--fieldPaddingRight, 15px);
-  --uiFieldPaddingBottom: var(--fieldPaddingBottom, 10px);
+  --uiFieldPaddingBottom: var(--fieldPaddingBottom, 20px);
   --uiFieldPaddingLeft: var(--fieldPaddingLeft, 15px);
 }
 
-.field_type2 .field__label-wrap:after{
+.field_type2 .field__label-wrap:after
+{
   content: "";
   width: 0;
   height: var(--uiFieldBorderBottom);
   background-color: var(--fieldBorderColorActive);
 
   position: absolute;
-  bottom: 0;
+  bottom: 60px;
   left: 0;
 
   will-change: width;
-  transition: width var(--uiFieldAnimationDuration) ease-out;
+  transition: width 0.4s ease-out;
 }
 
 .field_type2 .field__input:focus ~ .field__label-wrap:after
@@ -147,7 +155,7 @@
 
 .field{
   --fieldBorderColor: #fff;
-  --fieldBorderColorActive: darken($back, 20%);
+  --fieldBorderColorActive: lighten($back, 30%);
   --fieldPlaceholderColor: #fff;
   color: #fff;
 }
@@ -223,14 +231,6 @@ a:hover, a:focus
   margin: auto;
 }
 
-.footer
-{
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  text-align: center;
-  font-size: 1.4rem;
-}
-
 @media screen and (min-width: 641px)
 {
 
@@ -238,17 +238,5 @@ a:hover, a:focus
   {
     display: flex;
     justify-content: space-between;
-  }
-
-  // .melnik909
-  // {
-  //   margin-left: 2rem;
-  // }
-}
-
-@media screen and (max-width: 640px){
-
-  .melnik909{
-    display: none;
   }
 }

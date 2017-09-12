@@ -37,26 +37,28 @@
       <label class="field field_type2">
         <input type="number" id = "current-percent" value = "" onblur="calculate()" class="field__input" placeholder="90%" required/>
           <span class="field__label-wrap">
-            <span class="field__label">% Currently</span>
+            <span class="field__label">Current % in Class</span>
           </span>
       </label>
 
       <label class="field field_type2">
       <input type="number" id = "min-percent" value = "" onblur="calculate()" class="field__input" placeholder="95%" required/>
       <span class="field__label-wrap">
-        <span class="field__label">% in the Class</span>
+        <span class="field__label">Final Grade % Desired</span>
       </span>
       </label>
 
       <label class="field field_type2">
       <input type="number" id = "final-percent" value = "" onblur="calculate(); checker();" class="field__input" placeholder="20%" required/>
       <span class="field__label-wrap">
-        <span class="field__label">% of Final Weight</span>
+        <span class="field__label">Final % Weight</span>
       </span>
+
+      </div>
 
       <label>Grade on Final Needed</label>
       <input type="text" id = "total" value = " " onfocus="checker()" readonly/>
-    </div>
+
 
 
 
