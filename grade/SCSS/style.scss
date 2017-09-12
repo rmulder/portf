@@ -19,13 +19,6 @@ div.title-header
 
 // Main Box - below
 
-
-// just for padding above.
-// div.spec-index-padd
-// {
-//   height: -2.5em;
-// }
-
 div.spec-index-box article
 {
   max-width: 900px;
@@ -110,4 +103,10 @@ div.spec-index-box article div.spec-total input
   font-size: 1.4em;
   font-family: $robo;
   font-weight: 400;
+}
+
+// just for padding above.
+div.spec-index-padd
+{
+  height: 2em;
 }

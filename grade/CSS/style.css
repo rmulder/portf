@@ -58,4 +58,7 @@ div.spec-index-box article div.spec-total input {
   font-family: "Roboto", sans-serif;
   font-weight: 400; }
 
+div.spec-index-padd {
+  height: 2em; }
+
 /*# sourceMappingURL=style.css.map */
