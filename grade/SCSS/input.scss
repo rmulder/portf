@@ -110,7 +110,15 @@
   top: calc(0px + var(--uiFieldPaddingTop) + var(--uiFieldBorderTop));
 }
 
+// when clicking on input field, then info text moves up
 .field__input:focus ~ .field__label-wrap .field__label
+{
+  opacity: 1;
+  top: calc(-1 * calc(var(--uiFieldPaddingTop) + var(--uiFieldBorderTop) + 15px));
+}
+
+
+.field__input:hover ~ .field__label-wrap .field__label
 {
   opacity: 1;
   top: calc(-1 * calc(var(--uiFieldPaddingTop) + var(--uiFieldBorderTop) + 15px));
