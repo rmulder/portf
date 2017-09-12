@@ -34,45 +34,33 @@
       <div class="main-container page__container">
 
       <label class="field field_type2">
-        <input type="number" id = "current-percent" value = "" onblur="calculate()" class="field__input" placeholder="e.g. 90%" required/>
+        <input type="number" id = "current-percent" value = "" class="field__input" placeholder="e.g. 90%" required/>
           <span class="field__label-wrap">
             <span class="field__label">Current % in Class</span>
           </span>
       </label>
 
       <label class="field field_type2">
-      <input type="number" id = "min-percent" value = "" onblur="calculate()" class="field__input" placeholder="e.g. 95%" required/>
+      <input type="number" id = "min-percent" value = "" class="field__input" placeholder="e.g. 95%" required/>
       <span class="field__label-wrap">
         <span class="field__label">Grade % Wanted</span>
       </span>
       </label>
 
       <label class="field field_type2">
-      <input type="number" id = "final-percent" value = "" onblur="calculate(); checker();" class="field__input" placeholder="e.g. 20%" required/>
+      <input type="number" id = "final-percent" value = ""  class="field__input" placeholder="e.g. 20%" required/>
       <span class="field__label-wrap">
         <span class="field__label">Final % Weight</span>
       </span>
       </div>
 
       <div class="overall-butt">
-        <button class="spec-butt" type="button">Calculate</button>
+        <button class="spec-butt" id="other-spec-butt" type="button">Calculate</button>
       </div>
 
 
       <label>Grade on Final Needed</label>
-      <input type="text" id = "total" value = " " onfocus="checker()" readonly/>
-
-
-
-
-    <!-- <div class="main-container page__container">
-    <label class="field field_type2">
-      <input class="field__input" placeholder="UI developer">
-      <span class="field__label-wrap">
-        <span class="field__label">Enter your post</span>
-      </span>
-    </label>
-    </div> -->
+      <input type="text" id = "total" value = " " readonly/>
 
     </article>
 
