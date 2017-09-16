@@ -1,5 +1,0 @@
-Final Grade Calculator
-
-Use this tool to calculate the grade needed on the final to get a specified grade in the class. 
-
-Need to enter current % grade in class, desired % grade in class after final, and weight of final %. 
