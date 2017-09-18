@@ -2,7 +2,7 @@
 All my example work is here. 
 
 ## Basic
-Minimalist website. 
+Gulp.js reworked website. 
 
 ## Art 
 Minimalist Art Portfolio Sample website.
