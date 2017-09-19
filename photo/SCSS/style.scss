@@ -17,6 +17,7 @@ $maven: 'Maven Pro', sans-serif;
 
 body
 {
+  overflow: hidden; // disable horizontal and vertical scrolling
   background-color: $back;
 }
 
