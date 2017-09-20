@@ -1,7 +1,7 @@
 @charset "UTF-8";
 body {
   overflow: hidden;
-  background-color: #f8f9fa; }
+  background-color: #fff; }
 
 .navigation {
   height: 70px; }
@@ -117,7 +117,7 @@ nav {
     border-radius: 3em;
     height: 2.2px;
     width: 35px;
-    background: #000000;
+    background: #727e96;
     position: absolute;
     display: block;
     content: '';

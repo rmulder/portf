@@ -18,7 +18,7 @@ $maven: 'Maven Pro', sans-serif;
 body
 {
   overflow: hidden; // disable horizontal and vertical scrolling
-  background-color: $back;
+  background-color: #fff;
 }
 
 
@@ -186,7 +186,7 @@ nav
     border-radius: 3em;
     height: 2.2px;
     width: 35px;
-    background: #000000;
+    background: $gray;
     position: absolute;
     display: block;
     content: '';
