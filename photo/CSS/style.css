@@ -114,8 +114,8 @@ nav {
   #nav-toggle span:before,
   #nav-toggle span:after {
     cursor: pointer;
-    border-radius: 2em;
-    height: 5px;
+    border-radius: 3em;
+    height: 2.2px;
     width: 35px;
     background: #000000;
     position: absolute;
@@ -131,9 +131,9 @@ nav {
     #nav-toggle.active span:before, #nav-toggle.active span:after {
       top: 0; }
     #nav-toggle.active span:before {
-      transform: rotate(45deg); }
-    #nav-toggle.active span:after {
       transform: rotate(-45deg); }
+    #nav-toggle.active span:after {
+      transform: rotate(45deg); }
 
 article {
   max-width: 1000px;

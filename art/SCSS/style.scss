@@ -2,6 +2,11 @@
 
 @import 'vars'; // importing vars.scss file.
 
+html
+{
+  overflow: hidden;
+}
+
 body
 {
   margin: 0;
