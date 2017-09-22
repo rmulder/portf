@@ -1,0 +1,26 @@
+div.spec-index-padd {
+  height: 7em; }
+
+div.spec-index-box article {
+  max-width: 900px;
+  width: 95%;
+  height: 200px;
+  background: #fff;
+  margin: 0 auto;
+  border-radius: 5px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.4s ease-in-out; }
+
+div.spec-index-box article:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
+
+div.spec-index-box article p, a {
+  text-align: center;
+  display: block;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black; }
+
+/*# sourceMappingURL=projects.css.map */
