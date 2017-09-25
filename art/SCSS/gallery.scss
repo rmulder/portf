@@ -6,7 +6,7 @@
 html
 {
   box-sizing: border-box;
-  background-color: $light;
+  background-color: #1E1E1E;
 }
 
 // box reset standard
@@ -18,7 +18,7 @@ html
 .container
 {
   margin: auto; // center
-  max-width: 1200px;
+  max-width: 1500px;
 }
 
 .responsive-image
@@ -48,11 +48,13 @@ html
 }
 
 //desktop
+// This calculates the number of images to be displayed on a desktop screen
 @media screen and (min-width: 1000px)
 {
   .cell
   {
-    width: calc(100% / 3);
+    width: calc(100% / 2);
+    // change the last number to # of images wanted in a row.
   }
 }
 
@@ -68,7 +70,7 @@ html
 // navigation bar links
 .nav
 {
-  color: $fourgray;
+  color: yellow;
   font-size: 22px;
   list-style: none;
   padding: 20px 0 20px 0; //top,rig,bott,lef
@@ -88,7 +90,7 @@ html
 .nav > li > a
 {
   text-decoration: none;
-  color: $fourgray;
+  color: #A7A7A7;
   transition: color 0.3s ease-in-out; // vendorless fallback
   -moz-transition: color 0.3s ease-in-out; // Firefox
   -webkit-transition: color 0.3s ease-in-out; //safari and chrome
@@ -98,11 +100,12 @@ html
 .nav > li > a:hover
 {
   cursor: pointer;
-  color: darken( $fourgray, 90% );
+  color: #fff;
 }
 
 .logo
 {
+  color: #fff;
   font-family: $logo;
   margin-top: -50px;
   margin-left: 50px;
