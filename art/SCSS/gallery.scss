@@ -1,6 +1,36 @@
 // gallery main style sheet
 
-@import 'vars'; // importing vars.scss file.
+// @import 'vars'; // importing vars.scss file.
+
+// main white
+$light: #fff;
+
+// secondary white
+$seclight: #f8f9fa;
+
+// third white
+$thirlight: #f0f1f4;
+
+// main gray
+$gray: #f0f1f4;
+
+// sec gray (dark)
+$secgray: #999;
+
+// third gray (darker)
+$thirgray: #727e96;
+
+// fourth gray (darker)
+$fourgray: #454d5d;
+
+// main font
+$fontm: 'Roboto', sans-serif;
+
+// Motto fonts
+$fontsec: 'Open Sans';
+
+// Brand Name Font
+$logo: 'Exo 2', sans-serif;
 
 // box reset standard
 html
