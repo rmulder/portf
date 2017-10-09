@@ -7,6 +7,15 @@ body
   background-color: $black;
 }
 
+div.gmaps article h1
+{
+  margin-left: 5%;
+  color: #e3dddd;
+  font-family: $robo;
+  font-weight: 400;
+  font-size: 2em;
+}
+
 div.gmaps article #map
 {
   width: 90%;
@@ -17,11 +26,12 @@ div.gmaps article #map
 
 div.imgLogo img
 {
+  transition: all 0.6 ease-in-out;
 	padding-top: 1em;
 	height: auto;
-	width: 20%;
-	max-width: 100%;
-	min-width: 29em;
+	width: 40%;
+	// max-width: 100%;
+	// min-width: 29em;
 
 	display: block;
   margin-left: auto;
@@ -39,6 +49,7 @@ div.imgLogo img
 {
   div.imgLogo img
   {
+    transition: all 0.6 ease-in-out;
     width: 85%;
     height: auto;
   }

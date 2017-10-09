@@ -14,7 +14,8 @@ body {
   background-color: #fff;
   background-color: var(--color-background);
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+  -moz-osx-font-smoothing: grayscale;
+  transition: all 1.6s ease-in-out; }
 
 .demo-inola {
   --color-text: #8c8c8c;
@@ -175,33 +176,9 @@ a.demo--current {
   margin: 0 0 0 0.5em; }
 
 @media screen and (max-width: 50em) {
-  html,
-  body {
-    overflow-x: hidden;
-    width: 100vw;
-    height: 100%; }
-
-  .content {
-    height: auto;
-    min-height: 0;
-    padding-bottom: 10em; }
-
-  .content--fixed {
-    position: relative;
-    z-index: 1000;
-    display: block;
-    padding: 0.85em; }
-
-  .codrops-header {
-    flex-direction: column;
-    align-items: center; }
-
-  .codrops-header__title {
-    font-weight: bold;
-    padding-bottom: 0.25em;
-    text-align: center; }
-
-  .codrops-links {
-    margin: 0; } }
+  div.imgLogo img {
+    transition: all 0.6 ease-in-out;
+    width: 85%;
+    height: auto; } }
 
 /*# sourceMappingURL=demo.css.map */

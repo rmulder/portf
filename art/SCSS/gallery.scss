@@ -32,46 +32,57 @@ $fontsec: 'Open Sans';
 // Brand Name Font
 $logo: 'Exo 2', sans-serif;
 
+//
+// html
+// {
+//   background-color: #1E1E1E;
+// }
+
 // box reset standard
-html
+div.spec-gallery
 {
   box-sizing: border-box;
-  background-color: #1E1E1E;
+
 }
 
 // box reset standard
-*, *:before, *:after
+div.spec-gallery:before, div.spec-gallery:after
 {
   box-sizing: inherit;
 }
 
-.container
+div.spec-gallery div.spec-container
 {
   margin: auto; // center
   max-width: 1500px;
 }
 
-.responsive-image
+ div.spec-gallery div.spec-container div.spec-grid div.spec-cell img.respon-image
 {
   max-width: 100%;
 }
 
-.cell img
+// div.spec-gallery div.spec-container div.spec-grid div.spec-cell
+// {
+//   margin: 1px;
+// }
+
+div.spec-gallery div.spec-container div.spec-grid div.spec-cell img
 {
   display: block;
-  padding: 10px;
+  padding: 3px;
 }
 
 // tablet
-@media screen and (min-width: 600px)
+@media screen and (min-width: 700px)
 {
-  .grid
+  div.spec-gallery div.spec-container div.spec-grid
   {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
   }
-  .cell
+  div.spec-gallery div.spec-container div.spec-grid div.spec-cell
   {
     width: 50%;
   }
@@ -81,17 +92,23 @@ html
 // This calculates the number of images to be displayed on a desktop screen
 @media screen and (min-width: 1000px)
 {
-  .cell
+  div.spec-gallery div.spec-container div.spec-grid div.spec-cell
   {
     width: calc(100% / 2);
     // change the last number to # of images wanted in a row.
   }
 }
 
-.gallery-padd
+div.spec-gallery-padd
 {
-  height: 50px;
+  height: 5em;
 }
+
+
+
+
+
+
 
 
 // Menu SCSS Below
@@ -143,11 +160,11 @@ html
   font-size: 40px;
 
   user-drag: none;
-user-select: none;
--moz-user-select: none;
--webkit-user-drag: none;
--webkit-user-select: none;
--ms-user-select: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
 .logo::first-letter

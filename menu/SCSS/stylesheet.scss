@@ -6,11 +6,10 @@
 
 div.imgLogo img
 {
+	transition: all 0.6 ease-in-out;
 	padding-top: 1em;
 	height: auto;
-	width: 20%;
-	max-width: 100%;
-	min-width: 29em;
+	width: 40%;
 
 	display: block;
   margin-left: auto;
@@ -22,6 +21,16 @@ div.imgLogo img
 	-webkit-user-drag: none;
 	-webkit-user-select: none;
 	-ms-user-select: none;
+}
+
+@media screen and (max-width: 50em)
+{
+  div.imgLogo img
+  {
+    transition: all 0.6 ease-in-out;
+    width: 85%;
+    height: auto;
+  }
 }
 
 .menu--inola
