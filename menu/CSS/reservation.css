@@ -1,0 +1,35 @@
+// reservation stylesheet
+
+html, body
+{
+  background-color: #1f1e1e;
+}
+
+div.spec-index-padd
+{
+ padding: 5em;
+}
+
+div.spec-index-box article
+{
+  max-width: 900px;
+  width: 95%;
+  height: 200px;
+  margin: 0 auto;
+  
+  transition: all 0.4s ease-in-out;
+}
+
+div.spec-index-box article p, a
+{
+ font-family: 'Roboto, san-serif';
+  
+  text-align: center;
+  display: block;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+ 
+  color: white;
+}

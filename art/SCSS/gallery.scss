@@ -2,174 +2,175 @@
 
 // @import 'vars'; // importing vars.scss file.
 
-// main white
-$light: #fff;
-
-// secondary white
-$seclight: #f8f9fa;
-
-// third white
-$thirlight: #f0f1f4;
-
 // main gray
 $gray: #f0f1f4;
 
-// sec gray (dark)
-$secgray: #999;
 
-// third gray (darker)
-$thirgray: #727e96;
-
-// fourth gray (darker)
-$fourgray: #454d5d;
-
-// main font
-$fontm: 'Roboto', sans-serif;
-
-// Motto fonts
-$fontsec: 'Open Sans';
-
-// Brand Name Font
-$logo: 'Exo 2', sans-serif;
-
-//
-// html
-// {
-//   background-color: #1E1E1E;
-// }
-
-// box reset standard
-div.spec-gallery
+html
 {
   box-sizing: border-box;
-
-}
+  background-color: #1E1E1E;
+ }
 
 // box reset standard
-div.spec-gallery:before, div.spec-gallery:after
+*, *:before, *:after
 {
   box-sizing: inherit;
 }
 
-div.spec-gallery div.spec-container
+// box reset standard
+.container
 {
-  margin: auto; // center
+  margin: auto;
   max-width: 1500px;
 }
 
- div.spec-gallery div.spec-container div.spec-grid div.spec-cell img.respon-image
+.responsive-image
 {
   max-width: 100%;
 }
 
-// div.spec-gallery div.spec-container div.spec-grid div.spec-cell
-// {
-//   margin: 1px;
-// }
+ .cell img
+ {
+   display: block;
+   padding: 0.2em;
+ }
 
-div.spec-gallery div.spec-container div.spec-grid div.spec-cell img
+@media screen and (min-width: 600px)
 {
-  display: block;
-  padding: 3px;
-}
-
-// tablet
-@media screen and (min-width: 700px)
-{
-  div.spec-gallery div.spec-container div.spec-grid
+  .grid
   {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
   }
-  div.spec-gallery div.spec-container div.spec-grid div.spec-cell
-  {
-    width: 50%;
-  }
+   .cell
+   {
+     width: 50%;
+   }
 }
 
-//desktop
-// This calculates the number of images to be displayed on a desktop screen
+
 @media screen and (min-width: 1000px)
 {
-  div.spec-gallery div.spec-container div.spec-grid div.spec-cell
+  .cell
   {
     width: calc(100% / 2);
-    // change the last number to # of images wanted in a row.
   }
 }
 
-div.spec-gallery-padd
-{
-  height: 5em;
-}
+ .gallery-padd
+ {
+   height: 50px;
+ }
 
 
 
-
-
-
-
-
-// Menu SCSS Below
-
-
-// navigation bar links
-.nav
-{
-  color: yellow;
-  font-size: 22px;
-  list-style: none;
-  padding: 20px 0 20px 0; //top,rig,bott,lef
-  text-align: right;
-  padding-right: 30px;
-}
-
-// nav is parent, li, child, only selected
-.nav > li
-{
-  display: inline-block;
-  padding: 0 12px 0 12px; // paddi inbetween
-}
-
-// nav, li are parents, a, child, selected.
-// slow fading of text for transition.
-.nav > li > a
-{
-  text-decoration: none;
-  color: #A7A7A7;
-  transition: color 0.3s ease-in-out; // vendorless fallback
-  -moz-transition: color 0.3s ease-in-out; // Firefox
-  -webkit-transition: color 0.3s ease-in-out; //safari and chrome
-}
-
-// nav links at top
-.nav > li > a:hover
-{
-  cursor: pointer;
-  color: #fff;
-}
-
-.logo
-{
-  color: #fff;
-  font-family: $logo;
-  margin-top: -50px;
-  margin-left: 50px;
-  float: left;
-  font-size: 40px;
-
-  user-drag: none;
-  user-select: none;
-  -moz-user-select: none;
-  -webkit-user-drag: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-}
-
-.logo::first-letter
-{
-  font-size: 50px;
-  font-style: italic;
-  font-weight: 800;
-}
+//
+// div.spec-gallery div.spec-container div.spec-grid div.spec-cell img
+// {
+//   display: block;
+//   padding: 3px;
+//   margin: 5px;
+// }
+//
+// // tablet
+// @media screen and (min-width: 700px)
+// {
+//   div.spec-gallery div.spec-container div.spec-grid
+//   {
+//     display: flex;
+//     flex-wrap: wrap;
+//     flex-direction: row;
+//   }
+//   div.spec-gallery div.spec-container div.spec-grid div.spec-cell
+//   {
+//     width: 50%;
+//   }
+// }
+//
+// //desktop
+// // This calculates the number of images to be displayed on a desktop screen
+// @media screen and (min-width: 1000px)
+// {
+//   div.spec-gallery div.spec-container div.spec-grid div.spec-cell
+//   {
+//     width: calc(100% / 2);
+//     // change the last number to # of images wanted in a row.
+//   }
+// }
+//
+// div.spec-gallery-padd
+// {
+//   height: 5em;
+// }
+//
+//
+//
+//
+//
+//
+//
+//
+// // Menu SCSS Below
+//
+//
+// // navigation bar links
+// .nav
+// {
+//   color: yellow;
+//   font-size: 22px;
+//   list-style: none;
+//   padding: 20px 0 20px 0; //top,rig,bott,lef
+//   text-align: right;
+//   padding-right: 30px;
+// }
+//
+// // nav is parent, li, child, only selected
+// .nav > li
+// {
+//   display: inline-block;
+//   padding: 0 12px 0 12px; // paddi inbetween
+// }
+//
+// // nav, li are parents, a, child, selected.
+// // slow fading of text for transition.
+// .nav > li > a
+// {
+//   text-decoration: none;
+//   color: #A7A7A7;
+//   transition: color 0.3s ease-in-out; // vendorless fallback
+//   -moz-transition: color 0.3s ease-in-out; // Firefox
+//   -webkit-transition: color 0.3s ease-in-out; //safari and chrome
+// }
+//
+// // nav links at top
+// .nav > li > a:hover
+// {
+//   cursor: pointer;
+//   color: #fff;
+// }
+//
+// .logo
+// {
+//   color: #fff;
+//   font-family: $logo;
+//   margin-top: -50px;
+//   margin-left: 50px;
+//   float: left;
+//   font-size: 40px;
+//
+//   user-drag: none;
+//   user-select: none;
+//   -moz-user-select: none;
+//   -webkit-user-drag: none;
+//   -webkit-user-select: none;
+//   -ms-user-select: none;
+// }
+//
+// .logo::first-letter
+// {
+//   font-size: 50px;
+//   font-style: italic;
+//   font-weight: 800;
+// }

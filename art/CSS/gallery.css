@@ -1,74 +1,33 @@
-div.spec-gallery {
-  box-sizing: border-box; }
+html {
+  box-sizing: border-box;
+  background-color: #1E1E1E; }
 
-div.spec-gallery:before, div.spec-gallery:after {
+*, *:before, *:after {
   box-sizing: inherit; }
 
-div.spec-gallery div.spec-container {
+.container {
   margin: auto;
   max-width: 1500px; }
 
-div.spec-gallery div.spec-container div.spec-grid div.spec-cell img.respon-image {
+.responsive-image {
   max-width: 100%; }
 
-div.spec-gallery div.spec-container div.spec-grid div.spec-cell img {
+.cell img {
   display: block;
-  padding: 3px; }
+  padding: 0.2em; }
 
-@media screen and (min-width: 700px) {
-  div.spec-gallery div.spec-container div.spec-grid {
+@media screen and (min-width: 600px) {
+  .grid {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row; }
 
-  div.spec-gallery div.spec-container div.spec-grid div.spec-cell {
+  .cell {
     width: 50%; } }
 @media screen and (min-width: 1000px) {
-  div.spec-gallery div.spec-container div.spec-grid div.spec-cell {
+  .cell {
     width: calc(100% / 2); } }
-div.spec-gallery-padd {
-  height: 5em; }
-
-.nav {
-  color: yellow;
-  font-size: 22px;
-  list-style: none;
-  padding: 20px 0 20px 0;
-  text-align: right;
-  padding-right: 30px; }
-
-.nav > li {
-  display: inline-block;
-  padding: 0 12px 0 12px; }
-
-.nav > li > a {
-  text-decoration: none;
-  color: #A7A7A7;
-  transition: color 0.3s ease-in-out;
-  -moz-transition: color 0.3s ease-in-out;
-  -webkit-transition: color 0.3s ease-in-out; }
-
-.nav > li > a:hover {
-  cursor: pointer;
-  color: #fff; }
-
-.logo {
-  color: #fff;
-  font-family: "Exo 2", sans-serif;
-  margin-top: -50px;
-  margin-left: 50px;
-  float: left;
-  font-size: 40px;
-  user-drag: none;
-  user-select: none;
-  -moz-user-select: none;
-  -webkit-user-drag: none;
-  -webkit-user-select: none;
-  -ms-user-select: none; }
-
-.logo::first-letter {
-  font-size: 50px;
-  font-style: italic;
-  font-weight: 800; }
+.gallery-padd {
+  height: 50px; }
 
 /*# sourceMappingURL=gallery.css.map */
