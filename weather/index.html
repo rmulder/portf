@@ -8,8 +8,21 @@
     <meta name="author" content="Ronan Manoj">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+    function getWeather()
+    {
+      const zipcodeurl = "api.openweathermap.org/data/2.5/weather?zip=94040,us&APPID=";
+      const apikey = "db1edb185dafcf9893865ee1101d96a0";
+      document.write("jquery loaded");
+      $.getJSON("http://api.openweathermap.org/data/2.5/weather?zip=95129,us&APPID=db1edb185dafcf9893865ee1101d96a0",function(json)
+      {
+        document.write(JSON.stringify(json));
+      });
+    }
+    </script>
   </head>
   <body>
-
+    <button id = "getIt" onclick = "getWeather()">Get Weather</button>
   </body>
 </html>
