@@ -5,7 +5,8 @@ const gulp = require('gulp'),
   uglify = require('gulp-uglify'),
   gutil = require('gulp-util'),
   rename = require('gulp-rename'),
-  sass = require('gulp-sass');
+  sass = require('gulp-sass'),
+  maps = require('gulp-sourcemaps');
 
 gulp.task("concatScripts", function () {
 
@@ -17,7 +18,7 @@ gulp.task("concatScripts", function () {
 
 gulp.task("minifyScripts", ["concatScripts"], function() {
 
-  return gulp.src('js/app.js') // calc
+  return gulp.src('js/app.js')
           .pipe(uglify().on('error', gutil.log)) // if error, outputs to console.
           .pipe(rename('weather.js'))
           .pipe(gulp.dest('js'));

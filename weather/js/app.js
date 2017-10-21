@@ -17,7 +17,6 @@ function getWeather()
   const zipcode = $("#code-enter").val(); // zip coder entered by user
   console.log("The zip code entered: " + zipcode);
 
-
   $.getJSON(`${urlbase + zipcode + country + add + units + add + apikey}`,function(json)
   {
     let city = (JSON.stringify(json.name));
