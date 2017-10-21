@@ -1,14 +1,14 @@
 html {
+  background-color: #8ebfdf;
+  border: none;
   font-size: 12px; }
 
 body {
-  overflow: hidden;
-  margin: 0;
-  padding: 0; }
+  margin: 0; }
 
 .background {
   width: 100%;
-  height: 2000px;
+  height: 100%;
   position: relative;
   background-color: #8ebfdf;
   background-size: 100% 100%; }
@@ -32,6 +32,11 @@ body {
   .cloud3 {
     width: 90px;
     height: 120px;
+    position: fixed; }
+
+  .cloud4 {
+    width: 175px;
+    height: 225px;
     position: fixed; } }
 .cloud1 {
   top: 1px;
@@ -44,7 +49,7 @@ body {
   animation: move 25s linear infinite; }
 
 .cloud2 {
-  top: 250px;
+  top: 200px;
   z-index: 200;
   fill: #eee;
   -webkit-animation: move 35s linear 10s infinite backwards;
@@ -60,6 +65,15 @@ body {
   -moz-animation: move 15s linear 1s infinite backwards;
   -o-animation: move 15s linear 1s infinite backwards;
   animation: move 15s linear 1s infinite backwards; }
+
+.cloud4 {
+  top: 550px;
+  z-index: 400;
+  fill: #eee;
+  -webkit-animation: move 45s linear 1s infinite backwards;
+  -moz-animation: move 45s linear 1s infinite backwards;
+  -o-animation: move 45s linear 1s infinite backwards;
+  animation: move 45s linear 1s infinite backwards; }
 
 @media only screen and (max-width: 800px) {
   .cloud1 {
@@ -77,8 +91,7 @@ body {
   to {
     -webkit-transform: translateX(1350px); } }
 div.title {
-  padding: 0;
-  margin: 0; }
+  padding-top: -20px; }
 
 div.title p {
   position: relative;
@@ -86,8 +99,13 @@ div.title p {
   color: #fff;
   margin: 0 auto;
   text-align: center;
-  font-size: 6em; }
+  font-size: 6em;
+  transition: all 0.6s ease-in-out; }
 
+@media only screen and (max-width: 800px) {
+  div.title p {
+    margin-top: -1em;
+    font-size: 4.8em; } }
 div.button-spec {
   margin: 20px; }
 
@@ -102,6 +120,11 @@ div.button-spec button {
   background-color: #a2cae5;
   border-radius: 0.3em; }
 
+@media only screen and (max-width: 800px) {
+  div.button-spec button {
+    font-size: 1.2em;
+    height: 3rem;
+    width: 13rem; } }
 div.main-content {
   display: block;
   position: relative;
@@ -122,8 +145,12 @@ label[for=style] {
   margin: 0 auto;
   text-align: center;
   font-size: 2em;
-  font-family: "Dosis", sans-serif; }
+  font-family: "Dosis", sans-serif;
+  transition: all 0.4s ease-in-out; }
 
+@media only screen and (max-width: 800px) {
+  label[for=style] {
+    font-size: 1.8em; } }
 input::placeholder {
   color: #e7e5e1; }
 
@@ -140,7 +167,8 @@ input[type="number"] {
   border: none;
   height: 5rem;
   width: 20rem;
-  background-color: #66a8d4; }
+  background-color: #66a8d4;
+  transition: all 0.4s ease-in-out; }
 
 input[type="string"] {
   opacity: 0.9;
@@ -152,6 +180,18 @@ input[type="string"] {
   border: none;
   height: 5rem;
   width: 20rem;
-  background-color: #72afd7; }
+  background-color: #72afd7;
+  transition: all 0.4s ease-in-out; }
+
+@media only screen and (max-width: 800px) {
+  input[type="number"] {
+    height: 4rem;
+    width: 16rem;
+    font-size: 1.7em; }
+
+  input[type="string"] {
+    height: 4rem;
+    width: 16rem;
+    font-size: 2em; } }
 
 /*# sourceMappingURL=style.css.map */

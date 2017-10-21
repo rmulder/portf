@@ -3,19 +3,21 @@
 @import "vars";
 
 html{
+  background-color: $blue;
+  border: none;
   font-size: 12px;
 }
 
 
 body {
-  overflow: hidden;
+  // overflow: hidden;
   margin: 0;
-  padding: 0;
+  // padding: 0;
 }
 
 .background {
 	width: 100%;
-  height: 2000px;
+  height: 100%;
   position: relative;
   background-color: $blue;
   background-size: 100% 100%;
@@ -47,9 +49,16 @@ body {
     height: 120px;
     position: fixed;
   }
+  .cloud4
+  {
+    width: 175px;
+    height: 225px;
+    position: fixed;
+  }
 }
 
-.cloud1 {
+.cloud1
+{
 	top: 1px;
   z-index: 100;
   fill: #eee;
@@ -60,8 +69,9 @@ body {
   animation: move 25s linear infinite;
 }
 
-.cloud2 {
-	top: 250px;
+.cloud2
+{
+	top: 200px;
   z-index: 200;
   fill: #eee;
   -webkit-animation: move 35s linear 10s infinite backwards;
@@ -70,7 +80,8 @@ body {
   animation: move 35s linear 10s infinite backwards;
 }
 
-.cloud3 {
+.cloud3
+{
 	top: 350px;
   z-index: 300;
   fill: #eee;
@@ -78,6 +89,17 @@ body {
   -moz-animation: move 15s linear 1s infinite backwards;
   -o-animation: move 15s linear 1s infinite backwards;
   animation: move 15s linear 1s infinite backwards;
+}
+
+.cloud4
+{
+	top: 550px;
+  z-index: 400;
+  fill: #eee;
+  -webkit-animation: move 45s linear 1s infinite backwards;
+  -moz-animation: move 45s linear 1s infinite backwards;
+  -o-animation: move 45s linear 1s infinite backwards;
+  animation: move 45s linear 1s infinite backwards;
 }
 
 @media only screen and (max-width: 800px)
@@ -105,8 +127,8 @@ body {
 
 div.title
 {
-  padding: 0;
-  margin: 0;
+  padding-top: -20px;
+  // margin: 0;
 }
 
 div.title p
@@ -115,9 +137,20 @@ div.title p
   font-family: $ubu;
   color: #fff;
   margin: 0 auto;
-  // padding: em;
   text-align: center;
   font-size: 6em;
+
+  transition: all 0.6s ease-in-out;
+}
+
+@media only screen and (max-width: 800px)
+{
+  div.title p
+  {
+    margin-top: -1em;
+    font-size: 4.8em;
+  }
+
 }
 
 div.button-spec
@@ -136,6 +169,16 @@ div.button-spec button
   width: 15rem;
   background-color: lighten($blue, 5%);
   border-radius: 0.3em;
+}
+
+@media only screen and (max-width: 800px)
+{
+  div.button-spec button
+  {
+    font-size: 1.2em;
+    height: 3rem;
+    width: 13rem;
+  }
 }
 
 div.main-content
@@ -167,6 +210,16 @@ label[for=style]
   text-align: center;
   font-size: 2em;
   font-family: $dos;
+
+  transition: all 0.4s ease-in-out;
+}
+
+@media only screen and (max-width: 800px)
+{
+  label[for=style]
+  {
+    font-size: 1.8em;
+  }
 }
 
 input::placeholder
@@ -191,6 +244,8 @@ input[type="number"]
   height: 5rem;
   width: 20rem;
   background-color: darken($blue, 10%);
+
+  transition: all 0.4s ease-in-out;
 }
 
 input[type="string"]
@@ -205,4 +260,22 @@ input[type="string"]
   height: 5rem;
   width: 20rem;
   background-color: darken($blue, 7%);
+
+  transition: all 0.4s ease-in-out;
+}
+
+@media only screen and (max-width: 800px)
+{
+  input[type="number"]
+  {
+    height: 4rem;
+    width: 16rem;
+    font-size: 1.7em;
+  }
+   input[type="string"]
+   {
+     height: 4rem;
+     width: 16rem;
+     font-size: 2em;
+   }
 }
