@@ -20,9 +20,13 @@ function getWeather()
 
   $.getJSON(`${urlbase + zipcode + country + add + units + add + apikey}`,function(json)
   {
-    console.log("Name of city: " + JSON.stringify(json.name, null, ' '));
-    console.log("Weather of city min: " + JSON.stringify(json.main.temp_min, null, ' ') + "F");
-    $("#total").val((JSON.stringify(json.main.temp_min, null, ' '))); // assigning temp to read box
+    let city = (JSON.stringify(json.name));
+    city = city.substr(1).slice(0, -1); // to remove the quote marks
+    console.log("Name of city after slice: " + city);
+    // console.log("Name of city: " + city);
+    console.log("Weather of city min: " + JSON.stringify(json.main.temp_min, null, ' ') + "°F");
+    $("#total").val((JSON.stringify(json.main.temp_min, null, ' ')) + "°F"); // assigning temp to read box
     console.log(JSON.stringify(json.weather[0].description));
+    console.log(JSON.stringify(json.clouds.all));
   });
 }
