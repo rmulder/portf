@@ -1,3 +1,6 @@
+html {
+  font-size: 12px; }
+
 body {
   overflow: hidden;
   margin: 0;
@@ -5,7 +8,7 @@ body {
 
 .background {
   width: 100%;
-  height: 700px;
+  height: 2000px;
   position: relative;
   background-color: #8ebfdf;
   background-size: 100% 100%; }
@@ -16,9 +19,19 @@ body {
   position: absolute; }
 
 @media only screen and (max-width: 800px) {
-  .clouds {
-    width: 100px;
+  .cloud1 {
+    width: 150px;
     height: 200px;
+    position: fixed; }
+
+  .cloud2 {
+    width: 90px;
+    height: 150px;
+    position: fixed; }
+
+  .cloud3 {
+    width: 90px;
+    height: 120px;
     position: fixed; } }
 .cloud1 {
   top: 1px;
@@ -40,7 +53,7 @@ body {
   animation: move 35s linear 10s infinite backwards; }
 
 .cloud3 {
-  top: 100px;
+  top: 350px;
   z-index: 300;
   fill: #eee;
   -webkit-animation: move 15s linear 1s infinite backwards;
@@ -48,34 +61,97 @@ body {
   -o-animation: move 15s linear 1s infinite backwards;
   animation: move 15s linear 1s infinite backwards; }
 
+@media only screen and (max-width: 800px) {
+  .cloud1 {
+    top: 300px;
+    z-index: 100;
+    fill: #eee;
+    /* Animation shorthand syntax order: name, duration, timing-function, delay, iteration-count, direction, fill-mode */
+    -webkit-animation: move 25s linear infinite;
+    -moz-animation: move 25s linear infinite;
+    -o-animation: move 25s linear infinite;
+    animation: move 25s linear infinite; } }
 @-webkit-keyframes move {
   from {
     -webkit-transform: translateX(-200px); }
   to {
     -webkit-transform: translateX(1350px); } }
+div.title {
+  padding: 0;
+  margin: 0; }
+
+div.title p {
+  position: relative;
+  font-family: "Ubuntu", sans-serif;
+  color: #fff;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 6em; }
+
+div.button-spec {
+  margin: 20px; }
+
+div.button-spec button {
+  font-family: "Muli", sans-serif;
+  font-size: 1.2em;
+  outline: none;
+  border: none;
+  background: transparent;
+  height: 3rem;
+  width: 15rem;
+  background-color: #a2cae5;
+  border-radius: 0.3em; }
+
 div.main-content {
   display: block;
   position: relative;
-  padding: 5em;
+  padding-top: 10em;
   z-index: 1000; }
+
+div.spacing-boxes {
+  margin: 5em; }
 
 input, label {
   display: block;
   margin: 0 auto;
   z-index: 1000; }
 
-label {
+label[for=style] {
+  padding-bottom: 0.5em;
+  padding-top: 0.5em;
   margin: 0 auto;
-  text-align: center; }
+  text-align: center;
+  font-size: 2em;
+  font-family: "Dosis", sans-serif; }
+
+input::placeholder {
+  color: #e7e5e1; }
 
 input:focus {
   outline: 0; }
 
-input[type="number"], input[type="string"] {
+input[type="number"] {
+  opacity: 0.9;
+  font-family: "Muli", sans-serif;
+  font-size: 2em;
+  text-align: center;
+  color: #fff;
   border-radius: 0.3em;
   border: none;
-  height: 5em;
-  width: 15em;
-  background-color: #3f92c8; }
+  height: 5rem;
+  width: 20rem;
+  background-color: #66a8d4; }
+
+input[type="string"] {
+  opacity: 0.9;
+  font-family: "Dosis", sans-serif;
+  font-size: 2.5em;
+  text-align: center;
+  color: #fff;
+  border-radius: 0.3em;
+  border: none;
+  height: 5rem;
+  width: 20rem;
+  background-color: #72afd7; }
 
 /*# sourceMappingURL=style.css.map */

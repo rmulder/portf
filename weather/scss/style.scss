@@ -1,11 +1,10 @@
 // main stylesheet
 
-$blue: #8ebfdf;
-$robo: 'Roboto', sans-serif;
-$dos: 'Dosis', sans-serif;
-$ubu: 'Ubuntu', sans-serif;
-$maven: 'Maven Pro', sans-serif;
-$muli: 'Muli', sans-serif;
+@import "vars";
+
+html{
+  font-size: 12px;
+}
 
 
 body {
@@ -16,7 +15,7 @@ body {
 
 .background {
 	width: 100%;
-  height: 700px;
+  height: 2000px;
   position: relative;
   background-color: $blue;
   background-size: 100% 100%;
@@ -30,10 +29,22 @@ body {
 
 @media only screen and (max-width: 800px)
 {
-  .clouds
+  .cloud1
   {
-    width: 100px;
+    width: 150px;
     height: 200px;
+    position: fixed;
+  }
+  .cloud2
+  {
+    width: 90px;
+    height: 150px;
+    position: fixed;
+  }
+  .cloud3
+  {
+    width: 90px;
+    height: 120px;
     position: fixed;
   }
 }
@@ -60,13 +71,28 @@ body {
 }
 
 .cloud3 {
-	top: 100px;
+	top: 350px;
   z-index: 300;
   fill: #eee;
   -webkit-animation: move 15s linear 1s infinite backwards;
   -moz-animation: move 15s linear 1s infinite backwards;
   -o-animation: move 15s linear 1s infinite backwards;
   animation: move 15s linear 1s infinite backwards;
+}
+
+@media only screen and (max-width: 800px)
+{
+  .cloud1
+  {
+  	top: 300px;
+    z-index: 100;
+    fill: #eee;
+    /* Animation shorthand syntax order: name, duration, timing-function, delay, iteration-count, direction, fill-mode */
+    -webkit-animation: move 25s linear infinite;
+    -moz-animation: move 25s linear infinite;
+    -o-animation: move 25s linear infinite;
+    animation: move 25s linear infinite;
+  }
 }
 
 @-webkit-keyframes move {
@@ -77,13 +103,54 @@ body {
 
 // main content styling:
 
+div.title
+{
+  padding: 0;
+  margin: 0;
+}
+
+div.title p
+{
+  position: relative;
+  font-family: $ubu;
+  color: #fff;
+  margin: 0 auto;
+  // padding: em;
+  text-align: center;
+  font-size: 6em;
+}
+
+div.button-spec
+{
+  margin: 20px;
+}
+
+div.button-spec button
+{
+  font-family: $muli;
+  font-size: 1.2em;
+  outline: none;
+  border: none;
+  background: transparent;
+  height: 3rem;
+  width: 15rem;
+  background-color: lighten($blue, 5%);
+  border-radius: 0.3em;
+}
+
 div.main-content
 {
   display: block;
   position: relative;
-  padding: 5em;
+  padding-top: 10em;
   z-index: 1000;
 }
+
+div.spacing-boxes
+{
+  margin: 5em;
+}
+
 
 input, label
 {
@@ -92,10 +159,19 @@ input, label
   z-index: 1000;
 }
 
-label
+label[for=style]
 {
+  padding-bottom: 0.5em;
+  padding-top: 0.5em;
   margin: 0 auto;
   text-align: center;
+  font-size: 2em;
+  font-family: $dos;
+}
+
+input::placeholder
+{
+  color: #e7e5e1;
 }
 
 input:focus
@@ -103,11 +179,30 @@ input:focus
   outline:0;
 }
 
-input[type="number"], input[type="string"]
+input[type="number"]
 {
+  opacity: 0.9;
+  font-family: $muli;
+  font-size:2em;
+  text-align: center;
+  color: #fff;
   border-radius: 0.3em;
   border: none;
-  height: 5em;
-  width: 15em;
-  background-color: darken($blue, 20%);
+  height: 5rem;
+  width: 20rem;
+  background-color: darken($blue, 10%);
+}
+
+input[type="string"]
+{
+  opacity: 0.9;
+  font-family: $dos;
+  font-size:2.5em;
+  text-align: center;
+  color: #fff;
+  border-radius: 0.3em;
+  border: none;
+  height: 5rem;
+  width: 20rem;
+  background-color: darken($blue, 7%);
 }
