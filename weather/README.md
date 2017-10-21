@@ -12,3 +12,5 @@ A Weather API Website that provides weather information based on zip codes.
 * SCSS
 * CSS
 * OpenWeatherMap API
+* Gulp.js
+* Git
