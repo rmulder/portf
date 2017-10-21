@@ -9,41 +9,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script>
-    function getWeather()
-    {
-      // http://api.openweathermap.org/data/2.5/weather?zip=95129,us&units=imperial&APPID=db1edb185dafcf9893865ee1101d96a0
-      // const format = "api.openweathermap.org/data/2.5/weather?zip={zip code},{country code}";
-      let zipcode = "95129";
-      const country = ",us";
-      // const urlbase = "http://api.openweathermap.org/data/2.5/weather?zip=95129,us";
-      const urlbase = "http://api.openweathermap.org/data/2.5/weather?zip=";
-      const apikey = "APPID=db1edb185dafcf9893865ee1101d96a0";
-      const add = "&";
-      const units = "units=imperial"
-
-
-      $.getJSON(`${urlbase + zipcode + country + add + units + add + apikey}`,function(json)
-      {
-        document.write("Name of city: " + JSON.stringify(json.name) + ", CA");
-        document.write("\r \n");
-        // document.write(JSON.stringify(json.name));
-        document.write("Weather of city min: " + JSON.stringify(json.main.temp_min) + "F");
-        document.write("Weather of city max: " + JSON.stringify(json.main.temp_max) + "F");
-        // document.write(JSON.stringify(json.main.temp));
-        let weath = JSON.stringify(json);
-        // let weath = JSON.parse(json);
-
-        // document.getElementById('total').value = (total + "%"); // total is the value being assigned
-        //
-        // <input type="text" id = "total" value = " " readonly/> // html to which assigned to
-
-      });
-    }
-    </script>
+    <script src="js/app.js"> console.log("linking app.js"); </script>
   </head>
   <body>
-    <p id="demo">  </p>
-    <button id = "getIt" onclick = "getWeather()">Get Weather</button>
+      <div class="overall">
+
+        <label class="zipcode">
+          <label>Enter your Zip Code</label>
+          <input type="number" id="code-enter" value = "" class="zip-enter" placeholder="95014" title="Enter your Zip Code" required/>
+        </label>
+
+        <button id = "getIt" onclick = "getWeather()">Get Weather</button>
+
+        <label>Weather at the zipcode</label>
+        <input type="number" id = "total" value = "" title="Weather of zipcode entered"readonly/>
+
+      </div>
   </body>
 </html>
