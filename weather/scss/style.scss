@@ -7,20 +7,20 @@ $ubu: 'Ubuntu', sans-serif;
 $maven: 'Maven Pro', sans-serif;
 $muli: 'Muli', sans-serif;
 
-html{
+html
+{
   background-color: $blue;
   border: none;
   font-size: 12px;
 }
 
-
-body {
-  // overflow: hidden;
+body
+{
   margin: 0;
-  // padding: 0;
 }
 
-.background {
+.background
+{
 	width: 100%;
   height: 100%;
   position: relative;
@@ -28,7 +28,8 @@ body {
   background-size: 100% 100%;
 }
 
-.clouds {
+.clouds
+{
   width: 200px;
   height: 300px;
   position: absolute;
@@ -68,10 +69,10 @@ body {
   z-index: 100;
   fill: #eee;
   /* Animation shorthand syntax order: name, duration, timing-function, delay, iteration-count, direction, fill-mode */
-  -webkit-animation: move 25s linear infinite;
-  -moz-animation: move 25s linear infinite;
-  -o-animation: move 25s linear infinite;
-  animation: move 25s linear infinite;
+  -webkit-animation: move 55s linear infinite;
+  -moz-animation: move 55s linear infinite;
+  -o-animation: move 55s linear infinite;
+  animation: move 55s linear infinite;
 }
 
 .cloud2
@@ -90,10 +91,10 @@ body {
 	top: 350px;
   z-index: 300;
   fill: #eee;
-  -webkit-animation: move 15s linear 1s infinite backwards;
-  -moz-animation: move 15s linear 1s infinite backwards;
-  -o-animation: move 15s linear 1s infinite backwards;
-  animation: move 15s linear 1s infinite backwards;
+  -webkit-animation: move 25s linear 1s infinite backwards;
+  -moz-animation: move 25s linear 1s infinite backwards;
+  -o-animation: move 25s linear 1s infinite backwards;
+  animation: move 25s linear 1s infinite backwards;
 }
 
 .cloud4
@@ -115,10 +116,10 @@ body {
     z-index: 100;
     fill: #eee;
     /* Animation shorthand syntax order: name, duration, timing-function, delay, iteration-count, direction, fill-mode */
-    -webkit-animation: move 25s linear infinite;
-    -moz-animation: move 25s linear infinite;
-    -o-animation: move 25s linear infinite;
-    animation: move 25s linear infinite;
+    -webkit-animation: move 45s linear infinite;
+    -moz-animation: move 45s linear infinite;
+    -o-animation: move 45s linear infinite;
+    animation: move 45s linear infinite;
   }
 }
 
@@ -152,7 +153,7 @@ div.title p
 {
   div.title p
   {
-    margin-top: -1em;
+    margin-top: -1.5em;
     font-size: 4.8em;
   }
 

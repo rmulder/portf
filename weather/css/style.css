@@ -43,10 +43,10 @@ body {
   z-index: 100;
   fill: #eee;
   /* Animation shorthand syntax order: name, duration, timing-function, delay, iteration-count, direction, fill-mode */
-  -webkit-animation: move 25s linear infinite;
-  -moz-animation: move 25s linear infinite;
-  -o-animation: move 25s linear infinite;
-  animation: move 25s linear infinite; }
+  -webkit-animation: move 55s linear infinite;
+  -moz-animation: move 55s linear infinite;
+  -o-animation: move 55s linear infinite;
+  animation: move 55s linear infinite; }
 
 .cloud2 {
   top: 200px;
@@ -61,10 +61,10 @@ body {
   top: 350px;
   z-index: 300;
   fill: #eee;
-  -webkit-animation: move 15s linear 1s infinite backwards;
-  -moz-animation: move 15s linear 1s infinite backwards;
-  -o-animation: move 15s linear 1s infinite backwards;
-  animation: move 15s linear 1s infinite backwards; }
+  -webkit-animation: move 25s linear 1s infinite backwards;
+  -moz-animation: move 25s linear 1s infinite backwards;
+  -o-animation: move 25s linear 1s infinite backwards;
+  animation: move 25s linear 1s infinite backwards; }
 
 .cloud4 {
   top: 550px;
@@ -81,10 +81,10 @@ body {
     z-index: 100;
     fill: #eee;
     /* Animation shorthand syntax order: name, duration, timing-function, delay, iteration-count, direction, fill-mode */
-    -webkit-animation: move 25s linear infinite;
-    -moz-animation: move 25s linear infinite;
-    -o-animation: move 25s linear infinite;
-    animation: move 25s linear infinite; } }
+    -webkit-animation: move 45s linear infinite;
+    -moz-animation: move 45s linear infinite;
+    -o-animation: move 45s linear infinite;
+    animation: move 45s linear infinite; } }
 @-webkit-keyframes move {
   from {
     -webkit-transform: translateX(-200px); }
@@ -104,7 +104,7 @@ div.title p {
 
 @media only screen and (max-width: 800px) {
   div.title p {
-    margin-top: -1em;
+    margin-top: -1.5em;
     font-size: 4.8em; } }
 div.button-spec {
   margin: 20px; }
