@@ -1,0 +1,20 @@
+{
+  "name": "determinantcalc",
+  "version": "1.0.0",
+  "description": "determinant calculator for 22 and 33 matrices",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "determinant",
+    "math",
+    "responsive",
+    "ronan",
+    "manoj",
+    "ronanmanoj",
+    "linearalgebra"
+  ],
+  "author": "Ronan Manoj",
+  "license": "MIT"
+}
