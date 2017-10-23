@@ -26,7 +26,54 @@ function getWeather()
     console.log("Weather of city min: " + JSON.stringify(json.main.temp_min, null, ' ') + "°F");
     $("#total-low").val((JSON.stringify(json.main.temp_min, null, ' ')) + "°F"); // assigning temp to read box
     $("#total-high").val((JSON.stringify(json.main.temp_max, null, ' ')) + "°F"); // assigning temp to read box
-    console.log(JSON.stringify(json.weather[0].description));
+    let descr = (JSON.stringify(json.weather[0].description));
+    console.log(descr);
     console.log(JSON.stringify(json.clouds.all));
+
+    if(descr.search('rain') !== -1 || descr.search('mist') !== -1 || descr.search('hail') !== -1 || descr.search('snow') !== -1)
+    {
+      // $("div.background").css({"background-color": "yellow", "-webkit-transition: background-color 1s ease-in-out"});
+      $(".background").css("-webkit-transition",  "background-color 1s ease-in-out");
+      $(".background").css('background-color', '#9a9a97');
+      $("html").css("-webkit-transition",  "background-color 1s ease-in-out");
+      $("html").css('background-color', '#9a9a97');
+
+      $("div.button-spec button").css("-webkit-transition",  "background-color 1s ease-in-out");
+      $("div.button-spec button").css('background-color', '#90908d'); // button darken 5% from original gray
+
+      $("input[type='number']").css("-webkit-transition",  "background-color 1s ease-in-out");
+      $("input[type='number']").css('background-color', '#81817d'); // button darken 10% from original gray
+
+      $("input[type='string']").css("-webkit-transition",  "background-color 1s ease-in-out");
+      $("input[type='string']").css('background-color', '#81817d'); // button darken 10% from original gray
+
+    }
+    else if (descr.search('clear') !== -1)
+    {
+      $(".background").css("-webkit-transition",  "background-color 1s ease-in-out");
+      $(".background").css('background-color', '#ffe640');
+      $("html").css("-webkit-transition",  "background-color 1s ease-in-out");
+      $("html").css('background-color', '#ffe640');
+      // ffdf0d yellow darken 10%
+    }
+    else
+    {
+      $(".background").css("-webkit-transition",  "background-color 1s ease-in-out");
+      $(".background").css('background-color', '#8ebfdf');
+      $("html").css("-webkit-transition",  "background-color 1s ease-in-out");
+      $("html").css('background-color', '#8ebfdf');
+
+      $("div.button-spec button").css("-webkit-transition",  "background-color 1s ease-in-out");
+      $("div.button-spec button").css('background-color', '#a2cae5'); // button darken 5% from original blue
+
+      $("input[type='number']").css("-webkit-transition",  "background-color 1s ease-in-out");
+      $("input[type='number']").css('background-color', '#66a8d4'); // button darken 10% from original gray
+
+      $("input[type='string']").css("-webkit-transition",  "background-color 1s ease-in-out");
+      $("input[type='string']").css('background-color', '#72afd7'); // button darken 10% from original gray
+
+    }
+
+
   });
 }
