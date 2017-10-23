@@ -27,7 +27,7 @@ gulp.task("minifyScripts", ["concatScripts"], function() {
 gulp.task("compileSass", function() {
 
   // main stylesheet:
-   gulp.src("scss/weather.scss")
+   gulp.src("scss/style.scss")
     .pipe(sass({outputStyle: 'compressed'}))
     .pipe(rename('weather.css'))
     .pipe(maps.write('./')) // sourcemaps to css
