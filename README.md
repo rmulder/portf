@@ -24,3 +24,6 @@ A 2x2 and 3x3 Determinant Calculator.
 
 ## Weather API Integration 
 Weather API Website, retrieval through zip code.
+
+## News API Integration
+News API Website, retrieval through keyword/topic.
