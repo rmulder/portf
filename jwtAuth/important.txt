@@ -1,0 +1,3 @@
+Use this project instead, with client side html:
+
+https://github.com/pandeysoni/User-Authentication-using-JWT-JSON-Web-Token-in-Node.js-Express
