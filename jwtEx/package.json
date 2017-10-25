@@ -1,0 +1,34 @@
+{
+  "name": "jwttodolist",
+  "version": "2.0.0",
+  "description": "JWT example using nodejs and express and mongo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ronmantech/portf/jwtEx.git"
+  },
+  "keywords": [
+    "JWT",
+    "Mongo",
+    "nodejs", 
+    "express"
+  ],
+  "author": "Ronan Manoj",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ronmantech/portf/jwtEx/issues"
+  },
+  "homepage": "https://github.com/ronmantech/portf/jwtEx#readme",
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "mongoose": "^4.7.2"
+  }
+}
