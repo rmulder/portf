@@ -4,6 +4,6 @@ echo "Adding, commiting, pushing"
 
 git add --all
 
-git commit -m "personal website commit"
+git commit -m "Updating JWT Todo List Website"
 
 git push
