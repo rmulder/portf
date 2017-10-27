@@ -27,3 +27,9 @@ Weather API Website, retrieval through zip code.
 
 ## News API Integration
 News API Website, retrieval through keyword/topic.
+
+## JWT Test
+Implementing JWT (JSON Web Tokens) for authentication. 
+
+## Angular Application
+Playing around with angular.
