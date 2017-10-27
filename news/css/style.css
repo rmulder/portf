@@ -1,3 +1,77 @@
+html {
+  font-size: 12px;
+  box-sizing: border-box; }
 
+body {
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  background-color: #bababa; }
+
+div.title {
+  margin: 0 auto;
+  padding: 0; }
+
+div.title p {
+  justify-content: center;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 4em;
+  font-style: normal;
+  font-weight: 300; }
+
+div.spec-search-container {
+  margin: 0 auto;
+  flex: 0 0 200px;
+  height: 30px;
+  width: 200px;
+  position: relative; }
+
+#theInput {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 2;
+  background-color: transparent;
+  border: none;
+  color: #080808;
+  opacity: 0;
+  transition: opacity .5s;
+  padding: 5px;
+  font-family: "Maven Pro", sans-serif;
+  font-size: 2.0em; }
+
+.open #theInput {
+  opacity: 1; }
+
+#theInput:focus {
+  outline: none; }
+
+#searchSvg {
+  margin-left: -92px;
+  transition: margin-left 0.6s cubic-bezier(0, 0.5, 0.5, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1; }
+
+#searchSvg path {
+  stroke: #080808;
+  stroke-width: 2px;
+  fill: transparent;
+  stroke-dasharray: 75,200;
+  stroke-dashoffset: 75;
+  stroke-linejoin: round;
+  transition: stroke-dasharray 0.6s cubic-bezier(0, 0.5, 0.5, 1), stroke-dashoffset 0.6s cubic-bezier(0, 0.5, 0.5, 1); }
+
+.open #searchSvg {
+  margin-left: 0; }
+
+.open #searchSvg path {
+  stroke-dashoffset: 275;
+  stroke-dasharray: 200,76; }
 
 /*# sourceMappingURL=style.css.map */
