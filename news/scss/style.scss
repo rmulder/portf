@@ -1,12 +1,6 @@
 // main stylesheet
 
-$background-col: #bababa;
-$black: #080808;
-$robo: 'Roboto', sans-serif;
-$dos: 'Dosis', sans-serif;
-$ubu: 'Ubuntu', sans-serif;
-$maven: 'Maven Pro', sans-serif;
-$muli: 'Muli', sans-serif;
+@import "vars";
 
 html
 {
@@ -14,99 +8,17 @@ html
   box-sizing: border-box;
 }
 
-body
-{
-    // display: flex;
-    // align-items: center;
-    justify-content: center;
-    height: 100vh;
-    width: 100%;
-    background-color: $background-col;
-}
-
 div.title
 {
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
 }
 
 div.title p
 {
-  justify-content: center;
+  text-align: center;
   font-family: $ubu;
   font-size: 4em;
   font-style: normal;
   font-weight: 300;
-}
-
-div.spec-search-container
-{
-  margin: 0 auto;
-    flex: 0 0 200px;
-    height: 30px;
-    width: 200px;
-    position: relative;
-}
-
-#theInput
-{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    z-index: 2;
-    background-color: transparent;
-    border: none;
-    color: $black;
-    opacity: 0;
-    transition: opacity .5s;
-    padding: 5px;
-
-    font-family: $maven;
-    font-size: 2.0em;
-}
-
-.open #theInput
-{
-    opacity: 1;
-}
-
-#theInput:focus
-{
-    outline: none;
-}
-
-#searchSvg
-{
-    margin-left: -92px;
-    transition: margin-left .6s cubic-bezier(0,.5,.5,1);
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    z-index: 1;
-}
-
-#searchSvg path
-{
-    stroke: $black;
-    stroke-width: 2px;
-    fill: transparent;
-    stroke-dasharray: 75,200;
-    stroke-dashoffset: 75;
-    stroke-linejoin: round;
-    transition: stroke-dasharray .6s cubic-bezier(0,.5,.5,1), stroke-dashoffset .6s cubic-bezier(0,.5,.5,1);
-}
-
-.open #searchSvg
-{
-    margin-left: 0;
-}
-
-.open #searchSvg path
-{
-    stroke-dashoffset: 275;
-    stroke-dasharray: 200,76;
 }

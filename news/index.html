@@ -8,19 +8,29 @@
     <meta name="keywords" content="news, api, newsapi, ronan, manoj, ronanmanoj, responsive">
     <title>News API</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/boxes.css">
+    <link rel = "shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link href = "https://fonts.googleapis.com/css?family=Dosis:200,300|Maven+Pro|Muli:200,300,400|Roboto:100,300,400|Ubuntu:300,400" rel="stylesheet">
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src = "js/news.js"> console.log("linking news.js"); </script>
   </head>
   <body>
     <div class="title">
       <p>News API</p>
     </div>
 
-    <div class="spec-search-container"> <!-- search bar -->
-      <input id="theInput" />
-      <svg height="31" width="200" id="searchSvg">
-        <path d="M0 30 L200 30 L192 22 a10,10 0 1 0 -1,1 L192 22" />
-      </svg>
+    <!-- type 4 -->
+
+    <div class="main-container page__container">
+      <label class="field field_type4">
+        <input class="field__input" placeholder="e.g. technology">
+        <span class="field__label-wrap">
+          <span class="field__label">Topic of Interest</span>
+        </span>
+      </label>
     </div>
+
+
 
   </body>
   <script src="js/search.js" charset="utf-8"></script>
