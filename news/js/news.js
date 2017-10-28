@@ -10,7 +10,7 @@ $(document).ready(function()
     kw = kw.toLowerCase().replace(/\s/g, '');
     console.log("Keyword entered: " + kw);
 
-    if(kw.search('tech') !== -1 || kw.search('technology') !== -1)
+    if(kw.search('tech') !== -1 || kw.search('technology') !== -1 || kw.search('comp') !== -1 || kw.search('computer') !== -1 || kw.search('computers') !== -1 || kw.search('phones') !== -1 || kw.search('phone') !== -1 || kw.search('smart') !== -1)
     {
       console.log("Calling getTechNewsFunction");
       getTechNews();
@@ -20,14 +20,20 @@ $(document).ready(function()
       console.log("Calling getSportsNewsFunction");
       getSportsNews();
     }
-    else if (kw.search('business') !== -1 || kw.search('busi') !== -1 || kw.search('busines') !== -1 || kw.search('bus') !== -1 || kw.search('busin') !== -1)
+    else if (kw.search('business') !== -1 || kw.search('busi') !== -1 || kw.search('busines') !== -1 || kw.search('bus') !== -1 || kw.search('finance') !== -1 || kw.search('stock') !== -1 || kw.search('stocks') !== -1 || kw.search('market') !== -1 || kw.search('account') !== -1 || kw.search('accounting') !== -1)
     {
       console.log("Calling getBusinessNews");
       getBusinessNews();
     }
+    else if(kw.search('silicon') !== -1 || kw.search('valley') !== -1 || kw.search('siliconvalley') !== -1 || kw.search('thevalley') !== -1 || kw.search('bay') !== -1 || kw.search('bayarea') !== -1 || kw.search('thebay') !== -1 || kw.search('sf') !== -1 || kw.search('sanfrancisco') !== -1 || kw.search('sv') !== -1)
+    {
+      console.log("Calling getSiliconValleyNewsFunction");
+      getSVNews();
+    }
     else
     {
       console.log("Generally Popular News Called");
+      getGeneralNews();
     }
 
     e.preventDefault();
@@ -51,17 +57,21 @@ function getTechNews()
     tcSource = tcSource.substr(1).slice(0, -1); // to remove the quote marks
     console.log("News Source: " + tcSource);
 
-    let tcATitle = (JSON.stringify(json.articles[0].title))
-    tcATitle = tcATitle.substr(1).slice(0, -1);
-    console.log("News Title: " + tcATitle);
+    let t1Title = (JSON.stringify(json.articles[0].title))
+    t1Title = t1Title.substr(1).slice(0, -1);
+    console.log("News Title: " + t1Title);
 
-    let tcADesc = (JSON.stringify(json.articles[0].description))
-    tcADesc = tcADesc.substr(1).slice(0, -1);
-    console.log("News Description: " + tcADesc);
+    let t1Description = (JSON.stringify(json.articles[0].description))
+    t1Description = t1Description.substr(1).slice(0, -1);
+    console.log("News Description: " + t1Description);
 
-    let tcAUrl = (JSON.stringify(json.articles[0].url))
-    tcAUrl = tcAUrl.substr(1).slice(0, -1);
-    console.log("News URL: " + tcAUrl);
+    let t1Url = (JSON.stringify(json.articles[0].url))
+    t1Url = t1Url.substr(1).slice(0, -1);
+    console.log("News URL: " + t1Url);
+
+    let t1UrlI = (JSON.stringify(json.articles[0].urlToImage)) // url of image
+    t1UrlI = t1UrlI.substr(1).slice(0, -1);
+    console.log("News URL Image: " + t1UrlI);
 
     // $("#total-low").val((JSON.stringify(json.main.temp_min, null, ' ')) + "°F"); // assigning temp to read box
 
@@ -97,6 +107,10 @@ function getBusinessNews()
     b1Url = b1Url.substr(1).slice(0, -1);
     console.log("News URL: " + b1Url);
 
+    let b1UrlI = (JSON.stringify(json.articles[0].urlToImage)) // url of image
+    b1UrlI = b1UrlI.substr(1).slice(0, -1);
+    console.log("News URL Image: " + b1UrlI);
+
   });
 }
 
@@ -127,6 +141,80 @@ function getSportsNews()
     let s1Url = (JSON.stringify(json.articles[0].url))
     s1Url = s1Url.substr(1).slice(0, -1);
     console.log("News URL: " + s1Url);
+
+    let s1UrlI = (JSON.stringify(json.articles[0].urlToImage)) // url of image
+    s1UrlI = s1UrlI.substr(1).slice(0, -1);
+    console.log("News URL Image: " + s1UrlI);
+
+  });
+}
+
+function getGeneralNews()
+{
+  const urlbase = "https://newsapi.org/v1/articles?source=";
+  const rest = "&sortBy=top"; // in english, and top info.
+  const apikey = "&apiKey=c70c8062d2544d5b8459796ca2707d7a";
+  const cnn = "cnn";
+
+  // example:
+  // https://newsapi.org/v1/articles?source=cnn&sortBy=top&apiKey=c70c8062d2544d5b8459796ca2707d7a
+
+  $.getJSON(`${urlbase + cnn + rest + apikey}`,function(json)
+  {
+    let gSource = (JSON.stringify(json.source))
+    gSource = gSource.substr(1).slice(0, -1); // to remove the quote marks
+    console.log("News Source: " + gSource);
+
+    let g1Title = (JSON.stringify(json.articles[0].title))
+    g1Title = g1Title.substr(1).slice(0, -1);
+    console.log("News Title: " + g1Title);
+
+    let g1Description = (JSON.stringify(json.articles[0].description))
+    g1Description = g1Description.substr(1).slice(0, -1);
+    console.log("News Description: " + g1Description);
+
+    let g1Url = (JSON.stringify(json.articles[0].url))
+    g1Url = g1Url.substr(1).slice(0, -1);
+    console.log("News URL: " + g1Url);
+
+    let g1UrlI = (JSON.stringify(json.articles[0].urlToImage)) // url of image
+    g1UrlI = g1UrlI.substr(1).slice(0, -1);
+    console.log("News URL Image: " + g1UrlI);
+
+  });
+}
+
+function getSVNews()
+{
+  const urlbase = "https://newsapi.org/v1/articles?source=";
+  const rest = "&sortBy=top"; // in english, and top info.
+  const apikey = "&apiKey=c70c8062d2544d5b8459796ca2707d7a";
+  const recode = "recode";
+
+  // example:
+  // https://newsapi.org/v1/articles?source=recode&sortBy=top&apiKey=c70c8062d2544d5b8459796ca2707d7a
+
+  $.getJSON(`${urlbase + recode + rest + apikey}`,function(json)
+  {
+    let svSource = (JSON.stringify(json.source))
+    svSource = svSource.substr(1).slice(0, -1); // to remove the quote marks
+    console.log("News Source: " + svSource);
+
+    let sv1Title = (JSON.stringify(json.articles[0].title))
+    sv1Title = sv1Title.substr(1).slice(0, -1);
+    console.log("News Title: " + sv1Title);
+
+    let sv1Description = (JSON.stringify(json.articles[0].description))
+    sv1Description = sv1Description.substr(1).slice(0, -1);
+    console.log("News Description: " + sv1Description);
+
+    let sv1Url = (JSON.stringify(json.articles[0].url))
+    sv1Url = sv1Url.substr(1).slice(0, -1);
+    console.log("News URL: " + sv1Url);
+
+    let sv1UrlI = (JSON.stringify(json.articles[0].urlToImage)) // url of image
+    sv1UrlI = sv1UrlI.substr(1).slice(0, -1);
+    console.log("News URL Image: " + sv1UrlI);
 
   });
 }

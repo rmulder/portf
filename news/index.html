@@ -9,6 +9,7 @@
     <title>News API</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/boxes.css">
+    <link rel="stylesheet" href="css/cards.css">
     <link rel = "shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link href = "https://fonts.googleapis.com/css?family=Dosis:200,300|Maven+Pro|Muli:200,300,400|Roboto:100,300,400|Ubuntu:300,400" rel="stylesheet">
     <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -19,14 +20,55 @@
       <p>News API</p>
     </div>
 
+    <!-- Input of Keywords -->
+
     <div class="main-container page__container">
       <label class="field field_type4">
-        <input class="field__input" placeholder="e.g. technology">
+        <input class="field__input" placeholder="e.g. tech">
         <span class="field__label-wrap">
           <span class="field__label">Topic of Interest</span>
         </span>
       </label>
     </div>
+
+    <!-- End Input of Keywords -->
+
+
+
+    <!-- Content Cards-->
+
+    <ul class="cards">
+  <li class="cards__item">
+    <div class="card">
+      <div class="card__image card__image--fence"></div>
+      <div class="card__content">
+        <div class="card__title">Flex</div>
+        <p class="card__text">This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third parameters (flex-shrink and flex-basis) are optional. Default is 0 1 auto. </p>
+        <button class="btn btn--block card__btn">Button</button>
+      </div>
+    </div>
+  </li>
+  <li class="cards__item">
+    <div class="card">
+      <div class="card__image card__image--river"></div>
+      <div class="card__content">
+        <div class="card__title">Flex Grow</div>
+        <p class="card__text">This defines the ability for a flex item to grow if necessary. It accepts a unitless value that serves as a proportion. It dictates what amount of the available space inside the flex container the item should take up.</p>
+        <button class="btn btn--block card__btn">Button</button>
+      </div>
+    </div>
+  </li>
+  <li class="cards__item">
+    <div class="card">
+      <div class="card__image card__image--record"></div>
+      <div class="card__content">
+        <div class="card__title">Flex Shrink</div>
+        <p class="card__text">This defines the ability for a flex item to shrink if necessary. Negative numbers are invalid.This defines the ability for a flex item to grow if necessary. It accepts a unitless value that serves as a proportion. It dictates what amount of the available space inside the flex container the item should take up.This defines the ability for a flex item to grow if necessary. It accepts a unitless value that serves as a proportion. It dictates what amount of the available space inside the flex container the item should take up.</p>
+        <button class="btn btn--block card__btn">Button</button>
+      </div>
+    </div>
+  </li>
+</ul>
 
   </body>
   <script src="js/search.js" charset="utf-8"></script>
