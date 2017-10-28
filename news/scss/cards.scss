@@ -1,4 +1,8 @@
-// 
+// secondary stylesheet
+
+@import "vars";
+
+//
 // body {
 //   color: #999999;
 //   // font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -12,44 +16,59 @@
 //   -moz-font-feature-settings: "liga" on;
 // }
 
-img {
+img
+{
   height: auto;
   max-width: 100%;
   vertical-align: middle;
 }
-.btn {
+
+.btn
+{
   background-color: white;
   border: 1px solid #cccccc;
   color: #696969;
   padding: 0.5rem;
   text-transform: lowercase;
 }
-.btn--block {
+
+.btn--block
+{
   display: block;
   width: 100%;
 }
-.cards {
+
+.cards
+{
   display: flex;
   flex-wrap: wrap;
   list-style: none;
   margin: 0;
   padding: 0;
 }
-.cards__item {
+
+.cards__item
+{
   display: flex;
   padding: 1rem;
 }
-@media (min-width: 40rem) {
+
+@media (min-width: 40rem)
+{
   .cards__item {
     width: 50%;
   }
 }
-@media (min-width: 56rem) {
+
+@media (min-width: 56rem)
+{
   .cards__item {
     width: 33.3333%;
   }
 }
-.card {
+
+.card
+{
   background-color: white;
   border-radius: 0.25rem;
   box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
@@ -57,16 +76,17 @@ img {
   flex-direction: column;
   overflow: hidden;
 }
-// .card:hover .card__image {
-//   filter: contrast(100%);
-// }
-.card__content {
+
+.card__content
+{
   display: flex;
   flex: 1 1 auto;
   flex-direction: column;
   padding: 1rem;
 }
-.card__image {
+
+.card__image
+{
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -77,36 +97,53 @@ img {
   position: relative;
   transition: filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91);
 }
-.card__image::before {
+
+.card__image::before
+{
   content: "";
   display: block;
   padding-top: 56.25%;
 }
-@media (min-width: 40rem) {
-  .card__image::before {
+
+@media (min-width: 40rem)
+{
+  .card__image::before
+  {
     padding-top: 66.6%;
   }
 }
-.card__image--flowers {
+
+.card__image--flowers
+{
   background-image: url(https://unsplash.it/800/600?image=82);
 }
-.card__image--river {
+
+.card__image--river
+{
   background-image: url(https://unsplash.it/800/600?image=11);
 }
-.card__image--record {
+
+.card__image--record
+{
   background-image: url(https://unsplash.it/800/600?image=39);
 }
+
 .card__image--fence {
   background-image: url(https://unsplash.it/800/600?image=59);
 }
-.card__title {
+
+.card__title
+{
   color: #696969;
-  font-size: 1.25rem;
+  font-size: 1em;
   font-weight: 300;
   letter-spacing: 2px;
-  text-transform: uppercase;
+  // text-transform: uppercase;
 }
-.card__text {
+
+.card__text
+{
+  font-family: $robo;
   flex: 1 1 auto;
   font-size: 0.875rem;
   line-height: 1.5;
