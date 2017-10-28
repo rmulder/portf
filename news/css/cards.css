@@ -80,6 +80,7 @@ img {
   font-weight: 300; }
 
 .card__text {
+  color: blue;
   font-family: "Roboto", sans-serif;
   flex: 1 1 auto;
   font-size: 0.875rem;

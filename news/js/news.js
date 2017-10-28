@@ -79,8 +79,19 @@ function getTechNews()
 
     $(".card__title").text(t1Title); // assigning the title to the card title
 
+    $(".overall-cards").html('<ul class="cards">'
+            +'<li class="cards__item">'
+              +'<div class="card">'
+                +'<div class="card__image card__image--fence"></div>'
+                +'<div class="card__content">'
+                  +'<div class="card__title">'+ t1Title +'</div>'
+                  +'<p class="card__text">'+ t1Description +'</p>'
+                  // +'<button class="btn btn--block card__btn">'+ Go to Website +'</button>'
+                +'</div>'
+              +'</div>'
+            +'</li>');
   });
-}
+};
 
 
 function getBusinessNews()
