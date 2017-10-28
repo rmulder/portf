@@ -4,6 +4,6 @@ echo "Adding, Committing, Pushing"
 
 git add -A
 
-git commit -m "Updating weather api Project"
+git commit -m "Updating weather's Project"
 
 git push -u origin master
