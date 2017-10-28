@@ -4,11 +4,14 @@
 
 $(document).ready(function()
 {
+  // $(".overall-cards").css({'display': ' '});
   $(".field__input").change(function(e) // basically auto enter.
   {
     let kw = $(".field__input").val(); // zip coder entered by user
     kw = kw.toLowerCase().replace(/\s/g, '');
     console.log("Keyword entered: " + kw);
+
+    $(".card__content").hide();
 
     if(kw.search('tech') !== -1 || kw.search('technology') !== -1 || kw.search('comp') !== -1 || kw.search('computer') !== -1 || kw.search('computers') !== -1 || kw.search('phones') !== -1 || kw.search('phone') !== -1 || kw.search('smart') !== -1)
     {
@@ -73,7 +76,8 @@ function getTechNews()
     t1UrlI = t1UrlI.substr(1).slice(0, -1);
     console.log("News URL Image: " + t1UrlI);
 
-    // $("#total-low").val((JSON.stringify(json.main.temp_min, null, ' ')) + "°F"); // assigning temp to read box
+
+    $(".card__title").text(t1Title); // assigning the title to the card title
 
   });
 }
@@ -111,6 +115,8 @@ function getBusinessNews()
     b1UrlI = b1UrlI.substr(1).slice(0, -1);
     console.log("News URL Image: " + b1UrlI);
 
+    $(".card__title").text(b1Title); // assigning the title to the card title
+
   });
 }
 
@@ -145,6 +151,8 @@ function getSportsNews()
     let s1UrlI = (JSON.stringify(json.articles[0].urlToImage)) // url of image
     s1UrlI = s1UrlI.substr(1).slice(0, -1);
     console.log("News URL Image: " + s1UrlI);
+
+    $(".card__title").text(s1Title); // assigning the title to the card title
 
   });
 }
@@ -181,6 +189,8 @@ function getGeneralNews()
     g1UrlI = g1UrlI.substr(1).slice(0, -1);
     console.log("News URL Image: " + g1UrlI);
 
+    $(".card__title").text(g1Title); // assigning the title to the card title
+
   });
 }
 
@@ -215,6 +225,8 @@ function getSVNews()
     let sv1UrlI = (JSON.stringify(json.articles[0].urlToImage)) // url of image
     sv1UrlI = sv1UrlI.substr(1).slice(0, -1);
     console.log("News URL Image: " + sv1UrlI);
+
+    $(".card__title").text(sv1Title); // assigning the title to the card title
 
   });
 }

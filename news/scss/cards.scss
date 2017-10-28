@@ -3,18 +3,16 @@
 @import "vars";
 
 //
-// body {
-//   color: #999999;
-//   // font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-//   font-style: normal;
-//   font-weight: 400;
-//   letter-spacing: 0;
-//   padding: 1rem;
+// // body {
+// //   font-style: normal;
+// //   font-weight: 400;
+// //   letter-spacing: 0;
+// //   padding: 1rem;
 //   text-rendering: optimizeLegibility;
 //   -webkit-font-smoothing: antialiased;
 //   -moz-osx-font-smoothing: grayscale;
-//   -moz-font-feature-settings: "liga" on;
-// }
+// //   -moz-font-feature-settings: "liga" on;
+// // }
 
 img
 {
@@ -29,7 +27,6 @@ img
   border: 1px solid #cccccc;
   color: #696969;
   padding: 0.5rem;
-  text-transform: lowercase;
 }
 
 .btn--block
@@ -130,6 +127,9 @@ img
 
 .card__image--fence {
   background-image: url(https://unsplash.it/800/600?image=59);
+  // width: 800px;
+  // height: 600px;
+  // background-position: center;
 }
 
 .card__title
@@ -137,7 +137,7 @@ img
   color: #696969;
   font-size: 1em;
   font-weight: 300;
-  letter-spacing: 2px;
+  // letter-spacing: 2px;
   // text-transform: uppercase;
 }
 
