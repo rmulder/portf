@@ -57,7 +57,8 @@ body
   padding-left: var(--uiFieldPaddingLeft);
 
   font-family: $robo;
-  font-size: 100%;
+  font-weight: 400;
+  font-size: 110%;
   color: inherit;
 }
 
@@ -95,8 +96,10 @@ body
   top: calc(0px + var(--uiFieldPaddingTop) + var(--uiFieldBorderTop));
   left: calc(0px + var(--uiFieldPaddingLeft) + var(--uiFieldBorderLeft));
 
+  font-family: $ubu;
+  font-weight: 300;
   pointer-events: none;
-  font-size: .9em;
+  font-size: 1.3em;
 
   transition: top var(--uiFieldAnimationDuration) cubic-bezier(0.9,-0.15, 0.1, 1.15), opacity var(--uiFieldAnimationDuration) ease-out;
   will-change: top, opacity;
@@ -159,7 +162,7 @@ body
 
 .field{
   --fieldBorderColor: #fff;
-  --fieldBorderColorActive: lighten($back, 30%);
+  --fieldBorderColorActive: #{lighten($back, 30%)};
   --fieldPlaceholderColor: #fff;
   color: #fff;
 }

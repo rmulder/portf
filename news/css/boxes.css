@@ -42,7 +42,8 @@ body {
   padding-bottom: var(--uiFieldPaddingBottom);
   padding-left: var(--uiFieldPaddingLeft);
   font-family: "Roboto", sans-serif;
-  font-size: 100%;
+  font-weight: 400;
+  font-size: 110%;
   color: inherit; }
 
 .field__input::-webkit-input-placeholder {
@@ -72,8 +73,10 @@ body {
   position: absolute;
   top: calc(0px + var(--uiFieldPaddingTop) + var(--uiFieldBorderTop));
   left: calc(0px + var(--uiFieldPaddingLeft) + var(--uiFieldBorderLeft));
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
   pointer-events: none;
-  font-size: .9em;
+  font-size: 1.3em;
   transition: top var(--uiFieldAnimationDuration) cubic-bezier(0.9, -0.15, 0.1, 1.15), opacity var(--uiFieldAnimationDuration) ease-out;
   will-change: top, opacity; }
 
