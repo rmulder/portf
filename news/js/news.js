@@ -92,9 +92,27 @@ function getTechNews()
     t2UrlI = t2UrlI.substr(1).slice(0, -1);
     console.log("News URL Image: " + t2UrlI);
 
-    $(".cards").html('<li class="cards__item">'
+
+    let t3Title = (JSON.stringify(json.articles[2].title))
+    t3Title = t3Title.substr(1).slice(0, -1);
+    console.log("News Title 2: " + t3Title);
+
+    let t3Description = (JSON.stringify(json.articles[2].description))
+    t3Description = t3Description.substr(1).slice(0, -1);
+    console.log("News Description: " + t3Description);
+
+    let t3Url = (JSON.stringify(json.articles[2].url))
+    t3Url = t3Url.substr(1).slice(0, -1);
+    console.log("News URL: " + t3Url);
+
+    let t3UrlI = (JSON.stringify(json.articles[2].urlToImage)) // url of image
+    t3UrlI = t3UrlI.substr(1).slice(0, -1);
+    console.log("News URL Image: " + t3UrlI);
+
+    $(".overall-cards1").append('<ul class="cards">'
+      +'<li class="cards__item">'
               +'<div class="card">'
-                +'<div class="card__image card__image--fence"></div>'
+                +'<div class="card__image card__image--flowers"></div>'
                 +'<div class="card__content">'
                   +'<div class="card__title">'+ t1Title +'</div>'
                   +'<p class="card__text">'+ t1Description +'</p>'
@@ -104,7 +122,7 @@ function getTechNews()
             +'</li>'
             +'<li class="cards__item">'
               +'<div class="card">'
-                +'<div class="card__image card__image--river"></div>'
+                +'<div class="card__image card__image--flowers"></div>'
                 +'<div class="card__content">'
                   +'<div class="card__title">'+ t2Title +'</div>'
                   +'<p class="card__text">'+ t2Description +'</p>'
@@ -112,9 +130,17 @@ function getTechNews()
                 +'</div>'
               +'</div>'
             +'</li>'
+            +'<li class="cards__item">'
+              +'<div class="card">'
+                +'<div class="card__image card__image--flowers"></div>'
+                +'<div class="card__content">'
+                  +'<div class="card__title">'+ t3Title +'</div>'
+                  +'<p class="card__text">'+ t3Description +'</p>'
+                  +'<button class="btn btn--block card__btn">'+ 'Tech Crunch Link' +'</button>'
+                +'</div>'
+              +'</div>'
+            +'</li>'
           +'</ul>');
-
-    // $(".card__image card__image--fence").css('backgroundImage','url(t1UrlI)');
 
   });
 };
@@ -169,9 +195,26 @@ function getBusinessNews()
     b2UrlI = b2UrlI.substr(1).slice(0, -1);
     console.log("News URL Image: " + b2UrlI);
 
+    let b3Title = (JSON.stringify(json.articles[2].title))
+    b3Title = b3Title.substr(1).slice(0, -1);
+    console.log("News Title: " + b3Title);
+
+    let b3Description = (JSON.stringify(json.articles[2].description))
+    b3Description = b3Description.substr(1).slice(0, -1);
+    console.log("News Description: " + b3Description);
+
+    let b3Url = (JSON.stringify(json.articles[2].url))
+    b3Url = b3Url.substr(1).slice(0, -1);
+    console.log("News URL: " + b3Url);
+
+    let b3UrlI = (JSON.stringify(json.articles[2].urlToImage)) // url of image
+    b3UrlI = b3UrlI.substr(1).slice(0, -1);
+    console.log("News URL Image: " + b3UrlI);
+
     // $(".card__title").text(b1Title); // assigning the title to the card title
 
-    $(".cards").html('<li class="cards__item">'
+    $(".overall-cards1").append('<ul class="cards">'
+      +'<li class="cards__item">'
               +'<div class="card">'
                 +'<div class="card__image card__image--river"></div>'
                 +'<div class="card__content">'
@@ -183,10 +226,20 @@ function getBusinessNews()
             +'</li>'
             +'<li class="cards__item">'
               +'<div class="card">'
-                +'<div class="card__image card__image--fence"></div>'
+                +'<div class="card__image card__image--river"></div>'
                 +'<div class="card__content">'
                   +'<div class="card__title">'+ b2Title +'</div>'
                   +'<p class="card__text">'+ b2Description +'</p>'
+                  +'<button class="btn btn--block card__btn">'+ 'Business Insider Link' +'</button>'
+                +'</div>'
+              +'</div>'
+            +'</li>'
+            +'<li class="cards__item">'
+              +'<div class="card">'
+                +'<div class="card__image card__image--river"></div>'
+                +'<div class="card__content">'
+                  +'<div class="card__title">'+ b3Title +'</div>'
+                  +'<p class="card__text">'+ b3Description +'</p>'
                   +'<button class="btn btn--block card__btn">'+ 'Business Insider Link' +'</button>'
                 +'</div>'
               +'</div>'
@@ -228,7 +281,45 @@ function getSportsNews()
     s1UrlI = s1UrlI.substr(1).slice(0, -1);
     console.log("News URL Image: " + s1UrlI);
 
-    $(".card__title").text(s1Title); // assigning the title to the card title
+
+    let s2Title = (JSON.stringify(json.articles[1].title))
+    s2Title = s2Title.substr(1).slice(0, -1);
+    console.log("News Title: " + s2Title);
+
+    let s2Description = (JSON.stringify(json.articles[1].description))
+    s2Description = s2Description.substr(1).slice(0, -1);
+    console.log("News Description: " + s2Description);
+
+    let s2Url = (JSON.stringify(json.articles[1].url))
+    s2Url = s2Url.substr(1).slice(0, -1);
+    console.log("News URL: " + s2Url);
+
+    let s2UrlI = (JSON.stringify(json.articles[1].urlToImage)) // url of image
+    s2UrlI = s2UrlI.substr(1).slice(0, -1);
+    console.log("News URL Image: " + s2UrlI);
+
+    $(".overall-cards1").append('<ul class="cards">'
+      +'<li class="cards__item">'
+              +'<div class="card">'
+                +'<div class="card__image card__image--record"></div>'
+                +'<div class="card__content">'
+                  +'<div class="card__title">'+ s1Title +'</div>'
+                  +'<p class="card__text">'+ s1Description +'</p>'
+                  +'<button class="btn btn--block card__btn">' + 'Fox Sports Link' +'</button>'
+                +'</div>'
+              +'</div>'
+            +'</li>'
+            +'<li class="cards__item">'
+              +'<div class="card">'
+                +'<div class="card__image card__image--record"></div>'
+                +'<div class="card__content">'
+                  +'<div class="card__title">'+ s2Title +'</div>'
+                  +'<p class="card__text">'+ s2Description +'</p>'
+                  +'<button class="btn btn--block card__btn">'+ 'Fox Sports Link' +'</button>'
+                +'</div>'
+              +'</div>'
+            +'</li>'
+          +'</ul>');
 
   });
 }
@@ -265,7 +356,71 @@ function getGeneralNews()
     g1UrlI = g1UrlI.substr(1).slice(0, -1);
     console.log("News URL Image: " + g1UrlI);
 
-    $(".card__title").text(g1Title); // assigning the title to the card title
+
+    let g2Title = (JSON.stringify(json.articles[1].title))
+    g2Title = g2Title.substr(1).slice(0, -1);
+    console.log("News Title: " + g2Title);
+
+    let g2Description = (JSON.stringify(json.articles[1].description))
+    g2Description = g2Description.substr(1).slice(0, -1);
+    console.log("News Description: " + g2Description);
+
+    let g2Url = (JSON.stringify(json.articles[1].url))
+    g2Url = g2Url.substr(1).slice(0, -1);
+    console.log("News URL: " + g2Url);
+
+    let g2UrlI = (JSON.stringify(json.articles[1].urlToImage)) // url of image
+    g2UrlI = g2UrlI.substr(1).slice(0, -1);
+    console.log("News URL Image: " + g2UrlI);
+
+    let g3Title = (JSON.stringify(json.articles[2].title))
+    g3Title = g3Title.substr(1).slice(0, -1);
+    console.log("News Title: " + g3Title);
+
+    let g3Description = (JSON.stringify(json.articles[2].description))
+    g3Description = g3Description.substr(1).slice(0, -1);
+    console.log("News Description: " + g3Description);
+
+    let g3Url = (JSON.stringify(json.articles[2].url))
+    g3Url = g3Url.substr(1).slice(0, -1);
+    console.log("News URL: " + g3Url);
+
+    let g3UrlI = (JSON.stringify(json.articles[2].urlToImage)) // url of image
+    g3UrlI = g3UrlI.substr(1).slice(0, -1);
+    console.log("News URL Image: " + g3UrlI);
+
+    $(".overall-cards1").append('<ul class="cards">'
+      +'<li class="cards__item">'
+              +'<div class="card">'
+                +'<div class="card__image card__image--fence"></div>'
+                +'<div class="card__content">'
+                  +'<div class="card__title">'+ g1Title +'</div>'
+                  +'<p class="card__text">'+ g1Description +'</p>'
+                  +'<button class="btn btn--block card__btn">' + 'CNN Link' +'</button>'
+                +'</div>'
+              +'</div>'
+            +'</li>'
+            +'<li class="cards__item">'
+              +'<div class="card">'
+                +'<div class="card__image card__image--fence"></div>'
+                +'<div class="card__content">'
+                  +'<div class="card__title">'+ g2Title +'</div>'
+                  +'<p class="card__text">'+ g2Description +'</p>'
+                  +'<button class="btn btn--block card__btn">'+ 'CNN Link' +'</button>'
+                +'</div>'
+              +'</div>'
+            +'</li>'
+            +'<li class="cards__item">'
+              +'<div class="card">'
+                +'<div class="card__image card__image--fence"></div>'
+                +'<div class="card__content">'
+                  +'<div class="card__title">'+ g3Title +'</div>'
+                  +'<p class="card__text">'+ g3Description +'</p>'
+                  +'<button class="btn btn--block card__btn">'+ 'CNN Link' +'</button>'
+                +'</div>'
+              +'</div>'
+            +'</li>'
+          +'</ul>');
 
   });
 }
@@ -302,7 +457,70 @@ function getSVNews()
     sv1UrlI = sv1UrlI.substr(1).slice(0, -1);
     console.log("News URL Image: " + sv1UrlI);
 
-    $(".card__title").text(sv1Title); // assigning the title to the card title
+    let sv2Title = (JSON.stringify(json.articles[1].title))
+    sv2Title = sv2Title.substr(1).slice(0, -1);
+    console.log("News Title: " + sv2Title);
+
+    let sv2Description = (JSON.stringify(json.articles[1].description))
+    sv2Description = sv2Description.substr(1).slice(0, -1);
+    console.log("News Description: " + sv2Description);
+
+    let sv2Url = (JSON.stringify(json.articles[1].url))
+    sv2Url = sv2Url.substr(1).slice(0, -1);
+    console.log("News URL: " + sv2Url);
+
+    let sv2UrlI = (JSON.stringify(json.articles[1].urlToImage)) // url of image
+    sv2UrlI = sv2UrlI.substr(1).slice(0, -1);
+    console.log("News URL Image: " + sv2UrlI);
+
+    let sv3Title = (JSON.stringify(json.articles[2].title))
+    sv3Title = sv3Title.substr(1).slice(0, -1);
+    console.log("News Title: " + sv3Title);
+
+    let sv3Description = (JSON.stringify(json.articles[2].description))
+    sv3Description = sv3Description.substr(1).slice(0, -1);
+    console.log("News Description: " + sv3Description);
+
+    let sv3Url = (JSON.stringify(json.articles[2].url))
+    sv3Url = sv3Url.substr(1).slice(0, -1);
+    console.log("News URL: " + sv3Url);
+
+    let sv3UrlI = (JSON.stringify(json.articles[2].urlToImage)) // url of image
+    sv3UrlI = sv3UrlI.substr(1).slice(0, -1);
+    console.log("News URL Image: " + sv3UrlI);
+
+    $(".overall-cards1").append('<ul class="cards">'
+      +'<li class="cards__item">'
+              +'<div class="card">'
+                +'<div class="card__image card__image--sv"></div>'
+                +'<div class="card__content">'
+                  +'<div class="card__title">'+ sv1Title +'</div>'
+                  +'<p class="card__text">'+ sv1Description +'</p>'
+                  +'<button class="btn btn--block card__btn">' + 'Recode Link' +'</button>'
+                +'</div>'
+              +'</div>'
+            +'</li>'
+            +'<li class="cards__item">'
+              +'<div class="card">'
+                +'<div class="card__image card__image--sv"></div>'
+                +'<div class="card__content">'
+                  +'<div class="card__title">'+ sv2Title +'</div>'
+                  +'<p class="card__text">'+ sv2Description +'</p>'
+                  +'<button class="btn btn--block card__btn">'+ 'Recode Link' +'</button>'
+                +'</div>'
+              +'</div>'
+            +'</li>'
+            +'<li class="cards__item">'
+              +'<div class="card">'
+                +'<div class="card__image card__image--sv"></div>'
+                +'<div class="card__content">'
+                  +'<div class="card__title">'+ sv3Title +'</div>'
+                  +'<p class="card__text">'+ sv3Description +'</p>'
+                  +'<button class="btn btn--block card__btn">'+ 'Recode Link' +'</button>'
+                +'</div>'
+              +'</div>'
+            +'</li>'
+          +'</ul>');
 
   });
 }

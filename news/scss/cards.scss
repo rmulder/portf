@@ -112,28 +112,32 @@ img
 
 .card__image--flowers
 {
-  background-image: url(https://unsplash.it/800/600?image=82);
+  background-image: url(https://www.sheerid.com/wp-content/uploads/2016/11/presslogo_techcrunch.png);
 }
 
 .card__image--river
 {
-  background-image: url(https://unsplash.it/800/600?image=11);
+  background-image: url(http://www.truthrevolt.org/sites/default/files/styles/content_full_width/public/field/image/articles/business_insider_logo.png?itok=FEx7kvhi);
 }
 
 .card__image--record
 {
-  background-image: url(https://unsplash.it/800/600?image=39);
+  background-image: url(http://vignette1.wikia.nocookie.net/logopedia/images/5/59/Fox_sports_hd2009.png/revision/latest?cb=20120225230722);
 }
 
-.card__image--fence {
-  background-image: url(https://unsplash.it/800/600?image=59);
-  // width: 800px;
-  // height: 600px;
-  // background-position: center;
+.card__image--fence
+{
+  background-image: url(https://s3.amazonaws.com/freebiesupply/thumbs/2x/cnn-logo.png);
+}
+
+.card__image--sv
+{
+  background-image: url(https://www.sheerid.com/wp-content/uploads/2016/11/presslogo_recode.png);
 }
 
 .card__title
 {
+  font-family: $muli;
   color: #3d3d3d;
   font-size: 1.2em;
   font-weight: 300;
