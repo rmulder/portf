@@ -27,5 +27,7 @@ div.title p {
 @media screen and (max-width: 767px) {
   div.title p {
     font-size: 5em; } }
+div.padding-bottom {
+  height: 5em; }
 
 /*# sourceMappingURL=style.css.map */

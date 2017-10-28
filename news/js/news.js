@@ -76,20 +76,46 @@ function getTechNews()
     t1UrlI = t1UrlI.substr(1).slice(0, -1);
     console.log("News URL Image: " + t1UrlI);
 
+    let t2Title = (JSON.stringify(json.articles[1].title))
+    t2Title = t2Title.substr(1).slice(0, -1);
+    console.log("News Title 2: " + t2Title);
 
-    $(".card__title").text(t1Title); // assigning the title to the card title
+    let t2Description = (JSON.stringify(json.articles[1].description))
+    t2Description = t2Description.substr(1).slice(0, -1);
+    console.log("News Description: " + t2Description);
 
-    $(".overall-cards").html('<ul class="cards">'
-            +'<li class="cards__item">'
+    let t2Url = (JSON.stringify(json.articles[1].url))
+    t2Url = t2Url.substr(1).slice(0, -1);
+    console.log("News URL: " + t2Url);
+
+    let t2UrlI = (JSON.stringify(json.articles[1].urlToImage)) // url of image
+    t2UrlI = t2UrlI.substr(1).slice(0, -1);
+    console.log("News URL Image: " + t2UrlI);
+
+    $(".cards").html('<li class="cards__item">'
               +'<div class="card">'
                 +'<div class="card__image card__image--fence"></div>'
                 +'<div class="card__content">'
                   +'<div class="card__title">'+ t1Title +'</div>'
                   +'<p class="card__text">'+ t1Description +'</p>'
-                  // +'<button class="btn btn--block card__btn">'+ Go to Website +'</button>'
+                  +'<button class="btn btn--block card__btn">' + 'Tech Crunch Link' +'</button>'
                 +'</div>'
               +'</div>'
-            +'</li>');
+            +'</li>'
+            +'<li class="cards__item">'
+              +'<div class="card">'
+                +'<div class="card__image card__image--river"></div>'
+                +'<div class="card__content">'
+                  +'<div class="card__title">'+ t2Title +'</div>'
+                  +'<p class="card__text">'+ t2Description +'</p>'
+                  +'<button class="btn btn--block card__btn">'+ 'Tech Crunch Link' +'</button>'
+                +'</div>'
+              +'</div>'
+            +'</li>'
+          +'</ul>');
+
+    // $(".card__image card__image--fence").css('backgroundImage','url(t1UrlI)');
+
   });
 };
 
@@ -126,7 +152,46 @@ function getBusinessNews()
     b1UrlI = b1UrlI.substr(1).slice(0, -1);
     console.log("News URL Image: " + b1UrlI);
 
-    $(".card__title").text(b1Title); // assigning the title to the card title
+
+    let b2Title = (JSON.stringify(json.articles[1].title))
+    b2Title = b2Title.substr(1).slice(0, -1);
+    console.log("News Title: " + b2Title);
+
+    let b2Description = (JSON.stringify(json.articles[1].description))
+    b2Description = b2Description.substr(1).slice(0, -1);
+    console.log("News Description: " + b2Description);
+
+    let b2Url = (JSON.stringify(json.articles[1].url))
+    b2Url = b2Url.substr(1).slice(0, -1);
+    console.log("News URL: " + b2Url);
+
+    let b2UrlI = (JSON.stringify(json.articles[1].urlToImage)) // url of image
+    b2UrlI = b2UrlI.substr(1).slice(0, -1);
+    console.log("News URL Image: " + b2UrlI);
+
+    // $(".card__title").text(b1Title); // assigning the title to the card title
+
+    $(".cards").html('<li class="cards__item">'
+              +'<div class="card">'
+                +'<div class="card__image card__image--river"></div>'
+                +'<div class="card__content">'
+                  +'<div class="card__title">'+ b1Title +'</div>'
+                  +'<p class="card__text">'+ b1Description +'</p>'
+                  +'<button class="btn btn--block card__btn">' + 'Business Insider Link' +'</button>'
+                +'</div>'
+              +'</div>'
+            +'</li>'
+            +'<li class="cards__item">'
+              +'<div class="card">'
+                +'<div class="card__image card__image--fence"></div>'
+                +'<div class="card__content">'
+                  +'<div class="card__title">'+ b2Title +'</div>'
+                  +'<p class="card__text">'+ b2Description +'</p>'
+                  +'<button class="btn btn--block card__btn">'+ 'Business Insider Link' +'</button>'
+                +'</div>'
+              +'</div>'
+            +'</li>'
+          +'</ul>');
 
   });
 }

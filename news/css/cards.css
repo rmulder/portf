@@ -75,16 +75,14 @@ img {
   background-image: url(https://unsplash.it/800/600?image=59); }
 
 .card__title {
-  color: #696969;
-  font-size: 1em;
+  color: #3d3d3d;
+  font-size: 1.2em;
   font-weight: 300; }
 
 .card__text {
-  color: blue;
+  color: #888282;
   font-family: "Roboto", sans-serif;
-  flex: 1 1 auto;
-  font-size: 0.875rem;
-  line-height: 1.5;
+  font-size: 0.9em;
   margin-bottom: 1.25rem; }
 
 /*# sourceMappingURL=cards.css.map */
