@@ -1,3 +1,12 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Open Sans", "Ubuntu", "Fira Sans", "Helvetica Neue", sans-serif;
+  font-size: 1.6rem;
+  color: #fff;
+  margin: 0;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: scroll;
+  background-color: #585858; }
+
 .field {
   --uiFieldPaddingTop: var(--fieldPaddingTop, 0px);
   --uiFieldPaddingRight: var(--fieldPaddingRight, 0px);
@@ -32,7 +41,7 @@
   padding-right: var(--uiFieldPaddingRight);
   padding-bottom: var(--uiFieldPaddingBottom);
   padding-left: var(--uiFieldPaddingLeft);
-  font-family: inherit;
+  font-family: "Roboto", sans-serif;
   font-size: 100%;
   color: inherit; }
 
@@ -108,7 +117,7 @@
 */
 .field {
   --fieldBorderColor: #fff;
-  --fieldBorderColorActive: #fbc2eb;
+  --fieldBorderColorActive: #a5a5a5;
   --fieldPlaceholderColor: #fff;
   color: #fff; }
 
@@ -121,15 +130,6 @@
 @media screen and (max-width: 767px) {
   html {
     font-size: 50%; } }
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Open Sans", "Ubuntu", "Fira Sans", "Helvetica Neue", sans-serif;
-  font-size: 1.6rem;
-  color: #fff;
-  margin: 0;
-  -webkit-overflow-scrolling: touch;
-  overflow-y: scroll;
-  background-color: #a18cd1; }
-
 a {
   text-decoration: none;
   color: #fff; }

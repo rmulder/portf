@@ -10,15 +10,17 @@ html
 
 div.title
 {
-  margin: 0;
+  margin: -2em 0 0 0;
   padding: 0;
 }
 
 div.title p
 {
+  color: white;
+  letter-spacing: 3px;
   text-align: center;
-  font-family: $ubu;
-  font-size: 4em;
+  font-family: $dos;
+  font-size: 6em;
   font-style: normal;
   font-weight: 300;
 }
