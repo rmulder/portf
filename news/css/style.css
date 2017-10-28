@@ -11,7 +11,7 @@ html {
   box-sizing: border-box; }
 
 div.title {
-  margin: -2em 0 0 0;
+  margin: -2em 0 -3em 0;
   padding: 0; }
 
 div.title p {
