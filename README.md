@@ -52,3 +52,4 @@ Playing around with angular.
 * Mongoose
 * Bash
 * Git
+* Various API's
