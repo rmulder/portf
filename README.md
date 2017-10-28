@@ -33,3 +33,22 @@ Implementing JWT (JSON Web Tokens) for authentication.
 
 ## Angular Application
 Playing around with angular.
+
+### Technologies Used in Projects
+* ES6
+* jQuery
+* Pug/Jade
+* Node.js
+* Express.js
+* MongoDB
+* SCSS
+* Webpack
+* Gulp.js
+* Angular
+* JWT (JSON Web Token)
+* Bower
+* HTML 
+* CSS
+* Mongoose
+* Bash
+* Git
