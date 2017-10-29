@@ -1,7 +1,11 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin"),
 ExtractTextPlugin = require("extract-text-webpack-plugin"),
-UglifyJSPlugin = require('uglifyjs-webpack-plugin')
-path = require("path");
+UglifyJSPlugin = require('uglifyjs-webpack-plugin'),
+BabelWebpackPlugin = require('babel-minify-webpack-plugin'),
+OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin'),
+cssnano = require('cssnano'),
+path = require("path"),
+webpack = require('webpack');
 
 module.exports = {
   entry: ["./js/news.js"],
@@ -42,7 +46,16 @@ module.exports = {
             { loader: "sass-loader" }
           ]
         })
-      }
+      },
+    {
+     test: /\.js$/,
+     use: {
+       loader: "babel-loader",
+       options: {
+         presets: ["env"]
+       }
+     }
+   }
     ]
   },
   plugins: [
@@ -52,10 +65,13 @@ module.exports = {
     }),
     new ExtractTextPlugin({
       filename: "css/style.css"
-    })
-  ]
+    }),
+    new webpack.optimize.UglifyJsPlugin({
+    compress: {
+        warnings: false
+    }
+  })
+]
 };
 
 // https://www.valentinog.com/blog/from-gulp-to-webpack-quickstart/ -- webpack
-// https://medium.com/@kimberleycook/intro-to-webpack-1d035a47028d -- intro to webpack
-// https://zellwk.com/blog/bower/ -- bower

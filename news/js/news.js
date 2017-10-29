@@ -1,12 +1,15 @@
 // for news api json
 
+console.log(`I'm required by Webpack`);
+import './es6code';
+
 "use strict";
 
 $(document).ready(function()
 {
   $(".field__input").change(function(e) // basically auto enter.
   {
-    let kw = $(".field__input").val(); 
+    let kw = $(".field__input").val();
     kw = kw.toLowerCase().replace(/\s/g, '');
     console.log("Keyword entered: " + kw);
 
