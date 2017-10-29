@@ -1,9 +1,14 @@
+button:focus {
+  outline: 0; }
+
 img {
   height: auto;
   max-width: 100%;
   vertical-align: middle; }
 
 .btn {
+  font-size: 0.8em;
+  font-family: "Maven Pro", sans-serif;
   background-color: white;
   border: 1px solid #cccccc;
   color: #696969;
@@ -65,13 +70,13 @@ img {
 .card__image--flowers {
   background-image: url(https://www.sheerid.com/wp-content/uploads/2016/11/presslogo_techcrunch.png); }
 
-.card__image--river {
-  background-image: url(http://www.truthrevolt.org/sites/default/files/styles/content_full_width/public/field/image/articles/business_insider_logo.png?itok=FEx7kvhi); }
+.card__image--bus {
+  background-image: url(https://s3.amazonaws.com/freebiesupply/thumbs/2x/bloomberg-logo.png); }
 
-.card__image--record {
-  background-image: url(http://vignette1.wikia.nocookie.net/logopedia/images/5/59/Fox_sports_hd2009.png/revision/latest?cb=20120225230722); }
+.card__image--sport {
+  background-image: url(https://onmilwaukee.com/images/articles/bu/bucksfswstreampreseason/bucksfswstreampreseason_fullsize_story1.jpg); }
 
-.card__image--fence {
+.card__image--gnews {
   background-image: url(https://s3.amazonaws.com/freebiesupply/thumbs/2x/cnn-logo.png); }
 
 .card__image--sv {
