@@ -10,7 +10,7 @@ webpack = require('webpack');
 module.exports = {
   entry: ["./js/news.js"],
   output: {
-    filename: "js/news.js",
+    filename: "js/news.min.js",
     path: path.join(__dirname, "./build/")
   },
   module: {
@@ -61,7 +61,7 @@ module.exports = {
   plugins: [
     new HtmlWebPackPlugin({
       template: "./index.html",
-      filename: "./index.html"
+      filename: "./index.min.html"
     }),
     new ExtractTextPlugin({
       filename: "css/style.css"

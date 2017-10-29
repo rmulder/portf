@@ -1,7 +1,7 @@
 // for news api json
 
 console.log(`I'm required by Webpack`);
-import './es6code';
+// import './es6code';
 
 "use strict";
 
