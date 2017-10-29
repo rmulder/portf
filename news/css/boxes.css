@@ -5,7 +5,7 @@ body {
   margin: 0;
   -webkit-overflow-scrolling: touch;
   overflow-y: scroll;
-  background-color: #585858; }
+  background-color: #9e9d9d; }
 
 .field {
   --uiFieldPaddingTop: var(--fieldPaddingTop, 0px);
@@ -120,7 +120,7 @@ body {
 */
 .field {
   --fieldBorderColor: #fff;
-  --fieldBorderColorActive: #a5a5a5;
+  --fieldBorderColorActive: #eaeaea;
   --fieldPlaceholderColor: #fff;
   color: #fff; }
 
