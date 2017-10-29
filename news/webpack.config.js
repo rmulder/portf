@@ -8,12 +8,20 @@ path = require("path"),
 webpack = require('webpack');
 
 module.exports = {
-  entry: ["./js/news.js"],
+  entry: ["./js/news.js", "./css/style.css","./css/style.boxes", "./css/cards.css"],
+  // ["./src/js/index.js", "./src/_scss/main.scss"],
   output: {
     filename: "js/news.min.js",
     path: path.join(__dirname, "./build/")
   },
+  // output: {
+  //       filename: '[name].[chunkhash].js',
+  //       ...
+  // },
   module: {
+    loaders: [
+            { test: /\.css$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader") }
+        ],
     rules: [
       {
         test: /\.html$/,
@@ -34,19 +42,19 @@ module.exports = {
           }
         ]
       },
-      {
-        test: /\.scss$/,
-        use: ExtractTextPlugin.extract({
-          use: [
-            {
-              loader: "css-loader",
-              options: { minimize: true }
-            },
-            { loader: "postcss-loader" },
-            { loader: "sass-loader" }
-          ]
-        })
-      },
+      // {
+      //   test: /\.css$/,
+      //   use: ExtractTextPlugin.extract({
+      //     use: [
+      //       {
+      //         loader: "css-loader",
+      //         options: { minimize: true }
+      //       }
+      //       // { loader: "postcss-loader" },
+      //       // { loader: "sass-loader" }
+      //     ]
+      //   })
+      // },
     {
      test: /\.js$/,
      use: {
@@ -63,14 +71,19 @@ module.exports = {
       template: "./index.html",
       filename: "./index.min.html"
     }),
-    new ExtractTextPlugin({
-      filename: "css/style.css"
-    }),
+    // new ExtractTextPlugin('[name].[chunkhash].css'),
     new webpack.optimize.UglifyJsPlugin({
     compress: {
         warnings: false
     }
-  })
+  }),
+  new ExtractTextPlugin("styles.css"),
+    new OptimizeCssAssetsPlugin({
+      assetNameRegExp: /\.optimize\.css$/g,
+      cssProcessor: require('cssnano'),
+      cssProcessorOptions: { discardComments: {removeAll: true } },
+      canPrint: true
+    })
 ]
 };
 
