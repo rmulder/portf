@@ -81,10 +81,9 @@ module.exports = __webpack_require__(1);
 
 $(document).ready(function()
 {
-  // $(".overall-cards").css({'display': ' '});
   $(".field__input").change(function(e) // basically auto enter.
   {
-    let kw = $(".field__input").val(); // zip coder entered by user
+    let kw = $(".field__input").val(); 
     kw = kw.toLowerCase().replace(/\s/g, '');
     console.log("Keyword entered: " + kw);
 
@@ -193,7 +192,7 @@ function getTechNews()
                 +'<div class="card__content">'
                   +'<div class="card__title">'+ t1Title +'</div>'
                   +'<p class="card__text">'+ t1Description +'</p>'
-                  +'<button class="btn btn--block card__btn">' + 'Tech Crunch Link' +'</button>'
+                  +'<button id="t1link"  class="btn btn--block card__btn">' + 'Tech Crunch Link' +'</button>'
                 +'</div>'
               +'</div>'
             +'</li>'
@@ -203,7 +202,7 @@ function getTechNews()
                 +'<div class="card__content">'
                   +'<div class="card__title">'+ t2Title +'</div>'
                   +'<p class="card__text">'+ t2Description +'</p>'
-                  +'<button class="btn btn--block card__btn">'+ 'Tech Crunch Link' +'</button>'
+                  +'<button id="t2link"  class="btn btn--block card__btn">'+ 'Tech Crunch Link' +'</button>'
                 +'</div>'
               +'</div>'
             +'</li>'
@@ -213,11 +212,26 @@ function getTechNews()
                 +'<div class="card__content">'
                   +'<div class="card__title">'+ t3Title +'</div>'
                   +'<p class="card__text">'+ t3Description +'</p>'
-                  +'<button class="btn btn--block card__btn">'+ 'Tech Crunch Link' +'</button>'
+                  +'<button id="t3link" class="btn btn--block card__btn">'+ 'Tech Crunch Link' +'</button>'
                 +'</div>'
               +'</div>'
             +'</li>'
           +'</ul>');
+
+          $("#t1link").click(function()
+          {
+            window.open( t1Url ,'_blank');
+          });
+
+          $("#t2link").click(function()
+          {
+            window.open( t2Url ,'_blank');
+          });
+
+          $("#t3link").click(function()
+          {
+            window.open( t3Url ,'_blank');
+          });
 
   });
 };
@@ -226,12 +240,12 @@ function getTechNews()
 function getBusinessNews()
 {
   const urlbase = "https://newsapi.org/v1/articles?source=";
-  const rest = "&sortBy=top"; // in english, and popular info.
+  const rest = "&sortBy=top"; // popular info.
   const apikey = "&apiKey=c70c8062d2544d5b8459796ca2707d7a";
-  const business = "business-insider";
+  const business = "bloomberg";
 
   // example:
-  // https://newsapi.org/v1/articles?source=business-insider&sortBy=latest&apiKey=c70c8062d2544d5b8459796ca2707d7a
+  // https://newsapi.org/v1/articles?source=bloomberg&sortBy=top&apiKey=c70c8062d2544d5b8459796ca2707d7a
 
   $.getJSON(`${urlbase + business + rest + apikey}`,function(json)
   {
@@ -288,40 +302,53 @@ function getBusinessNews()
     b3UrlI = b3UrlI.substr(1).slice(0, -1);
     console.log("News URL Image: " + b3UrlI);
 
-    // $(".card__title").text(b1Title); // assigning the title to the card title
-
     $(".overall-cards1").append('<ul class="cards">'
       +'<li class="cards__item">'
               +'<div class="card">'
-                +'<div class="card__image card__image--river"></div>'
+                +'<div class="card__image card__image--bus"></div>'
                 +'<div class="card__content">'
                   +'<div class="card__title">'+ b1Title +'</div>'
                   +'<p class="card__text">'+ b1Description +'</p>'
-                  +'<button class="btn btn--block card__btn">' + 'Business Insider Link' +'</button>'
+                  +'<button id="b1link" class="btn btn--block card__btn">' + 'Bloomberg Insider Link' +'</button>'
                 +'</div>'
               +'</div>'
             +'</li>'
             +'<li class="cards__item">'
               +'<div class="card">'
-                +'<div class="card__image card__image--river"></div>'
+                +'<div class="card__image card__image--bus"></div>'
                 +'<div class="card__content">'
                   +'<div class="card__title">'+ b2Title +'</div>'
                   +'<p class="card__text">'+ b2Description +'</p>'
-                  +'<button class="btn btn--block card__btn">'+ 'Business Insider Link' +'</button>'
+                  +'<button id="b2link" class="btn btn--block card__btn">'+ 'Bloomberg Insider Link' +'</button>'
                 +'</div>'
               +'</div>'
             +'</li>'
             +'<li class="cards__item">'
               +'<div class="card">'
-                +'<div class="card__image card__image--river"></div>'
+                +'<div class="card__image card__image--bus"></div>'
                 +'<div class="card__content">'
                   +'<div class="card__title">'+ b3Title +'</div>'
                   +'<p class="card__text">'+ b3Description +'</p>'
-                  +'<button class="btn btn--block card__btn">'+ 'Business Insider Link' +'</button>'
+                  +'<button id="b3link" class="btn btn--block card__btn">'+ 'Bloomberg Insider Link' +'</button>'
                 +'</div>'
               +'</div>'
             +'</li>'
           +'</ul>');
+
+          $("#b1link").click(function()
+          {
+            window.open( b1Url ,'_blank');
+          });
+
+          $("#b2link").click(function()
+          {
+            window.open( b2Url ,'_blank');
+          });
+
+          $("#b3link").click(function()
+          {
+            window.open( b3Url ,'_blank');
+          });
 
   });
 }
@@ -375,28 +402,70 @@ function getSportsNews()
     s2UrlI = s2UrlI.substr(1).slice(0, -1);
     console.log("News URL Image: " + s2UrlI);
 
+
+    let s3Title = (JSON.stringify(json.articles[2].title))
+    s3Title = s3Title.substr(1).slice(0, -1);
+    console.log("News Title: " + s3Title);
+
+    let s3Description = (JSON.stringify(json.articles[2].description))
+    s3Description = s3Description.substr(1).slice(0, -1);
+    console.log("News Description: " + s3Description);
+
+    let s3Url = (JSON.stringify(json.articles[2].url))
+    s3Url = s3Url.substr(1).slice(0, -1);
+    console.log("News URL: " + s3Url);
+
+    let s3UrlI = (JSON.stringify(json.articles[2].urlToImage)) // url of image
+    s3UrlI = s3UrlI.substr(1).slice(0, -1);
+    console.log("News URL Image: " + s3UrlI);
+
     $(".overall-cards1").append('<ul class="cards">'
       +'<li class="cards__item">'
               +'<div class="card">'
-                +'<div class="card__image card__image--record"></div>'
+                +'<div class="card__image card__image--sport"></div>'
                 +'<div class="card__content">'
                   +'<div class="card__title">'+ s1Title +'</div>'
                   +'<p class="card__text">'+ s1Description +'</p>'
-                  +'<button class="btn btn--block card__btn">' + 'Fox Sports Link' +'</button>'
+                  +'<button id="s1link" class="btn btn--block card__btn">' + 'Fox Sports Link' +'</button>'
                 +'</div>'
               +'</div>'
             +'</li>'
             +'<li class="cards__item">'
               +'<div class="card">'
-                +'<div class="card__image card__image--record"></div>'
+                +'<div class="card__image card__image--sport"></div>'
                 +'<div class="card__content">'
                   +'<div class="card__title">'+ s2Title +'</div>'
                   +'<p class="card__text">'+ s2Description +'</p>'
-                  +'<button class="btn btn--block card__btn">'+ 'Fox Sports Link' +'</button>'
+                  +'<button id="s2link" class="btn btn--block card__btn">'+ 'Fox Sports Link' +'</button>'
+                +'</div>'
+              +'</div>'
+            +'</li>'
+            +'<li class="cards__item">'
+              +'<div class="card">'
+                +'<div class="card__image card__image--sport"></div>'
+                +'<div class="card__content">'
+                  +'<div class="card__title">'+ s3Title +'</div>'
+                  +'<p class="card__text">'+ s3Description +'</p>'
+                  +'<button id="s3link" class="btn btn--block card__btn">'+ 'Fox Sports Link' +'</button>'
                 +'</div>'
               +'</div>'
             +'</li>'
           +'</ul>');
+
+          $("#s1link").click(function()
+          {
+            window.open( s1Url ,'_blank');
+          });
+
+          $("#s2link").click(function()
+          {
+            window.open( s2Url ,'_blank');
+          });
+
+          $("#s3link").click(function()
+          {
+            window.open( s3Url ,'_blank');
+          });
 
   });
 }
@@ -433,7 +502,6 @@ function getGeneralNews()
     g1UrlI = g1UrlI.substr(1).slice(0, -1);
     console.log("News URL Image: " + g1UrlI);
 
-
     let g2Title = (JSON.stringify(json.articles[1].title))
     g2Title = g2Title.substr(1).slice(0, -1);
     console.log("News Title: " + g2Title);
@@ -469,35 +537,50 @@ function getGeneralNews()
     $(".overall-cards1").append('<ul class="cards">'
       +'<li class="cards__item">'
               +'<div class="card">'
-                +'<div class="card__image card__image--fence"></div>'
+                +'<div class="card__image card__image--gnews"></div>'
                 +'<div class="card__content">'
                   +'<div class="card__title">'+ g1Title +'</div>'
                   +'<p class="card__text">'+ g1Description +'</p>'
-                  +'<button class="btn btn--block card__btn">' + 'CNN Link' +'</button>'
+                  +'<button id="g1link" class="btn btn--block card__btn">' + 'CNN Link' +'</button>'
                 +'</div>'
               +'</div>'
             +'</li>'
             +'<li class="cards__item">'
               +'<div class="card">'
-                +'<div class="card__image card__image--fence"></div>'
+                +'<div class="card__image card__image--gnews"></div>'
                 +'<div class="card__content">'
                   +'<div class="card__title">'+ g2Title +'</div>'
                   +'<p class="card__text">'+ g2Description +'</p>'
-                  +'<button class="btn btn--block card__btn">'+ 'CNN Link' +'</button>'
+                  +'<button id="g2link" class="btn btn--block card__btn">'+ 'CNN Link' +'</button>'
                 +'</div>'
               +'</div>'
             +'</li>'
             +'<li class="cards__item">'
               +'<div class="card">'
-                +'<div class="card__image card__image--fence"></div>'
+                +'<div class="card__image card__image--gnews"></div>'
                 +'<div class="card__content">'
                   +'<div class="card__title">'+ g3Title +'</div>'
                   +'<p class="card__text">'+ g3Description +'</p>'
-                  +'<button class="btn btn--block card__btn">'+ 'CNN Link' +'</button>'
+                  +'<button id="g3link" class="btn btn--block card__btn">'+ 'CNN Link' +'</button>'
                 +'</div>'
               +'</div>'
             +'</li>'
           +'</ul>');
+
+          $("#g1link").click(function()
+          {
+            window.open( g1Url ,'_blank');
+          });
+
+          $("#g2link").click(function()
+          {
+            window.open( g2Url ,'_blank');
+          });
+
+          $("#g3link").click(function()
+          {
+            window.open( g3Url ,'_blank');
+          });
 
   });
 }
@@ -573,7 +656,7 @@ function getSVNews()
                 +'<div class="card__content">'
                   +'<div class="card__title">'+ sv1Title +'</div>'
                   +'<p class="card__text">'+ sv1Description +'</p>'
-                  +'<button class="btn btn--block card__btn">' + 'Recode Link' +'</button>'
+                  +'<button id="sv1link" class="btn btn--block card__btn">' + 'Recode Link' +'</button>'
                 +'</div>'
               +'</div>'
             +'</li>'
@@ -583,7 +666,7 @@ function getSVNews()
                 +'<div class="card__content">'
                   +'<div class="card__title">'+ sv2Title +'</div>'
                   +'<p class="card__text">'+ sv2Description +'</p>'
-                  +'<button class="btn btn--block card__btn">'+ 'Recode Link' +'</button>'
+                  +'<button id="sv2link" class="btn btn--block card__btn">'+ 'Recode Link' +'</button>'
                 +'</div>'
               +'</div>'
             +'</li>'
@@ -593,11 +676,26 @@ function getSVNews()
                 +'<div class="card__content">'
                   +'<div class="card__title">'+ sv3Title +'</div>'
                   +'<p class="card__text">'+ sv3Description +'</p>'
-                  +'<button class="btn btn--block card__btn">'+ 'Recode Link' +'</button>'
+                  +'<button id="sv3link" class="btn btn--block card__btn">'+ 'Recode Link' +'</button>'
                 +'</div>'
               +'</div>'
             +'</li>'
           +'</ul>');
+
+          $("#sv1link").click(function()
+          {
+            window.open( sv1Url ,'_blank');
+          });
+
+          $("#sv2link").click(function()
+          {
+            window.open( sv2Url ,'_blank');
+          });
+
+          $("#sv3link").click(function()
+          {
+            window.open( sv3Url ,'_blank');
+          });
 
   });
 }

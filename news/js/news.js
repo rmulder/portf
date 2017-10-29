@@ -4,10 +4,9 @@
 
 $(document).ready(function()
 {
-  // $(".overall-cards").css({'display': ' '});
   $(".field__input").change(function(e) // basically auto enter.
   {
-    let kw = $(".field__input").val(); // zip coder entered by user
+    let kw = $(".field__input").val(); 
     kw = kw.toLowerCase().replace(/\s/g, '');
     console.log("Keyword entered: " + kw);
 
