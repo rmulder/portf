@@ -13,6 +13,7 @@ A News API Website that provides news information based on keywords entered.
 * CSS
 * NewsApi.org API
 * Webpack
-* Bower 
+* Bower
+* Babel
 * Git
 
