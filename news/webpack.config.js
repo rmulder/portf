@@ -55,15 +55,15 @@ module.exports = {
       //     ]
       //   })
       // },
-    {
-     test: /\.js$/,
-     use: {
-       loader: "babel-loader",
-       options: {
-         presets: ["env"]
-       }
-     }
-   }
+  //   {
+  //    test: /\.js$/,
+  //    use: {
+  //      loader: "babel-loader",
+  //      options: {
+  //        presets: ["env"]
+  //      }
+  //    }
+  //  }
     ]
   },
   plugins: [
@@ -74,16 +74,17 @@ module.exports = {
     // new ExtractTextPlugin('[name].[chunkhash].css'),
     new webpack.optimize.UglifyJsPlugin({
     compress: {
+        compress: true,
         warnings: false
     }
   }),
-  new ExtractTextPlugin("styles.css"),
-    new OptimizeCssAssetsPlugin({
-      assetNameRegExp: /\.optimize\.css$/g,
-      cssProcessor: require('cssnano'),
-      cssProcessorOptions: { discardComments: {removeAll: true } },
-      canPrint: true
-    })
+  // new ExtractTextPlugin("styles.css"),
+    // new OptimizeCssAssetsPlugin({
+    //   assetNameRegExp: /\.optimize\.css$/g,
+    //   cssProcessor: require('cssnano'),
+    //   cssProcessorOptions: { discardComments: {removeAll: true } },
+    //   canPrint: true
+    // })
 ]
 };
 
