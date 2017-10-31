@@ -2,5 +2,5 @@
 
 function calc()
 {
-  let v1, v2;
+   let sum = 0;
 }
