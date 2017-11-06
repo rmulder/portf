@@ -8,19 +8,19 @@ const gulp = require('gulp'),
   sass = require('gulp-sass'),
   maps = require('gulp-sourcemaps');
 
-gulp.task("concatScripts", function () {
+gulp.task("concatStyle", function () {
 
-   gulp.src("scss/style.scss") // js file to be concat
-          .pipe(concat("weather.scss")) // re-name
+   gulp.src("scss/style.scss")
+          .pipe(concat("deter.scss")) // re-name
           .pipe(maps.write('./'))
-          .pipe(gulp.dest("scss")); // destination of concat js to be located
+          .pipe(gulp.dest("scss")); // destination of concat scss to be located
 });
 
 gulp.task("minifyScripts", ["concatScripts"], function() {
 
   return gulp.src('js/app.js')
-          .pipe(uglify().on('error', gutil.log)) // if error, outputs to console.
-          .pipe(rename('weather.js'))
+          .pipe(uglify().on('error', gutil.log)) // if error, output to console.
+          .pipe(rename('deter.js'))
           .pipe(gulp.dest('js'));
 });
 
@@ -29,7 +29,7 @@ gulp.task("compileSass", function() {
   // main stylesheet:
    gulp.src("scss/style.scss")
     .pipe(sass({outputStyle: 'compressed'}))
-    .pipe(rename('weather.css'))
+    .pipe(rename('deter.css'))
     .pipe(maps.write('./')) // sourcemaps to css
     .pipe(gulp.dest('css'))
 });
