@@ -1,6 +1,9 @@
 # Portfolio
 All my example work is here.
 
+## FireBase Application
+Integrating Firebase.
+
 ## Angular Application
 Playing around with angular.
 
