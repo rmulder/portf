@@ -57,5 +57,6 @@ Gulp.js reworked website.
 * Bash
 * Passport.js
 * Firebase
+* Bootstrap
 * Git
 * Various API's
