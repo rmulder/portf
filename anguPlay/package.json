@@ -1,0 +1,23 @@
+{
+  "name": "anguplay",
+  "version": "1.0.0",
+  "description": "playing around with angular",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "angular",
+    "js",
+    "ronan",
+    "manoj",
+    "ronmantech",
+    "google",
+    "script",
+    "api",
+    "framework",
+    "mvc"
+  ],
+  "author": "Ronan Manoj",
+  "license": "MIT"
+}
