@@ -1,5 +1,5 @@
 # Portfolio
-All my example work is here.
+Some of the projects I created.
 
 ## FireBase Application
 Integrating Firebase.
