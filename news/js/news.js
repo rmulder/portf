@@ -625,6 +625,3 @@ function getSVNews()
 
   });
 }
-
-// http://jsfiddle.net/andrewwhitaker/q6eLV/ - clearing text
-// http://jsfiddle.net/6bSX6/ - entering on change of text
