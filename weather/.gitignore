@@ -3,6 +3,7 @@
 
 ## Dependency directory
 node_modules
+*.sass-cache
 
 # Book build output
 _book
