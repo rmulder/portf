@@ -90,6 +90,8 @@
   display: block;
 }
 
+
+// controls the underline movement to the right when focused on input box.
 .field__label
 {
   position: absolute;
@@ -100,7 +102,7 @@
   font-size: 1.5em;
   font-family: $robo;
 
-  transition: top var(--uiFieldAnimationDuration) cubic-bezier(0.9,-0.15, 0.1, 1.15), opacity var(--uiFieldAnimationDuration) ease-out;
+  transition: top 0.3s cubic-bezier(0.9,-0.15, 0.1, 1.15), opacity var(--uiFieldAnimationDuration) ease-in-out;
   will-change: top, opacity;
 }
 
@@ -140,11 +142,11 @@
 {
   content: "";
   width: 0;
-  height: var(--uiFieldBorderBottom);
+  height: 2px;
   background-color: var(--fieldBorderColorActive);
 
   position: absolute;
-  bottom: 61px;
+  bottom: 60px;
   left: 0;
 
   will-change: width;

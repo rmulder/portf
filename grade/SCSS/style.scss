@@ -17,6 +17,14 @@ div.title-header
   padding: 0em;
 }
 
+@media screen and (max-width: 767px)
+{
+  div.title-header
+  {
+    font-size: 3.3em;
+  }
+}
+
 // Main Box - below
 
 div.spec-index-box article
