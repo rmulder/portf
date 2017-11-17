@@ -4,16 +4,33 @@
 
 .field
 {
+  $FieldPaddingTop: 10px;
+  $FieldPaddingRight: 0px;
+  $FieldPaddingBottom: 10px;
+  $FieldPaddingLeft: 0px;
+
   --uiFieldPaddingTop: var(--fieldPaddingTop, 10px);
   --uiFieldPaddingRight: var(--fieldPaddingRight, 0px);
   --uiFieldPaddingBottom: var(--fieldPaddingBottom, 10px);
   --uiFieldPaddingLeft: var(--fieldPaddingLeft, 0px);
+
+  $FieldBorderColor: transpatent;
+  $FieldBorderTop: 0px;
+  $FieldBorderRight: 0px;
+  $FieldBorderBottom: 0px;
+  $FieldBorderLeft: 0px;
 
   --uiFieldBorderColor: var(--fieldBorderColor, transpatent);
   --uiFieldBorderTop: var(--fieldBorderTop, 0px);
   --uiFieldBorderRight: var(--fieldBorderRight, 0px);
   --uiFieldBorderBottom: var(--fieldBorderBottom, 0px);
   --uiFieldBorderLeft: var(--fieldBorderLeft, 0px);
+
+
+  $FieldBgColor: transpatent;
+  $FieldPlaceholderColor: #767676;
+  $FieldAnimationDuration: 0.3s;
+  $FieldFonstSize: 1.5em;
 
   --uiFieldBgColor: var(--fieldBgColor, transpatent);
   --uiFieldPlaceholderColor: var(--fieldPlaceholderColor, #767676);
@@ -52,6 +69,7 @@
   padding-right: var(--uiFieldPaddingRight);
   padding-left: var(--uiFieldPaddingLeft);
 
+  // input of text into field
   font-family: $robo;
   font-size: 1.2em;
   color: $white;
@@ -98,12 +116,22 @@
   top: calc(0px + var(--uiFieldPaddingTop) + var(--uiFieldBorderTop));
   left: calc(0px + var(--uiFieldPaddingLeft) + var(--uiFieldBorderLeft));
 
+  // Title for each input label
   pointer-events: none;
   font-size: 1.5em;
   font-family: $robo;
 
-  transition: top 0.3s cubic-bezier(0.9,-0.15, 0.1, 1.15), opacity var(--uiFieldAnimationDuration) ease-in-out;
+  transition: all 0.3s cubic-bezier(0.9,-0.15, 0.1, 1.15), opacity var(--uiFieldAnimationDuration) ease-in-out;
+  // transition: font-size 0.3s cubic-bezier(0.9,-0.15, 0.1, 1.15), opacity var(--uiFieldAnimationDuration) ease-in-out;
   will-change: top, opacity;
+}
+
+@media screen and (max-width: 767px)
+{
+  .field__label
+  {
+    font-size: 1.3em;
+  }
 }
 
 .field__input:not(:placeholder-shown) ~ .field__label-wrap .field__label{

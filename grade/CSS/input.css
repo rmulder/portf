@@ -67,9 +67,12 @@
   pointer-events: none;
   font-size: 1.5em;
   font-family: "Roboto", sans-serif;
-  transition: top 0.3s cubic-bezier(0.9, -0.15, 0.1, 1.15), opacity var(--uiFieldAnimationDuration) ease-in-out;
+  transition: all 0.3s cubic-bezier(0.9, -0.15, 0.1, 1.15), opacity var(--uiFieldAnimationDuration) ease-in-out;
   will-change: top, opacity; }
 
+@media screen and (max-width: 767px) {
+  .field__label {
+    font-size: 1.3em; } }
 .field__input:not(:placeholder-shown) ~ .field__label-wrap .field__label {
   opacity: 0;
   top: calc(0px + var(--uiFieldPaddingTop) + var(--uiFieldBorderTop)); }
