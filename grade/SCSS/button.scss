@@ -50,6 +50,14 @@ div.overall-butt button.spec-butt
   transition: all 0.8s cubic-bezier(.25,.8,.25,1);
 }
 
+@media screen and (max-width: 767px)
+{
+  div.overall-butt button.spec-butt
+  {
+    font-size: 22px;
+  }
+}
+
 // sign up button
 div.overall-butt button.spec-butt:hover
 {
