@@ -46,6 +46,9 @@ div.spec-index-box article div.spec-total label {
   font-weight: 400;
   font-style: none; }
 
+@media screen and (max-width: 767px) {
+  div.spec-index-box article div.spec-total label {
+    font-size: 1.2em; } }
 div.spec-index-box article div.spec-total input {
   background-color: transparent;
   border: 0;
