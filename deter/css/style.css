@@ -1,5 +1,6 @@
 html {
   font-size: 12px;
+  font-family: "Roboto", sans-serif;
   user-drag: none;
   user-select: none;
   -moz-user-select: none;
@@ -54,6 +55,6 @@ label.deterValFinal {
   margin: 0 auto;
   font-size: 1.5em;
   font-weight: 300;
-  font-family: inherit; }
+  font-family: lato; }
 
 /*# sourceMappingURL=style.css.map */

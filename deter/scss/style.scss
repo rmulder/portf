@@ -1,9 +1,11 @@
 // main stylesheet
 
+@import "var";
+
 html
 {
   font-size: 12px;
-  // font-family: $robo;
+  font-family: $robo;
 
   user-drag: none;
   user-select: none;
@@ -84,5 +86,5 @@ label.deterValFinal
   margin: 0 auto;
   font-size: 1.5em;
   font-weight: 300;
-  font-family: inherit; // need to fix.
+  font-family: lato; // need to fix.
 }
