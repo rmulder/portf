@@ -37,6 +37,7 @@ input.enter {
   font-family: inherit;
   font-weight: 300;
   font-size: 1.5em;
+  text-align: center;
   background-color: #e19f9b;
   border-radius: 2px;
   z-index: 1000;
@@ -55,6 +56,6 @@ label.deterValFinal {
   margin: 0 auto;
   font-size: 1.5em;
   font-weight: 300;
-  font-family: lato; }
+  font-family: "Open Sans", sans-serif; }
 
 /*# sourceMappingURL=style.css.map */

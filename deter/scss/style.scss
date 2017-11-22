@@ -55,6 +55,7 @@ input.enter
   font-family: inherit; // need to change
   font-weight: 300;
   font-size: 1.5em;
+  text-align: center;
 
   background-color: #{lighten(#cf6760, 15%)};
   border-radius: 2px;
@@ -86,5 +87,5 @@ label.deterValFinal
   margin: 0 auto;
   font-size: 1.5em;
   font-weight: 300;
-  font-family: lato; // need to fix.
+  font-family: $open; // need to fix.
 }

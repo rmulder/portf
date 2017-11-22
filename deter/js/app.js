@@ -23,7 +23,11 @@ function calc()
 
   // Calcuation working
   const deterFinalVal = ((deterStore[0])*((deterStore[4]*deterStore[8]) - (deterStore[5]*deterStore[7])) - ((deterStore[1])*((deterStore[3]*deterStore[8]) - (deterStore[5]*deterStore[6]))) + ((deterStore[2])*((deterStore[3]*deterStore[7]) - (deterStore[6]*deterStore[4]))) );
-  console.log("Determinant Value: " + deterFinalVal);
+  console.info("Determinant Value: " + deterFinalVal);
+
+  document.getElementById('deter-value-final').value = (deterFinalVal.toPrecision(1));
+
+
 
   // let pos1 = parseInt(document.getElementById('1-enter').value, 10);
   // console.log(pos1);
