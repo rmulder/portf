@@ -27,8 +27,6 @@ function calc()
 
   document.getElementById('deter-value-final').value = (deterFinalVal.toPrecision(1));
 
-
-
   // let pos1 = parseInt(document.getElementById('1-enter').value, 10);
   // console.log(pos1);
 }
