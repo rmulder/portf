@@ -42,14 +42,15 @@ input.enter {
   border-radius: 2px;
   z-index: 1000;
   margin: 1em;
-  width: 10em;
+  width: calc(100% / 4);
+  max-width: 100em;
   height: 2em; }
 
 @media screen and (max-width: 800px) {
   input.enter {
     font-size: 1.2em; } }
 input.first-set {
-  display: inline-flex; }
+  display: inline; }
 
 label.deterValFinal {
   display: block;

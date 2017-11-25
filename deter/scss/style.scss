@@ -63,8 +63,11 @@ input.enter
 
   margin: 1em;
 
-  width: 10em;
+  // width: 10em;
+  width: calc(100% / 4);
+  max-width: 100em;
   height: 2em;
+  // display: inline-flex;
 }
 
 @media screen and (max-width: 800px)
@@ -78,7 +81,7 @@ input.enter
 input.first-set
 {
   // display: block;
-  display: inline-flex;
+  display: inline;
 }
 
 label.deterValFinal
