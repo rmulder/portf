@@ -2,9 +2,10 @@
 
 console.log("determinate calculator js linked");
 
-function calc()
+// adds the data to array.
+function add()
 {
-  let deterStore = []; // array for storage of rows and columns in deter
+  var deterStore = []; // array for storage of rows and columns in deter
 
   deterStore.push(parseInt(document.getElementById('1-enter').value, 10))
   deterStore.push(parseInt(document.getElementById('2-enter').value, 10))
@@ -16,17 +17,27 @@ function calc()
   deterStore.push(parseInt(document.getElementById('8-enter').value, 10))
   deterStore.push(parseInt(document.getElementById('9-enter').value, 10))
 
+  // prints content to the console for debugging purposes.
   for(let i = 0; i < deterStore.length; i++)
   {
     console.info("Values in determinant:" + deterStore[i]);
   }
 
+  threeCalc(); // calls calculation function for 3x3.
+}
+
+function threeCalc()
+{
   // Calcuation working
-  const deterFinalVal = ((deterStore[0])*((deterStore[4]*deterStore[8]) - (deterStore[5]*deterStore[7])) - ((deterStore[1])*((deterStore[3]*deterStore[8]) - (deterStore[5]*deterStore[6]))) + ((deterStore[2])*((deterStore[3]*deterStore[7]) - (deterStore[6]*deterStore[4]))) );
+  var deterFinalVal = ((deterStore[0])*((deterStore[4]*deterStore[8]) - (deterStore[5]*deterStore[7])) - ((deterStore[1])*((deterStore[3]*deterStore[8]) - (deterStore[5]*deterStore[6]))) + ((deterStore[2])*((deterStore[3]*deterStore[7]) - (deterStore[6]*deterStore[4]))) );
   console.info("Determinant Value: " + deterFinalVal);
 
   document.getElementById('deter-value-final').value = (deterFinalVal.toPrecision(1));
+  $('#deter-value-final').id().value();
 
-  // let pos1 = parseInt(document.getElementById('1-enter').value, 10);
-  // console.log(pos1);
+}
+
+function calc()
+{
+  add();
 }
