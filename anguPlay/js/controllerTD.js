@@ -1,5 +1,7 @@
 "use strict";
 
+console.log("controller linked.");
+
 angular.module('tdApp', [])
 .controller('tdController', function($scope)
 {
