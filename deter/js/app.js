@@ -23,7 +23,7 @@ function add()
     console.info("Values in determinant:" + deterStore[i]);
   }
 
-  threeCalc(); // calls calculation function for 3x3.
+  threeCalc(); // calls calculation function 
 }
 
 function threeCalc()
