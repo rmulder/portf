@@ -6,7 +6,25 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["grade", "school", "calculator", "es6", "responsive", "ronan"],
+  "keywords": [
+    "grade",
+    "school",
+    "calculator",
+    "es6",
+    "responsive",
+    "ronan"
+  ],
   "author": "Ronan Manoj",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-minify-html": "^1.0.6",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-uglify": "^3.0.0",
+    "gulp-util": "^3.0.8",
+    "gulpfile.js": "^2.0.0"
+  }
 }
