@@ -5,6 +5,6 @@
 * SCSS
 * CSS
 * ES6
-* jQuery
+* Gulp.js
 * Bash
 * Git
