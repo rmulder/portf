@@ -18,7 +18,6 @@ gulp.task("minhtml", function () {
   })).pipe(gulp.dest('./'));
 });
 
-
 gulp.task("concatStyles", function () {
 
    gulp.src(["scss/vars.scss", "scss/input.scss", "scss/button.scss", "scss/style.scss"]) // scss file to be concat
