@@ -1,4 +1,4 @@
-// for news api json
+// news api json
 
 console.log(`I'm required by Webpack`);
 // import './es6code';
@@ -7,7 +7,7 @@ console.log(`I'm required by Webpack`);
 
 $(document).ready(function()
 {
-  $(".field__input").change(function(e) // basically auto enter.
+  $(".field__input").change(function(e) // basically auto enters.
   {
     let kw = $(".field__input").val();
     kw = kw.toLowerCase().replace(/\s/g, '');
@@ -622,6 +622,5 @@ function getSVNews()
           {
             window.open( sv3Url ,'_blank');
           });
-
   });
 }
