@@ -1,0 +1,12 @@
+{
+  "name": "bart",
+  "version": "0.0.1",
+  "description": "updates the latest arrival times for the next train with the track number",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Ronan Manoj",
+  "license": "MIT"
+}

@@ -1,0 +1,5 @@
+#scripts
+*.sh
+
+#other fun stuff
+/node_modules
