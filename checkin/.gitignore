@@ -1,0 +1,10 @@
+#hidden fun stuff
+
+#scripts
+*.sh
+
+#node-modules
+/node_modules
+
+#other
+package-lock.json

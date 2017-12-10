@@ -1,0 +1,37 @@
+{
+  "name": "checkin",
+  "version": "0.0.1",
+  "description": "Check into your flight by entering your name and confirmation code and get a response.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node ./app"
+  },
+  "private": true,
+  "engines": {
+    "node": "8.7.0",
+    "npm": "5.5.1"
+  },
+  "dependencies": {
+    "bcrypt": "*",
+    "body-parser": "*",
+    "connect-mongo": "*",
+    "express": "4.15.4",
+    "express-session": "*",
+    "mongodb": "^2.2.31",
+    "mongoose": "*",
+    "pug": "*",
+    "sass": "*"
+  },
+  "keywords": [
+    "checkin",
+    "mongo",
+    "database",
+    "flight",
+    "confirmation",
+    "verification",
+    "feature",
+    "ronanmanoj"
+  ],
+  "author": "Ronan Manoj",
+  "license": "MIT"
+}
