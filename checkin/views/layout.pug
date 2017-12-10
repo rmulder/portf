@@ -1,0 +1,26 @@
+doctype html(lang='en')
+head
+  meta(charset='utf-8')
+  meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+  meta(http-equiv='x-ua-compatible', content='ie=edge')
+  title Check-In - #{title}
+
+  link(rel='stylesheet', type='text/css', href='/CSS/navbar.css')
+  link(rel='stylesheet', type='text/css', href='/CSS/checkin.css')
+  link(rel='stylesheet', type='text/css', href='/CSS/create.css')
+  link(rel='stylesheet', type='text/css', href='/CSS/result.css')
+  link(rel='stylesheet', type='text/css', href='/CSS/vars.css')
+  link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dosis:200,300|Maven+Pro|Muli:200,300,400|Roboto:100,300,400|Ubuntu:300,400")
+
+  body
+    // load navbar.jade
+    include navbar
+
+    // content block
+    block content
+
+    // footer
+    // p Made in the Bay Area - Ronan M. Website
+
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+    script(type='text/javascript', src='js/overall.js', charset='utf-8')
