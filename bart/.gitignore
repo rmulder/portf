@@ -1,5 +1,8 @@
 #scripts
 *.sh
 
-#other fun stuff
+#big packages
 /node_modules
+
+#other fun stuff
+*.sass-cache
