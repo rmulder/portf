@@ -20,6 +20,7 @@ let overallCall = () =>
     console.info("Local Time: " + localTime);
 
     firstCall(json);
+    secondCall(json);
 
   });
 }
@@ -30,10 +31,6 @@ let firstCall = (firstjson) =>
   let firstDestinName = (JSON.stringify(firstjson.root.station[0].etd[0].destination))
   firstDestinName = firstDestinName.substr(1).slice(0, -1); // remove the quote marks
   console.info("1 Destination: " + firstDestinName);
-  //
-  // let firstDestinName = (JSON.stringify(firstjson.root.station[0].etd[0].destination))
-  // firstDestinName = firstDestinName.substr(1).slice(0, -1); // remove the quote marks
-  // console.info("1 Destination: " + firstDestinName);
 
   let firstDepTime = (JSON.stringify(firstjson.root.station[0].etd[0].estimate[0].minutes))
   firstDepTime = firstDepTime.substr(1).slice(0, -1); // remove the quote marks
@@ -45,6 +42,24 @@ let firstCall = (firstjson) =>
 
   let firstcolor = (JSON.stringify(firstjson.root.station[0].etd[0].estimate[0].color))
   firstcolor = firstcolor.substr(1).slice(0, -1); // remove the quote marks
-  console.info("Train Color: " + firstcolor);
+  console.info("1 Train Color: " + firstcolor);
 }
-// firstCall();
+
+let secondCall = (secondjson) =>
+{
+  let secondDestinName = (JSON.stringify(secondjson.root.station[0].etd[1].destination))
+  secondDestinName = secondDestinName.substr(1).slice(0, -1); // remove the quote marks
+  console.info("2 Destination: " + secondDestinName);
+
+  let secondDepTime = (JSON.stringify(secondjson.root.station[0].etd[1].estimate[0].minutes))
+  secondDepTime = secondDepTime.substr(1).slice(0, -1); // remove the quote marks
+  console.info("2 dest. Depart Time: " + secondDepTime);
+
+  let secondplatform = (JSON.stringify(secondjson.root.station[0].etd[1].estimate[0].platform))
+  secondplatform = secondplatform.substr(1).slice(0, -1); // remove the quote marks
+  console.info("2 dest. Platform Number: " + secondplatform);
+
+  let secondcolor = (JSON.stringify(secondjson.root.station[0].etd[1].estimate[0].color))
+  secondcolor = secondcolor.substr(1).slice(0, -1); // remove the quote marks
+  console.info("2 Train Color: " + secondcolor);
+}
