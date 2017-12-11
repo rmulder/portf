@@ -47,6 +47,13 @@ let firstCall = (firstjson) =>
 
 let secondCall = (secondjson) =>
 {
+  // safety check for white trains:
+  if((JSON.stringify(secondjson.root.station[0].etd[1].estimate[0].color)) == "WHITE")
+  {
+    console.log("Calling other function for next newest train.");
+    // secondOtherCall(secondjson);
+  }
+
   let secondDestinName = (JSON.stringify(secondjson.root.station[0].etd[1].destination))
   secondDestinName = secondDestinName.substr(1).slice(0, -1); // remove the quote marks
   console.info("2 Destination: " + secondDestinName);
@@ -63,11 +70,6 @@ let secondCall = (secondjson) =>
   secondcolor = secondcolor.substr(1).slice(0, -1); // remove the quote marks
   console.info("2 Train Color: " + secondcolor);
 
-  if(secondcolor == "WHITE")
-  {
-    console.log("Calling other function for next newest train.");
-    // secondOtherCall(secondjson);
-  }
 }
 
 // if a train is white, need to display the next option and its eta departure time
