@@ -28,13 +28,20 @@ overallCall();
 
 let firstCall = (firstjson) =>
 {
+  // safety check for white trains:
+  if((JSON.stringify(firstjson.root.station[0].etd[0].estimate[0].color)) == "WHITE")
+  {
+    console.log("Calling other function for next newest train.");
+    // firstOtherCall(firstjson);
+  }
+
   let firstDestinName = (JSON.stringify(firstjson.root.station[0].etd[0].destination))
   firstDestinName = firstDestinName.substr(1).slice(0, -1); // remove the quote marks
   console.info("1 Destination: " + firstDestinName);
 
   let firstDepTime = (JSON.stringify(firstjson.root.station[0].etd[0].estimate[0].minutes))
   firstDepTime = firstDepTime.substr(1).slice(0, -1); // remove the quote marks
-  console.info("1 dest. Depart Time: " + firstDepTime);
+  console.info("1 dest. Depart Time: " + firstDepTime + " mins");
 
   let firstplatform = (JSON.stringify(firstjson.root.station[0].etd[0].estimate[0].platform))
   firstplatform = firstplatform.substr(1).slice(0, -1); // remove the quote marks
@@ -60,7 +67,7 @@ let secondCall = (secondjson) =>
 
   let secondDepTime = (JSON.stringify(secondjson.root.station[0].etd[1].estimate[0].minutes))
   secondDepTime = secondDepTime.substr(1).slice(0, -1); // remove the quote marks
-  console.info("2 dest. Depart Time: " + secondDepTime);
+  console.info("2 dest. Depart Time: " + secondDepTime + " mins");
 
   let secondplatform = (JSON.stringify(secondjson.root.station[0].etd[1].estimate[0].platform))
   secondplatform = secondplatform.substr(1).slice(0, -1); // remove the quote marks
@@ -69,25 +76,45 @@ let secondCall = (secondjson) =>
   let secondcolor = (JSON.stringify(secondjson.root.station[0].etd[1].estimate[0].color))
   secondcolor = secondcolor.substr(1).slice(0, -1); // remove the quote marks
   console.info("2 Train Color: " + secondcolor);
-
 }
 
 // if a train is white, need to display the next option and its eta departure time
-// let secondOtherCall = (secondOtherjson) =>
-// {
-//   let secondOtherDestinName = (JSON.stringify(secondOtherjson.root.station[0].etd[1].destination))
-//   secondOtherDestinName = secondOtherDestinName.substr(1).slice(0, -1);
-//   console.info("2 Destination: " + secondOtherDestinName);
-//
-//   let secondOtherDepTime = (JSON.stringify(secondOtherjson.root.station[0].etd[1].estimate[1].minutes))
-//   secondOtherDepTime = secondOtherDepTime.substr(1).slice(0, -1);
-//   console.info("2 dest. Depart Time: " + secondOtherDepTime);
-//
-//   let secondOtherplatform = (JSON.stringify(secondOtherjson.root.station[0].etd[1].estimate[1].platform))
-//   secondOtherplatform = secondOtherplatform.substr(1).slice(0, -1);
-//   console.info("2 dest. Platform Number: " + secondOtherplatform);
-//
-//   let secondOthercolor = (JSON.stringify(secondOtherjson.root.station[0].etd[1].estimate[1].color))
-//   secondOthercolor = secondOthercolor.substr(1).slice(0, -1);
-//   console.info("2 Train Color: " + secondOthercolor);
-// }
+let firstOtherCall = (firstOtherjson) =>
+{
+  let firstOtherDestinName = (JSON.stringify(firstOtherjson.root.station[0].etd[0].destination))
+  firstOtherDestinName = firstOtherDestinName.substr(1).slice(0, -1);
+  console.info("1 Other Destination: " + firstOtherDestinName);
+
+  let firstOtherDepTime = (JSON.stringify(firstOtherjson.root.station[0].etd[0].estimate[1].minutes))
+  firstOtherDepTime = firstOtherDepTime.substr(1).slice(0, -1);
+  console.info("1 Other dest. Depart Time: " + firstOtherDepTime + " mins");
+
+  let firstOtherplatform = (JSON.stringify(firstOtherjson.root.station[0].etd[0].estimate[1].platform))
+  firstOtherplatform = firstOtherplatform.substr(1).slice(0, -1);
+  console.info("1 Other dest. Platform Number: " + firstOtherplatform);
+
+  let firstOthercolor = (JSON.stringify(firstOtherjson.root.station[0].etd[0].estimate[1].color))
+  firstOthercolor = firstOthercolor.substr(1).slice(0, -1);
+  console.info("1 Other Other Train Color: " + firstOthercolor);
+}
+
+
+// if a train is white, need to display the next option and its eta departure time
+let secondOtherCall = (secondOtherjson) =>
+{
+  let secondOtherDestinName = (JSON.stringify(secondOtherjson.root.station[0].etd[1].destination))
+  secondOtherDestinName = secondOtherDestinName.substr(1).slice(0, -1);
+  console.info("2 Other Destination: " + secondOtherDestinName);
+
+  let secondOtherDepTime = (JSON.stringify(secondOtherjson.root.station[0].etd[1].estimate[1].minutes))
+  secondOtherDepTime = secondOtherDepTime.substr(1).slice(0, -1);
+  console.info("2 Other dest. Depart Time: " + secondOtherDepTime + " mins");
+
+  let secondOtherplatform = (JSON.stringify(secondOtherjson.root.station[0].etd[1].estimate[1].platform))
+  secondOtherplatform = secondOtherplatform.substr(1).slice(0, -1);
+  console.info("2 Other dest. Platform Number: " + secondOtherplatform);
+
+  let secondOthercolor = (JSON.stringify(secondOtherjson.root.station[0].etd[1].estimate[1].color))
+  secondOthercolor = secondOthercolor.substr(1).slice(0, -1);
+  console.info("2 Other Train Color: " + secondOthercolor);
+}
