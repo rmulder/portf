@@ -23,9 +23,17 @@ let fremontCall = () =>
     firstDestinName = firstDestinName.substr(1).slice(0, -1); // remove the quote marks
     console.info("1 Destination: " + firstDestinName);
 
-    let firstDestinDep = (JSON.stringify(json.root.station[0].etd[0].destination))
-    firstDestinDep = firstDestinDep.substr(1).slice(0, -1); // remove the quote marks
-    console.info("1 dest. Depart Time: " + firstDestinDep);
+    let firstDepTime = (JSON.stringify(json.root.station[0].etd[1].estimate[1].minutes))
+    // firstDepTime = firstDepTime.substr(1).slice(0, -1); // remove the quote marks
+    console.info("1 dest. Depart Time: " + firstDepTime);
+    //
+    // let firstplatform = (JSON.stringify(json.root.station[0].etd[0].destination.estimate[1].platform))
+    // firstplatform = firstplatform.substr(1).slice(0, -1); // remove the quote marks
+    // console.info("1 dest. Platform Number: " + firstplatform);
+    //
+    // let firstcolor = (JSON.stringify(json.root.station[0].etd[0].destination.estimate[1].color))
+    // firstcolor = firstcolor.substr(1).slice(0, -1); // remove the quote marks
+    // console.info("Train Color: " + firstcolor);
 
   });
 }
