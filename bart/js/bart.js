@@ -17,7 +17,15 @@ let fremontCall = () =>
   {
     let localTime = (JSON.stringify(json.root.time))
     localTime = localTime.substr(1).slice(0, -1); // remove the quote marks
-    console.info("Daly City Timings: " + localTime);
+    console.info("Local Time: " + localTime);
+
+    let firstDestinName = (JSON.stringify(json.root.station[0].etd[0].destination))
+    firstDestinName = firstDestinName.substr(1).slice(0, -1); // remove the quote marks
+    console.info("1 Destination: " + firstDestinName);
+
+    let firstDestinDep = (JSON.stringify(json.root.station[0].etd[0].destination))
+    firstDestinDep = firstDestinDep.substr(1).slice(0, -1); // remove the quote marks
+    console.info("1 dest. Depart Time: " + firstDestinDep);
 
   });
 }
