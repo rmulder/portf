@@ -2,7 +2,7 @@
 
 console.info("Inside bart.js");
 
-function fremontCall()
+let fremontCall = () =>
 {
   // example:
   // http://api.bart.gov/api/etd.aspx?cmd=etd&orig=FRMT&key=MW9S-E7SL-26DU-VV8V&json=y
@@ -15,10 +15,10 @@ function fremontCall()
 
   $.getJSON(`${urlbase + begin + origin + apikey + jsonOut}`,function(json)
   {
-    let DalyC = (JSON.stringify(json.source))
-    console.info("Daly City Timings: " + DalyC);
+    let localTime = (JSON.stringify(json.root.time))
+    localTime = localTime.substr(1).slice(0, -1); // remove the quote marks
+    console.info("Daly City Timings: " + localTime);
 
-    // DalyC = DalyC.substr(1).slice(0, -1); // to remove the quote marks
   });
 }
 fremontCall();
