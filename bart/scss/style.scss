@@ -46,6 +46,7 @@ div.title a
 div.time
 {
   padding-top: 12em;
+  transition: all 0.4s ease-in-out;
 }
 
 div.time p.platformNum, p.destName, p.timeDepart
@@ -89,6 +90,11 @@ div.time p.platformNum, p.destName, p.timeDepart
 
 @media only screen and (max-width: 800px)
 {
+  div.time
+  {
+    padding-top: 5em;
+  }
+
   div.time p.platformNum, p.destName, p.timeDepart
   {
     font-size: 3.0em;
