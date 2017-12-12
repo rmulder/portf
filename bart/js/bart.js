@@ -29,10 +29,11 @@ overallCall();
 let firstCall = (firstjson) =>
 {
   // safety check for white trains:
-  if((JSON.stringify(firstjson.root.station[0].etd[0].estimate[0].color)) == "WHITE")
+  if((JSON.stringify(firstjson.root.station[0].etd[0].estimate[0].color)) == ' "WHITE" ')
   {
     console.log("Calling other function 1 for next newest train.");
     firstOtherCall(firstjson);
+    return;
   }
 
   let firstDestinName = (JSON.stringify(firstjson.root.station[0].etd[0].destination))
@@ -55,10 +56,11 @@ let firstCall = (firstjson) =>
 let secondCall = (secondjson) =>
 {
   // safety check for white trains:
-  if((JSON.stringify(secondjson.root.station[0].etd[1].estimate[0].color)) == "WHITE")
+  if((JSON.stringify(secondjson.root.station[0].etd[1].estimate[0].color)) === '"WHITE"')
   {
     console.log("Calling other function 2 for next newest train.");
     secondOtherCall(secondjson);
+    return;
   }
 
   let secondDestinName = (JSON.stringify(secondjson.root.station[0].etd[1].destination))
