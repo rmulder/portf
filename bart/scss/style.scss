@@ -18,7 +18,7 @@ div.title a
   display: block;
   text-align: center;
   font-size: 5em;
-  color: #fff;
+  color: #000;
   font-family: $muli;
   font-weight: 200;
   text-decoration: none;
@@ -41,4 +41,37 @@ div.title a
   {
     font-size: 4em;
   }
+}
+
+div.time
+{
+  padding-top: 5em;
+}
+
+div.time p.platformNum, p.destName, p.timeDepart
+{
+  // width: calc(100% / 3);
+  text-align: center;
+  display: inline;
+  font-size: 4.4em;
+  color: #fff;
+  font-family: $robo;
+  font-weight: 300;
+}
+
+div.time p.platformNum
+{
+  border-radius: 5em;
+  border-color: #3a9143;
+  width: 33.33%;
+}
+
+div.time p.destName
+{
+  width: 33.33%;
+}
+
+div.time p.timeDepart
+{
+  width: auto;
 }
