@@ -42,7 +42,18 @@ let firstCall = (firstjson) =>
 
   let firstDepTime = (JSON.stringify(firstjson.root.station[0].etd[0].estimate[0].minutes))
   firstDepTime = firstDepTime.substr(1).slice(0, -1); // remove the quote marks
-  console.info("1 dest. Depart Time: " + firstDepTime + " mins");
+
+  if(firstDepTime == "Leaving")
+  {
+    console.log("leaving train, updating info");
+    console.info("1 dest. Depart Time: " + firstDepTime + " (0 mins)");
+  }
+  else if (firstDepTime !== "Leaving")
+  {
+    console.info("1 dest. Depart Time: " + firstDepTime + " mins");
+  }
+
+  $('.timeDepart').html(firstDepTime + " mins"); // changes the eta of departure on html side
 
   let firstplatform = (JSON.stringify(firstjson.root.station[0].etd[0].estimate[0].platform))
   firstplatform = firstplatform.substr(1).slice(0, -1); // remove the quote marks
