@@ -31,8 +31,8 @@ let firstCall = (firstjson) =>
   // safety check for white trains:
   if((JSON.stringify(firstjson.root.station[0].etd[0].estimate[0].color)) == "WHITE")
   {
-    console.log("Calling other function for next newest train.");
-    // firstOtherCall(firstjson);
+    console.log("Calling other function 1 for next newest train.");
+    firstOtherCall(firstjson);
   }
 
   let firstDestinName = (JSON.stringify(firstjson.root.station[0].etd[0].destination))
@@ -57,8 +57,8 @@ let secondCall = (secondjson) =>
   // safety check for white trains:
   if((JSON.stringify(secondjson.root.station[0].etd[1].estimate[0].color)) == "WHITE")
   {
-    console.log("Calling other function for next newest train.");
-    // secondOtherCall(secondjson);
+    console.log("Calling other function 2 for next newest train.");
+    secondOtherCall(secondjson);
   }
 
   let secondDestinName = (JSON.stringify(secondjson.root.station[0].etd[1].destination))
@@ -81,6 +81,8 @@ let secondCall = (secondjson) =>
 // if a train is white, need to display the next option and its eta departure time
 let firstOtherCall = (firstOtherjson) =>
 {
+  console.log("Inside firstOtherCall function. Next closests train.");
+
   let firstOtherDestinName = (JSON.stringify(firstOtherjson.root.station[0].etd[0].destination))
   firstOtherDestinName = firstOtherDestinName.substr(1).slice(0, -1);
   console.info("1 Other Destination: " + firstOtherDestinName);
@@ -102,6 +104,8 @@ let firstOtherCall = (firstOtherjson) =>
 // if a train is white, need to display the next option and its eta departure time
 let secondOtherCall = (secondOtherjson) =>
 {
+  console.log("Inside secondOtherCall function. Next closests train.");
+
   let secondOtherDestinName = (JSON.stringify(secondOtherjson.root.station[0].etd[1].destination))
   secondOtherDestinName = secondOtherDestinName.substr(1).slice(0, -1);
   console.info("2 Other Destination: " + secondOtherDestinName);
