@@ -48,6 +48,8 @@ let firstCall = (firstjson) =>
   firstplatform = firstplatform.substr(1).slice(0, -1); // remove the quote marks
   console.info("1 dest. Platform Number: " + firstplatform);
 
+  $('.platformNum').html(firstplatform); // changes the value of the platform # on html side
+
   let firstcolor = (JSON.stringify(firstjson.root.station[0].etd[0].estimate[0].color))
   firstcolor = firstcolor.substr(1).slice(0, -1); // remove the quote marks
   console.info("1 Train Color: " + firstcolor);
