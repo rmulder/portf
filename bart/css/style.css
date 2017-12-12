@@ -30,14 +30,14 @@ div.time {
   padding-top: 12em; }
 
 div.time p.platformNum, p.destName, p.timeDepart {
-  width: calc(100% / 3);
   text-align: center;
   display: inline-table;
   margin: auto;
   font-size: 4.4em;
   color: #fff;
   font-family: "Roboto", sans-serif;
-  font-weight: 300; }
+  font-weight: 300;
+  transition: all 0.4s ease-in-out; }
 
 .platformNum {
   float: left;
@@ -45,18 +45,22 @@ div.time p.platformNum, p.destName, p.timeDepart {
   text-align: left;
   border-radius: 5em;
   border-color: #3a9143;
-  width: 33.33%; }
+  width: 23%; }
 
 .destName {
   display: table-cell;
   text-align: center;
   margin: 0 auto;
-  width: 33.33%; }
+  width: 43.33%; }
 
 .timeDepart {
   display: table-cell;
   text-align: right;
   float: right;
-  width: auto; }
+  width: 33.33%; }
+
+@media only screen and (max-width: 800px) {
+  div.time p.platformNum, p.destName, p.timeDepart {
+    font-size: 3.0em; } }
 
 /*# sourceMappingURL=style.css.map */

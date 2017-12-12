@@ -50,7 +50,7 @@ div.time
 
 div.time p.platformNum, p.destName, p.timeDepart
 {
-  width: calc(100% / 3);
+  // width: calc(100% / 3);
   text-align: center;
   display: inline-table;
   margin: auto;
@@ -58,6 +58,7 @@ div.time p.platformNum, p.destName, p.timeDepart
   color: #fff;
   font-family: $robo;
   font-weight: 300;
+  transition: all 0.4s ease-in-out;
 }
 
 .platformNum
@@ -67,7 +68,7 @@ div.time p.platformNum, p.destName, p.timeDepart
   text-align: left;
   border-radius: 5em;
   border-color: #3a9143;
-  width: 33.33%;
+  width: 23%;
 }
 
 .destName
@@ -75,7 +76,7 @@ div.time p.platformNum, p.destName, p.timeDepart
   display: table-cell;
   text-align: center;
   margin: 0 auto;
-  width: 33.33%;
+  width: 43.33%;
 }
 
 .timeDepart
@@ -83,5 +84,13 @@ div.time p.platformNum, p.destName, p.timeDepart
   display: table-cell;
   text-align: right;
   float: right;
-  width: auto;
+  width: 33.33%;
+}
+
+@media only screen and (max-width: 800px)
+{
+  div.time p.platformNum, p.destName, p.timeDepart
+  {
+    font-size: 3.0em;
+  }
 }
