@@ -27,25 +27,36 @@ div.title a {
   div.title a {
     font-size: 4em; } }
 div.time {
-  padding-top: 5em; }
+  padding-top: 12em; }
 
 div.time p.platformNum, p.destName, p.timeDepart {
+  width: calc(100% / 3);
   text-align: center;
-  display: inline;
+  display: inline-table;
+  margin: auto;
   font-size: 4.4em;
   color: #fff;
   font-family: "Roboto", sans-serif;
   font-weight: 300; }
 
-div.time p.platformNum {
+.platformNum {
+  float: left;
+  display: table-cell;
+  text-align: left;
   border-radius: 5em;
   border-color: #3a9143;
   width: 33.33%; }
 
-div.time p.destName {
+.destName {
+  display: table-cell;
+  text-align: center;
+  margin: 0 auto;
   width: 33.33%; }
 
-div.time p.timeDepart {
+.timeDepart {
+  display: table-cell;
+  text-align: right;
+  float: right;
   width: auto; }
 
 /*# sourceMappingURL=style.css.map */

@@ -12,7 +12,7 @@ gulp.task("concatScripts", function () {
 
    gulp.src(["scss/reset.scss", "scss/var.scss", "scss/style.scss"]) // js file to be concat
           .pipe(concat("bart.scss")) // re-name
-          .pipe(maps.write('./'))
+          // .pipe(maps.write('./'))
           .pipe(gulp.dest("scss")); // destination of concat js to be located
 });
 
@@ -30,7 +30,7 @@ gulp.task("compileSass", function() {
    gulp.src("scss/bart.scss")
     .pipe(sass({outputStyle: 'compressed'}))
     .pipe(rename('bart.css'))
-    .pipe(maps.write('./')) // sourcemaps to css
+    // .pipe(maps.write('./')) // sourcemaps to css
     .pipe(gulp.dest('css'))
 });
 
