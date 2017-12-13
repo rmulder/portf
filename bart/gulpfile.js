@@ -8,7 +8,7 @@ const gulp = require('gulp'),
   sass = require('gulp-sass'),
   maps = require('gulp-sourcemaps');
 
-gulp.task("concatScripts", function () {
+gulp.task("concatStyle", function () {
 
    gulp.src(["scss/reset.scss", "scss/var.scss", "scss/style.scss"]) // js file to be concat
           .pipe(concat("bart.scss")) // re-name
@@ -16,7 +16,7 @@ gulp.task("concatScripts", function () {
           .pipe(gulp.dest("scss")); // destination of concat js to be located
 });
 
-gulp.task("minifyScripts", ["concatScripts"], function() {
+gulp.task("minifyScripts", ["concatStyle"], function() {
 
   return gulp.src('js/bart.js')
           .pipe(uglify().on('error', gutil.log)) // if error, outputs to console.
@@ -34,6 +34,6 @@ gulp.task("compileSass", function() {
     .pipe(gulp.dest('css'))
 });
 
-gulp.task("build", ['concatScripts', 'minifyScripts', 'compileSass']);
+gulp.task("build", ['concatStyle', 'minifyScripts', 'compileSass']);
 
 gulp.task("default", ['build']);
