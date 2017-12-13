@@ -41,6 +41,6 @@ gulp.task("compileSass", function() {
     .pipe(gulp.dest('css'))
 });
 
-gulp.task("build", ['concatStyle','compileSass', 'jscompress']); // concats and compresses
+gulp.task("build", ['concatStyle','compileSass', 'jscompress', 'htmlcompress']); // concats and compresses
 
 gulp.task("default", ['build']);
