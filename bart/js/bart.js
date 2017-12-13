@@ -40,6 +40,8 @@ let firstCall = (firstjson) =>
   firstDestinName = firstDestinName.substr(1).slice(0, -1); // remove the quote marks
   console.info("1 Destination: " + firstDestinName);
 
+  $('.destName').html(firstDestinName + " Train"); // changes the name of destination automatically
+
   let firstDepTime = (JSON.stringify(firstjson.root.station[0].etd[0].estimate[0].minutes))
   firstDepTime = firstDepTime.substr(1).slice(0, -1); // remove the quote marks
 
@@ -84,7 +86,7 @@ let firstCall = (firstjson) =>
 let secondCall = (secondjson) =>
 {
   // safety check for white trains:
-  if((JSON.stringify(secondjson.root.station[0].etd[1].estimate[0].color)) === '"WHITE"')
+  if((JSON.stringify(secondjson.root.station[0].etd[1].estimate[0].color)) == '"WHITE"')
   {
     console.log("Calling other function 2 for next newest train.");
     secondOtherCall(secondjson);
