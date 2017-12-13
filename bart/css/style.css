@@ -69,6 +69,36 @@ div.time p.platformNum, p.destName, p.timeDepart {
 div.padding {
   padding-top: 15em; }
 
+div.time p.platformNum2, p.destName2, p.timeDepart2 {
+  text-align: center;
+  display: inline-table;
+  margin: auto;
+  font-size: 4.4em;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  transition: all 0.4s ease-in-out; }
+
+.platformNum2 {
+  float: left;
+  display: table-cell;
+  text-align: left;
+  border-radius: 5em;
+  border-color: #3a9143;
+  width: 23%; }
+
+.destName2 {
+  display: table-cell;
+  text-align: center;
+  margin: 0 auto;
+  width: 43.33%; }
+
+.timeDepart2 {
+  display: table-cell;
+  text-align: right;
+  float: right;
+  width: 33.33%; }
+
 footer.ba {
   margin: 0 auto;
   display: block;
