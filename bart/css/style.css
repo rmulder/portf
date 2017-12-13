@@ -6,6 +6,8 @@ div.title {
   padding-top: 4em; }
 
 div.title a {
+  margin: 0 auto;
+  width: 45%;
   display: block;
   text-align: center;
   font-size: 5em;
