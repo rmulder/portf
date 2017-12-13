@@ -6,7 +6,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": [
+    "bart",
+    "api",
+    "fremont",
+    "time",
+    "responsive"
+  ],
   "author": "Ronan Manoj",
   "license": "MIT",
   "dependencies": {
@@ -15,7 +21,12 @@
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.1",
-    "gulp-uglify": "^3.0.0",
     "gulp-util": "^3.0.8"
+  },
+  "devDependencies": {
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-uglifyes": "^0.1.2",
+    "uglify-es": "^3.2.2"
   }
 }

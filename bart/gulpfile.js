@@ -2,11 +2,18 @@
 
 const gulp = require('gulp'),
   concat = require('gulp-concat'),
-  uglify = require('gulp-uglify'),
+  uglify = require('gulp-uglifyes'),
+  htmlmin = require('gulp-htmlmin'),
   gutil = require('gulp-util'),
   rename = require('gulp-rename'),
-  sass = require('gulp-sass'),
-  maps = require('gulp-sourcemaps');
+  sass = require('gulp-sass');
+
+gulp.task('htmlcompress', function() {
+    return gulp.src('index.html')
+      .pipe(htmlmin({collapseWhitespace: true}))
+      .pipe(rename('index.min.html'))
+      .pipe(gulp.dest('html'));
+  });
 
 gulp.task("concatStyle", function () {
 
@@ -15,12 +22,13 @@ gulp.task("concatStyle", function () {
           .pipe(gulp.dest("scss")); // destination of file
 });
 
-// doesn't support ES6
-gulp.task("minifyScripts", ["concatStyle"], function() {
+// supports ES6 compression
+gulp.task("jscompress", function() {
 
-  return gulp.src('js/bart.js')
+  return gulp.src('js/*.js')
           .pipe(uglify().on('error', gutil.log)) // error outputs to console.
-          .pipe(rename('bart.js'))
+          .pipe(uglify())
+          .pipe(rename('bart.min.js'))
           .pipe(gulp.dest('js'));
 });
 
@@ -33,6 +41,6 @@ gulp.task("compileSass", function() {
     .pipe(gulp.dest('css'))
 });
 
-gulp.task("build", ['concatStyle', 'compileSass']); // concats and compresses
+gulp.task("build", ['concatStyle','compileSass', 'jscompress']); // concats and compresses
 
 gulp.task("default", ['build']);
