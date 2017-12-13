@@ -66,6 +66,9 @@ div.time p.platformNum, p.destName, p.timeDepart {
 
   div.time p.platformNum, p.destName, p.timeDepart {
     font-size: 3.0em; } }
+div.padding {
+  padding-top: 15em; }
+
 footer.ba {
   margin: 0 auto;
   display: block;

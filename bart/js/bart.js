@@ -47,13 +47,15 @@ let firstCall = (firstjson) =>
   {
     console.log("leaving train, updating info");
     console.info("1 dest. Depart Time: " + firstDepTime + " (0 mins)");
+    $('.timeDepart').html(firstDepTime); // changes the eta of departure on html side
   }
   else if (firstDepTime !== "Leaving")
   {
     console.info("1 dest. Depart Time: " + firstDepTime + " mins");
+    $('.timeDepart').html(firstDepTime + " mins"); // changes the eta of departure on html side
   }
 
-  $('.timeDepart').html(firstDepTime + " mins"); // changes the eta of departure on html side
+  // $('.timeDepart').html(firstDepTime + " mins"); // changes the eta of departure on html side
 
   let firstplatform = (JSON.stringify(firstjson.root.station[0].etd[0].estimate[0].platform))
   firstplatform = firstplatform.substr(1).slice(0, -1); // remove the quote marks
@@ -82,11 +84,25 @@ let secondCall = (secondjson) =>
 
   let secondDepTime = (JSON.stringify(secondjson.root.station[0].etd[1].estimate[0].minutes))
   secondDepTime = secondDepTime.substr(1).slice(0, -1); // remove the quote marks
-  console.info("2 dest. Depart Time: " + secondDepTime + " mins");
+  // console.info("2 dest. Depart Time: " + secondDepTime + " mins");
+
+  if(secondDepTime == "Leaving")
+  {
+    console.log("leaving train, updating info");
+    console.info("2 dest. Depart Time: " + secondDepTime + " (0 mins)");
+    $('.timeDepart2').html(secondDepTime); // changes the eta of departure on html side
+  }
+  else if (secondDepTime !== "Leaving")
+  {
+    console.info("2 dest. Depart Time: " + secondDepTime + " mins");
+    $('.timeDepart2').html(secondDepTime + " mins"); // changes the eta of departure on html side
+  }
 
   let secondplatform = (JSON.stringify(secondjson.root.station[0].etd[1].estimate[0].platform))
   secondplatform = secondplatform.substr(1).slice(0, -1); // remove the quote marks
   console.info("2 dest. Platform Number: " + secondplatform);
+
+  $('.platformNum2').html(secondplatform); // changes the value of the platform # on html side
 
   let secondcolor = (JSON.stringify(secondjson.root.station[0].etd[1].estimate[0].color))
   secondcolor = secondcolor.substr(1).slice(0, -1); // remove the quote marks
@@ -104,11 +120,25 @@ let firstOtherCall = (firstOtherjson) =>
 
   let firstOtherDepTime = (JSON.stringify(firstOtherjson.root.station[0].etd[0].estimate[1].minutes))
   firstOtherDepTime = firstOtherDepTime.substr(1).slice(0, -1);
-  console.info("1 Other dest. Depart Time: " + firstOtherDepTime + " mins");
+  // console.info("1 Other dest. Depart Time: " + firstOtherDepTime + " mins");
+
+  if(firstOtherDepTime == "Leaving")
+  {
+    console.log("leaving train, updating info");
+    console.info("1 Other dest. Depart Time: " + firstOtherDepTime + " (0 mins)");
+    $('.timeDepart').html(firstOtherDepTime); // changes the eta of departure on html side
+  }
+  else if (firstOtherDepTime !== "Leaving")
+  {
+    console.info("1 Other dest. Depart Time: " + firstOtherDepTime + " mins");
+    $('.timeDepart').html(firstOtherDepTime + " mins"); // changes the eta of departure on html side
+  }
 
   let firstOtherplatform = (JSON.stringify(firstOtherjson.root.station[0].etd[0].estimate[1].platform))
   firstOtherplatform = firstOtherplatform.substr(1).slice(0, -1);
   console.info("1 Other dest. Platform Number: " + firstOtherplatform);
+
+  $('.platformNum').html(firstOtherplatform); // changes the value of the platform # on html side
 
   let firstOthercolor = (JSON.stringify(firstOtherjson.root.station[0].etd[0].estimate[1].color))
   firstOthercolor = firstOthercolor.substr(1).slice(0, -1);
@@ -127,11 +157,25 @@ let secondOtherCall = (secondOtherjson) =>
 
   let secondOtherDepTime = (JSON.stringify(secondOtherjson.root.station[0].etd[1].estimate[1].minutes))
   secondOtherDepTime = secondOtherDepTime.substr(1).slice(0, -1);
-  console.info("2 Other dest. Depart Time: " + secondOtherDepTime + " mins");
+  // console.info("2 Other dest. Depart Time: " + secondOtherDepTime + " mins");
+
+  if(secondOtherDepTime == "Leaving")
+  {
+    console.log("leaving train, updating info");
+    console.info("2 Other dest. Depart Time: " + secondOtherDepTime + " (0 mins)");
+    $('.timeDepart2').html(secondOtherDepTime); // changes the eta of departure on html side
+  }
+  else if (secondOtherDepTime !== "Leaving")
+  {
+    console.info("2 Other dest. Depart Time: " + secondOtherDepTime + " mins");
+    $('.timeDepart2').html(secondOtherDepTime + " mins"); // changes the eta of departure on html side
+  }
 
   let secondOtherplatform = (JSON.stringify(secondOtherjson.root.station[0].etd[1].estimate[1].platform))
   secondOtherplatform = secondOtherplatform.substr(1).slice(0, -1);
   console.info("2 Other dest. Platform Number: " + secondOtherplatform);
+
+  $('.platformNum2').html(secondOtherplatform); // changes the value of the platform # on html side
 
   let secondOthercolor = (JSON.stringify(secondOtherjson.root.station[0].etd[1].estimate[1].color))
   secondOthercolor = secondOthercolor.substr(1).slice(0, -1);
