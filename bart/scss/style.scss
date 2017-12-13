@@ -8,6 +8,7 @@ html
   font-size: 12px;
 }
 
+// title padding on top
 div.title
 {
   padding-top: 4em;
@@ -95,10 +96,15 @@ div.legendTitle p.Pnumber, p.Cname, p.Tnumber
   width: 25%;
 }
 
-div.time
+div.time2
 {
   padding-top: 12em;
   transition: all 0.4s ease-in-out;
+}
+
+div.paddingSpec
+{
+  padding-top: 5em;
 }
 
 div.time p.platformNum, p.destName, p.timeDepart
@@ -140,9 +146,9 @@ div.time p.platformNum, p.destName, p.timeDepart
 
 @media only screen and (max-width: 800px)
 {
-  div.time
+  div.time2
   {
-    padding-top: 5em;
+    padding-top: 3em;
   }
 
   div.time p.platformNum, p.destName, p.timeDepart
@@ -177,7 +183,7 @@ div.time p.platformNum, p.destName, p.timeDepart
 
   div.time
   {
-    padding-top: 5em;
+    // padding-top: 5em;
   }
 
   div.time p.platformNum, p.destName, p.timeDepart
@@ -193,7 +199,7 @@ div.time p.platformNum, p.destName, p.timeDepart
 
 div.padding
 {
-  padding-top: 3em;
+  padding-top: 6em;
 }
 
 div.time p.platformNum2, p.destName2, p.timeDepart2
