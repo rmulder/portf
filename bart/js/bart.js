@@ -71,9 +71,13 @@ let firstCall = (firstjson) =>
   {
     $('.platformNum').css('color', '#71f602'); // changes the color of train to platform #
   }
+  else if(firstcolor == "ORANGE")
+  {
+    $('.platformNum').css('color', '#ffc52e'); // changes the color of train to platform #
+  }
   else
   {
-    $('.platformNum').css('color', firstcolor); // changes the color of train to platform #
+    $('.platformNum2').css('color', firstcolor); // changes the color of train to platform #
   }
 }
 
@@ -117,7 +121,18 @@ let secondCall = (secondjson) =>
   secondcolor = secondcolor.substr(1).slice(0, -1); // remove the quote marks
   console.info("2 Train Color: " + secondcolor);
 
-  $('.platformNum2').css('color', secondcolor); // changes the color of train to platform #
+  if(secondcolor == "ORANGE")
+  {
+    $('.platformNum2').css('color', '#ffc52e'); // changes the color of train to platform #
+  }
+  else if(secondcolor == "GREEN")
+  {
+    $('.platformNum2').css('color', '#71f602'); // changes the color of train to platform #
+  }
+  else
+  {
+    $('.platformNum2').css('color', secondcolor); // changes the color of train to platform #
+  }
 }
 
 // if a train is white, need to display the next option and its eta departure time
@@ -201,5 +216,16 @@ let secondOtherCall = (secondOtherjson) =>
   secondOthercolor = secondOthercolor.substr(1).slice(0, -1);
   console.info("2 Other Train Color: " + secondOthercolor);
 
-  $('.platformNum2').css('color', secondOthercolor); // changes the color of train to platform #
+  if(secondOthercolor == "ORANGE")
+  {
+    $('.platformNum2').css('color', '#ffc52e'); // changes the color of train to platform #
+  }
+  else if(secondOthercolor == "GREEN")
+  {
+    $('.platformNum2').css('color', '#71f602'); // changes the color of train to platform #
+  }
+  else
+  {
+    $('.platformNum2').css('color', secondOthercolor); // changes the color of train to platform #
+  }
 }
