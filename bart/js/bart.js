@@ -97,6 +97,8 @@ let secondCall = (secondjson) =>
   secondDestinName = secondDestinName.substr(1).slice(0, -1); // remove the quote marks
   console.info("2 Destination: " + secondDestinName);
 
+  $('.destName2').html(secondDestinName + " Train"); // changes the name of destination automatically
+
   let secondDepTime = (JSON.stringify(secondjson.root.station[0].etd[1].estimate[0].minutes))
   secondDepTime = secondDepTime.substr(1).slice(0, -1); // remove the quote marks
   // console.info("2 dest. Depart Time: " + secondDepTime + " mins");
@@ -146,6 +148,8 @@ let firstOtherCall = (firstOtherjson) =>
   firstOtherDestinName = firstOtherDestinName.substr(1).slice(0, -1);
   console.info("1 Other Destination: " + firstOtherDestinName);
 
+  $('.destName').html(firstOtherDestinName + " Train"); // changes the name of destination automatically
+
   let firstOtherDepTime = (JSON.stringify(firstOtherjson.root.station[0].etd[0].estimate[1].minutes))
   firstOtherDepTime = firstOtherDepTime.substr(1).slice(0, -1);
   // console.info("1 Other dest. Depart Time: " + firstOtherDepTime + " mins");
@@ -191,6 +195,8 @@ let secondOtherCall = (secondOtherjson) =>
   let secondOtherDestinName = (JSON.stringify(secondOtherjson.root.station[0].etd[1].destination))
   secondOtherDestinName = secondOtherDestinName.substr(1).slice(0, -1);
   console.info("2 Other Destination: " + secondOtherDestinName);
+
+  $('.destName2').html(secondOtherDestinName + " Train"); // changes the name of destination automatically
 
   let secondOtherDepTime = (JSON.stringify(secondOtherjson.root.station[0].etd[1].estimate[1].minutes))
   secondOtherDepTime = secondOtherDepTime.substr(1).slice(0, -1);
