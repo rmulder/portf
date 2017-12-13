@@ -16,7 +16,6 @@ gulp.task('htmlcompress', function() {
   });
 
 gulp.task("concatStyle", function () {
-
    gulp.src(["scss/reset.scss", "scss/var.scss", "scss/style.scss"])
           .pipe(concat("bart.scss"))
           .pipe(gulp.dest("scss")); // destination of file
@@ -24,16 +23,14 @@ gulp.task("concatStyle", function () {
 
 // supports ES6 compression
 gulp.task("jscompress", function() {
-
-  return gulp.src('js/*.js')
-          .pipe(uglify().on('error', gutil.log)) // error outputs to console.
+  return gulp.src('js/bart.js')
+          // .pipe(uglify().on('error', gutil.log)) // error outputs to console.
           .pipe(uglify())
           .pipe(rename('bart.min.js'))
           .pipe(gulp.dest('js'));
 });
 
 gulp.task("compileSass", function() {
-
   // main stylesheet:
    gulp.src("scss/bart.scss")
     .pipe(sass({outputStyle: 'compressed'}))
