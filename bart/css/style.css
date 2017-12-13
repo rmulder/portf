@@ -7,7 +7,7 @@ div.title {
 
 div.title a {
   margin: 0 auto;
-  width: 45%;
+  width: 75%;
   display: block;
   text-align: center;
   font-size: 5em;
@@ -40,14 +40,13 @@ div.time p.platformNum, p.destName, p.timeDepart {
   color: #fff;
   font-family: "Roboto", sans-serif;
   font-weight: 300;
+  vertical-align: middle;
   transition: all 0.4s ease-in-out; }
 
 .platformNum {
   float: left;
   display: table-cell;
   text-align: left;
-  border-radius: 5em;
-  border-color: #3a9143;
   width: 23%; }
 
 .destName {

@@ -66,6 +66,15 @@ let firstCall = (firstjson) =>
   let firstcolor = (JSON.stringify(firstjson.root.station[0].etd[0].estimate[0].color))
   firstcolor = firstcolor.substr(1).slice(0, -1); // remove the quote marks
   console.info("1 Train Color: " + firstcolor);
+
+  if(firstcolor == "GREEN")
+  {
+    $('.platformNum').css('color', '#71f602'); // changes the color of train to platform #
+  }
+  else
+  {
+    $('.platformNum').css('color', firstcolor); // changes the color of train to platform #
+  }
 }
 
 let secondCall = (secondjson) =>
@@ -107,6 +116,8 @@ let secondCall = (secondjson) =>
   let secondcolor = (JSON.stringify(secondjson.root.station[0].etd[1].estimate[0].color))
   secondcolor = secondcolor.substr(1).slice(0, -1); // remove the quote marks
   console.info("2 Train Color: " + secondcolor);
+
+  $('.platformNum2').css('color', secondcolor); // changes the color of train to platform #
 }
 
 // if a train is white, need to display the next option and its eta departure time
@@ -143,6 +154,15 @@ let firstOtherCall = (firstOtherjson) =>
   let firstOthercolor = (JSON.stringify(firstOtherjson.root.station[0].etd[0].estimate[1].color))
   firstOthercolor = firstOthercolor.substr(1).slice(0, -1);
   console.info("1 Other Other Train Color: " + firstOthercolor);
+
+  if(firstOthercolor == "GREEN")
+  {
+    $('.platformNum').css('color', '#71f602'); // changes the color of train to platform #
+  }
+  else
+  {
+    $('.platformNum').css('color', firstOthercolor); // changes the color of train to platform #
+  }
 }
 
 
@@ -180,4 +200,6 @@ let secondOtherCall = (secondOtherjson) =>
   let secondOthercolor = (JSON.stringify(secondOtherjson.root.station[0].etd[1].estimate[1].color))
   secondOthercolor = secondOthercolor.substr(1).slice(0, -1);
   console.info("2 Other Train Color: " + secondOthercolor);
+
+  $('.platformNum2').css('color', secondOthercolor); // changes the color of train to platform #
 }
