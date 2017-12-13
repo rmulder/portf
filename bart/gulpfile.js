@@ -10,16 +10,16 @@ const gulp = require('gulp'),
 
 gulp.task("concatStyle", function () {
 
-   gulp.src(["scss/reset.scss", "scss/var.scss", "scss/style.scss"]) // js file to be concat
-          .pipe(concat("bart.scss")) // re-name
-          // .pipe(maps.write('./'))
-          .pipe(gulp.dest("scss")); // destination of concat js to be located
+   gulp.src(["scss/reset.scss", "scss/var.scss", "scss/style.scss"])
+          .pipe(concat("bart.scss"))
+          .pipe(gulp.dest("scss")); // destination of file
 });
 
+// doesn't support ES6
 gulp.task("minifyScripts", ["concatStyle"], function() {
 
   return gulp.src('js/bart.js')
-          .pipe(uglify().on('error', gutil.log)) // if error, outputs to console.
+          .pipe(uglify().on('error', gutil.log)) // error outputs to console.
           .pipe(rename('bart.js'))
           .pipe(gulp.dest('js'));
 });
@@ -30,10 +30,9 @@ gulp.task("compileSass", function() {
    gulp.src("scss/bart.scss")
     .pipe(sass({outputStyle: 'compressed'}))
     .pipe(rename('bart.css'))
-    // .pipe(maps.write('./')) // sourcemaps to css
     .pipe(gulp.dest('css'))
 });
 
-gulp.task("build", ['concatStyle', 'minifyScripts', 'compileSass']);
+gulp.task("build", ['concatStyle', 'compileSass']); // concats and compresses
 
 gulp.task("default", ['build']);
