@@ -45,6 +45,20 @@ div.title a
   }
 }
 
+// smartphones
+@media only screen and (max-width: 420px)
+{
+  div.title
+  {
+    padding-top: 3em;
+  }
+
+  div.title a
+  {
+    font-size: 3.6em;
+  }
+}
+
 div.time
 {
   padding-top: 12em;
@@ -53,7 +67,6 @@ div.time
 
 div.time p.platformNum, p.destName, p.timeDepart
 {
-  // width: calc(100% / 3);
   text-align: center;
   display: inline-table;
   margin: auto;
@@ -102,6 +115,36 @@ div.time p.platformNum, p.destName, p.timeDepart
   }
 }
 
+// smartphones
+@media only screen and (max-width: 420px)
+{
+  .platformNum
+  {
+    width: 15%;
+  }
+
+  .destName
+  {
+    width: 50.33%
+  }
+
+  .timeDepart
+  {
+    padding-right: 0.7em;
+    width: auto;
+  }
+
+  div.time
+  {
+    padding-top: 5em;
+  }
+
+  div.time p.platformNum, p.destName, p.timeDepart
+  {
+    font-size: 2.7em;
+  }
+}
+
 div.padding
 {
   padding-top: 3em;
@@ -146,11 +189,38 @@ div.time p.platformNum2, p.destName2, p.timeDepart2
   width: 33.33%;
 }
 
+// tablets
 @media only screen and (max-width: 800px)
 {
   div.time p.platformNum2, p.destName2, p.timeDepart2
   {
     font-size: 3.0em;
+  }
+}
+
+// smartphones
+@media only screen and (max-width: 420px)
+{
+  .platformNum2
+  {
+    width: 15%;
+  }
+
+  .destName2
+  {
+    width: 50.33%
+  }
+
+  .timeDepart2
+  {
+    padding-right: 0.7em;
+    width: auto;
+  }
+
+
+  div.time p.platformNum2, p.destName2, p.timeDepart2
+  {
+    font-size: 2.7em;
   }
 }
 
@@ -168,4 +238,12 @@ footer.ba
   text-align: center;
   font-weight: 200;
   color: #dadada;
+}
+
+@media only screen and (max-width: 800px)
+{
+  footer.ba
+  {
+    font-size: 0.6em;
+  }
 }
