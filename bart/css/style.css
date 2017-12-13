@@ -99,6 +99,9 @@ div.time p.platformNum2, p.destName2, p.timeDepart2 {
   float: right;
   width: 33.33%; }
 
+@media only screen and (max-width: 800px) {
+  div.time p.platformNum2, p.destName2, p.timeDepart2 {
+    font-size: 3.0em; } }
 footer.ba {
   margin: 0 auto;
   display: block;
