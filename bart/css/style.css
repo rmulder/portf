@@ -44,24 +44,21 @@ div.legendTitle p.Pnumber, p.Cname, p.Tnumber {
   display: inline-table;
   transition: all 0.4s ease-in-out; }
 
-p.Pnumber {
+.Pnumber {
   float: left;
   display: table-cell;
   text-align: center;
-  width: 25%; }
+  width: 23%; }
 
-p.Cname {
+.Cname {
   display: table-cell;
   text-align: center;
-  width: 33.33%; }
+  width: 43%; }
 
-p.Tnumber {
-  padding-right: 4em;
-  text-align: center;
+.Tnumber {
   display: table-cell;
-  text-align: right;
   float: right;
-  width: auto; }
+  width: 27%; }
 
 div.time {
   padding-top: 12em;
@@ -101,7 +98,10 @@ div.time p.platformNum, p.destName, p.timeDepart {
     padding-top: 5em; }
 
   div.time p.platformNum, p.destName, p.timeDepart {
-    font-size: 3.0em; } }
+    font-size: 3.0em; }
+
+  div.legendTitle p.Pnumber, p.Cname, p.Tnumber {
+    font-size: 2.3em; } }
 @media only screen and (max-width: 420px) {
   .platformNum {
     width: 15%; }

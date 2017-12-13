@@ -69,33 +69,29 @@ div.legendTitle p.Pnumber, p.Cname, p.Tnumber
   font-weight: 400;
   color: #{darken($blue, 20%)};
   display: inline-table;
-  // vertical-align: middle;
   transition: all 0.4s ease-in-out;
 }
 
-p.Pnumber
+.Pnumber
 {
   float: left;
   display: table-cell;
   text-align: center;
-  width: 25%;
+  width: 23%;
 }
 
-p.Cname
+.Cname
 {
   display: table-cell;
   text-align: center;
-  width: 33.33%;
+  width: 43%;
 }
 
-p.Tnumber
+.Tnumber
 {
-  padding-right: 4em;
-  text-align: center;
   display: table-cell;
-  text-align: right;
   float: right;
-  width: auto;
+  width: 27%;
 }
 
 div.time
@@ -151,6 +147,11 @@ div.time p.platformNum, p.destName, p.timeDepart
   div.time p.platformNum, p.destName, p.timeDepart
   {
     font-size: 3.0em;
+  }
+
+  div.legendTitle p.Pnumber, p.Cname, p.Tnumber
+  {
+    font-size: 2.3em;
   }
 }
 
