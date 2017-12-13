@@ -34,6 +34,35 @@ div.title a {
 
   div.title a {
     font-size: 3.6em; } }
+div.legendTitle p.Pnumber, p.Cname, p.Tnumber {
+  font-style: italic;
+  text-decoration: underline;
+  font-size: 3em;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  color: #153248;
+  display: inline-table;
+  transition: all 0.4s ease-in-out; }
+
+p.Pnumber {
+  float: left;
+  display: table-cell;
+  text-align: center;
+  width: 25%; }
+
+p.Cname {
+  display: table-cell;
+  text-align: center;
+  width: 33.33%; }
+
+p.Tnumber {
+  padding-right: 4em;
+  text-align: center;
+  display: table-cell;
+  text-align: right;
+  float: right;
+  width: auto; }
+
 div.time {
   padding-top: 12em;
   transition: all 0.4s ease-in-out; }

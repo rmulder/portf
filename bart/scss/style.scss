@@ -59,6 +59,45 @@ div.title a
   }
 }
 
+div.legendTitle p.Pnumber, p.Cname, p.Tnumber
+{
+  font-style: italic;
+  text-decoration: underline;
+  // text-align: center;
+  font-size: 3em;
+  font-family: $ubu;
+  font-weight: 400;
+  color: #{darken($blue, 20%)};
+  display: inline-table;
+  // vertical-align: middle;
+  transition: all 0.4s ease-in-out;
+}
+
+p.Pnumber
+{
+  float: left;
+  display: table-cell;
+  text-align: center;
+  width: 25%;
+}
+
+p.Cname
+{
+  display: table-cell;
+  text-align: center;
+  width: 33.33%;
+}
+
+p.Tnumber
+{
+  padding-right: 4em;
+  text-align: center;
+  display: table-cell;
+  text-align: right;
+  float: right;
+  width: auto;
+}
+
 div.time
 {
   padding-top: 12em;
