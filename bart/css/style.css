@@ -35,6 +35,7 @@ div.title a {
   div.title a {
     font-size: 3.6em; } }
 div.legendTitle p.Pnumber, p.Cname, p.Tnumber {
+  padding-bottom: -5em;
   font-style: italic;
   text-decoration: underline;
   font-size: 3em;
@@ -58,7 +59,7 @@ div.legendTitle p.Pnumber, p.Cname, p.Tnumber {
 .Tnumber {
   display: table-cell;
   float: right;
-  width: 27%; }
+  width: 25%; }
 
 div.time {
   padding-top: 12em;
@@ -117,7 +118,10 @@ div.time p.platformNum, p.destName, p.timeDepart {
     padding-top: 5em; }
 
   div.time p.platformNum, p.destName, p.timeDepart {
-    font-size: 2.7em; } }
+    font-size: 2.7em; }
+
+  div.legendTitle p.Pnumber, p.Cname, p.Tnumber {
+    font-size: 1.9em; } }
 div.padding {
   padding-top: 3em; }
 
