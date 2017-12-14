@@ -19,11 +19,26 @@
 			</article>
 		</div>
 
+		<div class="locationAddress">
+			<article>
+				<h1>Info</h1>
+			</article>
+		</div>
+
+		<div class="spec-index-box"/>
+		 <article>
+			 <p class="NDLocation">New Delhi Location</p>
+			 <p>The Lodhi, Lodhi Road, New Delhi 110003</p>
+		 </article>
+		</div>
+
+		<div class="padding-top"> </div>
+
 		<script>
 		function myMap() {
-		  const myCenter = new google.maps.LatLng(28.5704591,77.2566125);
+		  const myCenter = new google.maps.LatLng(28.5917073,77.2380751);
 		  const mapCanvas = document.getElementById("map");
-		  const mapOptions = {center: myCenter, zoom: 12};
+		  const mapOptions = {center: myCenter, zoom: 14};
 		  const map = new google.maps.Map(mapCanvas, mapOptions);
 		  const marker = new google.maps.Marker({position:myCenter});
 		  marker.setMap(map);
