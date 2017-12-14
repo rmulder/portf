@@ -21,7 +21,7 @@ div.imgLogo img {
     transition: all 0.6 ease-in-out;
     width: 85%;
     height: auto; } }
-div.menuTitle article h1 {
+div.inspireTitle article h1 {
   margin-left: 5%;
   color: #fff;
   font-family: "Muli", sans-serif;
@@ -30,7 +30,7 @@ div.menuTitle article h1 {
   transition: all 0.6 ease-in-out; }
 
 @media screen and (max-width: 800px) {
-  div.menuTitle article h1 {
+  div.inspireTitle article h1 {
     font-size: 1.6em; } }
 div.descriptionMenus {
   margin: 0 auto;
@@ -91,6 +91,17 @@ img.food1, img.food2, img.food3 {
     height: auto;
     width: 90%;
     display: block; } }
+div.menuTitle article h1 {
+  margin-left: 5%;
+  color: #fff;
+  font-family: "Muli", sans-serif;
+  font-weight: 300;
+  font-size: 2em;
+  transition: all 0.6 ease-in-out; }
+
+@media screen and (max-width: 800px) {
+  div.menuTitle article h1 {
+    font-size: 1.6em; } }
 ul {
   margin: 0;
   padding: 0; }
