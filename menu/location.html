@@ -15,24 +15,19 @@
 		<div class="gmaps">
 			<article>
 				<h1>Location</h1>
-				<div id="map">
-					<!-- Google Maps API Styling -->
-				</div>
+				<div id="map"></div> <!-- Google Maps API Styling -->
 			</article>
 		</div>
 
 		<script>
-		function myMap()
-		{
+		function myMap() {
 		  const myCenter = new google.maps.LatLng(28.5704591,77.2566125);
 		  const mapCanvas = document.getElementById("map");
 		  const mapOptions = {center: myCenter, zoom: 12};
 		  const map = new google.maps.Map(mapCanvas, mapOptions);
 		  const marker = new google.maps.Marker({position:myCenter});
 		  marker.setMap(map);
-
-		google.maps.event.addListener(marker,'click',function()
-		{
+		google.maps.event.addListener(marker,'click',function() {
 	    map.setZoom(14);
 	    map.setCenter(marker.getPosition());
   	});
