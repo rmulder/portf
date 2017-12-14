@@ -13,8 +13,6 @@ div.imgLogo img
 	padding-top: 1em;
 	height: auto;
 	width: 40%;
-	// max-width: 100%;
-	// min-width: 29em;
 
 	display: block;
   margin-left: auto;
@@ -92,8 +90,7 @@ div.spec-index-box article a
   left: 50%;
   transform: translate(-50%, -50%);
 
-  color: #000;
-  color: #000;
+  color: rgb(235,89,33);
   font-family: $dos;
   font-size: 1.5em;
   font-weight: 300;
@@ -110,5 +107,28 @@ div.spec-index-box article a
   div.spec-index-box article a
   {
     font-size: 1.2em;
+  }
+}
+
+div.betweenPadding
+{
+  margin-top: 25em;
+}
+
+div.reservePolicy article h1
+{
+  margin-left: 5%;
+  color: #000;
+  font-family: $muli;
+  font-weight: 300;
+  font-size: 1.9em;
+  transition: font-size 0.6 ease-in-out;
+}
+
+@media screen and (max-width: 800px)
+{
+  div.reservePolicy article h1
+  {
+    font-size: 1.6em;
   }
 }
