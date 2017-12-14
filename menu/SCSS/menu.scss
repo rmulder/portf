@@ -63,7 +63,7 @@ div.descriptionMenus
 
 div.descriptionMenus article
 {
-  width: 70%;
+  width: 80%;
   text-align: center;
   background-color: $black;
   margin: 0 auto;
@@ -75,31 +75,29 @@ div.descriptionMenus article
 
 div.descriptionMenus article p.firstInfo
 {
-  // width: 2em;
   text-align: justify;
   text-justify: inter-word;
-  // display: inline-block;
-
   padding-right: 7%;
 
   font-family: $ubu;
   font-size: 1.3em;
   font-weight: 300;
   color: #fff;
+
+  transition: all 0.6s ease-in-out;
 }
 
 div.descriptionMenus article p.secondInfo
 {
   text-align: justify;
   text-justify: inter-word;
-  // display: inline-block;
-
-  // padd
 
   font-family: $ubu;
   font-size: 1.3em;
   font-weight: 300;
   color: #fff;
+
+  transition: all 0.6s ease-in-out;
 }
 
 img.food1, img.food2, img.food3
@@ -110,4 +108,37 @@ img.food1, img.food2, img.food3
   padding: 1%;
   width: calc(30%);
   height: auto;
+
+  transition: all 0.6s ease-in-out;
+}
+
+@media screen and (max-width: 800px)
+{
+  div.descriptionMenus article
+  {
+    display: block;
+    width: 90%;
+  }
+
+  div.descriptionMenus article p.firstInfo
+  {
+    font-size: 1.0em;
+  }
+
+  div.descriptionMenus article p.secondInfo
+  {
+    font-size: 1.0em;
+  }
+
+  img.food1, img.food2, img.food3
+  {
+    justify-content: center;
+    // margin-left: 0.8%;
+    // padding: 1%;
+    margin: 0 auto;
+    height: auto;
+    width: 90%;
+    display: block;
+  }
+
 }

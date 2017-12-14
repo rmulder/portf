@@ -38,7 +38,7 @@ div.descriptionMenus {
   justify-content: center; }
 
 div.descriptionMenus article {
-  width: 70%;
+  width: 80%;
   text-align: center;
   background-color: #1f1e1e;
   margin: 0 auto;
@@ -53,7 +53,8 @@ div.descriptionMenus article p.firstInfo {
   font-family: "Ubuntu", sans-serif;
   font-size: 1.3em;
   font-weight: 300;
-  color: #fff; }
+  color: #fff;
+  transition: all 0.6s ease-in-out; }
 
 div.descriptionMenus article p.secondInfo {
   text-align: justify;
@@ -61,7 +62,8 @@ div.descriptionMenus article p.secondInfo {
   font-family: "Ubuntu", sans-serif;
   font-size: 1.3em;
   font-weight: 300;
-  color: #fff; }
+  color: #fff;
+  transition: all 0.6s ease-in-out; }
 
 img.food1, img.food2, img.food3 {
   display: inline-block;
@@ -69,6 +71,25 @@ img.food1, img.food2, img.food3 {
   margin-left: 0.8%;
   padding: 1%;
   width: calc(30%);
-  height: auto; }
+  height: auto;
+  transition: all 0.6s ease-in-out; }
+
+@media screen and (max-width: 800px) {
+  div.descriptionMenus article {
+    display: block;
+    width: 90%; }
+
+  div.descriptionMenus article p.firstInfo {
+    font-size: 1.0em; }
+
+  div.descriptionMenus article p.secondInfo {
+    font-size: 1.0em; }
+
+  img.food1, img.food2, img.food3 {
+    justify-content: center;
+    margin: 0 auto;
+    height: auto;
+    width: 90%;
+    display: block; } }
 
 /*# sourceMappingURL=menu.css.map */
