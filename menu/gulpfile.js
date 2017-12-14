@@ -11,15 +11,15 @@ const gulp = require('gulp'),
 gulp.task('htmlcompress', function() {
     return gulp.src(['index.html', 'reservation.html', 'location.html', 'menu.html'])
       .pipe(htmlmin({collapseWhitespace: true}))
-      .pipe(rename('index.min.html'))
+      // .pipe(rename('index.min.html'))
       .pipe(gulp.dest('html'));
   });
 
-gulp.task("concatStyle", function () {
-   gulp.src(["scss/location.scss", "scss/demo.scss", "scss/normalize.scss", "scss/stylesheet.scss", "scss/vars.scss"])
-          .pipe(concat("reservation.scss"))
-          .pipe(gulp.dest("scss")); // destination of file
-});
+// gulp.task("concatStyle", function () {
+//    gulp.src(["scss/location.scss", "scss/demo.scss", "scss/normalize.scss", "scss/stylesheet.scss", "scss/vars.scss"])
+//           .pipe(concat("reservation.scss"))
+//           .pipe(gulp.dest("scss")); // destination of file
+// });
 
 // supports ES6 compression
 gulp.task("jscompress", function() {
@@ -31,13 +31,12 @@ gulp.task("jscompress", function() {
 });
 
 gulp.task("compileSass", function() {
-  // main stylesheet:
-   gulp.src("reservation.scss")
+   gulp.src(["SCSS/location.scss", "SCSS/menu.scss", "SCSS/reservation.scss", "SCSS/demo.scss", "SCSS/normalize.scss", "SCSS/stylesheet.scss", "SCSS/vars.scss"])
     .pipe(sass({outputStyle: 'compressed'}))
-    .pipe(rename('reservation.css'))
+    // .pipe(rename('reservation.css'))
     .pipe(gulp.dest('css'))
 });
 
-gulp.task("build", ['concatStyle','compileSass', 'jscompress', 'htmlcompress']); // concats and compresses
+gulp.task("build", ['compileSass', 'jscompress', 'htmlcompress']); // concats and compresses
 
 gulp.task("default", ['build']);
