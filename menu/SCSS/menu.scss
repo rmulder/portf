@@ -54,12 +54,20 @@ div.menuTitle article h1
   }
 }
 
+div.descriptionMenus
+{
+  margin: 0 auto;
+  text-align: center;
+  justify-content: center;
+}
+
 div.descriptionMenus article
 {
-  width: 80%;
+  width: 70%;
   text-align: center;
   background-color: $black;
   margin: 0 auto;
+  text-align: center;
   display: inline-flex;
 
   transition: all 0.6s ease-in-out;

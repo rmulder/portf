@@ -32,11 +32,17 @@ div.menuTitle article h1 {
 @media screen and (max-width: 800px) {
   div.menuTitle article h1 {
     font-size: 1.6em; } }
+div.descriptionMenus {
+  margin: 0 auto;
+  text-align: center;
+  justify-content: center; }
+
 div.descriptionMenus article {
-  width: 80%;
+  width: 70%;
   text-align: center;
   background-color: #1f1e1e;
   margin: 0 auto;
+  text-align: center;
   display: inline-flex;
   transition: all 0.6s ease-in-out; }
 
