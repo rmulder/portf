@@ -1,0 +1,55 @@
+// menu stylesheet
+
+@import "vars";
+
+body
+{
+  background-color: $black;
+}
+
+div.imgLogo img
+{
+  transition: all 0.6 ease-in-out;
+	padding-top: 1em;
+	height: auto;
+	width: 40%;
+
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+	user-drag: none;
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-drag: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+}
+
+@media screen and (max-width: 50em)
+{
+  div.imgLogo img
+  {
+    transition: all 0.6 ease-in-out;
+    width: 85%;
+    height: auto;
+  }
+}
+
+div.menuTitle article h1
+{
+  margin-left: 5%;
+  color: #fff;
+  font-family: $muli;
+  font-weight: 300;
+  font-size: 2em;
+  transition: all 0.6 ease-in-out;
+}
+
+@media screen and (max-width: 800px)
+{
+  div.menuTitle article h1
+  {
+    font-size: 1.6em;
+  }
+}
