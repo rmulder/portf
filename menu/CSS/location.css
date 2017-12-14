@@ -1,6 +1,19 @@
 body {
   background-color: #1f1e1e; }
 
+div.gmaps article h1 {
+  margin-left: 5%;
+  color: #e3dddd;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 2em; }
+
+div.gmaps article #map {
+  width: 90%;
+  height: 500px;
+  display: block;
+  margin: 0 auto; }
+
 div.imgLogo img {
   transition: all 0.6 ease-in-out;
   padding-top: 1em;
@@ -22,4 +35,4 @@ div.imgLogo img {
     width: 85%;
     height: auto; } }
 
-/*# sourceMappingURL=reservation.css.map */
+/*# sourceMappingURL=location.css.map */

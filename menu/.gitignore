@@ -1,4 +1,7 @@
+#scripts
+*.sh
+
+#other fun stuff
+/node_modules
 /Documentation/
-*.sh
-*.sh
 .sass-cache

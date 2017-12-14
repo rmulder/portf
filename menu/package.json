@@ -1,0 +1,30 @@
+{
+  "name": "menu",
+  "version": "1.0.0",
+  "description": "Indian Restaurant",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "food",
+    "restaurant",
+    "menu"
+  ],
+  "author": "Ronan Manoj",
+  "license": "MIT",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-util": "^3.0.8"
+  },
+  "devDependencies": {
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-uglifyes": "^0.1.2",
+    "uglify-es": "^3.2.2"
+  }
+}
