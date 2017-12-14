@@ -66,6 +66,12 @@ img.lawnImg
   height: auto;
 }
 
+div.spec-index-box
+{
+  margin: 0;
+  padding: 0;
+}
+
 div.spec-index-box article
 {
   max-width: 900px;
@@ -107,6 +113,11 @@ div.spec-index-box article p.firstText
   }
 }
 
+div.padding-middle
+{
+  padding-top: 3em;
+}
+
 div.hoursOpen article h1
 {
   margin-left: 5%;
@@ -124,4 +135,47 @@ div.hoursOpen article h1
     font-size: 1.6em;
     transition: all 0.6 ease-in-out;
   }
+}
+
+div.spec-hours-box article
+{
+  text-align: center;
+  vertical-align: middle;
+  max-width: 900px;
+  width: 95%;
+  height: 150px;
+  background-color: #fff;
+  margin: 0 auto;
+
+  transition: all 0.4s ease-in-out;
+}
+
+div.spec-hours-box article p
+{
+  padding-top: -2em;
+  text-align: center;
+  display: block;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  color: #000;
+  font-family: $dos;
+  font-size: 1.5em;
+  font-weight: 300;
+  transition: all 0.4s ease-in-out;
+}
+
+@media screen and (max-width: 800px)
+{
+  div.spec-hours-box article p
+  {
+    font-size: 1.2em;
+  }
+}
+
+div.padding-last
+{
+  padding-top: 3em;
 }
