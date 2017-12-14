@@ -91,5 +91,37 @@ img.food1, img.food2, img.food3 {
     height: auto;
     width: 90%;
     display: block; } }
+ul.menuListOverall {
+  margin: 0 auto;
+  justify-content: center;
+  text-align: center; }
+
+ul.menuListOverall a {
+  font-size: 1.5em;
+  font-family: "Dosis", sans-serif;
+  text-decoration: none;
+  color: #eb5921; }
+
+ul.menuListOverall a.item1 {
+  display: inline-block;
+  padding-right: 10%; }
+
+ul.menuListOverall a.item2 {
+  display: inline-block; }
+
+ul.menuListOverall a.middle {
+  padding-top: 2%;
+  display: block; }
+
+ul.menuListOverall a.item3 {
+  display: inline-block;
+  padding-right: 10%; }
+
+ul.menuListOverall a.item4 {
+  display: inline-block; }
+
+@media screen and (max-width: 800px) {
+  ul.menuListOverall a {
+    font-size: 1.0em; } }
 
 /*# sourceMappingURL=menu.css.map */
