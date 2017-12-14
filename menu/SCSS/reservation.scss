@@ -4,7 +4,7 @@
 
 body
 {
-  background-color: $black;
+  background-color: #fff;
 }
 
 div.imgLogo img
@@ -28,12 +28,87 @@ div.imgLogo img
 	-ms-user-select: none;
 }
 
-@media screen and (max-width: 50em)
+@media screen and (max-width: 800px)
 {
   div.imgLogo img
   {
     transition: all 0.6 ease-in-out;
     width: 85%;
     height: auto;
+  }
+}
+
+div.reserveTitle article h1
+{
+  margin-left: 5%;
+  color: #000;
+  font-family: $muli;
+  font-weight: 300;
+  font-size: 2em;
+  transition: font-size 0.6 ease-in-out;
+}
+
+@media screen and (max-width: 800px)
+{
+  div.reserveTitle article h1
+  {
+    font-size: 1.6em;
+  }
+}
+
+div.spec-index-box article
+{
+  max-width: 900px;
+  width: 95%;
+  height: 200px;
+  background: white;
+  margin: 0 auto;
+
+  transition: all 0.4s ease-in-out;
+}
+
+div.spec-index-box article p
+{
+  text-align: center;
+  display: block;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  color: #000;
+  font-family: $ubu;
+  font-size: 1.5em;
+  font-weight: 300;
+  transition: all 0.4s ease-in-out;
+}
+
+div.spec-index-box article a
+{
+  text-align: center;
+  display: block;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  color: #000;
+  color: #000;
+  font-family: $dos;
+  font-size: 1.5em;
+  font-weight: 300;
+  transition: all 0.4s ease-in-out;
+}
+
+@media screen and (max-width: 800px)
+{
+  div.spec-index-box article p
+  {
+    font-size: 1.2em;
+  }
+
+  div.spec-index-box article a
+  {
+    font-size: 1.2em;
   }
 }
