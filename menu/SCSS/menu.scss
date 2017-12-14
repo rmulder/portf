@@ -142,6 +142,12 @@ img.food1, img.food2, img.food3
   }
 }
 
+ul
+{
+  margin: 0;
+  padding: 0;
+}
+
 ul.menuListOverall
 {
   margin: 0 auto;
@@ -151,37 +157,11 @@ ul.menuListOverall
 
 ul.menuListOverall a
 {
-  font-size: 1.5em;
+  font-size: 2em;
   font-family: $dos;
   text-decoration: none;
   color: rgb(235,89,33);
-}
-
-ul.menuListOverall a.item1
-{
-  display: inline-block;
-  padding-right: 10%;
-}
-
-ul.menuListOverall a.item2
-{
-  display: inline-block;
-}
-
-ul.menuListOverall a.middle
-{
-  padding-top: 2%;
-  display: block;
-}
-
-ul.menuListOverall a.item3
-{
-  display: inline-block;
-  padding-right: 10%;
-}
-
-ul.menuListOverall a.item4
-{
+  padding: 5%;
   display: inline-block;
 }
 
@@ -189,6 +169,16 @@ ul.menuListOverall a.item4
 {
   ul.menuListOverall a
   {
-    font-size: 1.0em;
+    font-size: 1.6em;
   }
+}
+
+div.padding-bott
+{
+  padding-top: 2em;
+}
+
+div.bottom-last
+{
+  padding-top: 5em;
 }

@@ -91,37 +91,30 @@ img.food1, img.food2, img.food3 {
     height: auto;
     width: 90%;
     display: block; } }
+ul {
+  margin: 0;
+  padding: 0; }
+
 ul.menuListOverall {
   margin: 0 auto;
   justify-content: center;
   text-align: center; }
 
 ul.menuListOverall a {
-  font-size: 1.5em;
+  font-size: 2em;
   font-family: "Dosis", sans-serif;
   text-decoration: none;
-  color: #eb5921; }
-
-ul.menuListOverall a.item1 {
-  display: inline-block;
-  padding-right: 10%; }
-
-ul.menuListOverall a.item2 {
-  display: inline-block; }
-
-ul.menuListOverall a.middle {
-  padding-top: 2%;
-  display: block; }
-
-ul.menuListOverall a.item3 {
-  display: inline-block;
-  padding-right: 10%; }
-
-ul.menuListOverall a.item4 {
+  color: #eb5921;
+  padding: 5%;
   display: inline-block; }
 
 @media screen and (max-width: 800px) {
   ul.menuListOverall a {
-    font-size: 1.0em; } }
+    font-size: 1.6em; } }
+div.padding-bott {
+  padding-top: 2em; }
+
+div.bottom-last {
+  padding-top: 5em; }
 
 /*# sourceMappingURL=menu.css.map */
