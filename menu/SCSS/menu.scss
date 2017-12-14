@@ -56,29 +56,24 @@ div.menuTitle article h1
 
 div.descriptionMenus article
 {
+  width: 80%;
   text-align: center;
-  display: table;
-  max-width: 1500px;
-  width: 84%;
-  min-height: 200px;
-  height: auto;
-  background: $black;
+  background-color: $black;
   margin: 0 auto;
-  border-radius: 5px;
-  // box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+  display: inline-flex;
 
   transition: all 0.6s ease-in-out;
 }
 
 div.descriptionMenus article p.firstInfo
 {
-  width: 2em;
+  // width: 2em;
   text-align: justify;
   text-justify: inter-word;
-  // text-align: center;
-  vertical-align: middle;
-  display: table-cell;
-  vertical-align: middle;
+  // display: inline-block;
+
+  padding-right: 7%;
+
   font-family: $ubu;
   font-size: 1.3em;
   font-weight: 300;
@@ -87,14 +82,12 @@ div.descriptionMenus article p.firstInfo
 
 div.descriptionMenus article p.secondInfo
 {
-  width: 20px;
-  height: auto;
   text-align: justify;
   text-justify: inter-word;
-  // text-align: center;
-  vertical-align: middle;
-  display: table-cell;
-  vertical-align: middle;
+  // display: inline-block;
+
+  // padd
+
   font-family: $ubu;
   font-size: 1.3em;
   font-weight: 300;

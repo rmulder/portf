@@ -33,37 +33,25 @@ div.menuTitle article h1 {
   div.menuTitle article h1 {
     font-size: 1.6em; } }
 div.descriptionMenus article {
+  width: 80%;
   text-align: center;
-  display: table;
-  max-width: 1500px;
-  width: 84%;
-  min-height: 200px;
-  height: auto;
-  background: #1f1e1e;
+  background-color: #1f1e1e;
   margin: 0 auto;
-  border-radius: 5px;
+  display: inline-flex;
   transition: all 0.6s ease-in-out; }
 
 div.descriptionMenus article p.firstInfo {
-  width: 2em;
   text-align: justify;
   text-justify: inter-word;
-  vertical-align: middle;
-  display: table-cell;
-  vertical-align: middle;
+  padding-right: 7%;
   font-family: "Ubuntu", sans-serif;
   font-size: 1.3em;
   font-weight: 300;
   color: #fff; }
 
 div.descriptionMenus article p.secondInfo {
-  width: 20px;
-  height: auto;
   text-align: justify;
   text-justify: inter-word;
-  vertical-align: middle;
-  display: table-cell;
-  vertical-align: middle;
   font-family: "Ubuntu", sans-serif;
   font-size: 1.3em;
   font-weight: 300;
