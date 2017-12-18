@@ -14,7 +14,7 @@ html
   -webkit-user-select: none;
   -ms-user-select: none;
 
-  background-color: #cf6760;
+  background-color: $red;
   color: #000000;
 }
 
@@ -31,14 +31,17 @@ header.title-header
 
 header.title-header p
 {
-  font-size: 3.4em;
-  font-weight: 200;
+  padding: 0.7em;
+  margin: 0;
+  font-family: $nun;
+  font-size: 4em;
+  font-weight: 100;
   text-align: center;
   color: #000000;
 
-  transition: all 0.2s ease-in-out; /* vendorless for all */
-  -moz-transition: all 0.2s ease-in-out; /* Firefox */
-  -webkit-transition: all 0.2s ease-in-out; /*safari and chrome */
+  transition: all 0.2s ease-in-out; // vendorless
+  -moz-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out; // safari & chrome
 }
 
 @media screen and (max-width: 800px)
@@ -65,12 +68,13 @@ input
 
 input.enter
 {
-  font-family: inherit; // need to change
+  font-family: $ubu; // need to change
   font-weight: 300;
-  font-size: 1.5em;
+  font-size: 1.7em;
+  text-align: center;
   text-align: center;
 
-  background-color: #{lighten(#cf6760, 15%)};
+  background-color: #{lighten($red, 15%)};
   border-radius: 2px;
   z-index: 1000;
 
@@ -87,7 +91,8 @@ input.enter
 {
   input.enter
   {
-    font-size: 1.2em;
+    width: calc(100% / 5);
+    font-size: 1.4em;
   }
 }
 
@@ -95,6 +100,62 @@ input.first-set
 {
   // display: block;
   display: inline;
+}
+
+button:focus
+{
+  outline: 0;
+}
+
+div.overall-butt
+{
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  justify-content: center;
+}
+
+div.overall-butt button.submit-butt
+{
+  opacity: 0.9;
+  font-family: $dos;
+  font-size:2.5em;
+  text-align: center;
+  color: #fff;
+  border-radius: 0.3em;
+  border: none;
+  height: 5rem;
+  width: 20rem;
+  background-color: darken($red, 7%);
+  will-change: font-size;
+
+  transition: all 0.4s ease-in-out;
+}
+
+@media only screen and (max-width: 800px)
+{
+  div.overall-butt button.submit-butt
+  {
+    height: 4rem;
+    width: 25%;
+    font-size: 2em;
+  }
+}
+
+input[type="string"]
+{
+  opacity: 0.9;
+  font-family: $dos;
+  font-size: 2.5em;
+  text-align: center;
+  color: #fff;
+  border-radius: 0.3em;
+  border: none;
+  height: 5rem;
+  width: 20rem;
+  background-color: #{ligthen($red, 15%)};
+
+  transition: all 0.4s ease-in-out;
 }
 
 label.deterValFinal
