@@ -2,38 +2,40 @@
 
 const gulp = require('gulp'),
   concat = require('gulp-concat'),
-  uglify = require('gulp-uglify'),
+  uglify = require('gulp-uglifyes'),
+  htmlmin = require('gulp-htmlmin'),
   gutil = require('gulp-util'),
   rename = require('gulp-rename'),
-  sass = require('gulp-sass'),
-  maps = require('gulp-sourcemaps');
+  sass = require('gulp-sass');
+
+gulp.task('htmlcompress', function() {
+    return gulp.src('index.html')
+      .pipe(htmlmin({collapseWhitespace: true}))
+      .pipe(rename('index.min.html'))
+      .pipe(gulp.dest('html'));
+  });
 
 gulp.task("concatStyle", function () {
-
    gulp.src("scss/style.scss")
-          .pipe(concat("deter.scss")) // re-name
-          .pipe(maps.write('./'))
-          .pipe(gulp.dest("scss")); // destination of concat scss to be located
+          .pipe(concat("deter.scss"))
+          .pipe(gulp.dest("scss")); // destination
 });
 
-gulp.task("minifyScripts", ["concatScripts"], function() {
-
-  return gulp.src('js/app.js')
-          .pipe(uglify().on('error', gutil.log)) // if error, output to console.
-          .pipe(rename('deter.js'))
+gulp.task("jscompress", function() {
+  return gulp.src('js/deter.js')
+          .pipe(uglify().on('error', gutil.log)) // error outputs to console.
+          // .pipe(uglify())
+          .pipe(rename('deter.min.js'))
           .pipe(gulp.dest('js'));
 });
 
 gulp.task("compileSass", function() {
-
-  // main stylesheet:
    gulp.src("scss/style.scss")
     .pipe(sass({outputStyle: 'compressed'}))
     .pipe(rename('deter.css'))
-    .pipe(maps.write('./')) // sourcemaps to css
     .pipe(gulp.dest('css'))
 });
 
-gulp.task("build", ['minifyScripts', 'compileSass']);
+gulp.task("build", ['compileSass', 'jscompress', 'htmlcompress']); // concats and compresses
 
 gulp.task("default", ['build']);

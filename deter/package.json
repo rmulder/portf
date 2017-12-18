@@ -1,7 +1,7 @@
 {
   "name": "determinantcalc",
   "version": "1.0.0",
-  "description": "determinant calculator for 22 and 33 matrices",
+  "description": "determinant calculator for 3 by 3 matrices",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,8 +11,6 @@
     "math",
     "responsive",
     "ronan",
-    "manoj",
-    "ronanmanoj",
     "linearalgebra"
   ],
   "author": "Ronan Manoj",
@@ -23,7 +21,12 @@
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.1",
-    "gulp-uglify": "^3.0.0",
     "gulp-util": "^3.0.8"
+  },
+  "devDependencies": {
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-uglifyes": "^0.1.2",
+    "uglify-es": "^3.2.2"
   }
 }
