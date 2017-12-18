@@ -18,6 +18,12 @@ html
   color: #000000;
 }
 
+body
+{
+  margin: 0;
+  padding: 0;
+}
+
 header.title-header
 {
   margin: 0 auto;
@@ -41,6 +47,13 @@ header.title-header p
   {
     font-size: 2.7em;
   }
+}
+
+div.numbersEnter
+{
+  margin: 0 auto;
+  justify-content: center;
+  text-align: center;
 }
 
 input
@@ -90,5 +103,5 @@ label.deterValFinal
   margin: 0 auto;
   font-size: 1.5em;
   font-weight: 300;
-  font-family: $open; // need to fix.
+  font-family: $ubu; // need to fix.
 }

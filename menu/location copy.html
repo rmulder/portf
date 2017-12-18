@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>About Us</title>
+		<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700|Fanwood+Text|Dosis:200,300|Maven+Pro|Muli:200,300,400|Ubuntu:300,400" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/location.css" />
+	</head>
+  <body>
+    <div class="imgLogo">
+      <a href="index.html"><img src="img/m_logo.png" alt="Indian Accent" /></a>
+    </div>
+
+		<div class="gmaps">
+			<article>
+				<h1>Location</h1>
+				<div id="map"></div> <!-- Google Maps API Styling -->
+			</article>
+		</div>
+
+		<div class="locationAddress">
+			<article>
+				<h1>Info</h1>
+			</article>
+		</div>
+
+		<div class="spec-index-box"/>
+		 <article>
+			 <p class="NDLocation">New Delhi Location</p>
+			 <p>The Lodhi, Lodhi Road, New Delhi 110003</p>
+		 </article>
+		</div>
+
+		<div class="padding-top"> </div>
+
+		<script>
+		function myMap() {
+		  const myCenter = new google.maps.LatLng(28.5917073,77.2380751);
+		  const mapCanvas = document.getElementById("map");
+		  const mapOptions = {center: myCenter, zoom: 14};
+		  const map = new google.maps.Map(mapCanvas, mapOptions);
+		  const marker = new google.maps.Marker({position:myCenter});
+		  marker.setMap(map);
+		google.maps.event.addListener(marker,'click',function() {
+	    map.setZoom(14);
+	    map.setCenter(marker.getPosition());
+  	});
+		}
+</script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUfwdR2pfZjGYMVpCc0amlZHOo6LN6veU&callback=myMap"></script>
+		<!-- Lat: 28.5704591-->
+		<!-- Long: 77.2566125 -->
+
+  </body>
+</html>

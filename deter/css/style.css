@@ -10,6 +10,10 @@ html {
   background-color: #cf6760;
   color: #000000; }
 
+body {
+  margin: 0;
+  padding: 0; }
+
 header.title-header {
   margin: 0 auto; }
 
@@ -28,6 +32,11 @@ header.title-header p {
 @media screen and (max-width: 800px) {
   header.title-header p {
     font-size: 2.7em; } }
+div.numbersEnter {
+  margin: 0 auto;
+  justify-content: center;
+  text-align: center; }
+
 input {
   overflow: hidden;
   margin: 0 auto;
@@ -57,6 +66,6 @@ label.deterValFinal {
   margin: 0 auto;
   font-size: 1.5em;
   font-weight: 300;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Ubuntu", sans-serif; }
 
 /*# sourceMappingURL=style.css.map */

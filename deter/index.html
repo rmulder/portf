@@ -9,7 +9,7 @@
     <meta name = "viewport" content="width=device-width, initial-scale=1.0">
     <link rel = "stylesheet" type="text/css" href="css/style.css">
     <link rel = "stylesheet" type="text/css" href="css/var.css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400|Open+Sans:300,400,600|Roboto:100,300,400,500,700" rel="stylesheet"> <!-- G Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Dosis:200,300|Maven+Pro|Muli:200,300,400|Roboto:100,300,400|Ubuntu:300,400" rel="stylesheet">
     <!-- <link rel = "shortcut icon" href="img/favicon.ico" type="image/x-icon"> -->
   </head>
   <body>
@@ -18,18 +18,20 @@
       <p>Determinant Calculator</p>
     </header>
 
-    <input type="number" id="1-enter" value = "" class="enter first-set" title="Enter value 1" required/>
-    <input type="number" id="2-enter" value = "" class="enter first-set" title="Enter value 2" required/>
-    <input type="number" id="3-enter" value = "" class="enter first-set" title="Enter value 3" required/>
-    <input type="number" id="4-enter" value = "" class="enter second-set" title="Enter value 4" required/>
-    <input type="number" id="5-enter" value = "" class="enter second-set" title="Enter value 5" required/>
-    <input type="number" id="6-enter" value = "" class="enter second-set" title="Enter value 6" required/>
-    <input type="number" id="7-enter" value = "" class="enter third-set" title="Enter value 7" required/>
-    <input type="number" id="8-enter" value = "" class="enter third-set" title="Enter value 8" required/>
-    <input type="number" id="9-enter" value = "" class="enter third-set" title="Enter value 9" required/>
+    <div class="numbersEnter">
+      <input type="number" id="1-enter" value = "" class="enter first-set" title="Enter value 1" required/>
+      <input type="number" id="2-enter" value = "" class="enter first-set" title="Enter value 2" required/>
+      <input type="number" id="3-enter" value = "" class="enter first-set" title="Enter value 3" required/>
+      <input type="number" id="4-enter" value = "" class="enter second-set" title="Enter value 4" required/>
+      <input type="number" id="5-enter" value = "" class="enter second-set" title="Enter value 5" required/>
+      <input type="number" id="6-enter" value = "" class="enter second-set" title="Enter value 6" required/>
+      <input type="number" id="7-enter" value = "" class="enter third-set" title="Enter value 7" required/>
+      <input type="number" id="8-enter" value = "" class="enter third-set" title="Enter value 8" required/>
+      <input type="number" id="9-enter" value = "" class="enter third-set" title="Enter value 9" required/>
+    </div>
 
     <div class="overall-butt">
-      <button class="submit-butt" id="submit-spec-butt" onclick="calc()" type="button" title="Calculate Determinant">Calculate</button>
+      <button class="submit-butt" id="submit-spec-butt" onclick="add()" type="button" title="Calculate Determinant">Calculate</button>
     </div>
 
     <label class="deterValFinal" for="style">Determinant Value</label>
