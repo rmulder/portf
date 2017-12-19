@@ -23,7 +23,7 @@ News API Website, retrieval through keyword/topic.
 Weather API Website, retrieval through zip code.
 
 ## Determinant Calculator
-A 2x2 and 3x3 Determinant Calculator.
+A 3x3 Determinant Calculator.
 
 ## Grade
 Grade Calculator Website.

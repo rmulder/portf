@@ -15,14 +15,14 @@ gulp.task('htmlcompress', function() {
       .pipe(gulp.dest('html'));
   });
 
-gulp.task("concatStyle", function () {
-   gulp.src("scss/style.scss")
-          .pipe(concat("deter.scss"))
-          .pipe(gulp.dest("scss")); // destination
-});
+// gulp.task("concatStyle", function () {
+//    gulp.src("scss/style.scss")
+//           .pipe(concat("deter.scss"))
+//           .pipe(gulp.dest("scss")); // destination
+// });
 
 gulp.task("jscompress", function() {
-  return gulp.src('js/deter.js')
+  return gulp.src('js/app.js')
           .pipe(uglify().on('error', gutil.log)) // error outputs to console.
           // .pipe(uglify())
           .pipe(rename('deter.min.js'))
@@ -36,6 +36,6 @@ gulp.task("compileSass", function() {
     .pipe(gulp.dest('css'))
 });
 
-gulp.task("build", ['compileSass', 'jscompress', 'htmlcompress']); // concats and compresses
+gulp.task("build", ['htmlcompress', 'compileSass', 'jscompress', ]); // concats and compresses
 
 gulp.task("default", ['build']);
