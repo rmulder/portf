@@ -1,10 +1,10 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const mongoose = require('mongoose');
-const session = require('express-session');
-const mongodb = require('mongodb');
-const MongoStore = require('connect-mongo')(session);
-const app = express();
+const express = require('express'),
+bodyParser = require('body-parser'), 
+mongoose = require('mongoose'), 
+session = require('express-session'), 
+mongodb = require('mongodb'), 
+MongoStore = require('connect-mongo')(session), 
+app = express();
 
 // const port = process.env.PORT || 8080;
 app.set('port', (process.env.PORT || 8080));
