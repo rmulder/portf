@@ -22,7 +22,6 @@ router.get('/checkin', function(req, res, next)
   return res.render('checkin', { title: 'Checking-In' });
 });
 
-
 // GET /result
 router.get('/result', function(req, res, next)
 {
