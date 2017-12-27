@@ -11,7 +11,7 @@ const db = mongoose.connection;
 // errors with database connection, logs to console.
 db.on('error', console.error.bind(console, 'connection error:'));
 
-// use sessions for tracking logins
+// sessions for tracking logins
 app.use(session({
   secret: 'PhOt0 cLuB',
   resave: true,
