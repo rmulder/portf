@@ -17,7 +17,7 @@ gulp.task("concatScripts", function()
 });
 
 gulp.task('imgCompress', function() {
-  gulp.src('src/img/*')
+  gulp.src('src/img/favicon.img')
        .pipe(imagemin({ optimizationLevel: 5 }))
        .pipe(gulp.dest('build/img'))
 });
