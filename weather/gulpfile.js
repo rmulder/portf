@@ -7,10 +7,9 @@ const gulp = require('gulp'),
   imagemin = require('gulp-imagemin'),
   gutil = require('gulp-util'),
   rename = require('gulp-rename'),
-  sass = require('gulp-sass'),
-  maps = require('gulp-sourcemaps');
+  sass = require('gulp-sass');
 
-gulp.task("concatScripts", () =>
+gulp.task("concatScripts", function()
 {
    gulp.src("src/scss/style.scss") // js file to be concat
           .pipe(concat("weather.scss")) // re-name
@@ -19,7 +18,7 @@ gulp.task("concatScripts", () =>
 
 gulp.task('imgCompress', function() {
   gulp.src('src/img/*')
-       pipe(imagemin({ optimizationLevel: 5 }))
+       .pipe(imagemin({ optimizationLevel: 5 }))
        .pipe(gulp.dest('build/img'))
 });
 
