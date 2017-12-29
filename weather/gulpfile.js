@@ -4,16 +4,23 @@ const gulp = require('gulp'),
   concat = require('gulp-concat'),
   uglify = require('gulp-uglifyes'),
   htmlmin = require('gulp-htmlmin'),
+  imagemin = require('gulp-imagemin'),
   gutil = require('gulp-util'),
   rename = require('gulp-rename'),
   sass = require('gulp-sass'),
   maps = require('gulp-sourcemaps');
 
-gulp.task("concatScripts", function ()
+gulp.task("concatScripts", () =>
 {
    gulp.src("src/scss/style.scss") // js file to be concat
           .pipe(concat("weather.scss")) // re-name
           .pipe(gulp.dest("buid/scss")); // destination of concat js to be located
+});
+
+gulp.task('imgCompress', function() {
+  gulp.src('src/img/*')
+       pipe(imagemin({ optimizationLevel: 5 }))
+       .pipe(gulp.dest('build/img'))
 });
 
 gulp.task('htmlcompress', function() {
@@ -40,6 +47,6 @@ gulp.task("compileSass", function()
     .pipe(gulp.dest('build/css'))
 });
 
-gulp.task("build", ['minifyScripts', 'compileSass', 'htmlcompress']);
+gulp.task("build", ['minifyScripts', 'compileSass', 'htmlcompress', 'imgCompress']);
 
 gulp.task("default", ['build']);
