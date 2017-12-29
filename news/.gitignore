@@ -1,4 +1,9 @@
+# npm stuff
 /node_modules
+
+#Scripts
 *.sh
+
+#Other fun stuff
 *.sass-cache
 .DS_Store
