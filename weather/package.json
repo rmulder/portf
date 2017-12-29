@@ -18,13 +18,15 @@
   ],
   "author": "Ronan Manoj",
   "license": "MIT",
-  "dependencies": {
+  "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.1",
     "gulp-uglify": "^3.0.0",
-    "gulp-util": "^3.0.8"
+    "gulp-util": "^3.0.8",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-uglifyes": "^0.1.2"
   }
 }
