@@ -20,7 +20,7 @@ gulp.task('htmlcompress', function() {
     return gulp.src('src/index.html')
       .pipe(htmlmin({collapseWhitespace: true}))
       .pipe(rename('index.min.html'))
-      .pipe(gulp.dest('build/html'));
+      .pipe(gulp.dest('build'));
   });
 
 // ES6 min. support
