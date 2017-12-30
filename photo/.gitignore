@@ -4,6 +4,4 @@
 .sass-cache
 
 # scripts
-watcher.sh
-pusher.sh
-server.sh
+*.sh
