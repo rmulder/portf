@@ -11,39 +11,39 @@ const gulp = require('gulp'),
 
 gulp.task("concatScripts", function()
 {
-   gulp.src("src/scss/style.scss") // js file to be concat
+   gulp.src("../src/scss/style.scss") // js file to be concat
           .pipe(concat("weather.scss")) // re-name
-          .pipe(gulp.dest("buid/scss")); // destination of concat js to be located
+          .pipe(gulp.dest("../buid/scss")); // destination of concat js to be located
 });
 
 gulp.task('imgCompress', function() {
-  gulp.src('src/img/favicon.img')
+  gulp.src('../src/img/favicon.img')
        .pipe(imagemin({ optimizationLevel: 5 }))
-       .pipe(gulp.dest('build/img'))
+       .pipe(gulp.dest('../build/img'))
 });
 
 gulp.task('htmlcompress', function() {
-    return gulp.src('src/index.html')
+    return gulp.src('../src/index.html')
       .pipe(htmlmin({collapseWhitespace: true}))
       .pipe(rename('index.min.html'))
-      .pipe(gulp.dest('build'));
+      .pipe(gulp.dest('../build'));
   });
 
 // ES6 min. support
 gulp.task("minifyScripts", ["concatScripts"], function()
 {
-  return gulp.src('src/js/app.js')
+  return gulp.src('../src/js/app.js')
           .pipe(uglify().on('error', gutil.log)) // if error, outputs to console.
-          .pipe(rename('weather.js'))
-          .pipe(gulp.dest('build/js'));
+          .pipe(rename('weather.min.js'))
+          .pipe(gulp.dest('../build/js'));
 });
 
 gulp.task("compileSass", function()
 {
-   gulp.src("src/scss/style.scss")
+   gulp.src("../src/scss/style.scss")
     .pipe(sass({outputStyle: 'compressed'}))
-    .pipe(rename('weather.css'))
-    .pipe(gulp.dest('build/css'))
+    .pipe(rename('weather.min.css'))
+    .pipe(gulp.dest('../build/css'))
 });
 
 gulp.task("build", ['minifyScripts', 'compileSass', 'htmlcompress', 'imgCompress']);

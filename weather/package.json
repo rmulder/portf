@@ -1,6 +1,6 @@
 {
   "name": "weatherapi",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "weather api based on zip code",
   "main": "index.html",
   "scripts": {
@@ -10,8 +10,6 @@
     "weather",
     "api",
     "weatherapi",
-    "ronan",
-    "manoj",
     "ronanmanoj",
     "responsive",
     "zipcode"
