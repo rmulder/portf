@@ -1,0 +1,6 @@
+To use:
+
+1. Clone repo (then cd into repo).
+2. Host files for usage.
+
+Need internet connection for api retrieval to work.
