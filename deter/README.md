@@ -1,7 +1,7 @@
 # Determinant Calculator
 
 ## About
-A determinant calculator for 2x2 and 3x3 matrices.
+A determinant calculator for 3x3 matrices.
 
 ## Technologies Used
 * ES6
