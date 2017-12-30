@@ -1,6 +1,6 @@
 {
   "name": "grade",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Final Grade Calculator",
   "main": "gulpfile.js",
   "scripts": {
@@ -16,15 +16,18 @@
   ],
   "author": "Ronan Manoj",
   "license": "MIT",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
-    "gulp-minify-html": "^1.0.6",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-imagemin": "^4.0.0",
+    "gulp-newer": "^1.3.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
-    "gulp-sourcemaps": "^2.6.1",
+    "gulp-sequence": "^0.4.6",
     "gulp-uglify": "^3.0.0",
-    "gulp-util": "^3.0.8",
-    "gulpfile.js": "^2.0.0"
+    "gulp-uglifyes": "^0.1.2",
+    "gulp-util": "^3.0.8"
   }
 }
