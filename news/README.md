@@ -1,4 +1,4 @@
- #News API
+ # News API
 
 ## About
 A News API Website that provides news information based on keywords entered.
