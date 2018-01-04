@@ -1,10 +1,10 @@
 # Angular Play
 
-## Descr:
-Got a little bored, made a basic todo list. 
+## About:
+Got a little bored, made a simple todo list. 
 
 ## Technologies Used:
-* ES6
+* JS 
 * Angular
 * jQuery
 * SCSS
