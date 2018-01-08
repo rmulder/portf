@@ -35,7 +35,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(express.static(__dirname + '/public')); // non-dynamic stuff
 
-app.set('view engine', 'pug'); // pug/jade engine
+app.set('view engine', 'pug'); // pug engine
 app.set('views', __dirname + '/views');
 
 const routes = require('./routes/index'); // include routes
@@ -43,7 +43,7 @@ app.use('/', routes);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  const err = new Error('File Not Found');
+  let err = new Error('File Not Found');
   err.status = 404;
   next(err);
 });
@@ -62,7 +62,7 @@ app.use(function(err, req, res, next) {
 // });
 
 app.get('/', function(request, response) {
-    var result = 'App is running'
+    let result = 'App is running'
     response.send(result);
 }).listen(app.get('port'), function() {
     console.log('App is running, server is listening on port ', app.get('port'));
