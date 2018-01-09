@@ -33,7 +33,7 @@ app.use(function (req, res, next) {
 app.use(bodyParser.json()); // parse incoming requests
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.use(express.static(__dirname + '/public')); // non-dynamic stuff
+app.use(express.static(__dirname + '/public')); // static files 
 
 app.set('view engine', 'pug'); // pug engine
 app.set('views', __dirname + '/views');
