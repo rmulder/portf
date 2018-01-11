@@ -15,6 +15,7 @@ let weather = () =>
     {
       let data = JSON.parse(this.response); // Success!
       console.log("Name of city after slice: " + data.name); //testing if it works
+      document.body.innerHTML = "<h1>Name of city of weather: " + data.name + "</h1>"
     }
     else
     {
