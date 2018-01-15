@@ -53,6 +53,7 @@ Gulp.js reworked website.
 * MongoDB
 * SCSS
 * Webpack
+* JavaScript
 * Gulp.js
 * Angular
 * JWT (JSON Web Token)
