@@ -16,7 +16,7 @@ gulp.task('htmlcompress', function()
       .pipe(htmlmin({collapseWhitespace: true}))
       .pipe(rename('index.min.html'))
       .pipe(gulp.dest('../build'));
-  });
+});
 
 gulp.task('imgCompress', function()
 {
