@@ -1,0 +1,12 @@
+To use:
+
+1) Clone the repo
+2) Host files
+3) Access files
+
+If you want to customize:
+
+1) Clone repo
+2) npm install
+3) modify files
+4) host/access files
