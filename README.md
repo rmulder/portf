@@ -65,4 +65,4 @@ Gulp.js reworked website.
 * Firebase
 * Bootstrap
 * Git
-* Various API's
+* Various APIs
