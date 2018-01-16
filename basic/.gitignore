@@ -1,3 +1,4 @@
+*.sass-cache
 pusher.sh
 auto.sh
 /node_modules/
