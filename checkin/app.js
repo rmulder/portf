@@ -41,7 +41,7 @@ app.set('views', __dirname + '/views');
 const routes = require('./routes/index'); // include routes
 app.use('/', routes);
 
-// catch 404 and forward to error handler
+// catch 404 then forward to error handler
 app.use(function(req, res, next) {
   let err = new Error('File Not Found');
   err.status = 404;
