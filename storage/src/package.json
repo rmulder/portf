@@ -1,0 +1,17 @@
+{
+  "name": "storage",
+  "version": "1.0.0",
+  "description": "basic mongodb storage",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mongo",
+    "db",
+    "node",
+    "js"
+  ],
+  "author": "Ronan Manoj",
+  "license": "MIT"
+}
