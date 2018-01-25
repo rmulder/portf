@@ -11,9 +11,9 @@ const gulp = require('gulp'),
 
 gulp.task("concatScripts", function()
 {
-   gulp.src("../src/scss/style.scss") // js file to be concat
+   gulp.src("../src/scss/style.scss") 
           .pipe(concat("weather.scss")) // re-name
-          .pipe(gulp.dest("../buid/scss")); // destination of concat js to be located
+          .pipe(gulp.dest("../buid/scss"));
 });
 
 gulp.task('imgCompress', function() {
