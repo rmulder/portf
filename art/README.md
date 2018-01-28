@@ -1,7 +1,8 @@
 # Art Portfolio Example
-A Art Portfolio Example Website.
+Art Portfolio Example Website.
 
 ## Technologies Used
 * HTML
+* SCSS
 * CSS
-* Sass
+* Gulp.js
