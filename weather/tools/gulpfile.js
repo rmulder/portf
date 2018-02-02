@@ -13,30 +13,32 @@ const gulp = require('gulp'),
 gulp.task("concatScripts", function()
 {
    gulp.src("../src/scss/style.scss")
-          .pipe(concat("weather.scss")) // re-name
-          .pipe(gulp.dest("../src/scss"));
+    .pipe(concat("weather.scss")) // re-name
+    .pipe(gulp.dest("../src/scss"));
 });
 
-gulp.task('imgCompress', function() {
+gulp.task('imgCompress', function()
+{
   gulp.src('../src/img/favicon.img')
-       .pipe(imagemin({ optimizationLevel: 5 }))
-       .pipe(gulp.dest('../build/img'))
+   .pipe(imagemin({ optimizationLevel: 5 }))
+   .pipe(gulp.dest('../build/img'))
 });
 
-gulp.task('htmlcompress', function() {
-    return gulp.src('../src/index.html')
-      .pipe(htmlmin({collapseWhitespace: true}))
-      .pipe(rename('index.min.html'))
-      .pipe(gulp.dest('../build'));
+gulp.task('htmlcompress', function()
+{
+  return gulp.src('../src/index.html')
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(rename('index.min.html'))
+    .pipe(gulp.dest('../build'));
   });
 
 // ES6 min. support
 gulp.task("minifyScripts", ["concatScripts"], function()
 {
   return gulp.src('../src/js/app.js')
-          .pipe(uglify().on('error', gutil.log)) // if error, outputs to console.
-          .pipe(rename('weather.min.js'))
-          .pipe(gulp.dest('../build/js'));
+    .pipe(uglify().on('error', gutil.log)) // if error, outputs to console.
+    .pipe(rename('weather.min.js'))
+    .pipe(gulp.dest('../build/js'));
 });
 
 gulp.task("compileSass", function()
@@ -47,17 +49,12 @@ gulp.task("compileSass", function()
     .pipe(gulp.dest('../build/css'))
 });
 
-gulp.task('inject:replace', function(){
-    gulp.src('../build/index.min.html')
-        .pipe(inject.replace('app.js', 'weather.min.js'))
-        .pipe(inject.replace('css/weather.css', 'css/weather.min.css'))
-        // .pipe(rename('replace.html'))
-        .pipe(gulp.dest('../build'));
-
-    // gulp.src('../build/index.min.html')
-    //     .pipe(inject.replace('css/weather.css', 'css/weather.min.css'))
-    //     // .pipe(rename('replace.html'))
-    //     .pipe(gulp.dest('../build'));
+gulp.task('inject:replace', function()
+{
+   gulp.src('../build/index.min.html')
+    .pipe(inject.replace('app.js', 'weather.min.js'))
+    .pipe(inject.replace('css/weather.css', 'css/weather.min.css'))
+    .pipe(gulp.dest('../build'));
 });
 
 gulp.task("build", ['minifyScripts', 'compileSass', 'htmlcompress', 'imgCompress', 'inject:replace']);
