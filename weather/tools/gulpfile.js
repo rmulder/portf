@@ -7,13 +7,14 @@ const gulp = require('gulp'),
   imagemin = require('gulp-imagemin'),
   gutil = require('gulp-util'),
   rename = require('gulp-rename'),
-  sass = require('gulp-sass');
+  sass = require('gulp-sass'),
+  inject = require('gulp-inject-string');
 
 gulp.task("concatScripts", function()
 {
-   gulp.src("../src/scss/style.scss") 
+   gulp.src("../src/scss/style.scss")
           .pipe(concat("weather.scss")) // re-name
-          .pipe(gulp.dest("../buid/scss"));
+          .pipe(gulp.dest("../src/scss"));
 });
 
 gulp.task('imgCompress', function() {
@@ -40,12 +41,25 @@ gulp.task("minifyScripts", ["concatScripts"], function()
 
 gulp.task("compileSass", function()
 {
-   gulp.src("../src/scss/style.scss")
+   gulp.src("../src/scss/weather.scss")
     .pipe(sass({outputStyle: 'compressed'}))
     .pipe(rename('weather.min.css'))
     .pipe(gulp.dest('../build/css'))
 });
 
-gulp.task("build", ['minifyScripts', 'compileSass', 'htmlcompress', 'imgCompress']);
+gulp.task('inject:replace', function(){
+    gulp.src('../build/index.min.html')
+        .pipe(inject.replace('app.js', 'weather.min.js'))
+        .pipe(inject.replace('css/weather.css', 'css/weather.min.css'))
+        // .pipe(rename('replace.html'))
+        .pipe(gulp.dest('../build'));
+
+    // gulp.src('../build/index.min.html')
+    //     .pipe(inject.replace('css/weather.css', 'css/weather.min.css'))
+    //     // .pipe(rename('replace.html'))
+    //     .pipe(gulp.dest('../build'));
+});
+
+gulp.task("build", ['minifyScripts', 'compileSass', 'htmlcompress', 'imgCompress', 'inject:replace']);
 
 gulp.task("default", ['build']);
