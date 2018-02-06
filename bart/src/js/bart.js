@@ -15,7 +15,7 @@ let overallCall = () =>
 
   $.getJSON(`${urlbase + begin + origin + apikey + jsonOut}`,function(json)
   {
-    let localTime = (JSON.stringify(json.root.time))
+    let localTime = (JSON.stringify(json.root.time));
     localTime = localTime.substr(1).slice(0, -1); // remove the quote marks
     console.info("Local Time: " + localTime);
 
@@ -23,7 +23,7 @@ let overallCall = () =>
     secondCall(json);
 
   });
-}
+};
 overallCall();
 
 let firstCall = (firstjson) =>
@@ -36,13 +36,13 @@ let firstCall = (firstjson) =>
     return;
   }
 
-  let firstDestinName = (JSON.stringify(firstjson.root.station[0].etd[0].destination))
+  let firstDestinName = (JSON.stringify(firstjson.root.station[0].etd[0].destination));
   firstDestinName = firstDestinName.substr(1).slice(0, -1); // remove the quote marks
   console.info("1 Destination: " + firstDestinName);
 
-  $('.destName').html(firstDestinName + " Train"); // changes the name of destination automatically
+  $(".destName").html(firstDestinName + " Train"); // changes the name of destination automatically
 
-  let firstDepTime = (JSON.stringify(firstjson.root.station[0].etd[0].estimate[0].minutes))
+  let firstDepTime = (JSON.stringify(firstjson.root.station[0].etd[0].estimate[0].minutes));
   firstDepTime = firstDepTime.substr(1).slice(0, -1); // remove the quote marks
 
   if(firstDepTime == "Leaving")
@@ -59,13 +59,13 @@ let firstCall = (firstjson) =>
 
   // $('.timeDepart').html(firstDepTime + " mins"); // changes the eta of departure on html side
 
-  let firstplatform = (JSON.stringify(firstjson.root.station[0].etd[0].estimate[0].platform))
+  let firstplatform = (JSON.stringify(firstjson.root.station[0].etd[0].estimate[0].platform));
   firstplatform = firstplatform.substr(1).slice(0, -1); // remove the quote marks
   console.info("1 dest. Platform Number: " + firstplatform);
 
   $('.platformNum').html(firstplatform); // changes the value of the platform # on html side
 
-  let firstcolor = (JSON.stringify(firstjson.root.station[0].etd[0].estimate[0].color))
+  let firstcolor = (JSON.stringify(firstjson.root.station[0].etd[0].estimate[0].color));
   firstcolor = firstcolor.substr(1).slice(0, -1); // remove the quote marks
   console.info("1 Train Color: " + firstcolor);
 
@@ -81,7 +81,7 @@ let firstCall = (firstjson) =>
   {
     $('.platformNum2').css('color', firstcolor); // changes the color of train to platform #
   }
-}
+};
 
 let secondCall = (secondjson) =>
 {
@@ -93,13 +93,13 @@ let secondCall = (secondjson) =>
     return;
   }
 
-  let secondDestinName = (JSON.stringify(secondjson.root.station[0].etd[1].destination))
+  let secondDestinName = (JSON.stringify(secondjson.root.station[0].etd[1].destination));
   secondDestinName = secondDestinName.substr(1).slice(0, -1); // remove the quote marks
   console.info("2 Destination: " + secondDestinName);
 
   $('.destName2').html(secondDestinName + " Train"); // changes the name of destination automatically
 
-  let secondDepTime = (JSON.stringify(secondjson.root.station[0].etd[1].estimate[0].minutes))
+  let secondDepTime = (JSON.stringify(secondjson.root.station[0].etd[1].estimate[0].minutes));
   secondDepTime = secondDepTime.substr(1).slice(0, -1); // remove the quote marks
   // console.info("2 dest. Depart Time: " + secondDepTime + " mins");
 
@@ -115,13 +115,13 @@ let secondCall = (secondjson) =>
     $('.timeDepart2').html(secondDepTime + " mins"); // changes the eta of departure on html side
   }
 
-  let secondplatform = (JSON.stringify(secondjson.root.station[0].etd[1].estimate[0].platform))
+  let secondplatform = (JSON.stringify(secondjson.root.station[0].etd[1].estimate[0].platform));
   secondplatform = secondplatform.substr(1).slice(0, -1); // remove the quote marks
   console.info("2 dest. Platform Number: " + secondplatform);
 
   $('.platformNum2').html(secondplatform); // changes the value of the platform # on html side
 
-  let secondcolor = (JSON.stringify(secondjson.root.station[0].etd[1].estimate[0].color))
+  let secondcolor = (JSON.stringify(secondjson.root.station[0].etd[1].estimate[0].color));
   secondcolor = secondcolor.substr(1).slice(0, -1); // remove the quote marks
   console.info("2 Train Color: " + secondcolor);
 
@@ -137,20 +137,20 @@ let secondCall = (secondjson) =>
   {
     $('.platformNum2').css('color', secondcolor); // changes the color of train to platform #
   }
-}
+};
 
 // if a train is white, need to display the next option and its eta departure time
 let firstOtherCall = (firstOtherjson) =>
 {
   console.log("Inside firstOtherCall function. Next closests train.");
 
-  let firstOtherDestinName = (JSON.stringify(firstOtherjson.root.station[0].etd[0].destination))
+  let firstOtherDestinName = (JSON.stringify(firstOtherjson.root.station[0].etd[0].destination));
   firstOtherDestinName = firstOtherDestinName.substr(1).slice(0, -1);
   console.info("1 Other Destination: " + firstOtherDestinName);
 
   $('.destName').html(firstOtherDestinName + " Train"); // changes the name of destination automatically
 
-  let firstOtherDepTime = (JSON.stringify(firstOtherjson.root.station[0].etd[0].estimate[1].minutes))
+  let firstOtherDepTime = (JSON.stringify(firstOtherjson.root.station[0].etd[0].estimate[1].minutes));
   firstOtherDepTime = firstOtherDepTime.substr(1).slice(0, -1);
   // console.info("1 Other dest. Depart Time: " + firstOtherDepTime + " mins");
 
@@ -166,13 +166,13 @@ let firstOtherCall = (firstOtherjson) =>
     $('.timeDepart').html(firstOtherDepTime + " mins"); // changes the eta of departure on html side
   }
 
-  let firstOtherplatform = (JSON.stringify(firstOtherjson.root.station[0].etd[0].estimate[1].platform))
+  let firstOtherplatform = (JSON.stringify(firstOtherjson.root.station[0].etd[0].estimate[1].platform));
   firstOtherplatform = firstOtherplatform.substr(1).slice(0, -1);
   console.info("1 Other dest. Platform Number: " + firstOtherplatform);
 
   $('.platformNum').html(firstOtherplatform); // changes the value of the platform # on html side
 
-  let firstOthercolor = (JSON.stringify(firstOtherjson.root.station[0].etd[0].estimate[1].color))
+  let firstOthercolor = (JSON.stringify(firstOtherjson.root.station[0].etd[0].estimate[1].color));
   firstOthercolor = firstOthercolor.substr(1).slice(0, -1);
   console.info("1 Other Other Train Color: " + firstOthercolor);
 
@@ -184,7 +184,7 @@ let firstOtherCall = (firstOtherjson) =>
   {
     $('.platformNum').css('color', firstOthercolor); // changes the color of train to platform #
   }
-}
+};
 
 
 // if a train is white, need to display the next option and its eta departure time
@@ -192,13 +192,13 @@ let secondOtherCall = (secondOtherjson) =>
 {
   console.log("Inside secondOtherCall function. Next closests train.");
 
-  let secondOtherDestinName = (JSON.stringify(secondOtherjson.root.station[0].etd[1].destination))
+  let secondOtherDestinName = (JSON.stringify(secondOtherjson.root.station[0].etd[1].destination));
   secondOtherDestinName = secondOtherDestinName.substr(1).slice(0, -1);
   console.info("2 Other Destination: " + secondOtherDestinName);
 
   $('.destName2').html(secondOtherDestinName + " Train"); // changes the name of destination automatically
 
-  let secondOtherDepTime = (JSON.stringify(secondOtherjson.root.station[0].etd[1].estimate[1].minutes))
+  let secondOtherDepTime = (JSON.stringify(secondOtherjson.root.station[0].etd[1].estimate[1].minutes));
   secondOtherDepTime = secondOtherDepTime.substr(1).slice(0, -1);
   // console.info("2 Other dest. Depart Time: " + secondOtherDepTime + " mins");
 
@@ -214,13 +214,13 @@ let secondOtherCall = (secondOtherjson) =>
     $('.timeDepart2').html(secondOtherDepTime + " mins"); // changes the eta of departure on html side
   }
 
-  let secondOtherplatform = (JSON.stringify(secondOtherjson.root.station[0].etd[1].estimate[1].platform))
+  let secondOtherplatform = (JSON.stringify(secondOtherjson.root.station[0].etd[1].estimate[1].platform));
   secondOtherplatform = secondOtherplatform.substr(1).slice(0, -1);
   console.info("2 Other dest. Platform Number: " + secondOtherplatform);
 
   $('.platformNum2').html(secondOtherplatform); // changes the value of the platform # on html side
 
-  let secondOthercolor = (JSON.stringify(secondOtherjson.root.station[0].etd[1].estimate[1].color))
+  let secondOthercolor = (JSON.stringify(secondOtherjson.root.station[0].etd[1].estimate[1].color));
   secondOthercolor = secondOthercolor.substr(1).slice(0, -1);
   console.info("2 Other Train Color: " + secondOthercolor);
 
@@ -236,4 +236,4 @@ let secondOtherCall = (secondOtherjson) =>
   {
     $('.platformNum2').css('color', secondOthercolor); // changes the color of train to platform #
   }
-}
+};

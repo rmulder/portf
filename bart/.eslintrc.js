@@ -1,4 +1,8 @@
 module.exports =
 {
-    "extends": "eslint:recommended"
+    "extends": "eslint:recommended",
+    "parserOptions":
+    {
+      "ecmaVersion": 6
+    }
 };

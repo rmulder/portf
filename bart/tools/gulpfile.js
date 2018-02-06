@@ -54,36 +54,44 @@ gulp.task("compileSass", function()
     .pipe(gulp.dest('../build/css'))
 });
 
-gulp.task('lint', () => {
-    // ESLint ignores files with "node_modules" paths.
-    // So, it's best to have gulp ignore the directory as well.
-    // Also, Be sure to return the stream from the task;
-    // Otherwise, the task may end before the stream has finished.
-    return gulp.src(['src/js/*.js','!node_modules/**'])
-        // eslint() attaches the lint output to the "eslint" property
-        // of the file object so it can be used by other modules.
-        .pipe(eslint(
-          rules:
-          {
-            'my-custom-rule': 1,
-            'strict': 2
-          },
-          globals:
-          [
-            'jQuery',
-            '$'
-          ],
-          envs:
-          [
-            'browser'
-          ]
-        ))
-        // eslint.format() outputs the lint results to the console.
-        // Alternatively use eslint.formatEach() (see Docs).
-        .pipe(eslint.format())
-        // To have the process exit with an error code (1) on
-        // lint error, return the stream and pipe to failAfterError last.
-        .pipe(eslint.failAfterError());
+gulp.task('lint', () =>
+{
+  return gulp.src(['../src/js/*.js','../!node_modules/**'])
+  .pipe(eslint({
+			rules: {
+        'no-console': 0,
+				'no-alert': 0,
+				'no-bitwise': 0,
+				'camelcase': 1,
+				'curly': 1,
+				'eqeqeq': 0,
+				'no-eq-null': 1,
+				'guard-for-in': 1,
+				'no-empty': 1,
+				'no-use-before-define': 0,
+				'no-obj-calls': 2,
+				'no-unused-vars': 1,
+				'new-cap': 1,
+				'no-shadow': 0,
+				'strict': 0,
+				'no-invalid-regexp': 2,
+				'comma-dangle': 2,
+				'no-undef': 1,
+				'no-new': 1,
+				'no-extra-semi': 1,
+				'no-debugger': 2,
+				'no-caller': 1,
+				'semi': 2,
+				'quotes': 0,
+				'no-unreachable': 2
+			},
+
+			globals: ['jQuery','$'],
+
+			envs: ['browser', { "es6": true }],
+
+		}))
+		.pipe(eslint.format());
 });
 
 gulp.task("build", gulpSequence(['jscompress', 'htmlcompress', 'concatStyle', 'imgCompress'], 'compileSass'));
