@@ -9,7 +9,8 @@ const gulp = require('gulp'),
   gutil = require('gulp-util'),
   rename = require('gulp-rename'),
   sass = require('gulp-sass'),
-  inject = require('gulp-inject-string');
+  inject = require('gulp-inject-string'),
+  eslint = require('gulp-eslint');
 
 // includes 'inject:html'
 gulp.task('htmlcompress', function()
@@ -36,7 +37,7 @@ gulp.task("concatStyle", function () {
 });
 
 // ES6 min. support
-gulp.task("jscompress", function()
+gulp.task("jscompress", ['lint'], function()
 {
   gulp.src('../src/js/bart.js')
       // .pipe(uglify().on('error', gutil.log)) // error outputs to console.
@@ -51,6 +52,38 @@ gulp.task("compileSass", function()
     .pipe(sass({outputStyle: 'compressed'}))
     .pipe(rename('bart.min.css'))
     .pipe(gulp.dest('../build/css'))
+});
+
+gulp.task('lint', () => {
+    // ESLint ignores files with "node_modules" paths.
+    // So, it's best to have gulp ignore the directory as well.
+    // Also, Be sure to return the stream from the task;
+    // Otherwise, the task may end before the stream has finished.
+    return gulp.src(['src/js/*.js','!node_modules/**'])
+        // eslint() attaches the lint output to the "eslint" property
+        // of the file object so it can be used by other modules.
+        .pipe(eslint(
+          rules:
+          {
+            'my-custom-rule': 1,
+            'strict': 2
+          },
+          globals:
+          [
+            'jQuery',
+            '$'
+          ],
+          envs:
+          [
+            'browser'
+          ]
+        ))
+        // eslint.format() outputs the lint results to the console.
+        // Alternatively use eslint.formatEach() (see Docs).
+        .pipe(eslint.format())
+        // To have the process exit with an error code (1) on
+        // lint error, return the stream and pipe to failAfterError last.
+        .pipe(eslint.failAfterError());
 });
 
 gulp.task("build", gulpSequence(['jscompress', 'htmlcompress', 'concatStyle', 'imgCompress'], 'compileSass'));

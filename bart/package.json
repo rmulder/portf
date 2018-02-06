@@ -1,8 +1,8 @@
 {
   "name": "bart",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "updates the latest arrival times for the next train with the track number",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,8 +17,15 @@
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
+    "eslint": "^4.17.0",
+    "eslint-config-standard": "^11.0.0-beta.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^6.0.0",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
+    "gulp-eslint": "^4.0.2",
     "gulp-htmlmin": "^3.0.0",
     "gulp-imagemin": "^4.0.0",
     "gulp-inject-string": "^1.1.1",
