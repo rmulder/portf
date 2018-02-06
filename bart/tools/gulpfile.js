@@ -85,11 +85,8 @@ gulp.task('lint', () =>
 				'quotes': 0,
 				'no-unreachable': 2
 			},
-
 			globals: ['jQuery','$'],
-
-			envs: ['browser', { "es6": true }],
-
+			envs: ['browser', { "es6": true }]
 		}))
 		.pipe(eslint.format());
 });
