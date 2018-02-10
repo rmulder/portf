@@ -1,6 +1,6 @@
 "use strict";
 
-console.info("Inside external js");
+console.info("external js");
 
 let weather = () =>
 {
