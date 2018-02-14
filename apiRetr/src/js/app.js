@@ -24,7 +24,7 @@ let weather = () =>
   };
   request.onerror = function()
   {
-    console.log("There is some major error!");
+    console.log("There is some error!");
   };
   request.send(); // sending info request
 }
