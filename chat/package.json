@@ -9,7 +9,7 @@
   },
   "scripts": {
     "start": "node index.js"
-  }
+  },
   "keywords": [
     "socketio",
     "chat",
