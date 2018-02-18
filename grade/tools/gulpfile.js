@@ -8,7 +8,8 @@ const gulp = require('gulp'),
   gulpSequence = require('gulp-sequence'),
   gutil = require('gulp-util'),
   rename = require('gulp-rename'),
-  sass = require('gulp-sass');
+  sass = require('gulp-sass'),
+  eslint = require('gulp-eslint');
 
 gulp.task('htmlcompress', function()
 {
