@@ -1,6 +1,9 @@
 # Portfolio
 Some of the projects I created.
 
+## Web Scraper
+Gathers specific text from the defined website.
+
 ## Bart Time Updates
 Shows the latest deperature times of trains.
 
