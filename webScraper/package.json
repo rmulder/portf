@@ -1,7 +1,7 @@
 {
   "name": "webcrawler",
   "version": "0.0.1",
-  "description": "nodejs, js based webcrawler to gather html tags and content",
+  "description": "nodejs, js based webscraper to traverse through html tags and gather content",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
