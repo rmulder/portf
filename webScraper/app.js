@@ -4,8 +4,8 @@ const URL = require('url-parse');
 const fs = require("fs"); // node's file system (fs)
 
 
-// request() making the http request to reddit.com.
-// Cheerio for gathering tags.*
+// request() used for making http requests.
+// Cheerio used for parsing and selecting html elements in page.
 request("https://www.reddit.com", function(error, response, body)
 {
   if(error)
