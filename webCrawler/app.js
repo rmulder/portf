@@ -1,5 +1,5 @@
 const request = require('request');
-const cheerio = require('url-parse');
+const cheerio = require('cheerio');
 const url-parse = require('url-parse');
 
 const START_URL = "http://www.arstechnica.com";
