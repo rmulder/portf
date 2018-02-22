@@ -1,6 +1,9 @@
 # Portfolio
 Some of the projects I created.
 
+## Web Crawler
+Crawls websites for specified word.
+
 ## Web Scraper
 Gathers specific text from the defined website.
 
