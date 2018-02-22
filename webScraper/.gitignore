@@ -2,3 +2,4 @@
 *.sh
 *.sass-cache
 package-lock.json
+/info

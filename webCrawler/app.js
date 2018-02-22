@@ -1,8 +1,9 @@
 const request = require('request');
 const cheerio = require('url-parse');
 const url-parse = require('url-parse');
-let pageToVisit = "http://www.arstechnica.com";
 
+
+let pageToVisit = "http://www.arstechnica.com";
 
 console.log("Visiting page " + pageToVisit);
 request(pageToVisit, function(error, response, body)
