@@ -34,3 +34,36 @@ function crawl()
     visitPage(nextPage, crawl);
   }
 }
+
+function visitPage(url, callback)
+{
+  // Add page to our set
+  pagesVisited[url] = true;
+  numPagesVisited++;
+
+  // Make the request
+  console.log("Visiting page " + url);
+  request(url, function(error, response, body)
+  {
+     // Check status code (200 is HTTP OK)
+     console.log("Status code: " + response.statusCode);
+     if(response.statusCode !== 200)
+     {
+       callback();
+       return;
+     }
+     // Parse the document body
+     let $ = cheerio.load(body);
+     let isWordFound = searchForWord($, SEARCH_WORD);
+     if(isWordFound)
+     {
+       console.log('Word ' + SEARCH_WORD + ' found at page ' + url);
+     }
+     else
+     {
+       collectInternalLinks($);
+       // In this short program, our callback is just calling crawl()
+       callback();
+     }
+  });
+}
