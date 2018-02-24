@@ -57,7 +57,7 @@ function visitPage(url, callback)
      // Parse the document body
      let $ = cheerio.load(body);
      let isWordFound = tagContentSearch($, SEARCH_WORD, SEARCH_LIST);
-     if(isWordFound == true)
+     if(isWordFound)
      {
        foundLoad();
        function foundLoad()
@@ -66,7 +66,7 @@ function visitPage(url, callback)
          // opn(url, {app: ['google chrome', '--incognito']});
          return 1;
        }
-       console.log('Word ' + SEARCH_WORD + ' found at page ' + url);
+       console.log('Word ' + isWordFound + '\r' + SEARCH_WORD + ' found at page ' + url);
      }
      else
      {
@@ -81,21 +81,18 @@ function visitPage(url, callback)
 //searching for the word in the html body
 function tagContentSearch($, word, listOfWords)
 {
+  console.log("inside tagContentSearch function");
   let bodyText = $('html > body').text().toLowerCase();
 
-  for(let e = 0; e >= listOfWords.length; e++)
+  for(var e = 0; e <= listOfWords.length; e++)
   {
-    console.info("Travesing through list of words for hit!");
+    console.log("Travesing through list of words for hit!");
     if(bodyText.toLowerCase().indexOf(listOfWords[e].toLowerCase()) !== -1)
     {
-      return true;
+      return listOfWords[e];
     }
-    // else
-    // {
-    //   return false;
-    // }
-    return false;
   }
+  return false;
 
   // if(bodyText.toLowerCase().indexOf(word.toLowerCase()) !== -1)
   // {
