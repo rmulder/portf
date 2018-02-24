@@ -1,6 +1,7 @@
 const request = require('request');
 const cheerio = require('cheerio');
 const URL = require('url-parse');
+const opn = require('opn');
 
 const START_URL = "https://mixmax.com";
 const SEARCH_WORD = "Intern";
@@ -57,6 +58,13 @@ function visitPage(url, callback)
      let isWordFound = searchForWord($, SEARCH_WORD);
      if(isWordFound)
      {
+       foundLoad();
+       function foundLoad()
+       {
+         console.log("found the word!");
+         opn(url, {app: ['google chrome', '--incognito']});
+         return 1;
+       }
        console.log('Word ' + SEARCH_WORD + ' found at page ' + url);
      }
      else

@@ -9,8 +9,9 @@
   "author": "Ronan Manoj",
   "license": "MIT",
   "dependencies": {
-    "request": "^2.83.0",
     "cheerio": "^0.19.0",
+    "opn": "5.2.0",
+    "request": "^2.83.0",
     "url-parse": "^1.0.5"
   }
 }
