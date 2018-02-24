@@ -4,7 +4,7 @@ const URL = require('url-parse');
 const opn = require('opn');
 
 const START_URL = "https://mixmax.com";
-const SEARCH_LIST = ['Intern', 'Software Engineering Intern', 'Engineering Intern', 'SWE', 'SDE', 'Web Intern', 'Front End Intern', 'Back End Intern'];
+const SEARCH_LIST = ['Software Engineering Intern', 'Engineering Intern', 'Web Intern', 'Front End Intern', 'Back End Intern'];
 const SEARCH_WORD = "Intern";
 const MAX_PAGES_TO_VISIT = 500;
 
@@ -66,7 +66,7 @@ function visitPage(url, callback)
          // opn(url, {app: ['google chrome', '--incognito']});
          return 1;
        }
-       console.log('Word ' + isWordFound + '\r' + SEARCH_WORD + ' found at page ' + url);
+       console.log('Word ' + isWordFound + ' ' + ' found at page ' + url);
      }
      else
      {
