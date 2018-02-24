@@ -4,6 +4,7 @@ const URL = require('url-parse');
 const opn = require('opn');
 
 const START_URL = "https://mixmax.com";
+const SEARCH_LIST = ['Intern', 'Software Engineering Intern', 'Engineering Intern', 'SWE', 'SDE', 'Web Intern', 'Front End Intern', 'Back End Intern'];
 const SEARCH_WORD = "Intern";
 const MAX_PAGES_TO_VISIT = 500;
 
@@ -55,21 +56,21 @@ function visitPage(url, callback)
      }
      // Parse the document body
      let $ = cheerio.load(body);
-     let isWordFound = searchForWord($, SEARCH_WORD);
-     if(isWordFound)
+     let isWordFound = tagContentSearch($, SEARCH_WORD, SEARCH_LIST);
+     if(isWordFound == true)
      {
        foundLoad();
        function foundLoad()
        {
          console.log("found the word!");
-         opn(url, {app: ['google chrome', '--incognito']});
+         // opn(url, {app: ['google chrome', '--incognito']});
          return 1;
        }
        console.log('Word ' + SEARCH_WORD + ' found at page ' + url);
      }
      else
      {
-       collectInternalLinks($);
+       InternalLinkSearch($);
        // In this short program, our callback is just calling crawl()
        callback();
      }
@@ -78,14 +79,36 @@ function visitPage(url, callback)
 
 
 //searching for the word in the html body
-function searchForWord($, word)
+function tagContentSearch($, word, listOfWords)
 {
   let bodyText = $('html > body').text().toLowerCase();
-  return(bodyText.indexOf(word.toLowerCase()) !== -1); // add here multiple search words.
+
+  for(let e = 0; e >= listOfWords.length; e++)
+  {
+    console.info("Travesing through list of words for hit!");
+    if(bodyText.toLowerCase().indexOf(listOfWords[e].toLowerCase()) !== -1)
+    {
+      return true;
+    }
+    // else
+    // {
+    //   return false;
+    // }
+    return false;
+  }
+
+  // if(bodyText.toLowerCase().indexOf(word.toLowerCase()) !== -1)
+  // {
+  //   return true;
+  // }
+  // else
+  // {
+  //   return false;
+  // }
 }
 
-// function collectInternalLinks($)
-let collectInternalLinks = ($) =>
+// function InternalLinkSearch($)
+let InternalLinkSearch = ($) =>
 {
     let relativeLinks = $("a[href^='/']");
     console.log("Found " + relativeLinks.length + " relative links on page");
