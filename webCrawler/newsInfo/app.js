@@ -2,9 +2,9 @@ const request = require('request');
 const cheerio = require('cheerio');
 const URL = require('url-parse');
 
-const START_URL = "http://www.arstechnica.com";
-const SEARCH_WORD = "stemming";
-const MAX_PAGES_TO_VISIT = 10;
+const START_URL = "https://news.google.com/news/";
+const SEARCH_WORD = "california";
+const MAX_PAGES_TO_VISIT = 100;
 
 let pagesVisited = {};
 let numPagesVisited = 0;
