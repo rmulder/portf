@@ -4,7 +4,7 @@ const URL = require('url-parse');
 const opn = require('opn');
 
 const START_URL = "https://mixmax.com";
-const SEARCH_LIST = ['Software Engineering Intern', 'Engineering Intern', 'Web Intern', 'Front End Intern', 'Back End Intern'];
+const SEARCH_LIST = ['bob', 'Engineering Intern', 'joe']; 
 const SEARCH_WORD = "Intern";
 const MAX_PAGES_TO_VISIT = 500;
 
