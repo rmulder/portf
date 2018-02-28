@@ -19,12 +19,12 @@ let weather = () =>
     }
     else
     {
-      console.log("Connection made to server, however, error returned!");
+      console.log("Connection made to server, however, error returned.);
     }
   };
   request.onerror = function()
   {
-    console.log("There is some error!");
+    console.log("There is some error");
   };
   request.send(); // sending info request
 }
