@@ -104,8 +104,7 @@ function tagContentSearch($, word, listOfWords)
   // }
 }
 
-// function InternalLinkSearch($)
-let InternalLinkSearch = ($) =>
+function InternalLinkSearch($)
 {
     let relativeLinks = $("a[href^='/']");
     console.log("Found " + relativeLinks.length + " relative links on page");
