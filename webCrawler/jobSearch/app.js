@@ -3,8 +3,8 @@ const cheerio = require('cheerio');
 const URL = require('url-parse');
 const opn = require('opn');
 
-const START_URL = "https://mixmax.com";
-const SEARCH_LIST = ['bob', 'Engineering Intern', 'joe']; 
+const START_URL = "https://www.oracle.com";
+const SEARCH_LIST = ['Student / Intern', 'bob', 'Engineering Intern', 'joe'];
 const SEARCH_WORD = "Intern";
 const MAX_PAGES_TO_VISIT = 500;
 
@@ -84,15 +84,28 @@ function tagContentSearch($, word, listOfWords)
   console.log("inside tagContentSearch function");
   let bodyText = $('html > body').text().toLowerCase();
 
-  for(var e = 0; e <= listOfWords.length; e++)
+  let trav = 0;
+
+  while (trav > 3)
   {
     console.log("Travesing through list of words for hit!");
     if(bodyText.toLowerCase().indexOf(listOfWords[e].toLowerCase()) !== -1)
     {
       return listOfWords[e];
     }
+    trav++;
   }
   return false;
+
+  // for(var e = 0; e <= listOfWords.length; e++)
+  // {
+  //   console.log("Travesing through list of words for hit!");
+  //   if(bodyText.toLowerCase().indexOf(listOfWords[e].toLowerCase()) !== -1)
+  //   {
+  //     return listOfWords[e];
+  //   }
+  // }
+  // return false;
 
   // if(bodyText.toLowerCase().indexOf(word.toLowerCase()) !== -1)
   // {
