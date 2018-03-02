@@ -3,7 +3,7 @@ const cheerio = require('cheerio');
 const URL = require('url-parse');
 const opn = require('opn');
 
-const START_URL = "https://www.oracle.com";
+const START_URL = "https://www.oracle.com/careers";
 const SEARCH_LIST = ['Student / Intern', 'bob', 'Engineering Intern', 'joe'];
 const SEARCH_WORD = "Intern";
 const MAX_PAGES_TO_VISIT = 500;

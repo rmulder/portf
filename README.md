@@ -57,6 +57,7 @@ Gulp.js reworked website.
 * Node.js
 * Express.js
 * MongoDB
+* Electron
 * SCSS
 * Webpack
 * JavaScript
