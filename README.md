@@ -1,6 +1,9 @@
 # Portfolio
 Some of the projects I created.
 
+## Electron Test
+Trying out Electron and implementing some basic functionality.
+
 ## Web Crawler
 Crawls websites for specified word.
 
