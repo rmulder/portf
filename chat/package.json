@@ -1,6 +1,7 @@
 {
   "name": "chat",
-  "version": "0.0.1",
+  "version": "0.0.2",
+  "private": true, 
   "description": "testing about socket.io chat",
   "main": "app.js",
   "dependencies": {
