@@ -19,7 +19,7 @@ request("http://catalog.oregonstate.edu/CourseDetail.aspx?Columns=afghijklmnopqr
 
   $('tr > tr').each(function(index)
   {
-    let instructorName = $(this).find('th:nth-child(4)').text();
+    let instructorName = $(this).find('th:nth-child(4)').text().trim();
 //    let score = $(this).find('div.score.unvoted').text().trim();
 //    let user = $(this).find('a.author').text().trim();
     console.log("InstructorName: " + instructorName);
