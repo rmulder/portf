@@ -1,3 +1,0 @@
-http://www.netinstructions.com/simple-web-scraping-with-node-js-and-javascript/
-
-For scraping a defined website. Used html tags to traverse and gather information.
