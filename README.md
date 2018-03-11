@@ -16,8 +16,8 @@ Shows the latest departure times of trains.
 ## Flight Check-In
 Checking into a flight verification.
 
-## FireBase Application
-Integrating Firebase.
+## Socket.io Application
+Integrating Socket.io
 
 ## Angular Application
 Playing around with angular.
