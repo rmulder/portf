@@ -1,7 +1,7 @@
 ### Build Docker image
 
 ```
-docker build -t hello-world .
+docker build -t cont .
 ```
 
 
@@ -23,12 +23,12 @@ docker ps
 ### Stop Container
 
 ```
-docker stop container-id (42ba83425487)
+docker stop container-id //(42ba83425487)
 ```
 ### Remove container
 
 ```
-docker rm container-id (42ba83425487)
+docker rm container-id  //(42ba83425487)
 ```
 ### Remove image
 
