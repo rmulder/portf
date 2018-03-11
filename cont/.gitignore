@@ -1,0 +1,4 @@
+/node_modules
+*.sh
+*.txt
+*.sass-cache
