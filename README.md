@@ -56,7 +56,7 @@ Gulp.js reworked website.
 ## Technologies Used in Projects
 * ES6
 * jQuery
-* Pug/Jade
+* Pug ~~Jade~~
 * Node.js
 * Express.js
 * MongoDB
