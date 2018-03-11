@@ -1,80 +1,80 @@
 # Portfolio
 Some of the projects I created.
 
-### Multi-Platform Electron Test
+## Multi-Platform Electron Test
 Trying out Electron and implementing some basic functionality.
 
-### Web Crawler
+## Web Crawler
 Crawls websites for specified word.
 
-### Web Scraper
+## Web Scraper
 Gathers specific text from the defined website.
 
-### Bart Time Updates
-Shows the latest deperature times of trains.
+## Bart Time Updates
+Shows the latest departure times of trains.
 
-### Flight Check-In
-Checking into a flight verification. 
+## Flight Check-In
+Checking into a flight verification.
 
-### FireBase Application
+## FireBase Application
 Integrating Firebase.
 
-### Angular Application
+## Angular Application
 Playing around with angular.
 
-### JWT Test
+## JWT Test
 Implementing JWT (JSON Web Tokens) for authentication.
 
-### News API Integration
+## News API Integration
 News API Website, retrieval through keyword/topic.
 
-### Weather API Integration
+## Weather API Integration
 Weather API Website, retrieval through zip code.
 
-### Determinant Calculator
+## Determinant Calculator
 A 3x3 Determinant Calculator.
 
-### Grade
+## Grade
 Grade Calculator Website.
 
-### Menu
+## Menu
 Restaurant Website.
 
-### Cam
+## Cam
 Photography Club Website.
 
-### Photo
+## Photo
 Responsive Navigation Bar.
 
-### Art
+## Art
 Minimalist Art Portfolio Sample website.
 
-### Basic
+## Basic
 Gulp.js reworked website.
 
 
 ## Technologies Used in Projects
 * ES6
-* jQuery
-* Pug ~~Jade~~
 * Node.js
 * Express.js
 * MongoDB
-* Electron
 * SCSS
-* Webpack
-* JavaScript
+* Passport.js
 * Gulp.js
-* Angular
-* JWT (JSON Web Token)
-* Bower
 * Docker
-* HTML
-* CSS
 * Mongoose
 * Bash
-* Passport.js
-* Firebase
+* Socket.io
+* Pug ~~Jade~~
+* Electron
+* Webpack
+* JS
+* Angular
+* JWT
+* Bower
+* HTML
+* CSS
+* jQuery
 * Bootstrap
 * Git
 * NPM packages
