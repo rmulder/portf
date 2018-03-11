@@ -68,6 +68,7 @@ Gulp.js reworked website.
 * Angular
 * JWT (JSON Web Token)
 * Bower
+* Docker
 * HTML
 * CSS
 * Mongoose
@@ -76,4 +77,5 @@ Gulp.js reworked website.
 * Firebase
 * Bootstrap
 * Git
+* NPM packages
 * Various APIs
