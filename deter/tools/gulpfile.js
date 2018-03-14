@@ -8,11 +8,15 @@ const gulp = require('gulp'),
   gulpSequence = require('gulp-sequence'),
   gutil = require('gulp-util'),
   rename = require('gulp-rename'),
-  sass = require('gulp-sass');
+  sass = require('gulp-sass'),
+  inject = require('gulp-inject-string');
 
 gulp.task('htmlcompress', function()
 {
   gulp.src('../src/index.html')
+      .pipe(inject.replace('app.js', 'deter.min.js'))
+      .pipe(inject.replace('style.css', 'deter.min.css'))
+      .pipe(inject.replace('<link rel = "stylesheet" type="text/css" href="css/var.css">', '')) //removal
       .pipe(htmlmin({collapseWhitespace: true}))
       .pipe(rename('index.min.html'))
       .pipe(gulp.dest('../build'));
