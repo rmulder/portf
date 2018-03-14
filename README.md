@@ -71,7 +71,6 @@ Gulp.js reworked website.
 * JS
 * Angular
 * JWT
-* Bower
 * HTML
 * CSS
 * jQuery
