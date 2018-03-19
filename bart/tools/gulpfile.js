@@ -1,16 +1,16 @@
 "use strict";
 
-const gulp = require('gulp'),
-  concat = require('gulp-concat'),
-  uglify = require('gulp-uglifyes'),
-  htmlmin = require('gulp-htmlmin'),
-  imagemin = require('gulp-imagemin'),
-  gulpSequence = require('gulp-sequence'),
-  gutil = require('gulp-util'),
-  rename = require('gulp-rename'),
-  sass = require('gulp-sass'),
-  inject = require('gulp-inject-string'),
-  eslint = require('gulp-eslint');
+const gulp = require('gulp');
+const concat = require('gulp-concat');
+const uglify = require('gulp-uglifyes');
+const htmlmin = require('gulp-htmlmin');
+const imagemin = require('gulp-imagemin');
+const gulpSequence = require('gulp-sequence');
+const gutil = require('gulp-util');
+const rename = require('gulp-rename');
+const sass = require('gulp-sass');
+const inject = require('gulp-inject-string');
+const eslint = require('gulp-eslint');
 
 // includes 'inject:html'
 gulp.task('htmlcompress', function()
