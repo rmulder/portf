@@ -2,8 +2,8 @@ const request = require('request');
 const cheerio = require('cheerio');
 const URL = require('url-parse');
 
-const START_URL = "https://www.ronanmanoj.com/gallery";
-const SEARCH_WORD = "student";
+const START_URL = "https://www.2018.jsconf.us";
+const SEARCH_WORD = "discount";
 const MAX_PAGES_TO_VISIT = 20;
 
 let pagesVisited = {};
