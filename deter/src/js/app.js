@@ -34,5 +34,6 @@ let threeCalc = (deterStore) =>
 
   document.getElementById('deter-value-final').value = (deterFinalVal);
   $('#deter-value-final').val();
-
 }
+
+module.exports.valueArray = deterStore;

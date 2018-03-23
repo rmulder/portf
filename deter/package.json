@@ -1,10 +1,10 @@
 {
   "name": "determinantcalc",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "determinant calculator for 3 by 3 matrices",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha ./tests/*.js"
   },
   "keywords": [
     "determinant",
@@ -15,8 +15,11 @@
   ],
   "author": "Ronan Manoj",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "npm": "*"
+  },
   "devDependencies": {
+    "chai": "*",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
     "gulp-htmlmin": "^3.0.0",
@@ -28,6 +31,7 @@
     "gulp-sequence": "^0.4.6",
     "gulp-uglify": "^3.0.0",
     "gulp-uglifyes": "^0.1.2",
-    "gulp-util": "^3.0.8"
+    "gulp-util": "^3.0.8",
+    "mocha": "*"
   }
 }
