@@ -10,5 +10,7 @@ A determinant calculator for 3x3 matrices.
 * CSS
 * HTML
 * Gulp.js
+* Mocha
+* Chai
 * Git
 
