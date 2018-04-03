@@ -1,10 +1,12 @@
 const request = require('request');
 const cheerio = require('cheerio');
 const URL = require('url-parse');
+const opn = require('opn');
 
-const START_URL = "https://www.2018.jsconf.us";
-const SEARCH_WORD = "discount";
-const MAX_PAGES_TO_VISIT = 20;
+const START_URL = "https://www.osufoundation.org/";
+const SEARCH_LIST = ['intern','Engineering Intern', 'software intern'];
+const SEARCH_WORD = "Intern";
+const MAX_PAGES_TO_VISIT = 500;
 
 let pagesVisited = {};
 let numPagesVisited = 0;
@@ -54,28 +56,68 @@ function visitPage(url, callback)
      }
      // Parse the document body
      let $ = cheerio.load(body);
-     let isWordFound = searchForWord($, SEARCH_WORD);
+     let isWordFound = tagContentSearch($, SEARCH_WORD, SEARCH_LIST);
      if(isWordFound)
      {
-       console.log('Word ' + SEARCH_WORD + ' found at page ' + url);
+       foundLoad();
+       function foundLoad()
+       {
+         console.log("found the word!");
+         // opn(url, {app: ['google chrome', '--incognito']});
+         return 1;
+       }
+       console.log('Word ' + isWordFound + ' ' + ' found at page ' + url);
      }
      else
      {
-       collectInternalLinks($);
+       InternalLinkSearch($);
        // In this short program, our callback is just calling crawl()
        callback();
      }
   });
 }
 
-function searchForWord($, word)
+
+//searching for the word in the html body
+function tagContentSearch($, word, listOfWords)
 {
+  console.log("inside tagContentSearch function");
   let bodyText = $('html > body').text().toLowerCase();
-  return(bodyText.indexOf(word.toLowerCase()) !== -1);
+
+  let trav = 0;
+
+  while (trav > 3)
+  {
+    console.log("Travesing through list of words for hit!");
+    if(bodyText.toLowerCase().indexOf(listOfWords[e].toLowerCase()) !== -1)
+    {
+      return listOfWords[e];
+    }
+    trav++;
+  }
+  return false;
+
+  // for(var e = 0; e <= listOfWords.length; e++)
+  // {
+  //   console.log("Travesing through list of words for hit!");
+  //   if(bodyText.toLowerCase().indexOf(listOfWords[e].toLowerCase()) !== -1)
+  //   {
+  //     return listOfWords[e];
+  //   }
+  // }
+  // return false;
+
+  // if(bodyText.toLowerCase().indexOf(word.toLowerCase()) !== -1)
+  // {
+  //   return true;
+  // }
+  // else
+  // {
+  //   return false;
+  // }
 }
 
-// function collectInternalLinks($)
-let collectInternalLinks = ($) =>
+function InternalLinkSearch($)
 {
     let relativeLinks = $("a[href^='/']");
     console.log("Found " + relativeLinks.length + " relative links on page");
