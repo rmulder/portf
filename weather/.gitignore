@@ -15,3 +15,6 @@ _book
 *.epub
 *.mobi
 *.pdf
+
+# Other fun stuff
+*.txt

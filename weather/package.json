@@ -4,7 +4,8 @@
   "description": "weather api based on zip code",
   "main": "index.html",
   "scripts": {
-    "test": "mocha ./tests/*.js"
+    "test": "mocha ./tests/*.js",
+    "test:watch": "mocha --watch ./tests/*.js"
   },
   "keywords": [
     "weather",

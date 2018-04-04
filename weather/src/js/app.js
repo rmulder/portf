@@ -87,3 +87,5 @@ function getWeather()
 
   });
 }
+
+module.exports.getWeather = getWeather;
