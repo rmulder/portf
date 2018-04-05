@@ -1,3 +1,4 @@
+"use strict";
 
 // getWeather function
 
@@ -30,62 +31,62 @@ function getWeather()
     console.log(descr);
     console.log(JSON.stringify(json.clouds.all));
 
-    if(descr.search('rain') !== -1 || descr.search('mist') !== -1 || descr.search('hail') !== -1 || descr.search('snow') !== -1 || descr.search('cloudy') !== -1)
-    {
-      // $("div.background").css({"background-color": "yellow", "-webkit-transition: background-color 1s ease-in-out"});
-      $(".background").css("-webkit-transition",  "background-color 1s ease-in-out");
-      $(".background").css('background-color', '#9a9a97');
-      $("html").css("-webkit-transition",  "background-color 1s ease-in-out");
-      $("html").css('background-color', '#9a9a97');
-
-      $("div.button-spec button").css("-webkit-transition",  "background-color 1s ease-in-out");
-      $("div.button-spec button").css('background-color', '#90908d'); // button darken 5% from original gray
-
-      $("input[type='number']").css("-webkit-transition",  "background-color 1s ease-in-out");
-      $("input[type='number']").css('background-color', '#81817d'); // button darken 10% from original gray
-
-      $("input[type='string']").css("-webkit-transition",  "background-color 1s ease-in-out");
-      $("input[type='string']").css('background-color', '#81817d'); // button darken 10% from original gray
-
-    }
-    else if (descr.search('clear') !== -1 || descr.search('partly') !== -1)
-    {
-      $(".background").css("-webkit-transition",  "background-color 1s ease-in-out");
-      $(".background").css('background-color', '#8ebfdf');
-      $("html").css("-webkit-transition",  "background-color 1s ease-in-out");
-      $("html").css('background-color', '#8ebfdf');
-
-      $("div.button-spec button").css("-webkit-transition",  "background-color 1s ease-in-out");
-      $("div.button-spec button").css('background-color', '#a2cae5'); // button darken 5% from original blue
-
-      $("input[type='number']").css("-webkit-transition",  "background-color 1s ease-in-out");
-      $("input[type='number']").css('background-color', '#66a8d4'); // button darken 10% from original blue
-
-      $("input[type='string']").css("-webkit-transition",  "background-color 1s ease-in-out");
-      $("input[type='string']").css('background-color', '#72afd7'); // button darken 10% from original blue
-
-      // ffdf0d yellow darken 10%
-    }
-    else
-    {
-      $(".background").css("-webkit-transition",  "background-color 1s ease-in-out");
-      $(".background").css('background-color', '#8ebfdf');
-      $("html").css("-webkit-transition",  "background-color 1s ease-in-out");
-      $("html").css('background-color', '#8ebfdf');
-
-      $("div.button-spec button").css("-webkit-transition",  "background-color 1s ease-in-out");
-      $("div.button-spec button").css('background-color', '#a2cae5'); // button darken 5% from original blue
-
-      $("input[type='number']").css("-webkit-transition",  "background-color 1s ease-in-out");
-      $("input[type='number']").css('background-color', '#66a8d4'); // button darken 10% from original blue
-
-      $("input[type='string']").css("-webkit-transition",  "background-color 1s ease-in-out");
-      $("input[type='string']").css('background-color', '#72afd7'); // button darken 10% from original blue
-
-    }
-
-
+    colorChange(descr);
   });
+}
+
+function colorChange(contentSRC)
+{
+  if(contentSRC.search('rain') !== -1 || contentSRC.search('mist') !== -1 || contentSRC.search('hail') !== -1 || contentSRC.search('snow') !== -1 || contentSRC.search('cloudy') !== -1)
+  {
+    // $("div.background").css({"background-color": "yellow", "-webkit-transition: background-color 1s ease-in-out"});
+    $(".background").css("-webkit-transition",  "background-color 1s ease-in-out");
+    $(".background").css('background-color', '#9a9a97');
+    $("html").css("-webkit-transition",  "background-color 1s ease-in-out");
+    $("html").css('background-color', '#9a9a97');
+
+    $("div.button-spec button").css("-webkit-transition",  "background-color 1s ease-in-out");
+    $("div.button-spec button").css('background-color', '#90908d'); // button darken 5% from original gray
+
+    $("input[type='number']").css("-webkit-transition",  "background-color 1s ease-in-out");
+    $("input[type='number']").css('background-color', '#81817d'); // button darken 10% from original gray
+
+    $("input[type='string']").css("-webkit-transition",  "background-color 1s ease-in-out");
+    $("input[type='string']").css('background-color', '#81817d'); // button darken 10% from original gray
+  }
+  else if (contentSRC.search('clear') !== -1 || contentSRC.search('partly') !== -1)
+  {
+    $(".background").css("-webkit-transition",  "background-color 1s ease-in-out");
+    $(".background").css('background-color', '#8ebfdf');
+    $("html").css("-webkit-transition",  "background-color 1s ease-in-out");
+    $("html").css('background-color', '#8ebfdf');
+
+    $("div.button-spec button").css("-webkit-transition",  "background-color 1s ease-in-out");
+    $("div.button-spec button").css('background-color', '#a2cae5'); // button darken 5% from original blue
+
+    $("input[type='number']").css("-webkit-transition",  "background-color 1s ease-in-out");
+    $("input[type='number']").css('background-color', '#66a8d4'); // button darken 10% from original blue
+
+    $("input[type='string']").css("-webkit-transition",  "background-color 1s ease-in-out");
+    $("input[type='string']").css('background-color', '#72afd7'); // button darken 10% from original blue
+    // ffdf0d yellow darken 10%
+  }
+  else
+  {
+    $(".background").css("-webkit-transition",  "background-color 1s ease-in-out");
+    $(".background").css('background-color', '#8ebfdf');
+    $("html").css("-webkit-transition",  "background-color 1s ease-in-out");
+    $("html").css('background-color', '#8ebfdf');
+
+    $("div.button-spec button").css("-webkit-transition",  "background-color 1s ease-in-out");
+    $("div.button-spec button").css('background-color', '#a2cae5'); // button darken 5% from original blue
+
+    $("input[type='number']").css("-webkit-transition",  "background-color 1s ease-in-out");
+    $("input[type='number']").css('background-color', '#66a8d4'); // button darken 10% from original blue
+
+    $("input[type='string']").css("-webkit-transition",  "background-color 1s ease-in-out");
+    $("input[type='string']").css('background-color', '#72afd7'); // button darken 10% from original blue
+  }
 }
 
 module.exports.getWeather = getWeather;
