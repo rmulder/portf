@@ -1,39 +1,43 @@
 "use strict";
 
-const gulp = require('gulp'),
-  concat = require('gulp-concat'),
-  uglify = require('gulp-uglifyes'),
-  htmlmin = require('gulp-htmlmin'),
-  imagemin = require('gulp-imagemin'),
-  gulpSequence = require('gulp-sequence'),
-  gutil = require('gulp-util'),
-  rename = require('gulp-rename'),
-  sass = require('gulp-sass'),
-  eslint = require('gulp-eslint');
+const gulp = require('gulp');
+const concat = require('gulp-concat');
+const uglify = require('gulp-uglifyes');
+const htmlmin = require('gulp-htmlmin');
+const imagemin = require('gulp-imagemin');
+const gulpSequence = require('gulp-sequence');
+const gutil = require('gulp-util');
+const rename = require('gulp-rename');
+const sass = require('gulp-sass');
+const eslint = require('gulp-eslint');
+const inject = require('gulp-inject-string');
 
-gulp.task('htmlcompress', function()
+gulp.task('htmlcompress', () =>
 {
   gulp.src('../src/index.html')
+      .pipe(inject.replace('app.js', 'grade.min.js'))
+      .pipe(inject.replace('final.css', 'deter.min.css'))
+//      .pipe(inject.replace('<link rel = "stylesheet" type="text/css" href="css/var.css">', '')) //removal
       .pipe(htmlmin({collapseWhitespace: true}))
       .pipe(rename('index.min.html'))
       .pipe(gulp.dest('../build'));
   });
 
-gulp.task('imgCompress', function()
+gulp.task('imgCompress', () =>
 {
   gulp.src('../src/img/*')
    .pipe(imagemin({ optimizationLevel: 5 }))
    .pipe(gulp.dest('../build/img'))
 });
 
-gulp.task("concatStyle", function ()
+gulp.task("concatStyle", () =>
 {
  gulp.src(["../src/scss/input.scss", "../src/scss/button.scss", "../src/scss/style.scss"])
     .pipe(concat("grade.scss"))
     .pipe(gulp.dest("../src/scss"));
 });
 
-gulp.task("jscompress", function()
+gulp.task("jscompress", () =>
 {
  gulp.src('../src/js/app.js')
     .pipe(uglify().on('error', gutil.log)) // error outputs to console.
@@ -41,7 +45,7 @@ gulp.task("jscompress", function()
     .pipe(gulp.dest('../build/js'));
 });
 
-gulp.task("compileSass", function()
+gulp.task("compileSass", () =>
 {
  gulp.src("../src/scss/grade.scss")
   .pipe(sass({outputStyle: 'compressed'}))
