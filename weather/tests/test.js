@@ -7,25 +7,25 @@ const expect = chai.expect;
 const apiTestIn = require("../src/js/app.js").getWeather;
 
 // pending
-xdescribe('Input Check', function()
+xdescribe('Input Check', () =>
 {
-  it('Should return an error!', function()
+  it('Should return an error!', () =>
   {
     assert.equal(-1, [1,2,3].indexOf(4));
   });
 });
 
-xdescribe('Testing HIGHs of Input Zipcode', function ()
+xdescribe('Testing HIGHs of Input Zipcode', () =>
 {
-  it('should return positive number', function()
+  it('should return positive number', () =>
   {
     expect(apiTestIn(testArray), 'should equal 49').to.deep.equal(49);
   });
 });
 
-xdescribe('Testing LOWs of Input Zipcode', function ()
+xdescribe('Testing LOWs of Input Zipcode', () => 
 {
-  it('should return positive number', function()
+  it('should return positive number', () =>
   {
     expect(apiTestIn(testArray), 'should equal 49').to.deep.equal(49);
   });
