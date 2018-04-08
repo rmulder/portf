@@ -11,7 +11,7 @@ const rename = require('gulp-rename');
 const sass = require('gulp-sass');
 const inject = require('gulp-inject-string');
 
-gulp.task('htmlcompress', function()
+gulp.task('htmlcompress', () =>
 {
   gulp.src('../src/index.html')
       .pipe(inject.replace('app.js', 'deter.min.js'))
@@ -22,21 +22,21 @@ gulp.task('htmlcompress', function()
       .pipe(gulp.dest('../build'));
 });
 
-gulp.task('imgCompress', function()
+gulp.task('imgCompress', () =>
 {
   gulp.src('../src/img/deter.ico')
      .pipe(imagemin({ optimizationLevel: 5 }))
      .pipe(gulp.dest('../build/img'))
 });
 
-gulp.task("concatStyle", function ()
+gulp.task("concatStyle", () =>
 {
    gulp.src("../src/scss/style.scss")
       .pipe(concat("deter.scss"))
       .pipe(gulp.dest("../src/scss"));
 });
 
-gulp.task("jscompress", function()
+gulp.task("jscompress", () =>
 {
    gulp.src('../src/js/app.js')
       .pipe(uglify().on('error', gutil.log)) // error outputs to console.
@@ -45,7 +45,7 @@ gulp.task("jscompress", function()
       .pipe(gulp.dest('../build/js'));
 });
 
-gulp.task("compileSass", function()
+gulp.task("compileSass", () =>
 {
    gulp.src("../src/scss/deter.scss")
     .pipe(sass({outputStyle: 'compressed'}))
