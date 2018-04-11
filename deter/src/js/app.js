@@ -19,7 +19,7 @@ let add = () =>
   deterStore.push($('#9-enter').val());
 
   // // prints content to the console for debugging purposes.
-  // for(let i = 0; i < deterStore.length; i++)
+  // for(let i of deterStore)
   // {
   //   console.info("Values in determinant:" + deterStore[i]);
   // }
