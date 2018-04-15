@@ -52,9 +52,10 @@ Gulp.js reworked website.
 
 ## Technologies Used in Projects
 * ES6
-* Node.js
-* Express.js
 * MongoDB
+* Express.js 
+* Angular
+* Node.js
 * SCSS
 * Passport.js
 * Gulp.js
@@ -66,12 +67,11 @@ Gulp.js reworked website.
 * Electron
 * Webpack
 * JS
-* Angular
-* JWT
 * HTML
 * CSS
 * jQuery
 * Bootstrap
 * Git
+* TypeScript
 * NPM packages
 * Various APIs
