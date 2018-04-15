@@ -1,11 +1,12 @@
 $(() => {
-  const os = require('os')
+  const os = require('os');
 
-  const datasets = []
-  const cpus = os.cpus()
+  const datasets = [];
+  const cpus = os.cpus();
 
-  for (let i = 0; i < cpus.length; i++) {
-    const cpu = cpus[i]
+  for (let i = 0; i < cpus.length; i++)
+  {
+    const cpu = cpus[i];
 
     const cpuData = {
       data: [
@@ -37,13 +38,13 @@ $(() => {
       title: {
         display: true,
         text: 'CPU Activity',
-        fontColor: 'rgb(250, 250, 250)',
+        fontColor: 'rgb(0, 0,0)',
         fontSize: 16
       },
       legend: {
         display: true,
         labels: {
-          fontColor: 'rgb(250, 250, 250)',
+          fontColor: 'rgb(0, 0, 0)',
           fontSize: 12
         }
       }
