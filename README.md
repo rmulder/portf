@@ -22,9 +22,6 @@ Integrating Socket.io
 ## Angular Application
 Playing around with angular.
 
-## JWT Test
-Implementing JWT (JSON Web Tokens) for authentication.
-
 ## News API Integration
 News API Website, retrieval through keyword/topic.
 
