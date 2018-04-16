@@ -1,0 +1,34 @@
+{
+  "name": "convert",
+  "version": "1.0.0",
+  "description": "converts binary to dec and vice versa",
+  "main": "index.html",
+  "scripts": {
+    "test": "mocha ./tests/*.js",
+    "test:watch": "mocha --watch ./tests/*.js"  
+  },
+  "keywords": [
+    "conversion",
+    "binary",
+    "decimal",
+    "js"
+  ],
+  "author": "Ronan Manoj",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "*",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-imagemin": "^4.0.0",
+    "gulp-inject-string": "^1.1.1",
+    "gulp-newer": "^1.3.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sequence": "^0.4.6",
+    "gulp-uglify": "^3.0.0",
+    "gulp-uglifyes": "^0.1.2",
+    "gulp-util": "^3.0.8",
+    "mocha": "*"
+  }
+}
