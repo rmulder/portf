@@ -1,2 +1,71 @@
 
+.input-group .active {
+  font-size: 12px;
+  top: -20px;
+  left: 0;
+  font-weight: 700;
+  color: #2470ef;
+}
 
+.input-group {
+  margin-top: 30px;
+  display: inline-block;
+  position: relative;
+}
+
+label:hover {
+  cursor: text;
+}
+
+.input-group input {
+  transition: all 0.3s ease;
+  padding: 6px 12px;
+  font-size: 16px;
+  outline: 0;
+  border: 1px solid #DADADA;
+  border-radius: 2px;
+}
+
+.input-group input:focus {
+  border: 1px solid #2470ef;
+}
+
+body {
+  padding: 30px;
+  font-family: 'Quicksand';
+}
+
+form {
+  width: 200px;
+  margin: 30px auto;
+}
+/* extras styling */
+.title {
+  font-size: 35px;
+  font-weight: 400;
+  padding-bottom: 20px;
+  color: #2470ef;
+  border-bottom: 2px solid #2470ef;
+  width: 350px;
+  text-align: center;
+  margin: 30px auto 0 auto;
+}
+
+.slant-box {
+  overflow: hidden;
+  background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
+/*  background-color: #2470ef; */
+  width: 400px;
+  height: 700px;
+  position: absolute;
+  top: -290px;
+  left: -110px;
+  transition: all 0.3s ease;
+  transform: rotate(45deg);
+}
+
+.submit-butt
+{
+margin: 0 auto;
+text-align: center;
+}

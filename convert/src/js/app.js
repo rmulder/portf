@@ -1,5 +1,10 @@
 "use strict";
 
+inputOne
+
+let tester = document.getElementById('inputOne').value;
+console.log(tester);
+
 const checker = () =>
 {
   if((regex1.test(input2) == true))
