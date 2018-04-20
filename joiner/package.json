@@ -30,5 +30,8 @@
     "gulp-uglifyes": "^0.1.2",
     "gulp-util": "^3.0.8",
     "mocha": "*"
+  },
+  "dependencies": {
+    "easy-pdf-merge": "0.1.3"
   }
 }
