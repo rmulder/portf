@@ -1,36 +1,33 @@
 "use strict";
 
-inputOne
-
-let tester = document.getElementById('inputOne').value;
-console.log(tester);
-
-const checker = () =>
+const add = () =>
 {
-  if((regex1.test(input2) == true))
+  const inputVal = document.getElementById('inputOne').value;
+  checker(inputVal); // checks input then runs appropriate function
+}
+
+const checker = (inputV) =>
+{
+  let regex1 = RegExp("[01]+");
+
+  if((regex1.test(inputV) == true))
   {
     console.log("Binary number!");
+    // console.log(parseInt(inputV, 2));
+    const binV = parseInt(inputV, 2);
+    console.log(binV);
+    document.getElementById('outputOne').value = binV;
   }
-  else if (regex1.test(input2) == false)
+  else if (regex1.test(inputV) != true)
   {
     console.log("Not a binary number");
+    // console.log(parseInt(inputV, 10).toString(2));
+    const decV = parseInt(inputV, 10).toString(2);
+    console.log(decV);
+    document.getElementById('outputOne').value = decV;
   }
   else
   {
-    console.error("error!");
+    console.error("Error!");
   }
-}
-
-let input = "23";
-let input2 = "1101000";
-
-let regex1 = RegExp("[01]+");
-
-if((regex1.test(input2) == true))
-{
-  console.log("Binary number!");
-}
-else
-{
-  console.log("Not a binary number");
 }
