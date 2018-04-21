@@ -1,27 +1,28 @@
 "use strict";
 
-const gulp = require('gulp');
-const concat = require('gulp-concat');
-const uglify = require('gulp-uglifyes');
-const htmlmin = require('gulp-htmlmin');
-const imagemin = require('gulp-imagemin');
-const gulpSequence = require('gulp-sequence');
-const gutil = require('gulp-util');
-const rename = require('gulp-rename');
-const sass = require('gulp-sass');
-const inject = require('gulp-inject-string');
+var gulp = require('gulp');
+let concat = require('gulp-concat');
+let uglify = require('gulp-uglifyes');
+let htmlmin = require('gulp-htmlmin');
+let imagemin = require('gulp-imagemin');
+let gulpSequence = require('gulp-sequence');
+let gutil = require('gulp-util');
+let rename = require('gulp-rename');
+let sass = require('gulp-sass');
+let inject = require('gulp-inject-string');
+let cleanCSS = require('gulp-clean-css');
 
 gulp.task('htmlcompress', () =>
 {
   gulp.src('../src/index.html')
-      .pipe(inject.replace('app.js', 'convert.min.js'))
-      .pipe(inject.replace('style.css', 'convert.min.css'))
-      .pipe(inject.replace('<link rel = "stylesheet" type="text/css" href="css/var.css">', '')) //removal
+      // .pipe(inject.replace('app.js', 'convert.min.js'))
+      // .pipe(inject.replace('style.css', 'convert.min.css'))
       .pipe(htmlmin({collapseWhitespace: true}))
       .pipe(rename('index.min.html'))
       .pipe(gulp.dest('../build'));
 });
 
+// not used
 gulp.task('imgCompress', () =>
 {
   gulp.src('../src/img/convert.ico')
@@ -29,6 +30,7 @@ gulp.task('imgCompress', () =>
      .pipe(gulp.dest('../build/img'))
 });
 
+// not used
 gulp.task("concatStyle", () =>
 {
    gulp.src("../src/scss/style.scss")
@@ -45,14 +47,15 @@ gulp.task("jscompress", () =>
       .pipe(gulp.dest('../build/js'));
 });
 
+
 gulp.task("compileSass", () =>
 {
-   gulp.src("../src/scss/convert.scss")
-    .pipe(sass({outputStyle: 'compressed'}))
+   gulp.src("../src/css/*.css")
+    .pipe(cleanCSS())
     .pipe(rename('convert.min.css'))
     .pipe(gulp.dest('../build/css'))
 });
 
-gulp.task("build", gulpSequence(['jscompress', 'htmlcompress', 'concatStyle', 'imgCompress'], 'compileSass'));
+gulp.task("build", gulpSequence(['jscompress', 'htmlcompress']));
 
 gulp.task("default", ['build']);
