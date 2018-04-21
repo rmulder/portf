@@ -1,22 +1,22 @@
 "use strict";
 
-var gulp = require('gulp');
-let concat = require('gulp-concat');
-let uglify = require('gulp-uglifyes');
-let htmlmin = require('gulp-htmlmin');
-let imagemin = require('gulp-imagemin');
-let gulpSequence = require('gulp-sequence');
-let gutil = require('gulp-util');
-let rename = require('gulp-rename');
-let sass = require('gulp-sass');
-let inject = require('gulp-inject-string');
-let cleanCSS = require('gulp-clean-css');
+const gulp = require('gulp');
+const concat = require('gulp-concat');
+const uglify = require('gulp-uglifyes');
+const htmlmin = require('gulp-htmlmin');
+const imagemin = require('gulp-imagemin');
+const gulpSequence = require('gulp-sequence');
+const gutil = require('gulp-util');
+const rename = require('gulp-rename');
+const sass = require('gulp-sass');
+const inject = require('gulp-inject-string');
+const cleanCSS = require('gulp-clean-css');
 
 gulp.task('htmlcompress', () =>
 {
   gulp.src('../src/index.html')
-      // .pipe(inject.replace('app.js', 'convert.min.js'))
-      // .pipe(inject.replace('style.css', 'convert.min.css'))
+      .pipe(inject.replace('app.js', 'convert.min.js'))
+      .pipe(inject.replace('style.css', 'convert.min.css'))
       .pipe(htmlmin({collapseWhitespace: true}))
       .pipe(rename('index.min.html'))
       .pipe(gulp.dest('../build'));
@@ -48,7 +48,7 @@ gulp.task("jscompress", () =>
 });
 
 
-gulp.task("compileSass", () =>
+gulp.task("compileCSS", () =>
 {
    gulp.src("../src/css/*.css")
     .pipe(cleanCSS())
@@ -56,6 +56,6 @@ gulp.task("compileSass", () =>
     .pipe(gulp.dest('../build/css'))
 });
 
-gulp.task("build", gulpSequence(['jscompress', 'htmlcompress']));
+gulp.task("build", gulpSequence(['jscompress', 'compileCSS', 'htmlcompress']));
 
 gulp.task("default", ['build']);
