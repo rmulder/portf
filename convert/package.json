@@ -30,6 +30,6 @@
     "gulp-uglify": "^3.0.0",
     "gulp-uglifyes": "^0.1.2",
     "gulp-util": "^3.0.8",
-    "mocha": "*"
+    "mocha": "5.1.1"
   }
 }
