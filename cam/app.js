@@ -1,8 +1,8 @@
-const express = require('express'), 
-bodyParser = require('body-parser'), 
-mongoose = require('mongoose'), 
-session = require('express-session'), 
-MongoStore = require('connect-mongo')(session);
+const express = require('express'); 
+const bodyParser = require('body-parser');
+const mongoose = require('mongoose'); 
+const session = require('express-session'); 
+const MongoStore = require('connect-mongo')(session);
 const app = express();
 
 // mongodb connection
@@ -59,7 +59,8 @@ app.use(function(err, req, res, next) {
   });
 });
 
-// listen on port 3000
-app.listen(3000, function () {
+// on port 3000
+app.listen(3000, function ()
+{
   console.log('Express app listening on port 3000');
 });
