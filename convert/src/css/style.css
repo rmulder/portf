@@ -20,9 +20,10 @@ label
 {
   font-family: 'Maven Pro', sans-serif;
   font-size: 1.3em;
-  float: right;
+  margin: 0 auto;
+/*  float: right; */
   position: relative;
-  left: -6px;
+/*  left: -6px; */
 }
 
 label:hover
