@@ -1,6 +1,6 @@
 /* main style */
 
-.input-group .active
+/* .input-group .active
 {
   font-size: 12px;
   top: -20px;
@@ -14,16 +14,28 @@
   margin-top: 30px;
   display: inline-block;
   position: relative;
+} */
+
+.nav-wrapper
+{
+  background-color: #fff !important;
+  font-weight: bold;
 }
 
-label
+.nav-wrapper a
+{
+  color: #000 !important;
+  font-weight: 300;
+}
+
+/* label
 {
   font-family: 'Maven Pro', sans-serif;
   font-size: 1.3em;
   margin: 0 auto;
-/*  float: right; */
+ float: right;
   position: relative;
-/*  left: -6px; */
+ left: -6px;
 }
 
 label:hover
@@ -68,9 +80,9 @@ button
   margin: 1em;
   display: block;
   margin-top: 1em;
-}
+} */
 
-/* extras styling */
+/*
 .title
 {
   font-size: 35px;
@@ -83,4 +95,4 @@ button
   margin: 30px auto 0 auto;
   font-family: 'Ubuntu', sans-serif;
   font-weight: 300;
-}
+} */
