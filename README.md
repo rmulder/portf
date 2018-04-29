@@ -1,6 +1,9 @@
 # Portfolio
 Some of the projects I created.
 
+## Converter
+Converts input to either decimal or binary using regex. 
+
 ## Multi-Platform Electron Test
 Trying out Electron and implementing some basic functionality.
 
