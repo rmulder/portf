@@ -34,13 +34,13 @@
                <form>
                  <div class="row">
                    <div class="input-field col s12">
-                     <input id="inputTag" type="number" class="validate">
-                     <label for="firstname" id="inputTag" class="active">String Input</label>
+                     <input id="inputTag" type="text" class="validate">
+                     <label for="firstname" id="inputTag" class="active">Number Input</label>
                    </div>
                  </div>
                  <div class="row">
                    <div class="input-field col s12">
-                     <input id="outputTag" disabled value="" type="text" class="validate">
+                     <input id="outputTag" disabled value="" type="text">
                      <label for="firstname" id="outputTag"></label>
                      <span class="helper-text" data-error="wrong" data-success="right">Output</span>
                    </div>
@@ -48,8 +48,8 @@
                </form>
              </div>
              <div class="card-action">
-               <input type="submit" class="btn tooltipped waves-effect waves-light" data-position="right" data-tooltip="Enter to convert" onclick="add()" value="Convert">
-               <input type="submit" class="btn tooltipped waves-effect waves-light" data-position="left" data-tooltip="Press to reset values" onclick="remover()" value="Remove">
+               <input type="submit" class="btn z-depth-2 tooltipped transparent waves-effect waves-light" data-position="right" id="leftbtn" data-tooltip="Enter to convert" onclick="add()" value="Convert">
+               <input type="submit" class="btn z-depth-2 tooltipped transparent waves-effect waves-light" data-position="left" id="rightbtn" data-tooltip="Press to reset values" onclick="remover()" value="Reset">
              </div>
            </div>
          </div>
@@ -57,21 +57,6 @@
      </div>
    </div>
  </div>
-
- <!-- <p class="center-align">
-  <a onclick="add()" class="waves-effect waves-light btn">Button</a>
- </p> -->
-<!-- <a class="waves-effect waves-light btn">Button</a> -->
-  <!-- <p class="title">Binary and Decimal Conversion</p>
-  <form action="#">
-    <div class="input-group">
-      <label for="string">String</label>
-      <input id='inputOne' class="inputs" type="text" name="string"/>
-      <button class="submit-butt" id="submit-spec-butt" onclick="add()" type="button" title="Calculate Determinant">Convert</button>
-      <label for="string">Output</label>
-      <input id='outputOne' class="inputs" type="text" name="string"/>
-    </div>
-  </form> -->
 
   </body>
 
