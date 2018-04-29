@@ -34,7 +34,7 @@
                <form>
                  <div class="row">
                    <div class="input-field col s12">
-                     <input id="inputTag" type="text" class="validate">
+                     <input id="inputTag" type="number" class="validate">
                      <label for="firstname" id="inputTag" class="active">String Input</label>
                    </div>
                  </div>
@@ -42,12 +42,14 @@
                    <div class="input-field col s12">
                      <input id="outputTag" disabled value="" type="text" class="validate">
                      <label for="firstname" id="outputTag"></label>
+                     <span class="helper-text" data-error="wrong" data-success="right">Output</span>
                    </div>
                  </div>
                </form>
              </div>
              <div class="card-action">
                <input type="submit" class="btn tooltipped waves-effect waves-light" data-position="right" data-tooltip="Enter to convert" onclick="add()" value="Convert">
+               <input type="submit" class="btn tooltipped waves-effect waves-light" data-position="left" data-tooltip="Press to reset values" onclick="remover()" value="Remove">
              </div>
            </div>
          </div>

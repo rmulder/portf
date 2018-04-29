@@ -30,3 +30,13 @@ const checker = (inputV) =>
     console.error("Error!");
   }
 }
+
+const remover = () =>
+{
+  document.getElementById("inputTag").blur();
+  document.getElementById("outputTag").blur();
+
+  document.getElementById('inputTag').value = ''; // remove input value
+  document.getElementById('outputTag').value = ''; // removes output value
+
+}
