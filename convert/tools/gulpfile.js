@@ -16,8 +16,8 @@ gulp.task('htmlcompress', () =>
 {
   gulp.src('../src/index.html')
       .pipe(inject.replace('app.js', 'convert.min.js'))
-      .pipe(inject.replace('style.css', 'convert.min.css'))
-      .pipe(htmlmin({collapseWhitespace: true}))
+      // .pipe(inject.replace('style.css', 'convert.min.css'))
+      .pipe(htmlmin({collapseWhitespace: true}, {minifyCSS: true}))
       .pipe(rename('index.min.html'))
       .pipe(gulp.dest('../build'));
 });
