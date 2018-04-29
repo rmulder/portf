@@ -1,16 +1,16 @@
 "use strict";
 
-const gulp = require('gulp'),
-  concat = require('gulp-concat'),
-  uglify = require('gulp-uglify'),
-  htmlmin = require('gulp-htmlmin'),
-  imagemin = require('gulp-imagemin'),
-  gulpSequence = require('gulp-sequence'),
-  gutil = require('gulp-util'),
-  rename = require('gulp-rename'),
-  sass = require('gulp-sass');
+const gulp = require('gulp');
+const concat = require('gulp-concat');
+const uglify = require('gulp-uglify');
+const htmlmin = require('gulp-htmlmin');
+const imagemin = require('gulp-imagemin');
+const gulpSequence = require('gulp-sequence');
+const gutil = require('gulp-util');
+const rename = require('gulp-rename');
+const sass = require('gulp-sass');
 
-gulp.task('htmlcompress', function()
+gulp.task('htmlcompress', () =>
 {
   gulp.src('../src/index.html')
     .pipe(htmlmin({collapseWhitespace: true}))
@@ -23,14 +23,14 @@ gulp.task('htmlcompress', function()
     .pipe(gulp.dest('../build/html'));
 });
 
-gulp.task('imgCompress', function()
+gulp.task('imgCompress', () =>
 {
   gulp.src('../src/img/*')
    .pipe(imagemin({ optimizationLevel: 5 }))
    .pipe(gulp.dest('../build/img'))
 });
 
-gulp.task("jscompress", function()
+gulp.task("jscompress", () =>
 {
    gulp.src('../src/js/app.js')
     .pipe(uglify().on('error', gutil.log)) // error outputs to console.
@@ -39,7 +39,7 @@ gulp.task("jscompress", function()
     .pipe(gulp.dest('../build/js'));
 });
 
-gulp.task("compileSass", function()
+gulp.task("compileSass", () =>
 {
   gulp.src("../src/scss/style.scss")
     .pipe(sass({outputStyle: 'compressed'}))
