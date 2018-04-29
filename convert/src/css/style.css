@@ -1,21 +1,5 @@
 /* main style */
 
-/* .input-group .active
-{
-  font-size: 12px;
-  top: -20px;
-  left: 0;
-  font-weight: 700;
-  color: #2470ef;
-}
-
-.input-group
-{
-  margin-top: 30px;
-  display: inline-block;
-  position: relative;
-} */
-
 .nav-wrapper
 {
   background-color: #fff !important;
@@ -47,71 +31,3 @@ input:focus
   border-bottom: 1px #000 !important;
   box-shadow: 0 1px 0 0 #000 !important
 }
-/* label
-{
-  font-family: 'Maven Pro', sans-serif;
-  font-size: 1.3em;
-  margin: 0 auto;
- float: right;
-  position: relative;
- left: -6px;
-}
-
-label:hover
-{
-  cursor: text;
-}
-
-.input-group input
-{
-  transition: all 0.3s ease;
-  padding: 6px 12px;
-  font-size: 16px;
-  outline: 0;
-  border: 1px solid #DADADA;
-  border-radius: 2px;
-}
-
-.input-group input:focus
-{
-  border: 1px solid #2470ef;
-}
-
-.input-group input:hover
-{
-  border: 1px solid #8db0eb;
-}
-
-body
-{
-  padding: 30px;
-  font-family: 'Quicksand';
-}
-
-form
-{
-  width: 200px;
-  margin: 30px auto;
-}
-
-button
-{
-  margin: 1em;
-  display: block;
-  margin-top: 1em;
-} */
-
-/*
-.title
-{
-  font-size: 35px;
-  font-weight: 400;
-  padding-bottom: 20px;
-  color: #2470ef;
-  border-bottom: 2px solid #2470ef;
-  width: 350px;
-  text-align: center;
-  margin: 30px auto 0 auto;
-  font-family: 'Ubuntu', sans-serif;
-  font-weight: 300;
-} */
