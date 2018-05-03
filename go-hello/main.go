@@ -1,23 +1,29 @@
 package main
 
-import
-(
-	"github.com/kataras/iris"
-	"github.com/kataras/iris/middleware/logger"
-	"github.com/kataras/iris/middleware/recover"
+import (
+    "fmt"
+    "net/http"
+    "strings"
+    "log"
 )
 
+func helloreply(w http.ResponseWriter, r *http.Request) {
+    r.ParseForm()  // parse arguments, you have to call this by yourself
+    fmt.Println(r.Form)  // print form information in server side
+    fmt.Println("path", r.URL.Path)
+    fmt.Println("scheme", r.URL.Scheme)
+    fmt.Println(r.Form["url_long"])
+    for k, v := range r.Form {
+        fmt.Println("key:", k)
+        fmt.Println("val:", strings.Join(v, ""))
+    }
+    fmt.Fprintf(w, "Hello World!") // send data to client side
+}
+
 func main() {
-	app := iris.New()
-	app.Logger().SetLevel("debug")
-	app.Use(recover.New())
-	app.Use(logger.New())
-
-	app.Handle("GET", "/", func(ctx iris.Context) {
-		ctx.HTML("<p>Hello, World!</p>")
-		// or: ctx.WriteString("Hello, World!")
-	})
-
-	// localhost:8080
-	app.Run(iris.Addr(":8080"), iris.WithoutServerError(iris.ErrServerClosed))
+    http.HandleFunc("/", helloreply) // set router
+    err := http.ListenAndServe(":8080", nil) // set listen port
+    if err != nil {
+        log.Fatal("ListenAndServe: ", err)
+    }
 }
