@@ -1,24 +1,24 @@
 "use strict";
 
-const gulp = require('gulp'),
-  concat = require('gulp-concat'),
-  uglify = require('gulp-uglifyes'),
-  htmlmin = require('gulp-htmlmin'),
-  imagemin = require('gulp-imagemin'),
-  gutil = require('gulp-util'),
-  rename = require('gulp-rename'),
-  gulpSequence = require('gulp-sequence'),
-  sass = require('gulp-sass'),
-  inject = require('gulp-inject-string');
+const gulp = require('gulp');
+const concat = require('gulp-concat');
+const uglify = require('gulp-uglifyes');
+const htmlmin = require('gulp-htmlmin');
+const imagemin = require('gulp-imagemin');
+const gutil = require('gulp-util');
+const rename = require('gulp-rename');
+const gulpSequence = require('gulp-sequence');
+const sass = require('gulp-sass');
+const inject = require('gulp-inject-string');
 
-gulp.task("concatStyles", function()
+gulp.task("concatStyles", () => 
 {
   gulp.src(["../src/scss/cards.scss", "../src/scss/style.scss", "../src/scss/boxes.scss", "../src/scss/vars.scss"])
       .pipe(concat("news.scss"))
       .pipe(gulp.dest("../src/scss"));
 });
 
-gulp.task('imgCompress', function()
+gulp.task('imgCompress', () =>
 {
   gulp.src('../src/img/favicon.ico')
        .pipe(imagemin({ optimizationLevel: 5 }))
@@ -27,7 +27,7 @@ gulp.task('imgCompress', function()
 
 
 // inject.replace inside
-gulp.task('htmlcompress', function()
+gulp.task('htmlcompress', () =>
 {
   gulp.src('../src/index.html')
       .pipe(inject.replace('news.js', 'news.min.js'))
@@ -40,15 +40,15 @@ gulp.task('htmlcompress', function()
   });
 
 // ES6 min. support
-gulp.task("minifyScripts", function()
-{
+gulp.task("minifyScripts", () =>
+		{
   gulp.src('../src/js/news.js')
       .pipe(uglify().on('error', gutil.log)) // if error, outputs to console.
       .pipe(rename('news.min.js'))
       .pipe(gulp.dest('../build/js'));
 });
 
-gulp.task("compileSass", function()
+gulp.task("compileSass", () =>
 {
   gulp.src("../src/scss/news.scss")
     .pipe(sass({outputStyle: 'compressed'}))
