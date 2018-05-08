@@ -26,7 +26,7 @@ gulp.task('htmlcompress', () =>
 gulp.task('imgCompress', () =>
 {
   gulp.src('../src/img/*')
-   .pipe(imagemin({ optimizationLevel: 5 }))
+   .pipe(imagemin({ optimizationLevel: 9 }))
    .pipe(gulp.dest('../build/img'))
 });
 
