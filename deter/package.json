@@ -1,6 +1,6 @@
 {
   "name": "determinantcalc",
-  "version": "1.1.2",
+  "version": "1.2.2",
   "description": "determinant calculator for 3 by 3 matrices",
   "main": "index.html",
   "scripts": {
@@ -17,7 +17,7 @@
   "author": "Ronan Manoj",
   "license": "MIT",
   "dependencies": {
-    "npm": "6.0.0"
+    "npm": "*"
   },
   "devDependencies": {
     "chai": "*",
