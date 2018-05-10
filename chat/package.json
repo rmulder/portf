@@ -38,22 +38,4 @@
     "superagent": "^3.8.2",
     "supertest": "^3.0.0"
   },
-  "contributors": [
-    {
-      "name": "Guillermo Rauch",
-      "email": "rauchg@gmail.com"
-    },
-    {
-      "name": "Arnout Kazemier",
-      "email": "info@3rd-eden.com"
-    },
-    {
-      "name": "Vladimir Dronnikov",
-      "email": "dronnikov@gmail.com"
-    },
-    {
-      "name": "Einar Otto Stangvik",
-      "email": "einaros@gmail.com"
-    }
-  ]
 }
