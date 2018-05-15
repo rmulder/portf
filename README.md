@@ -60,6 +60,7 @@ Gulp.js reworked website.
 * Passport.js
 * Gulp.js
 * Docker
+* Golang
 * Mongoose
 * Bash
 * Socket.io
