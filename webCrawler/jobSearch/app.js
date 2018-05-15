@@ -3,7 +3,7 @@ const cheerio = require('cheerio');
 const URL = require('url-parse');
 const opn = require('opn');
 
-const START_URL = "https://www.tesla.com/careers";
+const START_URL = "https://www.dropbox.com/careers";
 const SEARCH_LIST = ['intern','Engineering Intern', 'software intern'];
 const SEARCH_WORD = "Intern";
 const MAX_PAGES_TO_VISIT = 500;

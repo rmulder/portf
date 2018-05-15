@@ -3,7 +3,7 @@ const cheerio = require('cheerio');
 const URL = require('url-parse');
 
 const START_URL = "https://news.google.com/news/";
-const SEARCH_WORD = "california";
+const SEARCH_WORD = "android";
 const MAX_PAGES_TO_VISIT = 100;
 
 let pagesVisited = {};
