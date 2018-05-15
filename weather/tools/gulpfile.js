@@ -51,6 +51,10 @@ gulp.task("compileSass", () =>
     .pipe(gulp.dest('../build/css'))
 });
 
+gulp.task('watch:js', function () {
+    gulp.watch('../src/js/app.js', ['minifyScripts']);
+});
+
 gulp.task("build", ['minifyScripts', 'compileSass', 'htmlcompress', 'imgCompress']);
 
 gulp.task("default", ['build']);

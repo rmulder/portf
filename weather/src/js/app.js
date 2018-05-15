@@ -1,5 +1,7 @@
 "use strict";
 
+console.log("test function");
+
 // getWeather function
 
 function getWeather()
