@@ -22,9 +22,6 @@ Checking into a flight verification.
 ## Socket.io Application
 Integrating Socket.io
 
-## Angular Application
-Playing around with angular.
-
 ## News API Integration
 News API Website, retrieval through keyword/topic.
 
