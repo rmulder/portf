@@ -1,29 +1,17 @@
 package main
 
 import (
-    "fmt"
-    "net/http"
-    "strings"
-    "log"
+	"fmt"
+	"net/http"
 )
 
-func helloreply(w http.ResponseWriter, r *http.Request) {
-    r.ParseForm()  // parse arguments, you have to call this by yourself
-    fmt.Println(r.Form)  // print form information in server side
-    fmt.Println("path", r.URL.Path)
-    fmt.Println("scheme", r.URL.Scheme)
-    fmt.Println(r.Form["url_long"])
-    for k, v := range r.Form {
-        fmt.Println("key:", k)
-        fmt.Println("val:", strings.Join(v, ""))
-    }
-    fmt.Fprintf(w, "Hello World!") // send data to client side
-}
-
 func main() {
-    http.HandleFunc("/", helloreply) // set router
-    err := http.ListenAndServe(":8080", nil) // set listen port
-    if err != nil {
-        log.Fatal("ListenAndServe: ", err)
-    }
+	http.HandleFunc("*", func (w http.ResponseWriter, r *http.Request) {
+		fmt.Fprintf(w, "Will be serving static files shortly")
+	})
+
+	fs := http.FileServer(http.Dir("static/"))
+	http.Handle("/static/", http.StripPrefix("/static/", fs))
+
+	http.ListenAndServe(":8080", nil)
 }
