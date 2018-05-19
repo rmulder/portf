@@ -2,7 +2,7 @@
 
 console.info("external app.js");
 
-let weather = () =>
+const weather = () =>
 {
   console.log("Inside weather json parsing function!");
 
