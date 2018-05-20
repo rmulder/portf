@@ -1,7 +1,12 @@
 const express = require('express');
+const helmet = require('helmet');
+const compression = require('compression');
 const bodyParser = require('body-parser');
 const mongoose = require("mongoose");
 const app = express();
+
+app.use(helmet());
+app.use(compression());
 
 // server on port 8080 or enviroment variable defined when hosting
 const PORT = process.env.PORT || 8080;
@@ -27,7 +32,7 @@ let routes = require('./routes/index'); // include routes
 app.use('/', routes);
 
 app.post("/addname", (req, res) => {
-    var myData = new User(req.body);
+    let myData = new User(req.body);
     myData.save()
         .then(item => {
             res.send("Name saved to database");
@@ -38,5 +43,5 @@ app.post("/addname", (req, res) => {
 });
 
 app.listen(PORT, () => {
- console.log(`App listening on port ${PORT}`);
+ console.log(`http://localhost:${PORT}`);
 });
