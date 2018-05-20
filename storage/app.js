@@ -3,7 +3,7 @@ const helmet = require('helmet');
 const compression = require('compression');
 const bodyParser = require('body-parser');
 const mongoose = require("mongoose");
-const app = express();
+let app = express();
 
 app.use(helmet());
 app.use(compression());
@@ -35,7 +35,9 @@ app.post("/addname", (req, res) => {
     let myData = new User(req.body);
     myData.save()
         .then(item => {
-            res.send("Name saved to database");
+	      res.redirect(301, '/');
+	      console.log("added database item!");
+//            res.send("Name saved to database");
         })
         .catch(err => {
             res.status(400).send("Unable to save to database");
