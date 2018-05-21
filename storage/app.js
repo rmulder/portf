@@ -8,7 +8,7 @@ const app = express();
 app.use(helmet());
 app.use(compression());
 
-// server on port 8080 or enviroment variable defined when hosting
+// port 8080 or enviroment variable defined when hosting
 const PORT = process.env.PORT || 8080;
 
 mongoose.Promise = global.Promise;
@@ -52,7 +52,7 @@ app.use(function(req, res, next)
   next(err);
 });
 
-// last app.use callback
+// last callback
 app.use(function(err, req, res, next)
 {
   res.status(err.status || 500);
