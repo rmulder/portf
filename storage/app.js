@@ -22,7 +22,7 @@ let User = mongoose.model("User", nameSchema);
 app.use(bodyParser.json()); // parse incoming requests
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// static files link from /public
+// static files from /public
 app.use(express.static(__dirname + '/public'));
 
 app.set('view engine', 'pug'); // engine - pug
