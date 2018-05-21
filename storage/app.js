@@ -3,7 +3,7 @@ const helmet = require('helmet');
 const compression = require('compression');
 const bodyParser = require('body-parser');
 const mongoose = require("mongoose");
-let app = express();
+const app = express();
 
 app.use(helmet());
 app.use(compression());
@@ -37,13 +37,32 @@ app.post("/addname", (req, res) => {
         .then(item => {
 	      res.redirect(301, '/');
 	      console.log("added database item!");
-//            res.send("Name saved to database");
+        //res.send("Name saved to database");
         })
         .catch(err => {
             res.status(400).send("Unable to save to database");
         });
 });
 
-app.listen(PORT, () => {
+// catch 404 then forward to error handler
+app.use(function(req, res, next)
+{
+  let err = new Error('404, File Not Found');
+  err.status = 404;
+  next(err);
+});
+
+// last app.use callback
+app.use(function(err, req, res, next)
+{
+  res.status(err.status || 500);
+  res.render('error', {
+    message: err.message,
+    error: {}
+  });
+});
+
+app.listen(PORT, () =>
+{
  console.log(`http://localhost:${PORT}`);
 });
