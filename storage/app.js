@@ -36,10 +36,10 @@ app.post("/addname", (req, res) => {
     myData.save()
         .then(item => {
 	      res.redirect(301, '/');
-	      console.log("added database item!");
-        //res.send("Name saved to database");
+	      console.log("Item added to database!");
         })
         .catch(err => {
+	    console.error("Can't save to database!");
             res.status(400).send("Unable to save to database");
         });
 });
