@@ -17,7 +17,7 @@ let nameSchema = new mongoose.Schema({
     firstName: String,
     lastName: String
 });
-let User = mongoose.model("User", nameSchema);
+let Names = mongoose.model("Names", nameSchema);
 
 app.use(bodyParser.json()); // parse incoming requests
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -32,7 +32,7 @@ let routes = require('./routes/index'); // include routes
 app.use('/', routes);
 
 app.post("/addname", (req, res) => {
-    let myData = new User(req.body);
+    let myData = new Names(req.body);
     myData.save()
         .then(item => {
 	      res.redirect(301, '/');
