@@ -11,14 +11,6 @@ app.use(compression());
 // port 8080 or enviroment variable defined when hosting
 const PORT = process.env.PORT || 8080;
 
-mongoose.Promise = global.Promise;
-mongoose.connect("mongodb://localhost:27017/storage");
-let nameSchema = new mongoose.Schema({
-    firstName: String,
-    lastName: String
-});
-var Names = mongoose.model("Names", nameSchema);
-
 app.use(bodyParser.json()); // parse incoming requests
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -30,25 +22,6 @@ app.set('views', __dirname + '/views');
 
 let routes = require('./routes/index'); // include routes
 app.use('/', routes);
-
-app.post("/addname", (req, res) => {
-    let myData = new Names(req.body);
-    myData.save()
-        .then(item => {
-	      res.redirect(301, '/');
-	      console.log("Item added to database!");
-        })
-        .catch(err => {
-	    console.error("Can't save to database!");
-            res.status(400).send("Unable to save to database");
-        });
-});
-
-/*
-app.get('/getname', (req,res) => {
-  let 
-
-*/
 
 // catch 404 then forward to error handler
 app.use(function(req, res, next)
