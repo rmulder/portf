@@ -1,6 +1,6 @@
-let express = require('express');
+const express = require('express');
 let router = express.Router();
-let mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
 // modules
 mongoose.Promise = global.Promise;
@@ -25,6 +25,7 @@ router.post("/addname", (req, res) =>
     {
       res.redirect(301, '/');
       console.log("Item added to database!");
+      console.log(item);
     })
     .catch(err =>
       {
@@ -32,5 +33,12 @@ router.post("/addname", (req, res) =>
         res.status(400).send("Unable to save to database");
       });
 });
+
+// router.get('/find', (req, res, next) =>
+// {
+//   Names.find()
+//     .then()
+//   return res.render('index', { title: 'Index' });
+// });
 
 module.exports = router;
