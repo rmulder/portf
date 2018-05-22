@@ -17,7 +17,7 @@ let nameSchema = new mongoose.Schema({
     firstName: String,
     lastName: String
 });
-let Names = mongoose.model("Names", nameSchema);
+var Names = mongoose.model("Names", nameSchema);
 
 app.use(bodyParser.json()); // parse incoming requests
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -43,6 +43,12 @@ app.post("/addname", (req, res) => {
             res.status(400).send("Unable to save to database");
         });
 });
+
+/*
+app.get('/getname', (req,res) => {
+  let 
+
+*/
 
 // catch 404 then forward to error handler
 app.use(function(req, res, next)
