@@ -14,16 +14,16 @@ const PORT = process.env.PORT || 8080;
 app.use(bodyParser.json()); // parse incoming requests
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// static files from /public
+// static files
 app.use(express.static(__dirname + '/public'));
 
-app.set('view engine', 'pug'); // engine - pug
+app.set('view engine', 'pug');
 app.set('views', __dirname + '/views');
 
-let routes = require('./routes/index'); // include routes
+let routes = require('./routes/index'); // routes defined
 app.use('/', routes);
 
-// catch 404 then forward to error handler
+// 404 error catcher
 app.use(function(req, res, next)
 {
   let err = new Error('404, File Not Found');
