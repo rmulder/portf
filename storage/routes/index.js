@@ -35,43 +35,29 @@ router.post("/addname", (req, res) =>
       });
 });
 
-router.post('/find', (req, res) =>
+router.get('/find', (req, res, next) =>
+{
+  return res.render('find', { title: 'Find' });
+});
+
+router.post('/findname', (req, res, next) =>
 {
   let id = req.body.id;
 
   UserData.findById(id, (err, doc) =>
   {
-    if (err)
+    if(err)
     {
-      console.error('error, no entry found');
+      console.error('Some error occured!');
     }
-    doc.title = req.body.title;
-    doc.content = req.body.content;
-    doc.author = req.body.author;
-    doc.save();
+    // doc.title = req.body.title;
+    // doc.content = req.body.content;
+    // doc.author = req.body.author;
+    // doc.save();
   })
-  res.render('return', { firstName: 'id.firstName' });
+  res.render('return', { firstName: id.firstName });
 
-
-  // let myData = new Names(req.body);
-  // console.log("The request id: ", req.body);
-  // myData.find()
-  //   .then(item =>
-  //     {
-  //       return res.render('return', {firstName: "somo", title: 'Search'});
-  //     })
-  //   .catch(err =>
-  //     {
-  //       console.error("Can't load info from database!");
-  //       res.status(405).send("Unable to load data from database");
-  //     });
 });
 
-// router.get('/find', (req, res, next) =>
-// {
-//   Names.find()
-//     .then()
-//   return res.render('index', { title: 'Index' });
-// });
 
 module.exports = router;
