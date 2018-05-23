@@ -40,23 +40,23 @@ router.get('/find', (req, res, next) =>
   return res.render('find', { title: 'Find' });
 });
 
-router.post('/findname', (req, res, next) =>
-{
-  let id = req.body.id;
 
-  UserData.findById(id, (err, doc) =>
+// doesnt look in db. fix!!!
+router.post('/findname', (req, res) =>
+{
+  let myDataFind = new Names(req.body);
+
+  console.log("Id of user: ", myDataFind.id);
+
+  Names.findById(myDataFind.id, (err, doc) =>
   {
     if(err)
     {
       console.error('Some error occured!');
     }
-    // doc.title = req.body.title;
-    // doc.content = req.body.content;
-    // doc.author = req.body.author;
-    // doc.save();
+    res.render('return', { firstName: myDataFind.firstName, lastName: myDataFind.lastName});
   })
-  res.render('return', { firstName: id.firstName });
-
+  // res.render('return', { firstName: myDataFind.firstName, lastName: myDataFind.lastName});
 });
 
 
