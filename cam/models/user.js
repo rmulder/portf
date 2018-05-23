@@ -33,11 +33,11 @@ UserSchema.statics.authenticate = function(email, password, callback) {
         }
         else if ( !user )
         {
-          var err = new Error('User not found.');
+          let err = new Error('User not found.');
           err.status = 401;
           return callback(err);
         }
-        bcrypt.compare(password, user.password , function(error, result)
+        bcrypt.compare(password, user.password , (error, result) =>
         {
           if (result === true)
           {
@@ -51,9 +51,11 @@ UserSchema.statics.authenticate = function(email, password, callback) {
       });
 }
 // hash password before saving to database
-UserSchema.pre('save', function(next) {
+UserSchema.pre('save', (next) =>
+{
   var user = this;
-  bcrypt.hash(user.password, 10, function(err, hash) {
+  bcrypt.hash(user.password, 10, (err, hash) =>
+  {
     if (err) {
       return next(err);
     }
@@ -61,5 +63,5 @@ UserSchema.pre('save', function(next) {
     next();
   })
 });
-var User = mongoose.model('User', UserSchema);
+let User = mongoose.model('User', UserSchema);
 module.exports = User;
