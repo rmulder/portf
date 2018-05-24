@@ -11,6 +11,25 @@ const rename = require('gulp-rename');
 const sass = require('gulp-sass');
 const inject = require('gulp-inject-string');
 
+const paths = {
+  scss: {
+    src: '../src/scss/*.scss',
+    dest: '../build/css'
+  },
+  js: {
+    src: '../src/js/app.js',
+    dest: '../build/js'
+  },
+  html: {
+    src: '../src/index.html',
+    dest: '../build'
+  },
+  img: {
+    src: '../src/img/**',
+    dest: '../build/img'
+  }
+};
+
 gulp.task('htmlcompress', (done) =>
 {
   gulp.src('../src/index.html')
