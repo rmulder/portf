@@ -2,7 +2,7 @@
 
 console.log("determinate calculator js linked");
 
-// adds the data to array.
+// adds data to array.
 let add = () =>
 {
   let deterStore = [];
@@ -18,7 +18,7 @@ let add = () =>
   deterStore.push($('#8-enter').val());
   deterStore.push($('#9-enter').val());
 
-  // // prints content to the console for debugging purposes.
+  // // prints content to console
   // for(let i of deterStore)
   // {
   //   console.info("Values in determinant:" + deterStore[i]);
