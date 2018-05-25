@@ -11,7 +11,7 @@
     "babel-core": "6.26.3",
     "babel-loader": "7.1.4",
     "babel-minify-webpack-plugin": "^0.2.0",
-    "babel-preset-env": "^1.6.1",
+    "babel-preset-env": "1.7.0",
     "browserslist": [
       "last 2 versions"
     ],
@@ -19,14 +19,14 @@
     "cssnano": "^3.10.0",
     "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^1.1.11",
-    "gulp": "^3.9.1",
+    "gulp": "4.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-html-replace": "^1.6.2",
     "gulp-htmlmin": "^3.0.0",
     "gulp-imagemin": "^4.1.0",
     "gulp-inject-string": "^1.1.1",
     "gulp-newer": "^1.4.0",
-    "gulp-rename": "^1.2.2",
+    "gulp-rename": "1.2.3",
     "gulp-sass": "^3.2.1",
     "gulp-sequence": "^0.4.6",
     "gulp-uglify": "^3.0.0",
@@ -37,12 +37,12 @@
     "img-loader": "^2.0.1",
     "node-sass": "^4.9.0",
     "optimize-css-assets-webpack-plugin": "^3.2.0",
-    "postcss-loader": "^2.1.4",
+    "postcss-loader": "2.1.5",
     "sass-loader": "^6.0.7",
     "style-loader": "^0.19.1",
     "uglifyjs-webpack-plugin": "1.2.5",
     "url-loader": "^0.6.2",
-    "webpack": "^3.11.0"
+    "webpack": "^3.12.0"
   },
   "scripts": {
     "build": "webpack",

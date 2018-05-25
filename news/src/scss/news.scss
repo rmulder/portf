@@ -1,217 +1,3 @@
-// secondary stylesheet
-
-@import "vars";
-
-button:focus
-{
-  outline: 0;
-}
-
-img
-{
-  height: auto;
-  max-width: 100%;
-  vertical-align: middle;
-}
-
-.btn
-{
-  font-size: 0.8em;
-  font-family: $maven;
-  background-color: white;
-  border: 1px solid #cccccc;
-  color: #696969;
-  padding: 0.5rem;
-}
-
-.btn--block
-{
-  display: block;
-  width: 100%;
-}
-
-.cards
-{
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.cards__item
-{
-  display: flex;
-  padding: 1rem;
-}
-
-@media (min-width: 40rem)
-{
-  .cards__item {
-    width: 50%;
-  }
-}
-
-@media (min-width: 56rem)
-{
-  .cards__item {
-    width: 33.3333%;
-  }
-}
-
-.card
-{
-  background-color: white;
-  border-radius: 0.25rem;
-  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
-
-.card__content
-{
-  display: flex;
-  flex: 1 1 auto;
-  flex-direction: column;
-  padding: 1rem;
-}
-
-.card__image
-{
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-top-left-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;
-  // filter: contrast(70%);
-  overflow: hidden;
-  position: relative;
-  transition: filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91);
-}
-
-.card__image::before
-{
-  content: "";
-  display: block;
-  padding-top: 56.25%;
-}
-
-@media (min-width: 40rem)
-{
-  .card__image::before
-  {
-    padding-top: 66.6%;
-  }
-}
-
-// tech
-.card__image--flowers
-{
-  background-image: url(https://www.sheerid.com/wp-content/uploads/2016/11/presslogo_techcrunch.png);
-}
-
-// business
-.card__image--bus
-{
-  background-image: url(https://s3.amazonaws.com/freebiesupply/thumbs/2x/bloomberg-logo.png);
-}
-
-// sports
-.card__image--sport
-{
-  background-image: url(https://onmilwaukee.com/images/articles/bu/bucksfswstreampreseason/bucksfswstreampreseason_fullsize_story1.jpg);
-}
-
-// general news
-.card__image--gnews
-{
-  background-image: url(https://s3.amazonaws.com/freebiesupply/thumbs/2x/cnn-logo.png);
-}
-
-// silicon valley
-.card__image--sv
-{
-  background-image: url(https://www.sheerid.com/wp-content/uploads/2016/11/presslogo_recode.png);
-}
-
-.card__title
-{
-  font-family: $muli;
-  color: #3d3d3d;
-  font-size: 1.2em;
-  font-weight: 300;
-  // letter-spacing: 2px;
-  // text-transform: uppercase;
-}
-
-.card__text
-{
-  color: #888282;
-  font-family: $robo;
-  // flex: 1 1 auto;
-  font-size: 0.9em;
-  // line-height: 1.5;
-  margin-bottom: 1.25rem;
-}
-
-// main stylesheet
-
-@import "vars";
-
-*,
-*::before,
-*::after
-{
-  box-sizing: border-box;
-}
-
-html
-{
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-size: 12px;
-  box-sizing: border-box;
-}
-
-div.title
-{
-  margin: -5em 0 -4em 0;
-  padding: 0;
-}
-
-div.title p
-{
-  color: white;
-  letter-spacing: 3px;
-  text-align: center;
-  font-family: $dos;
-  font-size: 6em;
-  font-style: normal;
-  font-weight: 300;
-
-  transition: all 0.6s ease-in-out;
-}
-
-@media screen and (max-width: 767px)
-{
-  div.title
-  {
-    margin: -4em 0 -3em 0;
-  }
-
-  div.title p
-  {
-    font-size: 5em;
-  }
-}
-
-div.padding-bottom
-{
-  height: 5em;
-}
-
 // button/input stylesheet
 
 @import "vars";
@@ -443,13 +229,216 @@ a:hover, a:focus{
   margin-top: 7rem;
 }
 
-// variable stylesheet
+// secondary stylesheet
 
-$background-col: #bababa;
-$back: #9e9d9d;
-$black: #080808;
-$robo: 'Roboto', sans-serif;
-$dos: 'Dosis', sans-serif;
-$ubu: 'Ubuntu', sans-serif;
-$maven: 'Maven Pro', sans-serif;
-$muli: 'Muli', sans-serif;
+@import "vars";
+
+button:focus
+{
+  outline: 0;
+}
+
+img
+{
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.btn
+{
+  font-size: 0.8em;
+  font-family: $maven;
+  background-color: white;
+  border: 1px solid #cccccc;
+  color: #696969;
+  padding: 0.5rem;
+}
+
+.btn--block
+{
+  display: block;
+  width: 100%;
+}
+
+.cards
+{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cards__item
+{
+  display: flex;
+  padding: 1rem;
+}
+
+@media (min-width: 40rem)
+{
+  .cards__item {
+    width: 50%;
+  }
+}
+
+@media (min-width: 56rem)
+{
+  .cards__item {
+    width: 33.3333%;
+  }
+}
+
+.card
+{
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.card__content
+{
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.card__image
+{
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  // filter: contrast(70%);
+  overflow: hidden;
+  position: relative;
+  transition: filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91);
+}
+
+.card__image::before
+{
+  content: "";
+  display: block;
+  padding-top: 56.25%;
+}
+
+@media (min-width: 40rem)
+{
+  .card__image::before
+  {
+    padding-top: 66.6%;
+  }
+}
+
+// tech
+.card__image--flowers
+{
+  background-image: url(https://www.sheerid.com/wp-content/uploads/2016/11/presslogo_techcrunch.png);
+}
+
+// business
+.card__image--bus
+{
+  background-image: url(https://s3.amazonaws.com/freebiesupply/thumbs/2x/bloomberg-logo.png);
+}
+
+// sports
+.card__image--sport
+{
+  background-image: url(https://onmilwaukee.com/images/articles/bu/bucksfswstreampreseason/bucksfswstreampreseason_fullsize_story1.jpg);
+}
+
+// general news
+.card__image--gnews
+{
+  background-image: url(https://s3.amazonaws.com/freebiesupply/thumbs/2x/cnn-logo.png);
+}
+
+// silicon valley
+.card__image--sv
+{
+  background-image: url(https://www.sheerid.com/wp-content/uploads/2016/11/presslogo_recode.png);
+}
+
+.card__title
+{
+  font-family: $muli;
+  color: #3d3d3d;
+  font-size: 1.2em;
+  font-weight: 300;
+  // letter-spacing: 2px;
+  // text-transform: uppercase;
+}
+
+.card__text
+{
+  color: #888282;
+  font-family: $robo;
+  // flex: 1 1 auto;
+  font-size: 0.9em;
+  // line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+
+// main stylesheet
+
+@import "vars";
+
+*,
+*::before,
+*::after
+{
+  box-sizing: border-box;
+}
+
+html
+{
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 12px;
+  box-sizing: border-box;
+}
+
+div.title
+{
+  margin: -5em 0 -4em 0;
+  padding: 0;
+}
+
+div.title p
+{
+  color: white;
+  letter-spacing: 3px;
+  text-align: center;
+  font-family: $dos;
+  font-size: 6em;
+  font-style: normal;
+  font-weight: 300;
+
+  transition: all 0.6s ease-in-out;
+}
+
+@media screen and (max-width: 767px)
+{
+  div.title
+  {
+    margin: -4em 0 -3em 0;
+  }
+
+  div.title p
+  {
+    font-size: 5em;
+  }
+}
+
+div.padding-bottom
+{
+  height: 5em;
+}
