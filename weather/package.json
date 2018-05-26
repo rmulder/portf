@@ -5,7 +5,8 @@
   "main": "index.html",
   "scripts": {
     "test": "mocha ./tests/*.js",
-    "test:watch": "mocha --watch ./tests/*.js"
+    "test:watch": "mocha --watch ./tests/*.js",
+    "start": "./opener.sh" 
   },
   "keywords": [
     "weather",
