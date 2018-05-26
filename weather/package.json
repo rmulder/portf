@@ -18,18 +18,20 @@
   "author": "Ronan Manoj",
   "license": "MIT",
   "devDependencies": {
+    "babel-preset-es2015": "6.24.1",
+    "babel-register": "6.26.0",
     "chai": "*",
-    "gulp": "*",
+    "gulp": "4.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-htmlmin": "^3.0.0",
     "gulp-imagemin": "^4.1.0",
     "gulp-inject-string": "^1.1.1",
     "gulp-newer": "^1.4.0",
-    "gulp-rename": "^1.2.2",
+    "gulp-rename": "^1.2.3",
     "gulp-sass": "^3.2.1",
     "gulp-uglify": "^3.0.0",
     "gulp-uglifyes": "^0.1.3",
     "gulp-util": "^3.0.8",
-    "mocha": "*"
+    "mocha": "^5.2.0"
   }
 }
