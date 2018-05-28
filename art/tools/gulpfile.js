@@ -15,10 +15,34 @@ const paths =
 {
   scripts: ['../src/JS/*.js', '!../src/JS/script.js'],
   scss: ['../src/SCSS/style.scss', '../src/SCSS/gallery.scss', '!../src/SCSS/vars.scss'],
-  images: '../src/img/*',
+  images: '../src/img/*.jpg',
+  js: '../src/JS/app.js',
   html: ['../src/index.html', '../src/photos.html'],
   css: ['../src/CSS/*.css', '!../src/CSS/*.map', '!../src/CSS/vars.css']
 };
+
+// const paths = {
+//   scss: {
+//     src: ['../src/SCSS/*.scss', '!../src/SCSS/vars.scss'],
+//     spec: '../src/scss/deter.scss',/
+//     dest: '../src/scss'
+//   },
+//   css: {
+//     dest: '../build/css'
+//   },
+//   js: {
+//     src: '../src/js/app.js',
+//     dest: '../build/js'
+//   },
+//   html: {
+//     src: '../src/index.html',
+//     dest: '../build'
+//   },
+//   img: {
+//     src: '../src/img/**',
+//     dest: '../build/img'
+//   }
+// };
 
 gulp.task('htmlcompress', () =>
 {
@@ -30,6 +54,7 @@ gulp.task('htmlcompress', () =>
     .pipe(gulp.dest('../build'));
 
   gulp.src(paths.html[1])
+    .pipe(inject.replace('JS/app.js', 'JS/photo.min.js'))
     .pipe(inject.replace('CSS/gallery.css', 'css/gallery.min.css'))
     .pipe(inject.replace('CSS/gallery.css', 'css/gallery.min.css'))
     .pipe(htmlmin({collapseWhitespace: true}))
@@ -68,6 +93,14 @@ gulp.task("compileSass", () =>
     .pipe(gulp.dest('../build/css'))
 });
 
+gulp.task("minifyScripts", () =>
+{
+  return gulp.src(paths.js)
+    .pipe(uglify().on('error', gutil.log)) // if error, outputs to console.
+    .pipe(rename('photo.min.js'))
+    .pipe(gulp.dest('../build/js'));
+});
+
 // Rerun the task when a file changes
 gulp.task('watch', () =>
 {
@@ -76,6 +109,6 @@ gulp.task('watch', () =>
   gulp.watch(paths.html, ['htmlcompress']);
 });
 
-gulp.task("build", gulpSequence(['htmlcompress', 'concatStyle', 'imgCompress'], 'compileSass'));
+gulp.task("build", gulpSequence(['htmlcompress', 'concatStyle', 'imgCompress', 'minifyScripts'], 'compileSass'));
 
 gulp.task("default", ['build']);

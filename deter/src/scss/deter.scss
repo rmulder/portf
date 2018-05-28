@@ -926,3 +926,238 @@ $ubu: 'Ubuntu', sans-serif;
 $maven: 'Maven Pro', sans-serif;
 $muli: 'Muli', sans-serif;
 $nun: 'Nunito', sans-serif;
+
+// main stylesheet
+
+@import "var";
+
+html
+{
+  font-size: 12px;
+  font-family: $robo;
+
+  user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+
+  background-color: $red;
+  color: #000000;
+}
+
+body
+{
+  margin: 0;
+  padding: 0;
+}
+
+header.title-header
+{
+  margin: 0 auto;
+}
+
+header.title-header p
+{
+  padding: 0.7em;
+  margin: 0;
+  font-family: $nun;
+  font-size: 4em;
+  font-weight: 100;
+  text-align: center;
+  color: #000000;
+
+  transition: all 0.2s ease-in-out; // vendorless
+  -moz-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out; // safari & chrome
+}
+
+@media screen and (max-width: 800px)
+{
+  header.title-header p
+  {
+    font-size: 2.7em;
+  }
+}
+
+div.numbersEnter
+{
+  margin: 0 auto;
+  justify-content: center;
+  text-align: center;
+}
+
+input
+{
+  overflow: hidden;
+  margin: 0 auto;
+  border: none;
+}
+
+input.enter
+{
+  font-family: $ubu; // need to change
+  font-weight: 300;
+  font-size: 1.7em;
+  text-align: center;
+  text-align: center;
+
+  background-color: #{lighten($red, 15%)};
+  border-radius: 2px;
+  z-index: 1000;
+
+  margin: 1em;
+
+  // width: 10em;
+  width: calc(100% / 4);
+  max-width: 100em;
+  height: 2em;
+  // display: inline-flex;
+}
+
+@media screen and (max-width: 800px)
+{
+  input.enter
+  {
+    width: calc(100% / 5);
+    font-size: 1.4em;
+  }
+}
+
+input.first-set
+{
+  // display: block;
+  display: inline;
+}
+
+button:focus
+{
+  outline: 0;
+}
+
+label
+{
+  display: block;
+  margin: 0 auto;
+}
+
+div.overall-butt
+{
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  justify-content: center;
+}
+
+div.overall-butt button.submit-butt
+{
+  opacity: 0.9;
+  font-family: $dos;
+  font-size:2.5em;
+  text-align: center;
+  color: #fff;
+  border-radius: 0.3em;
+  border: none;
+  height: 5rem;
+  width: 20rem;
+  background-color: darken($red, 7%);
+  will-change: font-size;
+
+  transition: all 0.4s ease-in-out;
+}
+
+@media only screen and (max-width: 800px)
+{
+  div.overall-butt button.submit-butt
+  {
+    height: 4rem;
+    width: 25%;
+    font-size: 2em;
+  }
+}
+
+input[type="string"]
+{
+  display: block;
+  margin: 0 auto;
+  opacity: 0.9;
+  font-family: $dos;
+  font-size: 2.5em;
+  text-align: center;
+  color: #000;
+  border-radius: 0.3em;
+  border: none;
+  height: 5rem;
+  width: 10%;
+  background-color: #{ligthen($red, 15%)};
+
+  transition: all 0.4s ease-in-out;
+}
+
+label[for=style]
+{
+  padding-bottom: 0.5em;
+  padding-top: 0.5em;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 2em;
+  font-family: $dos;
+
+  transition: all 0.4s ease-in-out;
+}
+
+@media only screen and (max-width: 800px)
+{
+  label[for=style]
+  {
+    font-size: 1.8em;
+  }
+
+  input[type="string"]
+  {
+    overflow-x: scroll;
+    width: 17%;
+  }
+}
+
+@media only screen and (max-width: 400px)
+{
+  input[type="string"]
+  {
+    overflow-x: scroll;
+    width: 20%;
+  }
+}
+
+
+label.deterValFinal
+{
+  padding: 1.5em 0em 1em 0em;
+  display: block;
+  margin: 0 auto;
+  font-size: 2em;
+  font-weight: 300;
+  font-family: $ubu;
+
+  transition: all 0.4s ease-in-out;
+}
+
+@media only screen and (max-width: 800px)
+{
+  label.deterValFinal
+  {
+    font-size: 1.7em;
+  }
+}
+
+// secondary stylesheet - variables
+
+$red: #cf6760;
+
+$robo: 'Roboto', sans-serif;
+$dos: 'Dosis', sans-serif;
+$ubu: 'Ubuntu', sans-serif;
+$maven: 'Maven Pro', sans-serif;
+$muli: 'Muli', sans-serif;
+$nun: 'Nunito', sans-serif;

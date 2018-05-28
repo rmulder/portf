@@ -18,6 +18,9 @@ let add = () =>
   deterStore.push($('#8-enter').val());
   deterStore.push($('#9-enter').val());
 
+ // logs to console
+ deterStore.forEach( deterStore => console.info(deterStore) );
+
   // // prints content to console
   // for(let i of deterStore)
   // {
@@ -41,4 +44,4 @@ let threeCalc = (deterStore) =>
   return deterFinalVal;
 }
 
-module.exports.threeCalc = threeCalc;
+// module.exports.threeCalc = threeCalc;
