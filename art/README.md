@@ -5,4 +5,5 @@ Art Portfolio Example Website.
 * HTML
 * SCSS
 * CSS
+* JS
 * Gulp.js
