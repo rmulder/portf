@@ -1,7 +1,6 @@
 "use strict";
 
-import gulp from 'gulp'
-//const gulp = require('gulp');
+const gulp = require('gulp');
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglifyes');
 const htmlmin = require('gulp-htmlmin');
