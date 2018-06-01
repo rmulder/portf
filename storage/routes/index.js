@@ -14,6 +14,7 @@ let Names = mongoose.model("Names", nameSchema);
 // GET /(index)
 router.get('/', (req, res, next) =>
 {
+  console.log("IP Address of Request: ", req.connection.remoteAddress);
   return res.render('index', { title: 'Home' });
 });
 
