@@ -1,0 +1,110 @@
+/**
+ * Module dependencies.
+ */
+
+const app = require('../app');
+
+const debug = require('debug')('logstash_test:server');
+const http = require('http');
+const https = require('https');
+const fs = require('fs');
+
+/**
+ * Get port from environment and store in Express.
+ */
+
+const http_port = 8080;
+
+const port = normalizePort(process.env.PORT || http_port);
+app.set('port', port);
+
+/**
+ * Create HTTP server.
+ */
+
+const http_server = http.createServer(app);
+
+http_server.listen(port);
+http_server.on('error', onError);
+http_server.on('listening', onListening);
+
+
+
+/**
+ * Normalize a port into a number, string, or false.
+ */
+
+function normalizePort(val) {
+  const port = parseInt(val, 10);
+
+  if (isNaN(port)) {
+    // named pipe
+    return val;
+  }
+
+  if (port >= 0) {
+    // port number
+    return port;
+  }
+
+  return false;
+}
+
+/**
+ * Event listener for HTTP server "error" event.
+ */
+
+function onError(error) {
+  if (error.syscall !== 'listen') {
+    throw error;
+  }
+
+  const bind = typeof port === 'string'
+    ? 'Pipe ' + port
+    : 'Port ' + port;
+
+  // handle specific listen errors with friendly messages
+  switch (error.code) {
+    case 'EACCES':
+      console.error(bind + ' requires elevated privileges');
+      process.exit(1);
+      break;
+    case 'EADDRINUSE':
+      console.error(bind + ' is already in use');
+      process.exit(1);
+      break;
+    default:
+      throw error;
+  }
+}
+
+/**
+ * Event listener for HTTP server "listening" event.
+ */
+
+function onListening() {
+  const addr = http_server.address();
+  const bind = typeof addr === 'string'
+    ? 'pipe ' + addr
+    : 'port ' + addr.port;
+  debug('Listening on ' + bind);
+}
+
+/*https server settings start*/
+/*
+ * Create HTTPS options server.
+ * */
+
+// Users/ronanmanoj/Google Drive/portf/sandbox_test/httpsTest/bin
+
+const options = {
+    key: fs.readFileSync('../../../../server.key'),
+    cert: fs.readFileSync('../../../../server.crt')
+};
+
+const app2 = require('../app');
+const https_port = 443;
+const port2 = normalizePort(process.env.PORT || https_port);
+app2.set('port', port2);
+const https_server = https.createServer(options, app2);
+https_server.listen(port2);

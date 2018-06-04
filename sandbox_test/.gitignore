@@ -2,4 +2,4 @@
 *.sass-cache
 *.sh
 *.txt
-/fileUpload
+/uploads
