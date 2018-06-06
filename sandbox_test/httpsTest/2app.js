@@ -7,6 +7,18 @@ const app = express();
 
 const port = 8080 || process.env.PORT;
 
+const indexRouter = require('./routes/index');
+const usersRouter = require('./routes/users');
+
+app.use('/', indexRouter);
+app.use('/users', usersRouter);
+
+app.use(logger('dev'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(express.static(path.join(__dirname, 'public')));
+
 const certOptions = {
   key: fs.readFileSync(path.resolve('../../../../server.key')),
   cert: fs.readFileSync(path.resolve('../../../../server.crt'))
