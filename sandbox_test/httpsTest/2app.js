@@ -5,7 +5,17 @@ const https = require('https');
 const childProc = require('child_process');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+const helmet = require('helmet');
 const app = express();
+
+app.use(helmet());
+
+app.use(helmet.contentSecurityPolicy({
+  directives: {
+    defaultSrc: ["'self'"],
+    styleSrc: ["'self'", 'maxcdn.bootstrapcdn.com']
+  }
+}));
 
 const port = 8080 || process.env.PORT;
 
