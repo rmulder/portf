@@ -3,15 +3,19 @@ const fs = require('fs');
 const express = require('express');
 const https = require('https');
 const childProc = require('child_process');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
 const app = express();
 
 const port = 8080 || process.env.PORT;
 
+/*
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+*/
 
 app.use(logger('dev'));
 app.use(express.json());

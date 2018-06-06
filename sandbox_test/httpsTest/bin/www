@@ -1,41 +1,40 @@
+#!/usr/bin/env node
+
 /**
  * Module dependencies.
  */
 
-const app = require('../app');
-
-const debug = require('debug')('logstash_test:server');
-const http = require('http');
-const https = require('https');
-const fs = require('fs');
+var app = require('../app');
+var debug = require('debug')('httpstest:server');
+var http = require('http');
 
 /**
  * Get port from environment and store in Express.
  */
 
-const http_port = 8080;
-
-const port = normalizePort(process.env.PORT || http_port);
+var port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 
 /**
  * Create HTTP server.
  */
 
-const http_server = http.createServer(app);
+var server = http.createServer(app);
 
-http_server.listen(port);
-http_server.on('error', onError);
-http_server.on('listening', onListening);
+/**
+ * Listen on provided port, on all network interfaces.
+ */
 
-
+server.listen(port);
+server.on('error', onError);
+server.on('listening', onListening);
 
 /**
  * Normalize a port into a number, string, or false.
  */
 
 function normalizePort(val) {
-  const port = parseInt(val, 10);
+  var port = parseInt(val, 10);
 
   if (isNaN(port)) {
     // named pipe
@@ -59,7 +58,7 @@ function onError(error) {
     throw error;
   }
 
-  const bind = typeof port === 'string'
+  var bind = typeof port === 'string'
     ? 'Pipe ' + port
     : 'Port ' + port;
 
@@ -83,28 +82,9 @@ function onError(error) {
  */
 
 function onListening() {
-  const addr = http_server.address();
-  const bind = typeof addr === 'string'
+  var addr = server.address();
+  var bind = typeof addr === 'string'
     ? 'pipe ' + addr
     : 'port ' + addr.port;
   debug('Listening on ' + bind);
 }
-
-/*https server settings start*/
-/*
- * Create HTTPS options server.
- * */
-
-// Users/ronanmanoj/Google Drive/portf/sandbox_test/httpsTest/bin
-
-const options = {
-    key: fs.readFileSync('../../../../server.key'),
-    cert: fs.readFileSync('../../../../server.crt')
-};
-
-const app2 = require('../app');
-const https_port = 443;
-const port2 = normalizePort(process.env.PORT || https_port);
-app2.set('port', port2);
-const https_server = https.createServer(options, app2);
-https_server.listen(port2);
