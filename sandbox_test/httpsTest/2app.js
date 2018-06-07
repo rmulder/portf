@@ -13,19 +13,17 @@ app.use(helmet());
 app.use(helmet.contentSecurityPolicy({
   directives: {
     defaultSrc: ["'self'"],
-    styleSrc: ["'self'", 'maxcdn.bootstrapcdn.com']
+    styleSrc: ["'self'",'ajax.googleapis.com']
   }
 }));
 
 const port = 8080 || process.env.PORT;
 
-/*
 const indexRouter = require('./routes/index');
-const usersRouter = require('./routes/users');
+//const usersRouter = require('./routes/users');
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
-*/
+//app.use('/users', usersRouter);
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -37,11 +35,6 @@ const certOptions = {
   key: fs.readFileSync(path.resolve('../../../../server.key')),
   cert: fs.readFileSync(path.resolve('../../../../server.crt'))
 }
-
-app.get('*', (req, res, next) =>
-{
- res.send("Hello, HTTPS World");
-});
 
 const server = https.createServer(certOptions, app).listen(8080);
 childProc.exec(`open -a "Google Chrome" https://localhost:${port}`, () =>
