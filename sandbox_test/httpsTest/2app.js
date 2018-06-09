@@ -39,6 +39,7 @@ const certOptions = {
 }
 
 const server = https.createServer(certOptions, app).listen(8080);
+
 childProc.exec(`open -a "Google Chrome" https://localhost:${port}`, () =>
 {
  console.log(`Open on: https://localhost:${port}`); 
